@@ -1,8 +1,13 @@
 import React from 'react'
+import Login from './auth/Login'
 
 function Profile() {
   return (
-    <div>Profile</div>
+    <>
+    <Login />
+    <h1>Profile</h1>
+    
+    </>
   )
 }
 

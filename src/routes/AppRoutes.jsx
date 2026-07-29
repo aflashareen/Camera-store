@@ -12,6 +12,9 @@ import Collection from '../pages/user/Collection';
 import Search from '../pages/user/Search';
 import Profile from '../pages/user/Profile';
 import About from '../pages/user/About';
+import Login from '../pages/user/auth/Login';
+import Register from '../pages/user/auth/Register';
+import BestSeller from '../pages/user/BestSeller';
 
 function AppRoutes() {
     return (
@@ -23,12 +26,17 @@ function AppRoutes() {
                 <Route path="/shop" element={<Shop />} />
                 <Route path="/collection" element={<Collection />} />
                 <Route path="/product/:id" element={<Products />} />
+                <Route path='/about' element={<About />}/>
+                <Route path='/bestseller' element={<BestSeller />}></Route>
+
+                <Route path="/profile" element={<Profile />} />
+                <Route path='/login' element={<Login />}/>
+                <Route path='/register' element={<Register />}/>
+
                 <Route path="/search" element={<Search />} />
                 <Route path="/wishlist" element={<Wishlist />} />
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/checkout" element={<Checkout />} />
-                <Route path="/profile" element={<Profile />} />
-                <Route path='/about' element={<About />}/>
                 </Route>
             </Routes>
         </BrowserRouter>

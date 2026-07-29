@@ -4,15 +4,16 @@ import { Search, UserRound, Heart, ShoppingBag } from "lucide-react";
 
 function Navbar() {
   return (
-     <nav>
-      <div className='flex flex-row justify-between p-2 border border-[232323] bg-neutral-800 text-white '>
+     <nav  className="sticky top-0 z-50 bg-neutral-950 shadow-lg h-15">
+      <div className='flex flex-row justify-between p-4 text-white'>
 
-      <div className='font-Helvetica font-bold tracking-[0.35em] uppercase'>
-        <Link to="/"><h1>LENSÉ</h1></Link>{" "}
+      <div className='font-Helvetica font-bold text-xl tracking-[0.35em] uppercase'>
+        <Link to="/"><h1>LENSÉ</h1></Link>
       </div>
 
       <div className='flex gap-4 font-[Helvetica_Neue] tracking-wider font-light uppercase'>
         <Link to="/shop">Shop</Link>{" "}
+        <Link to="">Best sellers</Link>
         <Link to="/collection">Collection</Link> 
         <Link to='/about'>About</Link>      
       </div>
