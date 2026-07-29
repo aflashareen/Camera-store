@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 function Login() {
+  const [formData, setFormData]= useState({
+    email:"",
+    password:"",
+  })
   return (
     <form className="min-h-screen flex items-center justify-center">
 
@@ -18,12 +22,16 @@ function Login() {
           <input
             type="email"
             placeholder="Email*"
+            onChange={(e)=> setFormData({...formData,
+              email:e.target.value
+            })}
             className="border border-[#cbcbcb] rounded px-4 py-3 outline-none focus:border-black"
           />
 
           <input
             type="password"
             placeholder="Password*"
+            onChange={(e)=>setFormData({...formData,password:e.target.value})}
             className="border border-[#cbcbcb] rounded-md px-4 py-3 outline-none focus:border-black"
           />
 
