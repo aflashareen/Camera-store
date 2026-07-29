@@ -1,5 +1,94 @@
 {
-  "products": [],
+  "products": [   
+    {
+      "id": "1",
+      "name": "Olympus OM-2 MD",
+      "brand": "Canon",
+      "category": "Mirrorless Camera",
+      "price": 2499,
+      "image": "/src/assets/images/products/olympus-om.jpg",
+      "description": "High performance camera for photography and video.",
+      "rating": 4.7,
+      "stock": 5
+    },
+    {
+      "id": "2",
+      "name": "SONY, ILCE-1",
+      "brand": "Sony",
+      "category": "Mirrorless Camera",
+      "price": 2499,
+      "image": "/src/assets/images/products/sony-ilce-1.jpg",
+      "description": "High performance camera for photography and video.",
+      "rating": 4.7,
+      "stock": 5
+    },
+    {
+      "id": "3",
+      "name": "SONY, ILCE-7RM3",
+      "brand": "Sony",
+      "category": "Mirrorless Camera",
+      "price": 2499,
+      "image": "/src/assets/images/products/sony-ilce-7rm3.jpg",
+      "description": "High performance camera for photography and video.",
+      "rating": 4.7,
+      "stock": 5
+    },
+    {
+      "id": "4",
+      "name": "Olympus OM-2N",
+      "brand": "Canon",
+      "category": "Mirrorless Camera",
+      "price": 2499,
+      "image": "/src/assets/images/products/olympus-2n.jpg",
+      "description": "High performance camera for photography and video.",
+      "rating": 4.7,
+      "stock": 5
+    },
+    {
+      "id": "5",
+      "name": "Nikon F Photomic FTn",
+      "brand": "Nikon",
+      "category": "Mirrorless Camera",
+      "price": 2499,
+      "image": "/src/assets/images/products/nikon-film.jpg",
+      "description": "High performance camera for photography and video.",
+      "rating": 4.7,
+      "stock": 5
+    },
+    {
+      "id": "6",
+      "name": "Canon AE-1 Program",
+      "brand": "Canon",
+      "category": "Mirrorless Camera",
+      "price": 2499,
+      "image": "/src/assets/images/products/canon-ae.jpg",
+      "description": "High performance camera for photography and video.",
+      "rating": 4.7,
+      "stock": 5
+    },
+    {
+      "id": "7",
+      "name": "Minolta X-370",
+      "brand": "Canon",
+      "category": "Mirrorless Camera",
+      "price": 2499,
+      "image": "/src/assets/images/products/minolta-x-370.jpg",
+      "description": "High performance camera for photography and video.",
+      "rating": 4.7,
+      "stock": 5
+    },
+    {
+      "id": "8",
+      "name": "Sony Alpha 7 III",
+      "brand": "Canon",
+      "category": "Mirrorless Camera",
+      "price": 2499,
+      "image": "/src/assets/images/products/sony-a7.jpg",
+      "description": "High performance camera for photography and video.",
+      "rating": 4.7,
+      "stock": 5
+    }
+  ],
   "users": [
     {
       "fullname": "Afla",

@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Search, UserRound, Heart, ShoppingBag } from "lucide-react";
+import { Search, UserRound, Heart, ShoppingBag, Dice1 } from "lucide-react";
 import { useSelector } from "react-redux";
 
 function Navbar() {
-  const { isAuthenticated } = useSelector((state) => state.auth);
+  const { isAuthenticated,user } = useSelector((state) => state.auth);
 
   return (
     <nav className="sticky top-0 z-50 bg-neutral-950 shadow-lg h-15">
@@ -24,7 +24,13 @@ function Navbar() {
 
         <div className="flex gap-6">
           <Link to="/search"><Search size={20} strokeWidth={1.25} /></Link>{" "}
-          <Link to={isAuthenticated ? "/profile" : "/login"}><UserRound size={20} strokeWidth={1.25} /></Link>{" "}
+
+          <Link to={isAuthenticated ? "/profile" : "/login"}>
+          {isAuthenticated?(
+            <div className="w-7 h-7 rounded-full bg-white text-black flex items-center justify-center text-sm font-medium">{user?.fullname?.charAt(0).toUpperCase()}</div>
+          ):(<UserRound size={20} strokeWidth={1.25} />)}
+          </Link>{" "}
+
           <Link to="/wishlist"><Heart size={20} strokeWidth={1.25} /></Link>{" "}
           <Link to="/cart"><ShoppingBag size={20} strokeWidth={1.25} /></Link>
         </div>

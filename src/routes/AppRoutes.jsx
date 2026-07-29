@@ -16,6 +16,7 @@ import Login from '../pages/user/auth/Login';
 import Register from '../pages/user/auth/Register';
 import BestSeller from '../pages/user/BestSeller';
 import ProtectedRoute from './ProtectedRoute';
+import AuthRoute from './AuthRoute';
 
 function AppRoutes() {
     return (
@@ -35,8 +36,16 @@ function AppRoutes() {
                     <Profile />
                     </ProtectedRoute>
                     } />
-                <Route path='/login' element={<Login />}/>
-                <Route path='/register' element={<Register />}/>
+                <Route path='/login' element={
+                    <AuthRoute>
+                    <Login />
+                    </AuthRoute>
+                    }/>
+                <Route path='/register' element={
+                    <AuthRoute>
+                    <Register />
+                    </AuthRoute>
+                    }/>
 
                 <Route path="/search" element={<Search />} />
                 <Route path="/wishlist" element={<Wishlist />} />
