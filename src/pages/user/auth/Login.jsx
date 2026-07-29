@@ -1,13 +1,59 @@
+import { useMutation } from "@tanstack/react-query";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { getUserByEmail } from "../../../services/authService";
 
 function Login() {
-  const [formData, setFormData]= useState({
-    email:"",
-    password:"",
+  const [errors, setErrors] = useState({});
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  });
+
+  const navigate = useNavigate();
+
+  const loginMutation = useMutation({
+    mutationFn: getUserByEmail,
+
+    onSuccess: (data) => {
+      if (data.length === 0) {
+        setErrors({
+          email: "Email not found",
+        });
+        return;
+      }
+
+      const user = data[0];
+
+      if (user.password !== formData.password) {
+        setErrors({
+          password: "Incorrect password",
+        });
+        return;
+      }
+
+      //Login successfull
+      localStorage.setItem("user", JSON.stringify(user));
+
+      navigate("/")
+    },
+    onError: (error) => {
+      setErrors({
+        general: "Something went wrong. Please try again.",
+      });
+    }
   })
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    setErrors({});
+
+    loginMutation.mutate(formData.email);
+  };
+
   return (
-    <form className="min-h-screen flex items-center justify-center">
+    <form onSubmit={handleSubmit} className="min-h-screen flex items-center justify-center">
 
       <div className="w-full max-w-xl bg-white shadow-lg p-8">
         <h1 className="text-3xl font-semibold text-center tracking-[0.3em] mb-8">
@@ -22,22 +68,35 @@ function Login() {
           <input
             type="email"
             placeholder="Email*"
-            onChange={(e)=> setFormData({...formData,
-              email:e.target.value
+            onChange={(e) => setFormData({
+              ...formData,
+              email: e.target.value
             })}
             className="border border-[#cbcbcb] rounded px-4 py-3 outline-none focus:border-black"
           />
+          {errors.email && (
+            <p className="text-red-500 text-sm">{errors.email}</p>
+          )}
 
           <input
             type="password"
             placeholder="Password*"
-            onChange={(e)=>setFormData({...formData,password:e.target.value})}
+            onChange={(e) => setFormData({ ...formData, password: e.target.value })}
             className="border border-[#cbcbcb] rounded-md px-4 py-3 outline-none focus:border-black"
           />
+          {errors.password && (
+            <p className="text-red-500 text-sm">{errors.password}</p>
+          )}
 
-          <button className="bg-black text-white py-3 hover:bg-black/80 transition">
+          <button 
+          type="submit"
+          disabled={loginMutation.isPending}
+          className="bg-black text-white py-3 hover:bg-black/80 transition">
             Log In
           </button>
+          {errors.general && (
+            <p className="text-red-500 text-sm">{errors.general}</p>
+          )}
 
           <Link
             to="/register"

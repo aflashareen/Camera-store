@@ -5,7 +5,7 @@ export const registerUser = async (userData) => {
     return response.data;
 }
 
-export const loginUser = async (email) =>{
+export const getUserByEmail = async (email) =>{
     const response = await api.get(`/users?email=${email}`);
     return response.data;
 }
