@@ -2,6 +2,8 @@ import { useMutation } from "@tanstack/react-query";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { getUserByEmail } from "../../../services/authService";
+import { useDispatch } from 'react-redux';
+import { loginSuccess } from '../../../redux/slices/AuthSlice';
 
 function Login() {
   const [errors, setErrors] = useState({});
@@ -11,6 +13,7 @@ function Login() {
   });
 
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const loginMutation = useMutation({
     mutationFn: getUserByEmail,
@@ -24,18 +27,20 @@ function Login() {
       }
 
       const user = data[0];
-
+      
       if (user.password !== formData.password) {
         setErrors({
           password: "Incorrect password",
         });
         return;
       }
+      
+      dispatch(loginSuccess(user));
 
-      //Login successfull
       localStorage.setItem("user", JSON.stringify(user));
 
-      navigate("/")
+      navigate("/profile")
+
     },
     onError: (error) => {
       setErrors({
@@ -68,6 +73,7 @@ function Login() {
           <input
             type="email"
             placeholder="Email*"
+            value={formData.email}
             onChange={(e) => setFormData({
               ...formData,
               email: e.target.value
@@ -81,6 +87,7 @@ function Login() {
           <input
             type="password"
             placeholder="Password*"
+            value={formData.password}
             onChange={(e) => setFormData({ ...formData, password: e.target.value })}
             className="border border-[#cbcbcb] rounded-md px-4 py-3 outline-none focus:border-black"
           />

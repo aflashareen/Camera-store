@@ -15,6 +15,7 @@ import About from '../pages/user/About';
 import Login from '../pages/user/auth/Login';
 import Register from '../pages/user/auth/Register';
 import BestSeller from '../pages/user/BestSeller';
+import ProtectedRoute from './ProtectedRoute';
 
 function AppRoutes() {
     return (
@@ -29,7 +30,11 @@ function AppRoutes() {
                 <Route path='/about' element={<About />}/>
                 <Route path='/bestseller' element={<BestSeller />}></Route>
 
-                <Route path="/profile" element={<Profile />} />
+                <Route path="/profile" element={
+                    <ProtectedRoute>
+                    <Profile />
+                    </ProtectedRoute>
+                    } />
                 <Route path='/login' element={<Login />}/>
                 <Route path='/register' element={<Register />}/>
 
