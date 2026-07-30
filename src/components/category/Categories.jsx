@@ -16,9 +16,9 @@ function Categories() {
     <section className='bg-netural-950 py-24'>
         <div className='mx-auto max-w-7xl px-6'>
             <div className='mb-14 text-center'>
-                <p className='text-sm uppercase tracking-[0.35em] text-zinc-500'>Top Picks</p>
+                <p className='text-lg uppercase tracking-[0.35em] text-zinc-500'>Top Picks</p>
 
-                <h2 className='mt-3 text-4xl font-light text-white'>Shop by category</h2>
+                <h2 className='text-4xl font-light text-white'>Shop by category</h2>
             </div>
             <div className='grid gap-8 sm:grid-cols-2 lg:grid-cols-3'>
                 {categories.map((category)=>(

@@ -16,7 +16,7 @@ function Hero() {
       <div className="absolute inset-0 bg-black/50" />
 
       <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-white">
-        <h1 className="text-5xl font-bold">
+        <h1 className="text-5xl font-bold font-serif">
           Capture Every Moment
         </h1>
 
