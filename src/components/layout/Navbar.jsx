@@ -7,17 +7,17 @@ function Navbar() {
   const { isAuthenticated,user } = useSelector((state) => state.auth);
 
   return (
-    <nav className="sticky top-0 z-50 bg-neutral-950 shadow-lg h-15">
+    <nav className="sticky top-0 z-50 bg-neutral-950 shadow-lg border h-15">
       <div className='flex flex-row justify-between p-4 text-white'>
 
 
         <div className='font-Helvetica font-bold text-xl tracking-[0.35em] uppercase'>
-          <Link to="/"><h1>LENSÉ</h1></Link>
+          <Link to="/hero"><h1>LENSÉ</h1></Link>
         </div>
 
         <div className='flex gap-4 font-[Helvetica_Neue] tracking-wider font-light uppercase'>
+          <Link to="/">Home</Link>{" "}
           <Link to="/shop">Shop</Link>{" "}
-          <Link to="">Best sellers</Link>
           <Link to="/collection">Collection</Link>
           <Link to='/about'>About</Link>
         </div>

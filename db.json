@@ -87,8 +87,84 @@
       "description": "High performance camera for photography and video.",
       "rating": 4.7,
       "stock": 5
+    },
+    {
+      "id": "9",
+      "name": "Sony α7 V (A7M5)",
+      "brand": "Sony",
+      "category": "Full-Frame Mirrorless Camera",
+      "price": 270990,
+      "image": "/src/assets/images/products/sony-a7m5.jpg",
+      "description": "The Sony α7 V (A7M5) is a premium full-frame mirrorless camera featuring a 33MP sensor, AI-powered autofocus, 5-axis image stabilization, and professional 4K video recording. Designed for photographers and filmmakers, it delivers exceptional image quality, fast performance, and reliable tracking for portraits, wildlife, sports, and cinematic content.",
+      "rating": 4.9,
+      "stock": 5
+    },
+      {
+      "id": "10",
+      "name": "Sony FX5",
+      "brand": "Sony",
+      "category": "Full-Frame Cinema Camera",
+      "price": 489900,
+      "image": "/src/assets/images/products/sony-fx5.jpg",
+      "description": "The Sony FX5 is a professional full-frame cinema camera built for filmmakers and video creators. It features a 16.6MP stacked CMOS sensor, 5K open-gate recording, internal RAW recording, AI-powered autofocus, 15+ stops of dynamic range, and advanced 4K video capabilities in a compact Cinema Line body.",
+      "rating": 4.9,
+      "stock": 5
+    },
+    {
+      "id": "11",
+      "name": "Sony α1 II",
+      "brand": "Sony",
+      "category": "Flagship Full-Frame Mirrorless Camera",
+      "price": 599990,
+      "image": "/src/assets/images/products/sony-a1.jpg",
+      "description": "The Sony α1 II is Sony's flagship full-frame mirrorless camera, combining a 50.1MP stacked Exmor RS sensor, AI-powered autofocus, blackout-free continuous shooting up to 30 fps, and professional 8K video recording. Built for sports, wildlife, commercial photography, and filmmaking, it delivers exceptional speed, accuracy, and image quality.",
+      "rating": 5.0,
+      "stock": 5
+    },
+    {
+      "id": "12",
+      "name": "Sony α7R VI",
+      "brand": "Sony",
+      "category": "High-Resolution Full-Frame Mirrorless Camera",
+      "price": 470990,
+      "image": "/src/assets/images/products/sony-a7r6.jpg",
+      "description": "The Sony α7R VI is a premium full-frame mirrorless camera featuring a 66.8MP stacked Exmor RS CMOS sensor, AI-powered autofocus, up to 30 fps continuous shooting, and 8K video recording. Built for professional photographers and filmmakers, it delivers exceptional detail, speed, and dynamic range, making it ideal for landscape, commercial, wildlife, portrait, and studio photography.",
+      "rating": 4.9,
+      "stock": 5
     }
   ],
+  "categories": [
+  {
+    "id": 1,
+    "name": "Mirrorless",
+    "image": "src/assets/images/categories/mirrorless.png"
+  },
+  {
+    "id": 2,
+    "name": "DSLR",
+    "image": "src/assets/images/categories/dslr.png"
+  },
+  {
+    "id": 3,
+    "name": "Cinema",
+    "image": "src/assets/images/categories/cinema.png"
+  },
+  {
+    "id": 4,
+    "name": "Vlogging",
+    "image": "src/assets/images/categories/vlogging.png"
+  },
+  {
+    "id": 5,
+    "name": "Lenses",
+    "image": "src/assets/images/categories/lens.png"
+  },
+  {
+    "id": 6,
+    "name": "Accessories",
+    "image": "src/assets/images/categories/accessories.png"
+  }
+],
   "users": [
     {
       "fullname": "Afla",
@@ -104,6 +180,7 @@
       "id": "MsXqWcx3vVA"
     }
   ],
+
   "orders": [],
   "$schema": "./node_modules/json-server/schema.json"
 }

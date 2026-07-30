@@ -14,9 +14,9 @@ import Profile from '../pages/user/Profile';
 import About from '../pages/user/About';
 import Login from '../pages/user/auth/Login';
 import Register from '../pages/user/auth/Register';
-import BestSeller from '../pages/user/BestSeller';
 import ProtectedRoute from './ProtectedRoute';
 import AuthRoute from './AuthRoute';
+import Hero from '../components/hero/Hero';
 
 function AppRoutes() {
     return (
@@ -24,12 +24,12 @@ function AppRoutes() {
             <Routes>
                 {/* user */}
                 <Route element={<Layout />}>
+                <Route path='/hero' element={<Hero />}/>
                 <Route path="/" element={<Home />} />
                 <Route path="/shop" element={<Shop />} />
                 <Route path="/collection" element={<Collection />} />
                 <Route path="/product/:id" element={<Products />} />
                 <Route path='/about' element={<About />}/>
-                <Route path='/bestseller' element={<BestSeller />}></Route>
 
                 <Route path="/profile" element={
                     <ProtectedRoute>
