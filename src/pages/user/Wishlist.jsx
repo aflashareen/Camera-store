@@ -26,7 +26,7 @@ function Wishlist() {
 </button>
       <h1 className="text-4xl font-bold mb-10">Wishlist</h1>
 
-      <div className="grid md:grid-cols-4 gap-8">
+      <div className="grid md:grid-cols-3 gap-10">
         {wishlist.map((product) => (
           <div key={product.id} className="relative">
             <button

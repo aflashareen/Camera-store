@@ -36,11 +36,11 @@
     {
       "id": "4",
       "name": "Olympus OM-2N",
-      "brand": "Canon",
+      "brand": "Olympus",
       "category": "Mirrorless",
-      "price": 2499,
+      "price": 28990,
       "image": "/src/assets/images/products/olympus-2n.jpg",
-      "description": "High performance camera for photography and video.",
+      "description": "The Olympus OM-2N is a legendary 35mm SLR film camera celebrated for its compact design, dependable build quality, and aperture-priority automatic exposure. Designed for both enthusiasts and professionals, it delivers sharp, timeless images while offering full manual control for a classic analog photography experience. Lightweight yet durable, the OM-2N remains one of the most sought-after vintage cameras for film photography.",
       "rating": 4.7,
       "stock": 5
     },
@@ -49,9 +49,9 @@
       "name": "Nikon F Photomic FTn",
       "brand": "Nikon",
       "category": "DSLR",
-      "price": 2499,
+      "price": 24990,
       "image": "/src/assets/images/products/nikon-film.jpg",
-      "description": "High performance camera for photography and video.",
+      "description": "The Nikon F Photomic FTn is an iconic 35mm film SLR camera that helped define professional photography. Introduced in the late 1960s, it features the renowned Photomic FTn prism finder with center-weighted TTL metering, a rugged all-metal construction, and the legendary Nikon F mount. Built for reliability and precision, the F Photomic FTn remains a favorite among film photography enthusiasts, collectors, and professionals seeking a timeless shooting experience",
       "rating": 4.7,
       "stock": 5
     },
@@ -82,9 +82,9 @@
       "name": "Sony Alpha 7 III",
       "brand": "Canon",
       "category": "Mirrorless Camera",
-      "price": 2499,
+      "price": 127490,
       "image": "/src/assets/images/products/sony-a7.jpg",
-      "description": "High performance camera for photography and video.",
+      "description": "The Sony Alpha 7 III is a versatile full-frame mirrorless camera built for photographers and content creators. Featuring a 24.2MP back-illuminated CMOS sensor, advanced autofocus with real-time Eye AF, 5-axis in-body image stabilization, and stunning 4K video recording, it delivers exceptional image quality in both daylight and low-light conditions. Its compact, weather-resistant design and long-lasting battery make it an excellent choice for travel, portraits, landscapes, weddings, and professional video production.",
       "rating": 4.7,
       "stock": 5
     },
