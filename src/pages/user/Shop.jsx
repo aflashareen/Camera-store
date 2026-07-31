@@ -4,7 +4,6 @@ import ProductCard from "../../components/productCard/ProductCard";
 import { useSearchParams } from "react-router-dom";
 
 function Shop() {
-
   
   const {data: products = [], isLoading, error} = useQuery({
     queryKey:["products"],

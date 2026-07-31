@@ -10,6 +10,8 @@ function Navbar() {
     (state) => state.wishlist.items.length
   );
 
+  const cartCount = useSelector((state)=>state.cart.items.length)
+
   return (
     <nav className="sticky top-0 z-50 bg-neutral-950 shadow-lg border h-15">
       <div className='flex flex-row justify-between p-4 text-white'>
@@ -44,7 +46,17 @@ function Navbar() {
             )}
           </Link>{" "}
           </div>
-          <Link to="/cart"><ShoppingBag size={20} strokeWidth={1.25} /></Link>
+          <div className='relative'>
+            <Link to="/cart">
+            <ShoppingBag size={20} strokeWidth={1.25} />
+            {cartCount > 0 &&(
+              <span className='absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs'>
+                {cartCount}
+              </span>
+            )}
+            </Link>
+          </div>
+          
         </div>
       </div>
     </nav>

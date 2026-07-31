@@ -27,25 +27,25 @@ function Products() {
 
   const isWishlisted = wishlist.some((item) => item.id === product?.id);
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
-  
-  
+
+
   if (isLoading) return <p>Loading...</p>;
   if (error) return <p>Something went wrong.</p>;
 
-const handleWishlist = (e) => {
-  e.preventDefault();
+  const handleWishlist = (e) => {
+    e.preventDefault();
 
-  if (!isAuthenticated) {
-    navigate("/login");
-    return;
-  }
+    if (!isAuthenticated) {
+      navigate("/login");
+      return;
+    }
 
-  if (isWishlisted) {
-    dispatch(removeFromWishlist(product.id));
-  } else {
-    dispatch(addToWishlist(product));
-  }
-};
+    if (isWishlisted) {
+      dispatch(removeFromWishlist(product.id));
+    } else {
+      dispatch(addToWishlist(product));
+    }
+  };
 
   return (
     <div>
@@ -54,30 +54,49 @@ const handleWishlist = (e) => {
           <img src={product.image} alt={product.name} />
         </div>
 
-        <div className="w-[50%] pl-8 flex flex-col gap-3 relative">
-          <h1 className="font-semibold text-3xl">{product.name}</h1>
+        {/* right */}
+        <div className="w-1/2 pl-10 flex flex-col">
 
-          <p className="font-bold">{product.brand}</p>
+          <p className="text-sm uppercase tracking-widest text-gray-500">
+            {product.brand}
+          </p>
 
-          <p>MRP (Inclusive of all taxes)</p>
-          <p>₹{product.price}</p>
+          <div className="flex items-start justify-between mt-2">
+            <h1 className="text-4xl font-semibold text-black">
+              {product.name}
+            </h1>
 
-          <p>{product.description}</p>
+            <button
+              onClick={handleWishlist}
+              className="p-2 rounded-full hover:bg-gray-100 transition"
+            >
+              <Heart
+                size={22}
+                className={
+                  isWishlisted
+                    ? "fill-red-500 text-red-500"
+                    : "text-gray-500"
+                }
+              />
+            </button>
+          </div>
 
+          <p className="text-3xl font-bold mt-8">
+            ₹{product.price.toLocaleString()}
+          </p>
 
-          <button className="bg-zinc-400 w-50">Add to Cart</button>
-          <button
-            onClick={handleWishlist}
-            className="absolute top-3 right-3 bg-white rounded-full p-2 shadow-md"
+          <p className="text-sm text-gray-500 mt-1">
+            Inclusive of all taxes
+          </p>
 
-          > <Heart
-              size={20}
-              className={
-                isWishlisted
-                  ? "fill-red-500 text-red-500"
-                  : "text-gray-600"
-              }
-            /></button>
+          <p className="mt-8 leading-7 text-gray-600">
+            {product.description}
+          </p>
+
+          <button className="mt-10 w-full bg-black text-white py-4 rounded-lg hover:bg-zinc-800 transition">
+            Add to Cart
+          </button>
+
         </div>
       </div>
     </div>

@@ -2,7 +2,7 @@ import React from 'react'
 
 function About() {
   return (
-    <div className='bg=[#0F172A]'>
+    <div className=''>
       <h1>Capturing Moments. Inspiring Creativity.</h1>
       <p>Whether you're a passionate beginner, a professional creator, or an experienced filmmaker, we provide premium cameras and photography gear designed to help you capture every moment with confidence. Quality, innovation, and trust are at the heart of everything we offer.</p>
 

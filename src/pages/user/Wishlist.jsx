@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import ProductCard from "../../components/productCard/ProductCard";
 import { removeFromWishlist } from "../../redux/slices/WishlistSlice";
+import { ArrowLeft } from "lucide-react";
 
 function Wishlist() {
   const wishlist = useSelector((state) => state.wishlist.items);
@@ -16,6 +17,13 @@ function Wishlist() {
   }
   return (
     <div className="max-w-7xl mx-auto py-10 px-6">
+      <button
+  onClick={() => navigate(-1)}
+  className="flex items-center gap-2 mb-6 text-gray-700 hover:text-black transition"
+>
+  <ArrowLeft size={20} />
+  Back
+</button>
       <h1 className="text-4xl font-bold mb-10">Wishlist</h1>
 
       <div className="grid md:grid-cols-4 gap-8">

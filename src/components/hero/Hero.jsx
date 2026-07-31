@@ -1,6 +1,8 @@
+import { useNavigate } from "react-router-dom";
 import heroVideo from "../../assets/videos/hero-video.mp4";
 
 function Hero() {
+  const navigate = useNavigate();
   return (
     <section className="relative h-screen overflow-hidden">
       <video
@@ -24,7 +26,11 @@ function Hero() {
           Discover premium cameras built for professionals and creators.
         </p>
 
-        <button className="mt-8 rounded-full bg-white px-8 py-3 text-black font-medium hover:bg-gray-200 transition">
+        <button 
+        onClick={()=>(
+          navigate("/shop")
+        )}
+        className="mt-8 rounded-full bg-white px-8 py-3 text-black font-medium hover:bg-gray-200 transition" >
           Shop Now
         </button>
       </div>

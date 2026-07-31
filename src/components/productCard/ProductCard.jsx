@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom'
 import { addToWishlist, removeFromWishlist } from '../../redux/slices/WishlistSlice';
 import { Heart } from 'lucide-react';
+import { addToCart } from '../../redux/slices/CartSlice';
 
 function ProductCard({ product }) {
   const dispatch= useDispatch();
@@ -26,6 +27,16 @@ function ProductCard({ product }) {
       dispatch(addToWishlist(product));
     }
   }
+
+  const handleCart = (e) =>{
+    e.preventDefault();
+
+    if(!isAuthenticated){
+      navigate("/login");
+      return;
+    }
+    dispatch(addToCart(product));
+  }
   return (
     <Link to={`/product/${product.id}`}>
       <div className='relative cursor-pointer hover:shadow-lg transition'>
@@ -47,6 +58,9 @@ function ProductCard({ product }) {
         <div className='p-4 bg-black text-white'>
           <h2>{product.name}</h2>
           <p>₹{product.price.toLocaleString()}</p>
+
+          <button onClick={handleCart}
+          className="mt-3 w-full bg-white text-black py-2 rounded hover:bg-gray-200 transition">Add to Cart</button>
         </div>
       </div>
     </Link>
