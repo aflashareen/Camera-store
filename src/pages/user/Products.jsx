@@ -1,6 +1,6 @@
 import Layout from "../../components/layout/Layout";
 
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { getProductById } from "../../services/productService";
 
@@ -10,7 +10,9 @@ import { addToWishlist, removeFromWishlist } from "../../redux/slices/WishlistSl
 
 function Products() {
   const { id } = useParams();
-  
+
+  const navigate = useNavigate();
+
   const {
     data: product,
     isLoading,
@@ -19,15 +21,31 @@ function Products() {
     queryKey: ["product", id],
     queryFn: () => getProductById(id),
   });
-  
+
   const dispatch = useDispatch();
   const wishlist = useSelector((state) => state.wishlist.items);
 
+  const isWishlisted = wishlist.some((item) => item.id === product?.id);
+  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
+  
+  
   if (isLoading) return <p>Loading...</p>;
   if (error) return <p>Something went wrong.</p>;
 
+const handleWishlist = (e) => {
+  e.preventDefault();
 
-  const isWishlisted = wishlist.some((item) => item.id === product.id);
+  if (!isAuthenticated) {
+    navigate("/login");
+    return;
+  }
+
+  if (isWishlisted) {
+    dispatch(removeFromWishlist(product.id));
+  } else {
+    dispatch(addToWishlist(product));
+  }
+};
 
   return (
     <div>
@@ -49,15 +67,7 @@ function Products() {
 
           <button className="bg-zinc-400 w-50">Add to Cart</button>
           <button
-            onClick={(e) => {
-              e.preventDefault();
-
-              if (isWishlisted) {
-                dispatch(removeFromWishlist(product.id));
-              } else {
-                dispatch(addToWishlist(product));
-              }
-            }}
+            onClick={handleWishlist}
             className="absolute top-3 right-3 bg-white rounded-full p-2 shadow-md"
 
           > <Heart
