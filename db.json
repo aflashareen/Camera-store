@@ -1,5 +1,5 @@
 {
-  "products": [   
+  "products": [
     {
       "id": "1",
       "name": "Olympus OM-2 MD",
@@ -99,7 +99,7 @@
       "rating": 4.9,
       "stock": 5
     },
-      {
+    {
       "id": "10",
       "name": "Sony FX5",
       "brand": "Sony",
@@ -118,7 +118,7 @@
       "price": 599990,
       "image": "/src/assets/images/products/sony-a1.jpg",
       "description": "The Sony α1 II is Sony's flagship full-frame mirrorless camera, combining a 50.1MP stacked Exmor RS sensor, AI-powered autofocus, blackout-free continuous shooting up to 30 fps, and professional 8K video recording. Built for sports, wildlife, commercial photography, and filmmaking, it delivers exceptional speed, accuracy, and image quality.",
-      "rating": 5.0,
+      "rating": 5,
       "stock": 5
     },
     {
@@ -132,7 +132,7 @@
       "rating": 4.9,
       "stock": 5
     },
-      {
+    {
       "id": "13",
       "name": "Sony FX3",
       "brand": "Sony",
@@ -143,7 +143,7 @@
       "rating": 4.9,
       "stock": 5
     },
-      {
+    {
       "id": "14",
       "name": "Sony ZV-E10 II",
       "brand": "Sony",
@@ -154,7 +154,7 @@
       "rating": 4.9,
       "stock": 5
     },
-      {
+    {
       "id": "15",
       "name": "Nikon D850",
       "brand": "Sony",
@@ -165,7 +165,7 @@
       "rating": 4.9,
       "stock": 5
     },
-      {
+    {
       "id": "16",
       "name": "FE 100–400 mm F4.5 GM OSS",
       "brand": "Sony",
@@ -176,7 +176,7 @@
       "rating": 4.9,
       "stock": 5
     },
-      {
+    {
       "id": "17",
       "name": "FE 28–70 mm F3.5–5.6 OSS II",
       "brand": "Sony",
@@ -187,84 +187,84 @@
       "rating": 4.9,
       "stock": 5
     },
-      {
+    {
       "id": "18",
       "name": "FE 100 mm F2.8 Macro GM OSS",
       "brand": "Sony",
       "category": "Lenses",
-      "price": 147990 ,
+      "price": 147990,
       "image": "/src/assets/images/products/lens-FE100.jpg",
       "description": "The Sony FX5 is a professional full-frame cinema camera built for filmmakers and video creators. It features a 16.6MP stacked CMOS sensor, 5K open-gate recording, internal RAW recording, AI-powered autofocus, 15+ stops of dynamic range, and advanced 4K video capabilities in a compact Cinema Line body.",
       "rating": 4.9,
       "stock": 5
     },
-      {
+    {
       "id": "19",
       "name": "FE 50–150 mm F2 GM",
       "brand": "Sony",
       "category": "Lenses",
-      "price": 377490 ,
+      "price": 377490,
       "image": "/src/assets/images/products/lens-FE50.jpg",
       "description": "The Sony FX5 is a professional full-frame cinema camera built for filmmakers and video creators. It features a 16.6MP stacked CMOS sensor, 5K open-gate recording, internal RAW recording, AI-powered autofocus, 15+ stops of dynamic range, and advanced 4K video capabilities in a compact Cinema Line body.",
       "rating": 4.9,
       "stock": 5
     },
-      {
+    {
       "id": "20",
       "name": "FE 300mm F2.8 GM OSS",
       "brand": "Sony",
       "category": "Lenses",
-      "price": 599990 ,
+      "price": 599990,
       "image": "/src/assets/images/products/lens-FE300.jpg",
       "description": "The Sony FX5 is a professional full-frame cinema camera built for filmmakers and video creators. It features a 16.6MP stacked CMOS sensor, 5K open-gate recording, internal RAW recording, AI-powered autofocus, 15+ stops of dynamic range, and advanced 4K video capabilities in a compact Cinema Line body.",
       "rating": 4.9,
       "stock": 5
     },
-      {
+    {
       "id": "21",
       "name": "E PZ 16–50 mm F3.5–5.6 OSS II",
       "brand": "Sony",
       "category": "Lenses",
-      "price": 30490 ,
+      "price": 30490,
       "image": "/src/assets/images/products/lens-EPZ.jpg",
       "description": "The Sony FX5 is a professional full-frame cinema camera built for filmmakers and video creators. It features a 16.6MP stacked CMOS sensor, 5K open-gate recording, internal RAW recording, AI-powered autofocus, 15+ stops of dynamic range, and advanced 4K video capabilities in a compact Cinema Line body.",
       "rating": 4.9,
       "stock": 5
     },
-      {
+    {
       "id": "22",
       "name": "FE 85 mm F1.4 GM II",
       "brand": "Sony",
       "category": "Lenses",
-      "price": 185900 ,
+      "price": 185900,
       "image": "/src/assets/images/products/lens-FE85.jpg",
       "description": "The Sony FX5 is a professional full-frame cinema camera built for filmmakers and video creators. It features a 16.6MP stacked CMOS sensor, 5K open-gate recording, internal RAW recording, AI-powered autofocus, 15+ stops of dynamic range, and advanced 4K video capabilities in a compact Cinema Line body.",
       "rating": 4.9,
       "stock": 5
     },
-      {
+    {
       "id": "23",
       "name": "FE 12–24 mm F2.8 GM",
       "brand": "Sony",
       "category": "Lenses",
-      "price": 299990 ,
+      "price": 299990,
       "image": "/src/assets/images/products/lens-FE12.jpg",
       "description": "The Sony FX5 is a professional full-frame cinema camera built for filmmakers and video creators. It features a 16.6MP stacked CMOS sensor, 5K open-gate recording, internal RAW recording, AI-powered autofocus, 15+ stops of dynamic range, and advanced 4K video capabilities in a compact Cinema Line body.",
       "rating": 4.9,
       "stock": 5
     },
-      {
+    {
       "id": "24",
       "name": "Rain Cover",
       "brand": "Sony",
       "category": "Accessories",
-      "price": 299990 ,
+      "price": 299990,
       "image": "/src/assets/images/products/accessory-raincover.jpg",
       "description": "The Sony FX5 is a professional full-frame cinema camera built for filmmakers and video creators. It features a 16.6MP stacked CMOS sensor, 5K open-gate recording, internal RAW recording, AI-powered autofocus, 15+ stops of dynamic range, and advanced 4K video capabilities in a compact Cinema Line body.",
       "rating": 4.9,
       "stock": 5
     },
-      {
+    {
       "id": "25",
       "name": "XLR Adaptor",
       "brand": "Sony",
@@ -275,50 +275,138 @@
       "rating": 4.9,
       "stock": 5
     },
-      {
+    {
       "id": "26",
       "name": "86-mm Front Lens Cap",
       "brand": "Sony",
       "category": "Accessories",
-      "price": 299990 ,
+      "price": 299990,
       "image": "/src/assets/images/products/accessory-frontlens.jpg",
       "description": "The Sony FX5 is a professional full-frame cinema camera built for filmmakers and video creators. It features a 16.6MP stacked CMOS sensor, 5K open-gate recording, internal RAW recording, AI-powered autofocus, 15+ stops of dynamic range, and advanced 4K video capabilities in a compact Cinema Line body.",
+      "rating": 4.9,
+      "stock": 5
+    },
+    {
+      "id": "27",
+      "name": "Lens hood for SEL2870GM",
+      "brand": "Sony",
+      "category": "Accessories",
+      "price": 299990,
+      "image": "/src/assets/images/products/accessory-lenshood.jpg",
+      "description": "The Sony FX5 is a professional full-frame cinema camera built for filmmakers and video creators. It features a 16.6MP stacked CMOS sensor, 5K open-gate recording, internal RAW recording, AI-powered autofocus, 15+ stops of dynamic range, and advanced 4K video capabilities in a compact Cinema Line body.",
+      "rating": 4.9,
+      "stock": 5
+    },
+    {
+      "id": "28",
+      "name": "Lens hood for SEL50150GM",
+      "brand": "Sony",
+      "category": "Accessories",
+      "price": 299990,
+      "image": "/src/assets/images/products/accessory-lenshood2.jpg",
+      "description": "The Sony FX5 is a professional full-frame cinema camera built for filmmakers and video creators. It features a 16.6MP stacked CMOS sensor, 5K open-gate recording, internal RAW recording, AI-powered autofocus, 15+ stops of dynamic range, and advanced 4K video capabilities in a compact Cinema Line body.",
+      "rating": 4.9,
+      "stock": 5
+    },
+    {
+      "id": "29",
+      "name": "Canon EOS 5D Mark III",
+      "brand": "Canon",
+      "category": "DSLR",
+      "price": 299990,
+      "image": "/src/assets/images/products/canon-eos.jpg",
+      "description": "The Sony FX5 is a professional full-frame cinema camera built for filmmakers and video creators. It features a 16.6MP stacked CMOS sensor, 5K open-gate recording, internal RAW recording, AI-powered autofocus, 15+ stops of dynamic range, and advanced 4K video capabilities in a compact Cinema Line body.",
+      "rating": 4.9,
+      "stock": 5
+    },
+    {
+      "id": "30",
+      "name": "flash",
+      "brand": "Canon",
+      "category": "Accessories",
+      "price": 299990,
+      "image": "/src/assets/images/products/accessory-flash.jpg",
+      "description": "The Sony FX5 is a professional full-frame cinema camera built for filmmakers and video creators. It features a 16.6MP stacked CMOS sensor, 5K open-gate recording, internal RAW recording, AI-powered autofocus, 15+ stops of dynamic range, and advanced 4K video capabilities in a compact Cinema Line body.",
+      "rating": 4.9,
+      "stock": 5
+    },
+    {
+      "id": "31",
+      "name": "Canon EOS R5 Mark II",
+      "brand": "Canon",
+      "category": "DSLR",
+      "price": 299990,
+      "image": "/src/assets/images/products/canon-eos-r5.jpg",
+      "description": "The EOS R5 Mark II has set a new benchmark for videography and photography, with many new AF features made possible by the new Accelerated Capture System.",
+      "rating": 4.9,
+      "stock": 5
+    },
+    {
+      "id": "32",
+      "name": "Godox SL200III Daylight LED Video Light",
+      "brand": "Godox",
+      "category": "Accessories",
+      "price": 34590,
+      "image": "/src/assets/images/products/accessory-godox.jpg",
+      "description": "The Godox SL200 is a powerful 200W continuous LED video light series, featuring options like the Godox SL200III Daylight LED Video Light and the Godox SL200IIIBI Bi-Color LED Monolight, priced roughly between ₹28,999 and ₹44,413 depending on the exact version. It is widely used for studio setups, interviews, and film production.",
+      "rating": 4.9,
+      "stock": 5
+    },
+    {
+      "id": "33",
+      "name": "DIGITEK® (DSBH-065) Portable 65cm Octa Soft Box Kit",
+      "brand": "Digitek",
+      "category": "Accessories",
+      "price": 2299,
+      "image": "/src/assets/images/products/accessory-godox-softbox.jpg",
+      "description": "The Godox SL200 is a powerful 200W continuous LED video light series, featuring options like the Godox SL200III Daylight LED Video Light and the Godox SL200IIIBI Bi-Color LED Monolight, priced roughly between ₹28,999 and ₹44,413 depending on the exact version. It is widely used for studio setups, interviews, and film production.",
+      "rating": 4.9,
+      "stock": 5
+    },
+    {
+      "id": "34",
+      "name": "DJI RS 5 Gimbal Stabilizer",
+      "brand": "DJI",
+      "category": "Accessories",
+      "price": 49990,
+      "image": "/src/assets/images/products/accessory-gimbal-rs5.jpg",
+      "description": "The Godox SL200 is a powerful 200W continuous LED video light series, featuring options like the Godox SL200III Daylight LED Video Light and the Godox SL200IIIBI Bi-Color LED Monolight, priced roughly between ₹28,999 and ₹44,413 depending on the exact version. It is widely used for studio setups, interviews, and film production.",
       "rating": 4.9,
       "stock": 5
     }
   ],
   "categories": [
-  {
-    "id": 1,
-    "name": "Mirrorless",
-    "image": "src/assets/images/categories/mirrorless.png"
-  },
-  {
-    "id": 2,
-    "name": "DSLR",
-    "image": "src/assets/images/categories/dslr.png"
-  },
-  {
-    "id": 3,
-    "name": "Cinema",
-    "image": "src/assets/images/categories/cinema.png"
-  },
-  {
-    "id": 4,
-    "name": "Vlogging",
-    "image": "src/assets/images/categories/vlogging.png"
-  },
-  {
-    "id": 5,
-    "name": "Lenses",
-    "image": "src/assets/images/categories/lens.png"
-  },
-  {
-    "id": 6,
-    "name": "Accessories",
-    "image": "src/assets/images/categories/accessories.png"
-  }
-],
+    {
+      "id": "1",
+      "name": "Mirrorless",
+      "image": "src/assets/images/categories/mirrorless.png"
+    },
+    {
+      "id": "2",
+      "name": "DSLR",
+      "image": "src/assets/images/categories/dslr.png"
+    },
+    {
+      "id": "3",
+      "name": "Cinema",
+      "image": "src/assets/images/categories/cinema.png"
+    },
+    {
+      "id": "4",
+      "name": "Vlogging",
+      "image": "src/assets/images/categories/vlogging.png"
+    },
+    {
+      "id": "5",
+      "name": "Lenses",
+      "image": "src/assets/images/categories/lens.png"
+    },
+    {
+      "id": "6",
+      "name": "Accessories",
+      "image": "src/assets/images/categories/accessories.png"
+    }
+  ],
   "users": [
     {
       "fullname": "Afla",
@@ -332,9 +420,14 @@
       "email": "aflasherin07@gmail.com",
       "password": "amjad",
       "id": "MsXqWcx3vVA"
+    },
+    {
+      "fullname": "Afla Shareen",
+      "email": "amna@gmail.com",
+      "password": "amjad1246",
+      "id": "b88LsIsBmIc"
     }
   ],
-
   "orders": [],
   "$schema": "./node_modules/json-server/schema.json"
 }

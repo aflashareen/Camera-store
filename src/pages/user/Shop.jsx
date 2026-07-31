@@ -27,7 +27,7 @@ function Shop() {
   }
 
   return (
-    <div className="grid grid-cols-4 gap-6 p-8">
+    <div className="grid grid-cols-3 gap-8 p-8 bg-zinc-300">
       {
         filteredProducts.map(product => (
           <ProductCard key={product.id} product={product}/>

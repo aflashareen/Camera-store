@@ -1,13 +1,105 @@
-import React from 'react'
+import { FaInstagram, FaFacebook, FaYoutube, FaTwitter } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <>
-    <footer>
-        <p>© 2026 Camera Store</p>
-    </footer>   
-    </>
-  )
+    <footer className="bg-black text-gray-400 border-t border-gray-800">
+      <div className="max-w-7xl mx-auto px-6 py-14">
+
+        <div className="grid md:grid-cols-4 gap-10">
+
+          {/* Logo */}
+          <div>
+            <h2 className="text-3xl font-bold text-white tracking-widest">
+              LENSÉ
+            </h2>
+
+            <p className="mt-4 text-sm leading-7">
+              Capture moments with premium cameras and accessories
+              crafted for creators and professionals.
+            </p>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h3 className="text-white font-semibold mb-4">
+              Quick Links
+            </h3>
+
+            <ul className="space-y-3">
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/shop">Shop</Link></li>
+              <li><Link to="/collection">Collection</Link></li>
+              <li><Link to="/about">About</Link></li>
+            </ul>
+          </div>
+
+          {/* Categories */}
+          <div>
+            <h3 className="text-white font-semibold mb-4">
+              Categories
+            </h3>
+
+            <ul className="space-y-3">
+              <li>Mirrorless</li>
+              <li>DSLR</li>
+              <li>Lenses</li>
+              <li>Accessories</li>
+            </ul>
+          </div>
+
+          {/* Support */}
+          <div>
+            <h3 className="text-white font-semibold mb-4">
+              Support
+            </h3>
+
+            <ul className="space-y-3">
+              <li>Contact</li>
+              <li>FAQs</li>
+              <li>Shipping</li>
+              <li>Returns</li>
+            </ul>
+
+            <div className="flex gap-4 mt-6">
+
+              <FaInstagram
+                size={22}
+                className="hover:text-white cursor-pointer transition"
+              />
+
+              <FaFacebook
+                size={22}
+                className="hover:text-white cursor-pointer transition"
+              />
+
+              <FaTwitter
+                size={22}
+                className="hover:text-white cursor-pointer transition"
+              />
+
+              <FaYoutube
+                size={22}
+                className="hover:text-white cursor-pointer transition"
+              />
+            </div>
+          </div>
+
+        </div>
+
+        <div className="border-t border-gray-800 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center text-sm">
+
+          <p>© 2026 LENSÉ. All rights reserved.</p>
+
+          <div className="flex gap-6 mt-4 md:mt-0">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+  );
 }
 
 export default Footer;

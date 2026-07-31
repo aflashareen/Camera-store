@@ -6,7 +6,7 @@ function CategoryCard({ category }) {
 
   return (
     <div onClick={()=> navigate(`/shop?category=${encodeURIComponent(category.name)}`)}
-    className='cursor-pointer group overflow-hidden rounded-xl'
+    className='cursor-pointer group overflow-hidden rounded-xl '
     >
         <img 
         src={category.image}

@@ -13,14 +13,14 @@ function Categories() {
     if(error)return <p>Something went wrong.</p>;
 
   return (
-    <section className='bg-netural-950 py-24'>
+    <section className='bg-neutral-950 py-24 text-white'>
         <div className='mx-auto max-w-7xl px-6'>
             <div className='mb-14 text-center'>
                 <p className='text-lg uppercase tracking-[0.35em] text-zinc-500'>Top Picks</p>
 
-                <h2 className='text-4xl font-light text-white'>Shop by category</h2>
+                <h2 className='mt-3 text-3xl font-bold text-zinc-600 uppercase'>Shop by category</h2>
             </div>
-            <div className='grid gap-8 sm:grid-cols-2 lg:grid-cols-3'>
+            <div className='grid gap-8 sm:grid-cols-2 lg:grid-cols-3 text-zinc-300'>
                 {categories.map((category)=>(
                     <CategoryCard 
                     key={category.id}
@@ -33,4 +33,4 @@ function Categories() {
   )
 }
 
-export default Categories
+export default Categories;

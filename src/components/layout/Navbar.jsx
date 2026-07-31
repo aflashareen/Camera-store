@@ -4,7 +4,11 @@ import { Search, UserRound, Heart, ShoppingBag, Dice1 } from "lucide-react";
 import { useSelector } from "react-redux";
 
 function Navbar() {
-  const { isAuthenticated,user } = useSelector((state) => state.auth);
+  const { isAuthenticated, user } = useSelector((state) => state.auth);
+
+  const wishlistCount = useSelector(
+    (state) => state.wishlist.items.length
+  );
 
   return (
     <nav className="sticky top-0 z-50 bg-neutral-950 shadow-lg border h-15">
@@ -26,12 +30,20 @@ function Navbar() {
           <Link to="/search"><Search size={20} strokeWidth={1.25} /></Link>{" "}
 
           <Link to={isAuthenticated ? "/profile" : "/login"}>
-          {isAuthenticated?(
-            <div className="w-7 h-7 rounded-full bg-white text-black flex items-center justify-center text-sm font-medium">{user?.fullname?.charAt(0).toUpperCase()}</div>
-          ):(<UserRound size={20} strokeWidth={1.25} />)}
+            {isAuthenticated ? (
+              <div className="w-7 h-7 rounded-full bg-white text-black flex items-center justify-center text-sm font-medium">{user?.fullname?.charAt(0).toUpperCase()}</div>
+            ) : (<UserRound size={20} strokeWidth={1.25} />)}
           </Link>{" "}
 
-          <Link to="/wishlist"><Heart size={20} strokeWidth={1.25} /></Link>{" "}
+          <div className='relative'>
+          <Link to="/wishlist"><Heart size={20} strokeWidth={1.25} />
+            {wishlistCount > 0 && (
+              <span className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">
+                {wishlistCount}
+              </span>
+            )}
+          </Link>{" "}
+          </div>
           <Link to="/cart"><ShoppingBag size={20} strokeWidth={1.25} /></Link>
         </div>
       </div>
