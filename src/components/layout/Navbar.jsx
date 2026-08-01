@@ -3,13 +3,18 @@ import { Link } from 'react-router-dom'
 import { Search, UserRound, Heart, ShoppingBag, Dice1 } from "lucide-react";
 import { useSelector } from "react-redux";
 import { useCurrentUser } from '../../hooks/UseCurrentUser';
+import { useQuery } from '@tanstack/react-query';
+import { getWishlist } from '../../services/wishlistService';
 
 function Navbar() {
   const { data : user } = useCurrentUser();
 
-  const wishlistCount = useSelector(
-    (state) => state.wishlist.items.length
-  );
+  const { data: wishlist} = useQuery({
+    queryKey: ["wishlist"],
+    queryFn: getWishlist,
+  })
+
+  const wishlistCount = wishlist?.length ?? 0;
 
   const cartCount = useSelector((state)=>state.cart.items.length)
 

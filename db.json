@@ -418,20 +418,40 @@
     {
       "fullname": "Afla Shareen",
       "email": "aflasherin07@gmail.com",
-      "password": "amjad",
-      "id": "MsXqWcx3vVA"
+      "password": "amjad140321",
+      "id": "QLC9S6aT-eQ"
+    }
+  ],
+  "wishlist": [
+    {
+      "id": "nX2tlsAtPeY",
+      "name": "Sony α1 II",
+      "brand": "Sony",
+      "category": "Flagship Full-Frame Mirrorless Camera",
+      "price": 599990,
+      "image": "/src/assets/images/products/sony-a1.jpg",
+      "description": "The Sony α1 II is Sony's flagship full-frame mirrorless camera, combining a 50.1MP stacked Exmor RS sensor, AI-powered autofocus, blackout-free continuous shooting up to 30 fps, and professional 8K video recording. Built for sports, wildlife, commercial photography, and filmmaking, it delivers exceptional speed, accuracy, and image quality.",
+      "rating": 5,
+      "stock": 5
     },
     {
-      "fullname": "Afla Shareen",
-      "email": "amna@gmail.com",
-      "password": "amjad1246",
-      "id": "b88LsIsBmIc"
-    },
+      "id": "qp6gbMh7v1Y",
+      "name": "FE 28–70 mm F3.5–5.6 OSS II",
+      "brand": "Sony",
+      "category": "Lenses",
+      "price": 45990,
+      "image": "/src/assets/images/products/lens-FE28.jpg",
+      "description": "The Sony FX5 is a professional full-frame cinema camera built for filmmakers and video creators. It features a 16.6MP stacked CMOS sensor, 5K open-gate recording, internal RAW recording, AI-powered autofocus, 15+ stops of dynamic range, and advanced 4K video capabilities in a compact Cinema Line body.",
+      "rating": 4.9,
+      "stock": 5
+    }
+  ],
+"cart": [
     {
-      "fullname": "jalala",
-      "email": "jalala@gmail.com",
-      "password": "afla",
-      "id": "I7QOafgEJMI"
+      "id": 1,
+      "userId": 1,
+      "productId": 5,
+      "quantity": 2
     }
   ],
   "orders": [],

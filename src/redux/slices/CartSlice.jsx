@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit"
 
 const initialState = {
-    items : JSON.parse(localStorage.getItem("cart")) || [],
+    items : [],
 }
 const CartSlice = createSlice({
     name : "cart",
@@ -18,10 +18,6 @@ const CartSlice = createSlice({
                     quantity: 1,
                 });
             }
-
-            localStorage.setItem("cart",
-                JSON.stringify(state.items)
-            )
         },
         removeFromCart:(state,action)=>{
             state.items = state.items.filter((item)=>item.id !== action.payload);

@@ -58,6 +58,7 @@ function Cart() {
               </div>
 
               <div className="flex items-center gap-3">
+                
                 <button
                 disabled={item.quantity === 1}
                   onClick={() => dispatch(decreaseQuantity(item.id))}

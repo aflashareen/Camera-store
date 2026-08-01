@@ -1,37 +1,64 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom'
-import { addToWishlist, removeFromWishlist } from '../../redux/slices/WishlistSlice';
 import { Heart } from 'lucide-react';
 import { addToCart } from '../../redux/slices/CartSlice';
 
-function ProductCard({ product }) {
-  const dispatch= useDispatch();
-  const navigate = useNavigate();
+import { useCurrentUser } from '../../hooks/UseCurrentUser';
+import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
+import { addToWishlist, getWishlist, removeFromWishlist } from '../../services/wishlistService';
 
-  const wishlist = useSelector((state)=> state.wishlist.items);
-  const isAuthenticated = useSelector((state)=>state.auth.isAuthenticated);
+function ProductCard({ product }) {
+  const queryClient= useQueryClient();
+  const navigate = useNavigate();
+   const dispatch = useDispatch();
+  const {data: user} = useCurrentUser();
+
+  const {data:wishlist=[]} = useQuery({
+    queryKey: ["wishlist"],
+    queryFn:getWishlist,
+  }) 
 
   const isWishlisted = wishlist.some((item)=>item.id === product.id);
+
+  const addMutation = useMutation({
+    mutationFn: addToWishlist,
+
+    onSuccess: () =>{
+      queryClient.invalidateQueries({
+        queryKey:["wishlist"],
+      });
+    },
+  });
+
+  const removeMutation = useMutation({
+    mutationFn: removeFromWishlist,
+
+    onSuccess: ()=>{
+      queryClient.invalidateQueries({
+        queryKey:["wishlist"],
+      });
+    },  
+});
 
   const handleWishlist = (e) => {
     e.preventDefault();
 
-    if(!isAuthenticated){
+    if(!user){
       navigate("/login")
       return;
     }
     if(isWishlisted){
-      dispatch(removeFromWishlist(product.id));
+      removeMutation.mutate(product.id)
     }else{
-      dispatch(addToWishlist(product));
+      addMutation.mutate(product)
     }
   }
 
   const handleCart = (e) =>{
     e.preventDefault();
 
-    if(!isAuthenticated){
+    if(!user){
       navigate("/login");
       return;
     }

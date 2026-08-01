@@ -39,6 +39,13 @@ function Register() {
 
     setErrors({});
 
+    if(formData.password.length < 8){
+      setErrors({
+        password: "Password must contain at least 8 characters",
+      });
+      return;
+    }
+
     if (formData.password !== formData.confirmPassword) {
       setErrors({
         confirmPassword: "Passwords do not match"
@@ -108,6 +115,9 @@ function Register() {
               onChange={handleChange}
               className="border border-[#cbcbcb] rounded-md px-4 py-3 outline-none focus:border-black"
             />
+            {errors.password && (
+              <p className='text-red-500 text-sm mt-1'>{errors.password}</p>
+            )}
 
             <input
               type="password"

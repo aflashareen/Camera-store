@@ -1,17 +1,20 @@
 import Layout from "../../components/layout/Layout";
 
 import { useNavigate, useParams } from "react-router-dom";
-import { useQuery } from "@tanstack/react-query";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { getProductById } from "../../services/productService";
 
 import { Heart } from "lucide-react";
-import { useDispatch, useSelector } from "react-redux";
-import { addToWishlist, removeFromWishlist } from "../../redux/slices/WishlistSlice";
+import { getWishlist,addToWishlist,removeFromWishlist } from "../../services/wishlistService";
+import { useCurrentUser } from "../../hooks/UseCurrentUser";
 
 function Products() {
   const { id } = useParams();
 
+  const { data : user } = useCurrentUser();
+
   const navigate = useNavigate();
+  const queryClient = useQueryClient();
 
   const {
     data: product,
@@ -22,11 +25,32 @@ function Products() {
     queryFn: () => getProductById(id),
   });
 
-  const dispatch = useDispatch();
-  const wishlist = useSelector((state) => state.wishlist.items);
+  const { data:wishlist=[] } = useQuery({
+    queryKey: ["wishlist"],
+    queryFn: getWishlist,
+  })
+
+  const addMutation = useMutation({
+    mutationFn : addToWishlist,
+
+    onSuccess: () =>{
+      queryClient.invalidateQueries({
+        queryKey:["wishlist"],
+      });
+    },
+  });
+
+  const removeMutation = useMutation({
+    mutationFn : removeFromWishlist,
+
+    onSuccess:()=>{
+      queryClient.invalidateQueries({
+        queryKey:["wishlist"],
+      })
+    }
+  })
 
   const isWishlisted = wishlist.some((item) => item.id === product?.id);
-  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
 
 
   if (isLoading) return <p>Loading...</p>;
@@ -35,15 +59,15 @@ function Products() {
   const handleWishlist = (e) => {
     e.preventDefault();
 
-    if (!isAuthenticated) {
+    if (!user) {
       navigate("/login");
       return;
     }
 
     if (isWishlisted) {
-      dispatch(removeFromWishlist(product.id));
+      removeMutation.mutate(product.id);
     } else {
-      dispatch(addToWishlist(product));
+      addMutation.mutate(product);
     }
   };
 
