@@ -2,9 +2,10 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Search, UserRound, Heart, ShoppingBag, Dice1 } from "lucide-react";
 import { useSelector } from "react-redux";
+import { useCurrentUser } from '../../hooks/UseCurrentUser';
 
 function Navbar() {
-  const { isAuthenticated, user } = useSelector((state) => state.auth);
+  const { data : user } = useCurrentUser();
 
   const wishlistCount = useSelector(
     (state) => state.wishlist.items.length
@@ -31,8 +32,8 @@ function Navbar() {
         <div className="flex gap-6">
           <Link to="/search"><Search size={20} strokeWidth={1.25} /></Link>{" "}
 
-          <Link to={isAuthenticated ? "/profile" : "/login"}>
-            {isAuthenticated ? (
+          <Link to={user ? "/profile" : "/login"}>
+            {user ? (
               <div className="w-7 h-7 rounded-full bg-white text-black flex items-center justify-center text-sm font-medium">{user?.fullname?.charAt(0).toUpperCase()}</div>
             ) : (<UserRound size={20} strokeWidth={1.25} />)}
           </Link>{" "}

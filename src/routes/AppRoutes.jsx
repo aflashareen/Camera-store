@@ -15,7 +15,6 @@ import About from '../pages/user/About';
 import Login from '../pages/user/auth/Login';
 import Register from '../pages/user/auth/Register';
 import ProtectedRoute from './ProtectedRoute';
-import AuthRoute from './AuthRoute';
 import Hero from '../components/hero/Hero';
 
 function AppRoutes() {
@@ -24,33 +23,26 @@ function AppRoutes() {
             <Routes>
                 {/* user */}
                 <Route element={<Layout />}>
-                <Route path='/hero' element={<Hero />}/>
-                <Route path="/" element={<Home />} />
-                <Route path="/shop" element={<Shop />} />
-                <Route path="/collection" element={<Collection />} />
-                <Route path="/product/:id" element={<Products />} />
-                <Route path='/about' element={<About />}/>
+                    <Route path='/hero' element={<Hero />} />
+                    <Route path="/" element={<Home />} />
+                    <Route path="/shop" element={<Shop />} />
+                    <Route path="/collection" element={<Collection />} />
+                    <Route path="/product/:id" element={<Products />} />
+                    <Route path='/about' element={<About />} />
 
-                <Route path="/profile" element={
-                    <ProtectedRoute>
-                    <Profile />
-                    </ProtectedRoute>
-                    } />
-                <Route path='/login' element={
-                    <AuthRoute>
-                    <Login />
-                    </AuthRoute>
-                    }/>
-                <Route path='/register' element={
-                    <AuthRoute>
-                    <Register />
-                    </AuthRoute>
-                    }/>
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/register" element={<Register />} />
+                    <Route
+                        path="/profile"
+                        element={
+                            <ProtectedRoute>
+                                <Profile />
+                            </ProtectedRoute> }/>
 
-                <Route path="/search" element={<Search />} />
-                <Route path="/wishlist" element={<Wishlist />} />
-                <Route path="/cart" element={<Cart />} />
-                <Route path="/checkout" element={<Checkout />} />
+                    <Route path="/search" element={<Search />} />
+                    <Route path="/wishlist" element={<Wishlist />} />
+                    <Route path="/cart" element={<Cart />} />
+                    <Route path="/checkout" element={<Checkout />} />
                 </Route>
             </Routes>
         </BrowserRouter>

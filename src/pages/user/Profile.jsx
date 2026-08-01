@@ -1,17 +1,18 @@
 import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom';
-import { logout } from '../../redux/slices/AuthSlice';
+import { useCurrentUser } from '../../hooks/UseCurrentUser';
+import { useQueryClient } from '@tanstack/react-query';
 
 function Profile() {
-  const { user } = useSelector((state)=>state.auth);
+  const { data : user } =useCurrentUser();
 
-  const dispatch = useDispatch();
+  const queryClient = useQueryClient();
   const navigate = useNavigate();
 
   const handleLogout = () =>{
-    dispatch(logout());
     localStorage.removeItem("user");
+
+    queryClient.setQueriesData(["currentUser"], null);
 
     navigate("/login");
   }
@@ -24,4 +25,4 @@ function Profile() {
   )
 }
 
-export default Profile
+export default Profile;

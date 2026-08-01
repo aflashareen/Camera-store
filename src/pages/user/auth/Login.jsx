@@ -1,9 +1,7 @@
-import { useMutation } from "@tanstack/react-query";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { getUserByEmail } from "../../../services/authService";
-import { useDispatch } from 'react-redux';
-import { loginSuccess } from '../../../redux/slices/AuthSlice';
 
 function Login() {
   const [errors, setErrors] = useState({});
@@ -13,7 +11,7 @@ function Login() {
   });
 
   const navigate = useNavigate();
-  const dispatch = useDispatch();
+  const queryClient = useQueryClient();
 
   const loginMutation = useMutation({
     mutationFn: getUserByEmail,
@@ -27,19 +25,19 @@ function Login() {
       }
 
       const user = data[0];
-      
+
       if (user.password !== formData.password) {
         setErrors({
           password: "Incorrect password",
         });
         return;
       }
-      
-      dispatch(loginSuccess(user));
 
       localStorage.setItem("user", JSON.stringify(user));
 
-      navigate("/profile")
+      queryClient.setQueryData(["currentUser"], user);
+
+      navigate("/profile");
 
     },
     onError: (error) => {
@@ -95,10 +93,10 @@ function Login() {
             <p className="text-red-500 text-sm">{errors.password}</p>
           )}
 
-          <button 
-          type="submit"
-          disabled={loginMutation.isPending}
-          className="bg-black text-white py-3 hover:bg-black/80 transition">
+          <button
+            type="submit"
+            disabled={loginMutation.isPending}
+            className="bg-black text-white py-3 hover:bg-black/80 transition">
             Log In
           </button>
           {errors.general && (
