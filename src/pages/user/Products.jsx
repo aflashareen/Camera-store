@@ -5,13 +5,14 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { getProductById } from "../../services/productService";
 
 import { Heart } from "lucide-react";
-import { getWishlist,addToWishlist,removeFromWishlist } from "../../services/wishlistService";
+import { getWishlist, addToWishlist, removeFromWishlist } from "../../services/wishlistService";
 import { useCurrentUser } from "../../hooks/UseCurrentUser";
+import { addToCart, getCart } from "../../services/cartService";
 
 function Products() {
   const { id } = useParams();
 
-  const { data : user } = useCurrentUser();
+  const { data: user } = useCurrentUser();
 
   const navigate = useNavigate();
   const queryClient = useQueryClient();
@@ -25,32 +26,50 @@ function Products() {
     queryFn: () => getProductById(id),
   });
 
-  const { data:wishlist=[] } = useQuery({
+  const { data: wishlist = [] } = useQuery({
     queryKey: ["wishlist"],
     queryFn: getWishlist,
   })
+  const { data: cart = [] } = useQuery({
+    queryKey: ["cart"],
+    queryFn: getCart,
+  });
+
+  const cartMutation = useMutation({
+    mutationFn: addToCart,
+
+    onSuccess: () => {
+      queryClient.invalidateQueries({
+        queryKey: ["cart"],
+      });
+    },
+  });
 
   const addMutation = useMutation({
-    mutationFn : addToWishlist,
+    mutationFn: addToWishlist,
 
-    onSuccess: () =>{
+    onSuccess: () => {
       queryClient.invalidateQueries({
-        queryKey:["wishlist"],
+        queryKey: ["wishlist"],
       });
     },
   });
 
   const removeMutation = useMutation({
-    mutationFn : removeFromWishlist,
+    mutationFn: removeFromWishlist,
 
-    onSuccess:()=>{
+    onSuccess: () => {
       queryClient.invalidateQueries({
-        queryKey:["wishlist"],
+        queryKey: ["wishlist"],
       })
     }
   })
 
-  const isWishlisted = wishlist.some((item) => item.id === product?.id);
+  const existingItem = wishlist.find(
+    (item) => String(item.productId) === String(product?.id)
+  );
+
+  const isWishlisted = !!existingItem;
 
 
   if (isLoading) return <p>Loading...</p>;
@@ -65,10 +84,36 @@ function Products() {
     }
 
     if (isWishlisted) {
-      removeMutation.mutate(product.id);
+      removeMutation.mutate(existingItem.id);
     } else {
-      addMutation.mutate(product);
+      addMutation.mutate({
+        ...product,
+        userId: user.id,
+        productId: product.id,
+      });
     }
+  };
+  const handleCart = () => {
+    if (!user) {
+      navigate("/login");
+      return;
+    }
+
+    const existingCartItem = cart.find(
+      (item) => String(item.productId) === String(product.id)
+    );
+
+    if (existingCartItem) {
+      alert("Product already in cart");
+      return;
+    }
+
+    cartMutation.mutate({
+      ...product,
+      userId: user.id,
+      productId: product.id,
+      quantity: 1,
+    });
   };
 
   return (
@@ -117,7 +162,10 @@ function Products() {
             {product.description}
           </p>
 
-          <button className="mt-10 w-full bg-black text-white py-4 rounded-lg hover:bg-zinc-800 transition">
+          <button
+            onClick={handleCart}
+            className="mt-10 w-full bg-black text-white py-4 rounded-lg hover:bg-zinc-800 transition"
+          >
             Add to Cart
           </button>
 

@@ -424,34 +424,60 @@
   ],
   "wishlist": [
     {
-      "id": "nX2tlsAtPeY",
-      "name": "Sony α1 II",
+      "id": "-ywKIDQN40A",
+      "name": " Sony a9 III",
       "brand": "Sony",
-      "category": "Flagship Full-Frame Mirrorless Camera",
-      "price": 599990,
-      "image": "/src/assets/images/products/sony-a1.jpg",
-      "description": "The Sony α1 II is Sony's flagship full-frame mirrorless camera, combining a 50.1MP stacked Exmor RS sensor, AI-powered autofocus, blackout-free continuous shooting up to 30 fps, and professional 8K video recording. Built for sports, wildlife, commercial photography, and filmmaking, it delivers exceptional speed, accuracy, and image quality.",
-      "rating": 5,
-      "stock": 5
+      "category": "Mirrorless",
+      "price": 529990,
+      "image": "/src/assets/images/products/sony-ilce-1.jpg",
+      "description": "The Sony a9 III is a flagship full-frame mirrorless camera engineered for professionals who demand exceptional speed, precision, and image quality. Featuring advanced autofocus, high-speed continuous shooting, and outstanding low-light performance, it excels in sports, wildlife, events, and cinematic video production. Its durable design, intuitive controls, and cutting-edge technology make it the perfect companion for capturing every decisive moment with confidence.",
+      "rating": 4.7,
+      "stock": 5,
+      "userId": "QLC9S6aT-eQ",
+      "productId": "2"
     },
     {
-      "id": "qp6gbMh7v1Y",
-      "name": "FE 28–70 mm F3.5–5.6 OSS II",
+      "id": "LREeLlv-wqU",
+      "name": "Sony Alpha 6000 (APS-C)",
       "brand": "Sony",
-      "category": "Lenses",
-      "price": 45990,
-      "image": "/src/assets/images/products/lens-FE28.jpg",
-      "description": "The Sony FX5 is a professional full-frame cinema camera built for filmmakers and video creators. It features a 16.6MP stacked CMOS sensor, 5K open-gate recording, internal RAW recording, AI-powered autofocus, 15+ stops of dynamic range, and advanced 4K video capabilities in a compact Cinema Line body.",
-      "rating": 4.9,
-      "stock": 5
+      "category": "Mirrorless",
+      "price": 59990,
+      "image": "/src/assets/images/products/sony-ilce-7rm3.jpg",
+      "description": "The Sony Alpha 6000 is a compact APS-C mirrorless camera designed for photographers who demand speed, portability, and exceptional image quality. Featuring a 24.3MP Exmor APS-C sensor, fast hybrid autofocus, and continuous shooting up to 11 fps, it captures sharp photos and Full HD videos with remarkable detail. Its lightweight design, interchangeable E-mount lens system, and intuitive controls make it an excellent choice for travel, street photography, portraits, and everyday creative shooting.",
+      "rating": 4.7,
+      "stock": 5,
+      "userId": "QLC9S6aT-eQ",
+      "productId": "3"
     }
   ],
-"cart": [
+  "cart": [
     {
-      "id": 1,
-      "userId": 1,
-      "productId": 5,
-      "quantity": 2
+      "id": "ot0hITY5yt0",
+      "name": "Sony Alpha 6000 (APS-C)",
+      "brand": "Sony",
+      "category": "Mirrorless",
+      "price": 59990,
+      "image": "/src/assets/images/products/sony-ilce-7rm3.jpg",
+      "description": "The Sony Alpha 6000 is a compact APS-C mirrorless camera designed for photographers who demand speed, portability, and exceptional image quality. Featuring a 24.3MP Exmor APS-C sensor, fast hybrid autofocus, and continuous shooting up to 11 fps, it captures sharp photos and Full HD videos with remarkable detail. Its lightweight design, interchangeable E-mount lens system, and intuitive controls make it an excellent choice for travel, street photography, portraits, and everyday creative shooting.",
+      "rating": 4.7,
+      "stock": 5,
+      "userId": "QLC9S6aT-eQ",
+      "productId": "3",
+      "quantity": 1
+    },
+    {
+      "id": "0E3LE6JZnSI",
+      "name": "Sony α7 V (A7M5)",
+      "brand": "Sony",
+      "category": "Mirrorless",
+      "price": 270990,
+      "image": "/src/assets/images/products/sony-a7m5.jpg",
+      "description": "The Sony α7 V (A7M5) is a premium full-frame mirrorless camera featuring a 33MP sensor, AI-powered autofocus, 5-axis image stabilization, and professional 4K video recording. Designed for photographers and filmmakers, it delivers exceptional image quality, fast performance, and reliable tracking for portraits, wildlife, sports, and cinematic content.",
+      "rating": 4.9,
+      "stock": 5,
+      "userId": "QLC9S6aT-eQ",
+      "productId": "9",
+      "quantity": 1
     }
   ],
   "orders": [],

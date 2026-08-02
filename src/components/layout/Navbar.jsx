@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 import { useCurrentUser } from '../../hooks/UseCurrentUser';
 import { useQuery } from '@tanstack/react-query';
 import { getWishlist } from '../../services/wishlistService';
+import { getCart } from '../../services/cartService';
 
 function Navbar() {
   const { data : user } = useCurrentUser();
@@ -12,11 +13,16 @@ function Navbar() {
   const { data: wishlist} = useQuery({
     queryKey: ["wishlist"],
     queryFn: getWishlist,
-  })
+  });
 
   const wishlistCount = wishlist?.length ?? 0;
 
-  const cartCount = useSelector((state)=>state.cart.items.length)
+  const { data: cart = [] } = useQuery({
+  queryKey: ["cart"],
+  queryFn: getCart,
+});
+
+const cartCount = cart.length;
 
   return (
     <nav className="sticky top-0 z-50 bg-neutral-950 shadow-lg border h-15">

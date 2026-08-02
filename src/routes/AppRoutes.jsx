@@ -8,7 +8,7 @@ import Products from '../pages/user/Products'
 import Cart from '../pages/user/Cart'
 import Wishlist from '../pages/user/Wishlist';
 import Checkout from '../pages/user/Checkout';
-import Collection from '../pages/user/Collection';
+import Collection from '../pages/user/Collections';
 import Search from '../pages/user/Search';
 import Profile from '../pages/user/Profile';
 import About from '../pages/user/About';
