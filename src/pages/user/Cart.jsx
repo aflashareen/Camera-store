@@ -103,7 +103,7 @@ function Cart() {
         </div>
 
         <Link to="/checkout">
-          <button className="w-full mt-8 bg-black text-white py-4 rounded-lg hover:bg-gray-800 transition">
+          <button className="w-full mt-8 bg-black text-white py-4 rounded-lg hover:bg-black/80 transition">
             Proceed to Checkout
           </button>
         </Link>

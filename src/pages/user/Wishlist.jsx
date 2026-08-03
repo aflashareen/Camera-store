@@ -7,7 +7,7 @@ import WishlistCard from "../../components/productCard/WishlistCard";
 import { useCurrentUser } from "../../hooks/UseCurrentUser";
 
 function Wishlist() {
-  
+
   const navigate = useNavigate();
   const queryClient = useQueryClient();
 

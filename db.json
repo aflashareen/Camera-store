@@ -420,6 +420,12 @@
       "email": "aflasherin07@gmail.com",
       "password": "amjad140321",
       "id": "QLC9S6aT-eQ"
+    },
+    {
+      "fullname": "amjad k",
+      "email": "amj@gmail.com",
+      "password": "afla140321",
+      "id": "NWdYytKWWrk"
     }
   ],
   "wishlist": [
@@ -461,25 +467,9 @@
       "stock": 5,
       "userId": "QLC9S6aT-eQ",
       "productId": "1"
-    }
-  ],
-  "cart": [
-    {
-      "id": "mLckxBn-igE",
-      "name": " Sony a9 III",
-      "brand": "Sony",
-      "category": "Mirrorless",
-      "price": 529990,
-      "image": "/src/assets/images/products/sony-ilce-1.jpg",
-      "description": "The Sony a9 III is a flagship full-frame mirrorless camera engineered for professionals who demand exceptional speed, precision, and image quality. Featuring advanced autofocus, high-speed continuous shooting, and outstanding low-light performance, it excels in sports, wildlife, events, and cinematic video production. Its durable design, intuitive controls, and cutting-edge technology make it the perfect companion for capturing every decisive moment with confidence.",
-      "rating": 4.7,
-      "stock": 5,
-      "userId": "QLC9S6aT-eQ",
-      "productId": "2",
-      "quantity": 1
     },
     {
-      "id": "F4cCtKD-IYI",
+      "id": "W8JjRWOn6sk",
       "name": "Sony Alpha 6000 (APS-C)",
       "brand": "Sony",
       "category": "Mirrorless",
@@ -488,26 +478,40 @@
       "description": "The Sony Alpha 6000 is a compact APS-C mirrorless camera designed for photographers who demand speed, portability, and exceptional image quality. Featuring a 24.3MP Exmor APS-C sensor, fast hybrid autofocus, and continuous shooting up to 11 fps, it captures sharp photos and Full HD videos with remarkable detail. Its lightweight design, interchangeable E-mount lens system, and intuitive controls make it an excellent choice for travel, street photography, portraits, and everyday creative shooting.",
       "rating": 4.7,
       "stock": 5,
-      "userId": "QLC9S6aT-eQ",
-      "productId": "3",
-      "quantity": 2
+      "userId": "NWdYytKWWrk",
+      "productId": "3"
     },
     {
-      "id": "hA72rrr9uBc",
-      "name": "Olympus OM-2 MD",
-      "brand": "Olympus",
-      "category": "Mirrorless",
-      "price": 42990,
-      "image": "/src/assets/images/products/olympus-om.jpg",
-      "description": "A timeless 35mm film SLR renowned for its precision engineering and elegant design. The Olympus OM-2 MD features aperture-priority automatic exposure, through-the-lens (TTL) metering, and a compact, lightweight body that makes it a favorite among film photography enthusiasts. Its exceptional Zuiko lens compatibility and reliable performance deliver beautifully detailed images, making it an excellent choice for both collectors and photographers seeking an authentic analog shooting experience.",
+      "id": "iVER6gi82Zc",
+      "name": "Canon AE-1 Program",
+      "brand": "Canon",
+      "category": "Film camera",
+      "price": 38700,
+      "image": "/src/assets/images/products/canon-ae.jpg",
+      "description": "High performance camera for photography and video.",
       "rating": 4.7,
       "stock": 5,
-      "userId": "QLC9S6aT-eQ",
-      "productId": "1",
+      "userId": "NWdYytKWWrk",
+      "productId": "6"
+    }
+  ],
+  "cart": [
+    {
+      "id": "_BQMkJ6DKXM",
+      "name": " Sony a9 III",
+      "brand": "Sony",
+      "category": "Mirrorless",
+      "price": 529990,
+      "image": "/src/assets/images/products/sony-ilce-1.jpg",
+      "description": "The Sony a9 III is a flagship full-frame mirrorless camera engineered for professionals who demand exceptional speed, precision, and image quality. Featuring advanced autofocus, high-speed continuous shooting, and outstanding low-light performance, it excels in sports, wildlife, events, and cinematic video production. Its durable design, intuitive controls, and cutting-edge technology make it the perfect companion for capturing every decisive moment with confidence.",
+      "rating": 4.7,
+      "stock": 5,
+      "userId": "NWdYytKWWrk",
+      "productId": "2",
       "quantity": 1
     },
     {
-      "id": "S1_thG_h6ys",
+      "id": "RAaa4azFw40",
       "name": "Nikon F Photomic FTn",
       "brand": "Nikon",
       "category": "DSLR",
@@ -516,55 +520,63 @@
       "description": "The Nikon F Photomic FTn is an iconic 35mm film SLR camera that helped define professional photography. Introduced in the late 1960s, it features the renowned Photomic FTn prism finder with center-weighted TTL metering, a rugged all-metal construction, and the legendary Nikon F mount. Built for reliability and precision, the F Photomic FTn remains a favorite among film photography enthusiasts, collectors, and professionals seeking a timeless shooting experience",
       "rating": 4.7,
       "stock": 5,
-      "userId": "QLC9S6aT-eQ",
+      "userId": "NWdYytKWWrk",
       "productId": "5",
       "quantity": 1
     }
   ],
   "orders": [
     {
-      "id": "ORD001",
+      "id": "1",
       "userId": "QLC9S6aT-eQ",
-      "customer": {
-        "fullname": "Afla Shareen",
-        "email": "aflasherin07@gmail.com",
-        "phone": "9876543210"
-      },
-      "shippingAddress": {
-        "address": "ABC House",
-        "city": "Malappuram",
-        "state": "Kerala",
-        "pinCode": "676505"
-      },
-      "paymentMethod": "Cash on Delivery",
       "items": [
         {
-          "productId": "33",
-          "name": "Sony Alpha 6000 (APS-C)",
-          "price": 59990,
-          "quantity": 1,
-          "image": "/src/assets/images/products/sony-ilce-7rm3.jpg"
-        },
-        {
-          "productId": "34",
+          "productId": "9",
           "name": "Sony α7 V (A7M5)",
           "price": 270990,
-          "quantity": 1,
-          "image": "/src/assets/images/products/sony-a7v.jpg"
-        },
-        {
-          "productId": "35",
-          "name": "Sony a9 III",
-          "price": 529990,
-          "quantity": 1,
-          "image": "/src/assets/images/products/sony-ilce-1.jpg"
+          "quantity": 1
         }
       ],
-      "subtotal": 860970,
-      "shipping": 0,
-      "total": 860970,
+      "total": 270990,
       "status": "Pending",
-      "orderDate": "2026-08-02T18:30:00Z"
+      "orderedAt": "2026-08-03T09:30:00.000Z"
+    },
+    {
+      "userId": "QLC9S6aT-eQ",
+      "items": [
+        {
+          "productId": "2",
+          "name": " Sony a9 III",
+          "image": "/src/assets/images/products/sony-ilce-1.jpg",
+          "price": 529990,
+          "quantity": 1
+        },
+        {
+          "productId": "3",
+          "name": "Sony Alpha 6000 (APS-C)",
+          "image": "/src/assets/images/products/sony-ilce-7rm3.jpg",
+          "price": 59990,
+          "quantity": 2
+        },
+        {
+          "productId": "1",
+          "name": "Olympus OM-2 MD",
+          "image": "/src/assets/images/products/olympus-om.jpg",
+          "price": 42990,
+          "quantity": 1
+        },
+        {
+          "productId": "5",
+          "name": "Nikon F Photomic FTn",
+          "image": "/src/assets/images/products/nikon-film.jpg",
+          "price": 24990,
+          "quantity": 1
+        }
+      ],
+      "total": 717950,
+      "status": "Pending",
+      "orderedAt": "2026-08-03T10:39:16.122Z",
+      "id": "2QU3f4sTy28"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
