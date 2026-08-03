@@ -17,6 +17,8 @@ import Register from '../pages/user/auth/Register';
 import ProtectedRoute from './ProtectedRoute';
 import Hero from '../components/hero/Hero';
 import PublicRoute from './PublicRoute';
+import OrderSuccess from '../orders/OrderSuccess';
+import Orders from '../orders/Orders';
 
 function AppRoutes() {
     return (
@@ -47,6 +49,8 @@ function AppRoutes() {
                     <Route path="/wishlist" element={<Wishlist />} />
                     <Route path="/cart" element={<Cart />} />
                     <Route path="/checkout" element={<Checkout />} />
+                    <Route path='/ordersuccess' element={<OrderSuccess />}/>
+                    <Route path='/orders' element={<Orders />}/>
                 </Route>
             </Routes>
         </BrowserRouter>

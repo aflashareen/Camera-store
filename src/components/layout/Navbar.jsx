@@ -60,7 +60,7 @@ function Navbar() {
               placeholder="Search cameras..."
               value={search}
               onChange={handleSearch}
-              className="w-64 pl-10 pr-4 py-1 border focus:outline-none focus:ring-2 focus:ring-black"
+              className="w-64 pl-10 pr-4 py-1 border-gray-200 focus:outline-none focus:ring-2 focus:ring-black rounded"
             />
           </div>
 

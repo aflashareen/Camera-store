@@ -523,60 +523,45 @@
       "userId": "NWdYytKWWrk",
       "productId": "5",
       "quantity": 1
+    },
+    {
+      "id": "9GGrO971LHc",
+      "name": " Sony a9 III",
+      "brand": "Sony",
+      "category": "Mirrorless",
+      "price": 529990,
+      "image": "/src/assets/images/products/sony-ilce-1.jpg",
+      "description": "The Sony a9 III is a flagship full-frame mirrorless camera engineered for professionals who demand exceptional speed, precision, and image quality. Featuring advanced autofocus, high-speed continuous shooting, and outstanding low-light performance, it excels in sports, wildlife, events, and cinematic video production. Its durable design, intuitive controls, and cutting-edge technology make it the perfect companion for capturing every decisive moment with confidence.",
+      "rating": 4.7,
+      "stock": 5,
+      "userId": "QLC9S6aT-eQ",
+      "productId": "2",
+      "quantity": 1
     }
   ],
   "orders": [
     {
-      "id": "1",
       "userId": "QLC9S6aT-eQ",
       "items": [
         {
-          "productId": "9",
-          "name": "Sony α7 V (A7M5)",
-          "price": 270990,
+          "productId": "8",
+          "name": "Sony Alpha 7 III",
+          "image": "/src/assets/images/products/sony-a7.jpg",
+          "price": 127490,
+          "quantity": 1
+        },
+        {
+          "productId": "6",
+          "name": "Canon AE-1 Program",
+          "image": "/src/assets/images/products/canon-ae.jpg",
+          "price": 38700,
           "quantity": 1
         }
       ],
-      "total": 270990,
+      "total": 166190,
       "status": "Pending",
-      "orderedAt": "2026-08-03T09:30:00.000Z"
-    },
-    {
-      "userId": "QLC9S6aT-eQ",
-      "items": [
-        {
-          "productId": "2",
-          "name": " Sony a9 III",
-          "image": "/src/assets/images/products/sony-ilce-1.jpg",
-          "price": 529990,
-          "quantity": 1
-        },
-        {
-          "productId": "3",
-          "name": "Sony Alpha 6000 (APS-C)",
-          "image": "/src/assets/images/products/sony-ilce-7rm3.jpg",
-          "price": 59990,
-          "quantity": 2
-        },
-        {
-          "productId": "1",
-          "name": "Olympus OM-2 MD",
-          "image": "/src/assets/images/products/olympus-om.jpg",
-          "price": 42990,
-          "quantity": 1
-        },
-        {
-          "productId": "5",
-          "name": "Nikon F Photomic FTn",
-          "image": "/src/assets/images/products/nikon-film.jpg",
-          "price": 24990,
-          "quantity": 1
-        }
-      ],
-      "total": 717950,
-      "status": "Pending",
-      "orderedAt": "2026-08-03T10:39:16.122Z",
-      "id": "2QU3f4sTy28"
+      "orderedAt": "2026-08-03T11:05:36.872Z",
+      "id": "DBZKDtPZu0k"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

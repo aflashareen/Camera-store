@@ -11,6 +11,6 @@ export const addOrder = async (order) => {
 };
 
 export const getOrderById = async (id) => {
-  const { data } = await api.get(`/orders/${id}`);
+  const { data } = await api.get(`/orders?userId=${id}`);
   return data;
 };

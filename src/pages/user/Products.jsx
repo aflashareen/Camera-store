@@ -116,6 +116,16 @@ function Products() {
     });
   };
 
+  const handleBuynow = (e) =>{
+    e.preventDefault();
+
+    if(!user){
+      navigate("/login");
+      return;
+    }
+    navigate("/checkout")
+  }
+
   return (
     <div>
       <div className="w-full p-10 flex flex-row justify-center">
@@ -167,6 +177,13 @@ function Products() {
             className="mt-10 w-full bg-black text-white py-4 rounded-lg hover:bg-zinc-800 transition"
           >
             Add to Cart
+          </button>
+
+          <button
+            onClick={handleBuynow}
+            className="mt-2 w-full bg-black text-white py-4 rounded-lg hover:bg-zinc-800 transition"
+          >
+            Buy Now
           </button>
 
         </div>

@@ -17,15 +17,13 @@ function Checkout() {
   const placeOrderMutation = useMutation({
     mutationFn: addOrder,
 
-    onSuccess: async () => {
-      await Promise.all(
-        cart.map((item) => removeFromCart(item.id))
-      );
+onSuccess: async () => {
+  await Promise.all(cart.map(item => removeFromCart(item.id)));
 
-      queryClient.invalidateQueries({ queryKey: ["cart"] });
+  queryClient.invalidateQueries({ queryKey: ["cart"] });
 
-      navigate("/orders");
-    }
+  navigate("/ordersuccess");
+}
   })
 
   const [formData, setFormData] = useState({
@@ -103,6 +101,8 @@ function Checkout() {
       status: "Pending",
       orderedAt: new Date().toISOString(),
     };
+
+    navigate("/ordersuccess")
 
     placeOrderMutation.mutate(order);
   };
