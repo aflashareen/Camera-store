@@ -452,20 +452,6 @@
   ],
   "cart": [
     {
-      "id": "ot0hITY5yt0",
-      "name": "Sony Alpha 6000 (APS-C)",
-      "brand": "Sony",
-      "category": "Mirrorless",
-      "price": 59990,
-      "image": "/src/assets/images/products/sony-ilce-7rm3.jpg",
-      "description": "The Sony Alpha 6000 is a compact APS-C mirrorless camera designed for photographers who demand speed, portability, and exceptional image quality. Featuring a 24.3MP Exmor APS-C sensor, fast hybrid autofocus, and continuous shooting up to 11 fps, it captures sharp photos and Full HD videos with remarkable detail. Its lightweight design, interchangeable E-mount lens system, and intuitive controls make it an excellent choice for travel, street photography, portraits, and everyday creative shooting.",
-      "rating": 4.7,
-      "stock": 5,
-      "userId": "QLC9S6aT-eQ",
-      "productId": "3",
-      "quantity": 1
-    },
-    {
       "id": "0E3LE6JZnSI",
       "name": "Sony α7 V (A7M5)",
       "brand": "Sony",
@@ -478,8 +464,67 @@
       "userId": "QLC9S6aT-eQ",
       "productId": "9",
       "quantity": 1
+    },
+    {
+      "id": "mLckxBn-igE",
+      "name": " Sony a9 III",
+      "brand": "Sony",
+      "category": "Mirrorless",
+      "price": 529990,
+      "image": "/src/assets/images/products/sony-ilce-1.jpg",
+      "description": "The Sony a9 III is a flagship full-frame mirrorless camera engineered for professionals who demand exceptional speed, precision, and image quality. Featuring advanced autofocus, high-speed continuous shooting, and outstanding low-light performance, it excels in sports, wildlife, events, and cinematic video production. Its durable design, intuitive controls, and cutting-edge technology make it the perfect companion for capturing every decisive moment with confidence.",
+      "rating": 4.7,
+      "stock": 5,
+      "userId": "QLC9S6aT-eQ",
+      "productId": "2",
+      "quantity": 1
     }
   ],
-  "orders": [],
+  "orders": [
+    {
+      "id": "ORD001",
+      "userId": "QLC9S6aT-eQ",
+      "customer": {
+        "fullname": "Afla Shareen",
+        "email": "aflasherin07@gmail.com",
+        "phone": "9876543210"
+      },
+      "shippingAddress": {
+        "address": "ABC House",
+        "city": "Malappuram",
+        "state": "Kerala",
+        "pinCode": "676505"
+      },
+      "paymentMethod": "Cash on Delivery",
+      "items": [
+        {
+          "productId": "33",
+          "name": "Sony Alpha 6000 (APS-C)",
+          "price": 59990,
+          "quantity": 1,
+          "image": "/src/assets/images/products/sony-ilce-7rm3.jpg"
+        },
+        {
+          "productId": "34",
+          "name": "Sony α7 V (A7M5)",
+          "price": 270990,
+          "quantity": 1,
+          "image": "/src/assets/images/products/sony-a7v.jpg"
+        },
+        {
+          "productId": "35",
+          "name": "Sony a9 III",
+          "price": 529990,
+          "quantity": 1,
+          "image": "/src/assets/images/products/sony-ilce-1.jpg"
+        }
+      ],
+      "subtotal": 860970,
+      "shipping": 0,
+      "total": 860970,
+      "status": "Pending",
+      "orderDate": "2026-08-02T18:30:00Z"
+    }
+  ],
   "$schema": "./node_modules/json-server/schema.json"
 }
