@@ -1,13 +1,16 @@
 import { useQuery } from "@tanstack/react-query";
+import { getUserById } from "../services/userService";
 
-const getCurrentUser = () => {
-  return JSON.parse(localStorage.getItem("user"));
-};
 
 export const useCurrentUser = () => {
+
+  const userId = localStorage.getItem("userId");
+
   return useQuery({
-    queryKey: ["currentUser"],
-    queryFn: () => JSON.parse(localStorage.getItem("user")),
-    staleTime: Infinity,
+
+    queryKey: ["currentUser", userId],
+    queryFn: () => getUserById(userId),
+    enabled: !!userId,
+
   });
 };

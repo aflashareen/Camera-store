@@ -33,11 +33,11 @@ function Login() {
         return;
       }
 
-      localStorage.setItem("user", JSON.stringify(user));
+      localStorage.setItem("userId", user.id);
 
-      queryClient.setQueryData(["currentUser"], user);
+      queryClient.setQueryData(["currentUser", user.id], user);
 
-      navigate("/profile");
+      navigate("/");
 
     },
     onError: (error) => {

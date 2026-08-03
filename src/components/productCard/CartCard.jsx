@@ -65,7 +65,7 @@ function CartCard({ product }) {
 
   return (
    <Link to={`/product/${product.productId}`}>
-  <div className="flex gap-6 bg-white rounded-xl shadow-md p-4 relative w-300">
+  <div className="flex gap-10 bg-white rounded-xl shadow-md p-4 relative w-300">
 
     <img
       src={product.image}
@@ -77,7 +77,7 @@ function CartCard({ product }) {
 
       <button
         onClick={handleRemove}
-        className="absolute top-4 right-4"
+        className= "absolute top-20 right-10"
       >
         <Trash2 className="text-red-500" size={20} />
       </button>

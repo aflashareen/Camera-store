@@ -5,13 +5,17 @@ import { useQuery } from "@tanstack/react-query";
 import { getCart } from "../../services/cartService";
 import CartCard from "../../components/productCard/CartCard";
 import { Link } from "react-router-dom";
+import { useCurrentUser } from "../../hooks/UseCurrentUser";
 
 function Cart() {
   const navigate = useNavigate();
 
+  const { data: user } = useCurrentUser();
+
   const { data: cart = [], isLoading } = useQuery({
     queryKey: ["cart"],
     queryFn: getCart,
+    enabled: !!user,
   });
 
   if (isLoading) return <h2>Loading...</h2>;

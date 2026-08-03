@@ -16,6 +16,7 @@ import Login from '../pages/user/auth/Login';
 import Register from '../pages/user/auth/Register';
 import ProtectedRoute from './ProtectedRoute';
 import Hero from '../components/hero/Hero';
+import PublicRoute from './PublicRoute';
 
 function AppRoutes() {
     return (
@@ -30,8 +31,11 @@ function AppRoutes() {
                     <Route path="/product/:id" element={<Products />} />
                     <Route path='/about' element={<About />} />
 
+                    <Route element={<PublicRoute/>}>
                     <Route path="/login" element={<Login />} />
                     <Route path="/register" element={<Register />} />
+                    </Route>
+                    
                     <Route
                         path="/profile"
                         element={

@@ -4,14 +4,18 @@ import { useNavigate } from "react-router-dom";
 import { getWishlist, removeFromWishlist } from "../../services/wishlistService";
 import { ArrowLeft } from "lucide-react";
 import WishlistCard from "../../components/productCard/WishlistCard";
+import { useCurrentUser } from "../../hooks/UseCurrentUser";
 
 function Wishlist() {
   const navigate = useNavigate();
   const queryClient = useQueryClient();
 
+  const { data: user } = useCurrentUser();
+
   const { data: wishlist = [], isLoading } = useQuery({
     queryKey: ["wishlist"],
     queryFn: getWishlist,
+    enabled: !!user,
   });
 
   if (isLoading) return <h2>Loading...</h2>;

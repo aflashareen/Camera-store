@@ -3,7 +3,7 @@
     {
       "id": "1",
       "name": "Olympus OM-2 MD",
-      "brand": "Canon",
+      "brand": "Olympus",
       "category": "Mirrorless",
       "price": 42990,
       "image": "/src/assets/images/products/olympus-om.jpg",
@@ -80,7 +80,7 @@
     {
       "id": "8",
       "name": "Sony Alpha 7 III",
-      "brand": "Canon",
+      "brand": "Sony",
       "category": "Mirrorless Camera",
       "price": 127490,
       "image": "/src/assets/images/products/sony-a7.jpg",
@@ -322,7 +322,7 @@
     {
       "id": "30",
       "name": "flash",
-      "brand": "Canon",
+      "brand": "Sony",
       "category": "Accessories",
       "price": 299990,
       "image": "/src/assets/images/products/accessory-flash.jpg",
@@ -448,6 +448,19 @@
       "stock": 5,
       "userId": "QLC9S6aT-eQ",
       "productId": "3"
+    },
+    {
+      "id": "e9iKOvo4LoA",
+      "name": "Olympus OM-2 MD",
+      "brand": "Olympus",
+      "category": "Mirrorless",
+      "price": 42990,
+      "image": "/src/assets/images/products/olympus-om.jpg",
+      "description": "A timeless 35mm film SLR renowned for its precision engineering and elegant design. The Olympus OM-2 MD features aperture-priority automatic exposure, through-the-lens (TTL) metering, and a compact, lightweight body that makes it a favorite among film photography enthusiasts. Its exceptional Zuiko lens compatibility and reliable performance deliver beautifully detailed images, making it an excellent choice for both collectors and photographers seeking an authentic analog shooting experience.",
+      "rating": 4.7,
+      "stock": 5,
+      "userId": "QLC9S6aT-eQ",
+      "productId": "1"
     }
   ],
   "cart": [
@@ -478,6 +491,34 @@
       "userId": "QLC9S6aT-eQ",
       "productId": "3",
       "quantity": 2
+    },
+    {
+      "id": "hA72rrr9uBc",
+      "name": "Olympus OM-2 MD",
+      "brand": "Olympus",
+      "category": "Mirrorless",
+      "price": 42990,
+      "image": "/src/assets/images/products/olympus-om.jpg",
+      "description": "A timeless 35mm film SLR renowned for its precision engineering and elegant design. The Olympus OM-2 MD features aperture-priority automatic exposure, through-the-lens (TTL) metering, and a compact, lightweight body that makes it a favorite among film photography enthusiasts. Its exceptional Zuiko lens compatibility and reliable performance deliver beautifully detailed images, making it an excellent choice for both collectors and photographers seeking an authentic analog shooting experience.",
+      "rating": 4.7,
+      "stock": 5,
+      "userId": "QLC9S6aT-eQ",
+      "productId": "1",
+      "quantity": 1
+    },
+    {
+      "id": "S1_thG_h6ys",
+      "name": "Nikon F Photomic FTn",
+      "brand": "Nikon",
+      "category": "DSLR",
+      "price": 24990,
+      "image": "/src/assets/images/products/nikon-film.jpg",
+      "description": "The Nikon F Photomic FTn is an iconic 35mm film SLR camera that helped define professional photography. Introduced in the late 1960s, it features the renowned Photomic FTn prism finder with center-weighted TTL metering, a rugged all-metal construction, and the legendary Nikon F mount. Built for reliability and precision, the F Photomic FTn remains a favorite among film photography enthusiasts, collectors, and professionals seeking a timeless shooting experience",
+      "rating": 4.7,
+      "stock": 5,
+      "userId": "QLC9S6aT-eQ",
+      "productId": "5",
+      "quantity": 1
     }
   ],
   "orders": [

@@ -1,7 +1,11 @@
 import api from "./api";
 
 export const getWishlist = async () =>{
-    const { data }= await api.get("/wishlist");
+    const userId = localStorage.getItem("userId");
+
+    if(!userId) return [];
+
+    const { data }= await api.get(`/wishlist?userId=${userId}`);
     return data;
 }
 export const addToWishlist = async (product) =>{

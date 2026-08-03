@@ -1,7 +1,11 @@
 import api from "./api";
 
 export const getCart = async () => {
-  const { data } = await api.get("/cart");
+  const userId = localStorage.getItem("userId");
+
+  if(!userId) return [];
+
+  const { data } = await api.get(`/cart?userId=${userId}`);
   return data;
 };
 
