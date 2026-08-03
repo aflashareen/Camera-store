@@ -106,7 +106,7 @@ const handleCart = (e) => {
 };
   return (
     <Link to={`/product/${product.id}`}>
-      <div className="group relative overflow-hidden rounded bg-white border border-zinc-950 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
+      <div className="group relative overflow-hidden rounded-2xl bg-white border border-zinc-300 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
 
         <button
           onClick={handleWishlist}
@@ -124,7 +124,7 @@ const handleCart = (e) => {
           className="w-full h-80 object-cover"
         />
 
-        <div className="p-4 bg-[#11111] text-black">
+        <div className="p-4 bg-black text-white">
           <h2 className="font-semibold text-lg">{product.name}</h2>
 
           <p className="text-gray-300">{product.brand}</p>
@@ -135,7 +135,7 @@ const handleCart = (e) => {
 
           <button
             onClick={handleCart}
-            className="mt-4 w-full bg-black text-white py-2 rounded hover:bg-gray-200 transition"
+            className="mt-4 w-full bg-white text-black py-2 rounded hover:bg-gray-200 transition"
           >
             Add to Cart
           </button>

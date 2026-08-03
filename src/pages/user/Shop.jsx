@@ -1,9 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
 import { getProducts } from "../../services/productService";
 import ProductCard from "../../components/productCard/ProductCard";
-import { useSearchParams } from "react-router-dom";
-
+import { useNavigate, useSearchParams } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
 function Shop() {
+  const navigate = useNavigate();
   const { data: products = [], isLoading, error } = useQuery({
     queryKey: ["products"],
     queryFn: getProducts,
@@ -47,12 +48,22 @@ function Shop() {
       return 0;
     });
   return (
-    <div className="grid grid-cols-3 gap-8 p-8 bg-zinc-950">
-      {
-        filteredProducts.map(product => (
-          <ProductCard key={product.id} product={product} />
-        ))
-      }
+    <div className="bg-zinc-300">
+      <button
+        onClick={() => navigate(-1)}
+        className="flex items-center gap-2 pt-4 pl-2 text-gray-700 hover:text-black transition"
+      >
+        <ArrowLeft size={20} />
+        Back
+      </button>
+
+      <div className="grid grid-cols-3 gap-8 p-8 bg-zinc-300">
+        {
+          filteredProducts.map(product => (
+            <ProductCard key={product.id} product={product} />
+          ))
+        }
+      </div>
     </div>
   );
 }
