@@ -1,8 +1,9 @@
-import ProductCard from "../../components/productCard/ProductCard";
+import ProductCard from "../../components/productCard/WishlistCard";
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import { useNavigate } from "react-router-dom";
 import { getWishlist, removeFromWishlist } from "../../services/wishlistService";
 import { ArrowLeft } from "lucide-react";
+import WishlistCard from "../../components/productCard/WishlistCard";
 
 function Wishlist() {
   const navigate = useNavigate();
@@ -11,16 +12,6 @@ function Wishlist() {
   const { data: wishlist = [], isLoading } = useQuery({
     queryKey: ["wishlist"],
     queryFn: getWishlist,
-  });
-
-  const deleteMutation = useMutation({
-    mutationFn: removeFromWishlist,
-
-    onSuccess: () => {
-      queryClient.invalidateQueries({
-        queryKey: ["wishlist"],
-      });
-    },
   });
 
   if (isLoading) return <h2>Loading...</h2>;
@@ -45,15 +36,10 @@ function Wishlist() {
 
       <div className="grid md:grid-cols-3 gap-10">
         {wishlist.map((product) => (
-          <div key={product.id} className="relative">
-            <button
-              onClick={() => deleteMutation.mutate(product.id)}
-              className="absolute top-2 right-2 bg-red-500 text-white rounded-full w-8 h-8"
-            >
-              ✕
-            </button>
-            <ProductCard product={product} />
-          </div>
+          <WishlistCard
+            key={product.id}
+            product={product}
+          />
         ))}
       </div>
     </div>

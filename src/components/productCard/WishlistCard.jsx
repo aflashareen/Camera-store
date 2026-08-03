@@ -1,14 +1,13 @@
 import React from "react";
-import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { Heart } from "lucide-react";
-import { addToCart } from "../../redux/slices/CartSlice";
 import { useCurrentUser } from "../../hooks/UseCurrentUser";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { removeFromWishlist } from "../../services/wishlistService";
+import { addToCart } from "../../services/cartService";
 
 function WishlistCard({ product }) {
-  const dispatch = useDispatch();
+
   const navigate = useNavigate();
   const queryClient = useQueryClient();
 
@@ -33,6 +32,14 @@ function WishlistCard({ product }) {
 
     removeMutation.mutate(product.id);
   };
+  const cartMutation = useMutation({
+    mutationFn: addToCart,
+    onSuccess: () => {
+      queryClient.invalidateQueries({
+        queryKey: ["cart"],
+      });
+    },
+  });
 
   const handleCart = (e) => {
     e.preventDefault();
@@ -42,19 +49,12 @@ function WishlistCard({ product }) {
       return;
     }
 
-    dispatch(
-      addToCart({
-        id: product.productId,
-        name: product.name,
-        brand: product.brand,
-        category: product.category,
-        price: product.price,
-        image: product.image,
-        description: product.description,
-        rating: product.rating,
-        stock: product.stock,
-      })
-    );
+    cartMutation.mutate({
+      ...product,
+      userId: user.id,
+      productId: product.productId,
+      quantity: 1,
+    });
   };
 
   return (

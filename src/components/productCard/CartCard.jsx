@@ -1,11 +1,12 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Trash2 } from "lucide-react";
+import { Minus, Plus, Trash2 } from "lucide-react";
 import { useCurrentUser } from "../../hooks/UseCurrentUser";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { removeFromCart } from "../../services/cartService";
+import { removeFromCart, updateCart } from "../../services/cartService";
 
 function CartCard({ product }) {
+
   const navigate = useNavigate();
   const queryClient = useQueryClient();
 
@@ -32,36 +33,92 @@ function CartCard({ product }) {
     removeMutation.mutate(product.id);
   };
 
-  return (
-    <Link to={`/product/${product.productId}`}>
-      <div className="relative cursor-pointer hover:shadow-lg transition">
+  const updateMutation = useMutation({
+    mutationFn: updateCart,
 
+    onSuccess: () => {
+      queryClient.invalidateQueries({
+        queryKey: ["cart"],
+      });
+    },
+  });
+
+  const increaseQuantity = (e) => {
+    e.preventDefault();
+
+    updateMutation.mutate({
+      id: product.id,
+      quantity: (product.quantity || 1) + 1
+    })
+  };
+
+  const decreaseQuantity = (e) => {
+    e.preventDefault();
+
+    if ((product.quantity || 1) === 1) return;
+
+    updateMutation.mutate({
+      id: product.id,
+      quantity: (product.quantity || 1) - 1
+    })
+  };
+
+  return (
+   <Link to={`/product/${product.productId}`}>
+  <div className="flex gap-6 bg-white rounded-xl shadow-md p-4 relative w-300">
+
+    <img
+      src={product.image}
+      alt={product.name}
+      className="w-40 h-40 object-cover rounded-lg"
+    />
+
+    <div className="flex-1 flex flex-col justify-between">
+
+      <button
+        onClick={handleRemove}
+        className="absolute top-4 right-4"
+      >
+        <Trash2 className="text-red-500" size={20} />
+      </button>
+
+      <div>
+        <h2 className="text-xl font-semibold">
+          {product.name}
+        </h2>
+
+        <p className="text-gray-500">
+          {product.brand}
+        </p>
+
+        <p className="text-2xl font-bold mt-3">
+          ₹{product.price.toLocaleString()}
+        </p>
+      </div>
+
+      <div className="flex items-center gap-4 mt-4">
         <button
-          onClick={handleRemove}
-          className="absolute top-3 right-3 bg-white rounded-full p-2 shadow-md"
+          onClick={decreaseQuantity}
+          className="border rounded-md p-2"
         >
-          <Trash2 color="red" size={18} />
+          <Minus size={16} />
         </button>
 
-        <img
-          src={product.image}
-          alt={product.name}
-          className="w-full h-80 object-cover"
-        />
+        <span className="font-semibold text-lg">
+          {product.quantity}
+        </span>
 
-        <div className="p-4 bg-black text-white">
-          <h2 className="font-semibold text-lg">
-            {product.name}
-          </h2>
-
-          <p>{product.brand}</p>
-
-          <p className="font-bold mt-2">
-            ₹{product?.price?.toLocaleString?.()}
-          </p>
-        </div>
+        <button
+          onClick={increaseQuantity}
+          className="border rounded-md p-2"
+        >
+          <Plus size={16} />
+        </button>
       </div>
-    </Link>
+
+    </div>
+  </div>
+</Link>
   );
 }
 

@@ -424,7 +424,7 @@
   ],
   "wishlist": [
     {
-      "id": "-ywKIDQN40A",
+      "id": "B-2IXQauC6s",
       "name": " Sony a9 III",
       "brand": "Sony",
       "category": "Mirrorless",
@@ -437,7 +437,7 @@
       "productId": "2"
     },
     {
-      "id": "LREeLlv-wqU",
+      "id": "l0fIu8JJzIM",
       "name": "Sony Alpha 6000 (APS-C)",
       "brand": "Sony",
       "category": "Mirrorless",
@@ -452,20 +452,6 @@
   ],
   "cart": [
     {
-      "id": "0E3LE6JZnSI",
-      "name": "Sony α7 V (A7M5)",
-      "brand": "Sony",
-      "category": "Mirrorless",
-      "price": 270990,
-      "image": "/src/assets/images/products/sony-a7m5.jpg",
-      "description": "The Sony α7 V (A7M5) is a premium full-frame mirrorless camera featuring a 33MP sensor, AI-powered autofocus, 5-axis image stabilization, and professional 4K video recording. Designed for photographers and filmmakers, it delivers exceptional image quality, fast performance, and reliable tracking for portraits, wildlife, sports, and cinematic content.",
-      "rating": 4.9,
-      "stock": 5,
-      "userId": "QLC9S6aT-eQ",
-      "productId": "9",
-      "quantity": 1
-    },
-    {
       "id": "mLckxBn-igE",
       "name": " Sony a9 III",
       "brand": "Sony",
@@ -478,6 +464,20 @@
       "userId": "QLC9S6aT-eQ",
       "productId": "2",
       "quantity": 1
+    },
+    {
+      "id": "F4cCtKD-IYI",
+      "name": "Sony Alpha 6000 (APS-C)",
+      "brand": "Sony",
+      "category": "Mirrorless",
+      "price": 59990,
+      "image": "/src/assets/images/products/sony-ilce-7rm3.jpg",
+      "description": "The Sony Alpha 6000 is a compact APS-C mirrorless camera designed for photographers who demand speed, portability, and exceptional image quality. Featuring a 24.3MP Exmor APS-C sensor, fast hybrid autofocus, and continuous shooting up to 11 fps, it captures sharp photos and Full HD videos with remarkable detail. Its lightweight design, interchangeable E-mount lens system, and intuitive controls make it an excellent choice for travel, street photography, portraits, and everyday creative shooting.",
+      "rating": 4.7,
+      "stock": 5,
+      "userId": "QLC9S6aT-eQ",
+      "productId": "3",
+      "quantity": 2
     }
   ],
   "orders": [

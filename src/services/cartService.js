@@ -13,3 +13,10 @@ export const addToCart = async (product) => {
 export const removeFromCart = async (id) => {
   await api.delete(`/cart/${id}`);
 };
+
+export const updateCart = async ({ id, quantity }) =>{
+  const { data } = await api.patch(`/cart/${id}`,{
+    quantity,
+  });
+  return data;
+}
