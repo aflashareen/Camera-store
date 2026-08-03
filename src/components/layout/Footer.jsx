@@ -8,7 +8,7 @@ function Footer() {
 
         <div className="grid md:grid-cols-4 gap-10">
 
-          {/* Logo */}
+
           <div>
             <h2 className="text-3xl font-bold text-white tracking-widest">
               LENSÉ
@@ -20,7 +20,7 @@ function Footer() {
             </p>
           </div>
 
-          {/* Quick Links */}
+
           <div>
             <h3 className="text-white font-semibold mb-4">
               Quick Links
@@ -34,21 +34,40 @@ function Footer() {
             </ul>
           </div>
 
-          {/* Categories */}
+
           <div>
             <h3 className="text-white font-semibold mb-4">
               Categories
             </h3>
 
             <ul className="space-y-3">
-              <li>Mirrorless</li>
-              <li>DSLR</li>
-              <li>Lenses</li>
-              <li>Accessories</li>
+              <li>
+                <Link to="/shop?category=Mirrorless">
+                  Mirrorless
+                </Link>
+              </li>
+
+              <li>
+                <Link to="/shop?category=DSLR">
+                  DSLR
+                </Link>
+              </li>
+
+              <li>
+                <Link to="/shop?category=Lenses">
+                  Lenses
+                </Link>
+              </li>
+
+              <li>
+                <Link to="/shop?category=Accessories">
+                  Accessories
+                </Link>
+              </li>
             </ul>
           </div>
 
-          {/* Support */}
+
           <div>
             <h3 className="text-white font-semibold mb-4">
               Support

@@ -5,7 +5,7 @@ function CategoryCard({ category }) {
     const navigate = useNavigate();
 
   return (
-    <div onClick={()=> navigate(`/shop?category=${encodeURIComponent(category.name)}`)}
+    <div onClick={()=>  navigate(`/shop?category=${encodeURIComponent(category.name)}`)}
     className='cursor-pointer group overflow-hidden rounded-xl '
     >
         <img 

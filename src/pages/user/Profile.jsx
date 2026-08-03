@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { useCurrentUser } from "../../hooks/UseCurrentUser";
 import { useQueryClient } from "@tanstack/react-query";
-import { User, Mail, Heart, ShoppingBag, LogOut, BadgeCheck ,Package} from "lucide-react";
+import { User, Mail, Heart, ShoppingBag, LogOut, BadgeCheck, Package, ArrowLeft } from "lucide-react";
 
 function Profile() {
   const { data: user, isLoading } = useCurrentUser();
@@ -24,9 +24,15 @@ function Profile() {
 
   return (
     <div className=" py-12 px-6 bg-zinc-300">
+      <button
+        onClick={() => navigate(-1)}
+        className="flex items-center gap-2 mb-6 text-gray-700 hover:text-black transition"
+      >
+        <ArrowLeft size={20} />
+        Back
+      </button>
 
       <div className="max-w-3xl mx-auto rounded bg-white shadow-md p-8">
-
         <div className="flex flex-col items-center">
           <div className="w-24 h-24 rounded-full bg-black text-white flex items-center justify-center text-4xl font-bold">
             {user.fullname.charAt(0).toUpperCase()}
