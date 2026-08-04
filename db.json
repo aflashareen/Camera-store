@@ -523,20 +523,6 @@
       "userId": "NWdYytKWWrk",
       "productId": "5",
       "quantity": 1
-    },
-    {
-      "id": "9GGrO971LHc",
-      "name": " Sony a9 III",
-      "brand": "Sony",
-      "category": "Mirrorless",
-      "price": 529990,
-      "image": "/src/assets/images/products/sony-ilce-1.jpg",
-      "description": "The Sony a9 III is a flagship full-frame mirrorless camera engineered for professionals who demand exceptional speed, precision, and image quality. Featuring advanced autofocus, high-speed continuous shooting, and outstanding low-light performance, it excels in sports, wildlife, events, and cinematic video production. Its durable design, intuitive controls, and cutting-edge technology make it the perfect companion for capturing every decisive moment with confidence.",
-      "rating": 4.7,
-      "stock": 5,
-      "userId": "QLC9S6aT-eQ",
-      "productId": "2",
-      "quantity": 1
     }
   ],
   "orders": [
@@ -562,6 +548,22 @@
       "status": "Pending",
       "orderedAt": "2026-08-03T11:05:36.872Z",
       "id": "DBZKDtPZu0k"
+    },
+    {
+      "userId": "QLC9S6aT-eQ",
+      "items": [
+        {
+          "productId": "2",
+          "name": " Sony a9 III",
+          "image": "/src/assets/images/products/sony-ilce-1.jpg",
+          "price": 529990,
+          "quantity": 1
+        }
+      ],
+      "total": 529990,
+      "status": "Pending",
+      "orderedAt": "2026-08-04T05:08:21.141Z",
+      "id": "RPh2vi92Mp0"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

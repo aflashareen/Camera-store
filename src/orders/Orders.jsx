@@ -27,69 +27,77 @@ function Orders() {
   }
 
   return (
-    <div className="max-w-6xl mx-auto py-10 px-6">
-            <button
-        onClick={() => navigate(-1)}
-        className="flex items-center gap-2 mb-6 text-gray-700 hover:text-black transition"
-      >
-        <ArrowLeft size={20} />
-        Back
-      </button>
-      <h1 className="text-4xl font-bold mb-8">
-        My Orders
-      </h1>
-
-      {orders.map((order) => (
-        <div
-          key={order.id}
-          className="bg-white rounded-xl shadow p-6 mb-8"
+    <div className="min-h-screen bg-[radial-gradient(circle_at_top,#262626_0%,#111_45%,#000_100%)] text-white">
+      <div className="max-w-6xl mx-auto py-12 px-6">
+        <button
+          onClick={() => navigate(-1)}
+          className="flex items-center gap-2 mb-8 text-gray-400 hover:text-white transition"
         >
-          <div className="flex justify-between mb-6">
-            <div>
-              <p className="font-semibold">
-                Order #{order.id}
-              </p>
+          <ArrowLeft size={20} />
+          Back
+        </button>
+        <h1 className="text-5xl font-bold tracking-tight mb-10">
+          My Orders
+        </h1>
 
-              <p className="text-gray-500">
-                {new Date(order.orderedAt).toLocaleDateString()}
-              </p>
-            </div>
+        {orders.map((order) => (
+          <div
+            key={order.id}
+            className="mb-8 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-2xl p-8 shadow-[0_20px_80px_rgba(0,0,0,0.45)]"
+          >
+            <div className="flex items-center justify-between border-b border-white/10 pb-6 mb-6">
+              <div>
+                <p className="text-xl font-semibold">
+                  Order #{order.id}
+                </p>
 
-            <span className="text-green-600 font-semibold">
-              {order.status}
-            </span>
-          </div>
-
-          {order.items.map((item) => (
-            <div
-              key={item.productId}
-              className="flex items-center gap-5 border-b py-4"
-            >
-              <img
-                src={item.image}
-                alt={item.name}
-                className="w-24 h-24 object-cover rounded"
-              />
-
-              <div className="flex-1">
-                <h3 className="font-semibold">
-                  {item.name}
-                </h3>
-
-                <p>Qty: {item.quantity}</p>
+                <p className="text-sm text-gray-400 mt-1">
+                  {new Date(order.orderedAt).toLocaleDateString()}
+                </p>
               </div>
 
-              <p className="font-bold">
-                ₹{item.price.toLocaleString()}
-              </p>
+              <span className="rounded-full bg-green-500/15 border border-green-400/20 px-4 py-2 text-green-400 text-sm font-semibold">
+                {order.status}
+              </span>
             </div>
-          ))}
 
-          <div className="text-right mt-6 text-xl font-bold">
-            Total: ₹{order.total.toLocaleString()}
+            {order.items.map((item) => (
+              <div
+                key={item.productId}
+                className="flex items-center gap-6 rounded-2xl border border-white/10 bg-white/5 p-4 mb-4 hover:bg-white/10 transition"
+              >
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  className="w-28 h-28 rounded-xl object-cover"
+                />
+
+                <div className="flex-1">
+                  <h3 className="text-lg font-semibold">
+                    {item.name}
+                  </h3>
+
+                  <p className="text-gray-400 mt-1">Qty: {item.quantity}</p>
+                </div>
+
+                <p className="text-xl font-bold">
+                  ₹{item.price.toLocaleString()}
+                </p>
+              </div>
+            ))}
+
+            <div className="mt-8 flex justify-between items-center border-t border-white/10 pt-6">
+              <span className="text-lg text-gray-400">
+                Order Total
+              </span>
+
+              <span className="text-3xl font-bold">
+                ₹{order.total.toLocaleString()}
+              </span>
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }

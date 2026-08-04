@@ -23,45 +23,45 @@ function Profile() {
   if (isLoading) return <p>Loading...</p>;
 
   return (
-    <div className=" py-12 px-6 bg-zinc-300">
+    <div className="min-h-screen bg-[radial-gradient(circle_at_top,#2A2A2A_0%,#18181B_45%,#09090B_100%)] text-white py-12 px-6">
       <button
         onClick={() => navigate(-1)}
-        className="flex items-center gap-2 mb-6 text-gray-700 hover:text-black transition"
+        className="flex items-center gap-2 mb-8 text-gray-400 hover:text-white transition"
       >
         <ArrowLeft size={20} />
         Back
       </button>
 
-      <div className="max-w-3xl mx-auto rounded bg-white shadow-md p-8">
+      <div className="max-w-3xl mx-auto rounded-3xl border border-white/10 bg-white/5 backdrop-blur-2xl shadow-[0_20px_80px_rgba(0,0,0,0.45)] p-10">
         <div className="flex flex-col items-center">
-          <div className="w-24 h-24 rounded-full bg-black text-white flex items-center justify-center text-4xl font-bold">
+          <div className="w-28 h-28 rounded-full bg-gradient-to-br from-white/20 to-white/5 border border-white/10 flex items-center justify-center text-5xl font-bold">
             {user.fullname.charAt(0).toUpperCase()}
           </div>
 
-          <h1 className="text-3xl font-semibold mt-4">
+          <h1 className="text-4xl font-bold mt-5 tracking-wide">
             {user.fullname}
           </h1>
 
-          <p className="text-gray-500">
+          <p className="text-gray-500 mt-2">
             {user.email}
           </p>
         </div>
 
-        <div className="mt-10 space-y-5">
+        <div className="mt-10 rounded-2xl border border-white/10 bg-white/5 p-6 space-y-6">
 
           <div className="flex items-center gap-4">
-            <User />
+            <User className="text-gray-400" size={20} />
             <span>{user.fullname}</span>
           </div>
 
           <div className="flex items-center gap-4">
-            <Mail />
+            <Mail className="text-gray-400" size={20} />
             <span>{user.email}</span>
           </div>
 
           <div className="flex items-center gap-4">
-            <BadgeCheck />
-            <span>{user.id}</span>
+            <BadgeCheck className="text-gray-400" size={20} />
+            <span>ID : {user.id}</span>
           </div>
 
         </div>
@@ -70,7 +70,7 @@ function Profile() {
 
           <Link
             to="/wishlist"
-            className="border rounded-lg p-5 text-center hover:bg-gray-100"
+            className="rounded-2xl border border-white/10 bg-white/5 p-6 text-center hover:bg-white/10 transition duration-300 hover:-translate-y-1"
           >
             <Heart className="mx-auto mb-2" />
             Wishlist
@@ -78,7 +78,7 @@ function Profile() {
 
           <Link
             to="/cart"
-            className="border rounded-lg p-5 text-center hover:bg-gray-100"
+            className="rounded-2xl border border-white/10 bg-white/5 p-6 text-center hover:bg-white/10 transition duration-300 hover:-translate-y-1"
           >
             <ShoppingBag className="mx-auto mb-2" />
             Cart
@@ -86,7 +86,7 @@ function Profile() {
 
           <Link
             to="/orders"
-            className="border rounded-lg p-5 text-center hover:bg-gray-100"
+            className="rounded-2xl border border-white/10 bg-white/5 p-6 text-center hover:bg-white/10 transition duration-300 hover:-translate-y-1"
           >
             <Package className="mx-auto mb-2" />
             Orders
@@ -96,7 +96,7 @@ function Profile() {
 
         <button
           onClick={handleLogout}
-          className="mt-10 w-full bg-black text-white py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-neutral-800"
+          className="mt-10 w-full rounded-2xl bg-white text-black py-4 font-semibold flex items-center justify-center gap-3 hover:bg-gray-200 transition"
         >
           <LogOut size={18} />
           Logout

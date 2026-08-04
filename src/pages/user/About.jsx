@@ -1,95 +1,167 @@
 function About() {
   return (
-    <div className="bg-[radial-gradient(circle_at_top,#2A2A2A_0%,#18181B_45%,#09090B_100%)] text-white">
+    <div className="bg-black text-white">
 
-      <section className="max-w-7xl mx-auto px-8 py-28 text-center">
-        <p className="uppercase tracking-[6px] text-gray-400 text-sm mb-4">
-          About Us
-        </p>
+      {/* Hero */}
+      <section className="min-h-screen flex items-center justify-center px-8">
+        <div className="max-w-4xl text-center">
 
-        <h1 className="text-5xl md:text-6xl font-semibold leading-tight pt-14">
-          Capturing Moments.
-          <br />
-          Inspiring Creativity.
-        </h1>
+          <p className="uppercase tracking-[0.5em] text-zinc-500 text-sm">
+            LENSÉ
+          </p>
 
-        <p className="max-w-3xl mx-auto mt-8 text-gray-400 text-lg leading-8">
-          Whether you're a passionate beginner, a professional creator, or an
-          experienced filmmaker, we provide premium cameras and photography gear
-          designed to help you capture every moment with confidence.
-        </p>
+          <h1 className="mt-8 text-5xl md:text-7xl font-light leading-tight">
+            Precision.
+            <br />
+            Crafted For Vision.
+          </h1>
+
+          <p className="mt-8 text-zinc-400 text-lg leading-8 max-w-2xl mx-auto">
+            More than cameras. We curate timeless tools for creators who
+            transform everyday moments into unforgettable stories.
+          </p>
+
+        </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-8 py-24 grid md:grid-cols-2 gap-20 items-center">
+      {/* Hero Image */}
+      <section className="px-8 pb-24">
+        <div className="max-w-7xl mx-auto overflow-hidden rounded-3xl border border-zinc-800">
 
-        <div>
           <img
             src="src/assets/images/about-camera.jpg"
-            alt=""
-            className="rounded-xl object-cover w-full h-[500px]"
+            alt="Camera"
+            className="w-full h-[650px] object-cover hover:scale-105 transition duration-700"
           />
+
         </div>
-
-        <div>
-          <p className="uppercase tracking-[5px] text-gray-500 text-sm mb-4">
-            Our Story
-          </p>
-
-          <h2 className="text-4xl font-semibold mb-8">
-            Crafted for Creators
-          </h2>
-
-          <p className="text-gray-400 leading-8 mb-6">
-            Founded with a passion for photography and filmmaking, our mission
-            is to bring the world's finest cameras and accessories to creators
-            everywhere.
-          </p>
-
-          <p className="text-gray-400 leading-8">
-            Every photograph tells a story. That's why we carefully curate
-            professional mirrorless cameras, vintage film cameras, cinema gear,
-            and photography accessories trusted by photographers around the
-            globe.
-          </p>
-        </div>
-
       </section>
 
-      <section className="max-w-7xl mx-auto px-8 py-24">
+      {/* Story */}
+      <section className="py-24 px-8 border-t border-zinc-900">
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-20">
 
-          <div className="bg-white/5 rounded-xl p-8 text-center border border-white/10">
-            <h2 className="text-4xl font-bold">50+</h2>
-            <p className="text-gray-400 mt-2">Premium Products</p>
+          <div>
+
+            <p className="uppercase tracking-[0.4em] text-zinc-500 text-sm">
+              OUR STORY
+            </p>
+
+            <h2 className="mt-6 text-5xl font-light leading-tight">
+              Designed For
+              <br />
+              Modern Creators.
+            </h2>
+
           </div>
 
-          <div className="bg-white/5 rounded-xl p-8 text-center border border-white/10">
-            <h2 className="text-4xl font-bold">10+</h2>
-            <p className="text-gray-400 mt-2">Trusted Brands</p>
-          </div>
+          <div className="space-y-8 text-zinc-400 leading-8">
 
-          <div className="bg-white/5 rounded-xl p-8 text-center border border-white/10">
-            <h2 className="text-4xl font-bold">10K+</h2>
-            <p className="text-gray-400 mt-2">Happy Customers</p>
-          </div>
+            <p>
+              LENSÉ was created with one vision—to bring exceptional cameras
+              into the hands of creators who appreciate craftsmanship,
+              innovation, and timeless design.
+            </p>
 
-          <div className="bg-white/5 rounded-xl p-8 text-center border border-white/10">
-            <h2 className="text-4xl font-bold">100%</h2>
-            <p className="text-gray-400 mt-2">Authentic Products</p>
+            <p>
+              Every camera in our collection is carefully selected for its
+              performance, reliability, and ability to inspire creativity.
+              Whether you're capturing travel, portraits, cinema, or everyday
+              life, your vision deserves equipment that never compromises.
+            </p>
+
           </div>
 
         </div>
 
       </section>
 
-      <section className="py-28 px-8">
+      {/* Stats */}
+      <section className="py-24 px-8">
+
+        <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 text-center gap-10">
+
+          <div>
+            <h2 className="text-6xl font-light">50+</h2>
+            <p className="mt-3 uppercase tracking-[0.25em] text-zinc-500 text-sm">
+              Products
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-6xl font-light">10+</h2>
+            <p className="mt-3 uppercase tracking-[0.25em] text-zinc-500 text-sm">
+              Brands
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-6xl font-light">10K+</h2>
+            <p className="mt-3 uppercase tracking-[0.25em] text-zinc-500 text-sm">
+              Customers
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-6xl font-light">100%</h2>
+            <p className="mt-3 uppercase tracking-[0.25em] text-zinc-500 text-sm">
+              Authentic
+            </p>
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* Values */}
+      <section className="py-24 px-8 border-y border-zinc-900">
+
+        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-12">
+
+          <div>
+            <h3 className="text-2xl font-light mb-4">Quality</h3>
+            <p className="text-zinc-400 leading-8">
+              We partner with trusted brands to ensure every product meets the
+              highest standards of performance and durability.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-2xl font-light mb-4">Innovation</h3>
+            <p className="text-zinc-400 leading-8">
+              From mirrorless systems to cinema cameras, we bring modern
+              technology to passionate photographers and filmmakers.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-2xl font-light mb-4">Trust</h3>
+            <p className="text-zinc-400 leading-8">
+              Every purchase is backed by authenticity, transparency, and
+              dedicated customer support.
+            </p>
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* Quote */}
+      <section className="py-32 px-8">
 
         <div className="max-w-4xl mx-auto text-center">
 
-          <h2 className="text-4xl md:text-5xl font-semibold leading-relaxed">
-            "Photography is more than capturing an image.
-            It's preserving a moment forever."
+          <p className="uppercase tracking-[0.5em] text-zinc-500 mb-8">
+            LENSÉ
+          </p>
+
+          <h2 className="text-4xl md:text-6xl font-light leading-relaxed">
+            "The world isn't remembered
+            <br />
+            for what we saw,
+            <br />
+            but for what we captured."
           </h2>
 
         </div>

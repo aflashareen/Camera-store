@@ -122,6 +122,7 @@ onSuccess: async () => {
   const total = subtotal + shipping;
 
   return (
+    <div className="min-h-screen bg-[radial-gradient(circle_at_top,#2a2a2a_0%,#111_45%,#000_100%)] text-white">
     <div className="max-w-7xl mx-auto px-6 py-12">
 
       <button
@@ -136,7 +137,7 @@ onSuccess: async () => {
         Checkout
       </h1>
 
-      <div className="bg-white shadow rounded-lg p-8">
+      <div className="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-2xl shadow-[0_20px_80px_rgba(0,0,0,0.45)] p-8">
 
         <h2 className="text-2xl font-semibold mb-6">
           Shipping Information
@@ -151,7 +152,7 @@ onSuccess: async () => {
               name="fullName"
               value={formData.fullName}
               onChange={handleChange}
-              className="w-full border rounded-lg p-3"
+              className="w-full rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-white placeholder:text-gray-400 backdrop-blur-md outline-none transition-all duration-300 focus:border-white/40 focus:bg-white/10"
             />
             {errors.fullName && (
               <p className="text-red-500 text-sm">{errors.fullName}</p>
@@ -164,9 +165,9 @@ onSuccess: async () => {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className="w-full border rounded-lg p-3"
+              className="w-full rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-white placeholder:text-gray-400 backdrop-blur-md outline-none transition-all duration-300 focus:border-white/40 focus:bg-white/10"
             />
-            {errors.address && (
+            {errors.email && (
               <p className="text-red-500 text-sm">{errors.email}</p>
             )}
           </div>
@@ -178,9 +179,9 @@ onSuccess: async () => {
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              className="w-full border rounded-lg p-3"
+              className="w-full rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-white placeholder:text-gray-400 backdrop-blur-md outline-none transition-all duration-300 focus:border-white/40 focus:bg-white/10"
             />
-            {errors.address && (
+            {errors.phone && (
               <p className="text-red-500 text-sm">{errors.phone}</p>
             )}
           </div>
@@ -192,9 +193,9 @@ onSuccess: async () => {
               name="city"
               value={formData.city}
               onChange={handleChange}
-              className="w-full border rounded-lg p-3"
+              className="w-full rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-white placeholder:text-gray-400 backdrop-blur-md outline-none transition-all duration-300 focus:border-white/40 focus:bg-white/10"
             />
-            {errors.address && (
+            {errors.city && (
               <p className="text-red-500 text-sm">{errors.city}</p>
             )}
           </div>
@@ -206,9 +207,9 @@ onSuccess: async () => {
               name="state"
               value={formData.state}
               onChange={handleChange}
-              className="w-full border rounded-lg p-3"
+              className="w-full rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-white placeholder:text-gray-400 backdrop-blur-md outline-none transition-all duration-300 focus:border-white/40 focus:bg-white/10"
             />
-            {errors.address && (
+            {errors.state && (
               <p className="text-red-500 text-sm">{errors.state}</p>
             )}
           </div>
@@ -220,9 +221,9 @@ onSuccess: async () => {
               name="pincode"
               value={formData.pincode}
               onChange={handleChange}
-              className="w-full border rounded-lg p-3"
+              className="w-full rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-white placeholder:text-gray-400 backdrop-blur-md outline-none transition-all duration-300 focus:border-white/40 focus:bg-white/10"
             />
-            {errors.address && (
+            {errors.pincode && (
               <p className="text-red-500 text-sm">{errors.pincode}</p>
             )}
           </div>
@@ -235,10 +236,10 @@ onSuccess: async () => {
           name="address"
           value={formData.address}
           onChange={handleChange}
-          className="border rounded-lg p-3 w-full mt-6"
+          className="mt-6 w-full rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-white placeholder:text-gray-400 backdrop-blur-md outline-none focus:border-white/40 focus:bg-white/10"
         />
         {errors.address && (
-          <p className="text-red-500 text-sm">{errors.fullName}</p>
+          <p className="text-red-500 text-sm">{errors.address}</p>
         )}
 
         <h2 className="text-2xl font-semibold mt-10 mb-5">
@@ -264,8 +265,7 @@ onSuccess: async () => {
 
       </div>
 
-      <div className="mt-12 bg-gray-100 rounded-xl p-8">
-
+      <div className="mt-12 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-2xl shadow-[0_20px_80px_rgba(0,0,0,0.45)] p-8">
         <h2 className="text-3xl font-bold mb-8">
           Order Summary
         </h2>
@@ -304,11 +304,12 @@ onSuccess: async () => {
 
           <button
             onClick={handlePlaceOrder}
-            className="w-full mt-8 bg-black text-white py-4 rounded-lg hover:bg-black/80 transition">
+            className="mt-8 w-full rounded-xl bg-white text-black py-4 font-semibold transition hover:bg-gray-200">
             Place Order
           </button>
         </div>
       </div>
+    </div>
     </div>
   );
 }

@@ -64,7 +64,7 @@ function Collections() {
             border border-zinc-800
             bg-zinc-950
             transition-all duration-500
-            hover:border-zinc-500
+            hover:border-zinc-950
             hover:-translate-y-2
             hover:shadow-[0_20px_60px_rgba(255,255,255,0.06)]
           "

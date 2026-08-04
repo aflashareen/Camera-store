@@ -65,8 +65,8 @@ function Filter({
       text-sm
       tracking-wide
       outline-none
-      hover:border-white
-      focus:border-white
+      hover:border-black
+      focus:border-black
       transition-all
       cursor-pointer
     "
@@ -78,7 +78,7 @@ function Filter({
   </select>
 
   <svg
-    className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-400 pointer-events-none"
+    className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-zinc-500 pointer-events-none"
     fill="none"
     stroke="currentColor"
     strokeWidth="2"

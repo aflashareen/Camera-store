@@ -62,7 +62,7 @@ function Shop() {
 
   const categories = [...new Set(products.map((p) => p.category))];
   return (
-    <div className="bg-zinc-300">
+    <div className="bg-black">
       <button
         onClick={() => navigate(-1)}
         className="flex items-center gap-2 pt-4 pl-2 text-gray-700 hover:text-black transition"
@@ -86,7 +86,7 @@ function Shop() {
         }}
       />
 
-      <div className="grid grid-cols-3 gap-8 p-8 bg-zinc-300">
+      <div className="grid grid-cols-3 gap-8 p-8 bg-neutal-800">
         {
           filteredProducts.map(product => (
             <ProductCard key={product.id} product={product} />

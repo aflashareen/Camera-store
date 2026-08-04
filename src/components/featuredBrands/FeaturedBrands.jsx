@@ -16,14 +16,14 @@ const brands = [
 
 function FeaturedBrands() {
     return (
-        <section className="bg-white py-24">
+        <section className="bg-black py-24">
             <div className="max-w-7xl mx-auto px-6">
                 <div className="text-center mb-16">
                     <p className="uppercase tracking-[0.35em] text-zinc-500">
                         Featured Brands
                     </p>
 
-                    <h2 className="mt-3 text-4xl font-semibold text-black">
+                    <h2 className="mt-3 text-4xl font-semibold text-zinc-500">
                         Trusted by Professionals
                     </h2>
                 </div>

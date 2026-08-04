@@ -37,11 +37,11 @@ function Navbar() {
     <nav className="sticky top-0 z-50 bg-neutral-950 shadow-lg border h-15">
       <div className="h-15 flex justify-between items-center text-white">
 
-        <div className='font-Helvetica font-bold text-xl tracking-[0.35em] uppercase p-4'>
+        <div className='text-xl tracking-[0.35em] uppercase p-4'>
           <Link to="/hero"><h1>LENSÉ</h1></Link>
         </div>
 
-        <div className='  flex items-center gap-4 font-[Helvetica_Neue] tracking-wider font-light uppercase'>
+        <div className='flex items-center gap-4 text-zinc-850 tracking-wider font-thin uppercase'>
           <Link to="/">Home</Link>{" "}
           <Link to="/shop">Shop</Link>{" "}
           <Link to="/collection">Collection</Link>
