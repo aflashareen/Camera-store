@@ -1,7 +1,6 @@
-import ProductCard from "../../components/productCard/WishlistCard";
-import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
+import { useQuery } from '@tanstack/react-query'
 import { useNavigate } from "react-router-dom";
-import { getWishlist, removeFromWishlist } from "../../services/wishlistService";
+import { getWishlist } from "../../services/wishlistService";
 import { ArrowLeft } from "lucide-react";
 import WishlistCard from "../../components/productCard/WishlistCard";
 import { useCurrentUser } from "../../hooks/UseCurrentUser";
@@ -9,7 +8,6 @@ import { useCurrentUser } from "../../hooks/UseCurrentUser";
 function Wishlist() {
 
   const navigate = useNavigate();
-  const queryClient = useQueryClient();
 
   const { data: user } = useCurrentUser();
 
@@ -21,7 +19,11 @@ function Wishlist() {
 
   if (isLoading) return <h2>Loading...</h2>;
 
-  if (wishlist.length === 0) {
+  const userWishlist = wishlist.filter(
+    (item) => String(item.userId) === String(user?.id)
+  );
+
+  if (userWishlist.length === 0) {
     return (
       <div className="w-screen py-20 text-center">
         <h2 className="text-3xl font-semibold">Your Wishlist Is Empty</h2>
@@ -40,7 +42,7 @@ function Wishlist() {
       <h1 className="text-4xl font-bold mb-10">Wishlist</h1>
 
       <div className="grid md:grid-cols-3 gap-10">
-        {wishlist.map((product) => (
+        {userWishlist.map((product) => (
           <WishlistCard
             key={product.id}
             product={product}

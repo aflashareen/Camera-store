@@ -8,6 +8,7 @@ import { useState } from "react";
 
 function Shop() {
   const navigate = useNavigate();
+
   const { data: products = [], isLoading, error } = useQuery({
     queryKey: ["products"],
     queryFn: getProducts,
@@ -37,30 +38,8 @@ function Shop() {
       if (sort === "high-low") return b.price - a.price;
       if (sort === "rating") return b.rating - a.rating;
       return 0;
-    }).sort((a, b) => {
-      if (!search) return 0;
+    })
 
-      const aMatch =
-        a.name.toLowerCase().includes(search.toLowerCase()) ||
-        a.brand.toLowerCase().includes(search.toLowerCase()) ||
-        a.category.toLowerCase().includes(search.toLowerCase());
-
-      const bMatch =
-        b.name.toLowerCase().includes(search.toLowerCase()) ||
-        b.brand.toLowerCase().includes(search.toLowerCase()) ||
-        b.category.toLowerCase().includes(search.toLowerCase());
-
-      if (aMatch && !bMatch) return -1;
-      if (!aMatch && bMatch) return 1;
-
-      return 0;
-    });
-
-  //filter
-  const [selectedCategory, setSelectedCategory] = useState("All");
-  const [sortBy, setSortBy] = useState("default");
-
-  const categories = [...new Set(products.map((p) => p.category))];
   return (
     <div className="bg-black">
       <button

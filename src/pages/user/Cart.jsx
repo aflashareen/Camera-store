@@ -20,7 +20,11 @@ function Cart() {
 
   if (isLoading) return <h2>Loading...</h2>;
 
-  if (cart.length === 0) {
+  const userCart = cart.filter(
+    (item) => String(item.userId) === String(user?.id)
+  );
+
+  if (userCart.length === 0) {
     return (
       <div className="py-20 text-center">
         <h2 className="text-3xl font-semibold">
@@ -29,7 +33,7 @@ function Cart() {
       </div>
     );
   }
-  const total = cart.reduce((sum, item) => {
+  const total = userCart.reduce((sum, item) => {
     return sum + item.price * (item.quantity || 1);
   }, 0);
 
@@ -50,7 +54,7 @@ function Cart() {
 
 
       <div className="flex flex-col gap-6">
-        {cart.map((product) => (
+        {userCart.map((product) => (
           <CartCard
             key={product.id}
             product={product}

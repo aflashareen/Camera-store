@@ -1,5 +1,3 @@
-import Layout from "../../components/layout/Layout";
-
 import { useNavigate, useParams } from "react-router-dom";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { getProductById } from "../../services/productService";
@@ -15,24 +13,24 @@ function Products() {
   const { data: user } = useCurrentUser();
 
   const navigate = useNavigate();
+
   const queryClient = useQueryClient();
 
-  const {
-    data: product,
-    isLoading,
-    error,
-  } = useQuery({
+  const { data: product, isLoading, error, } = useQuery({
     queryKey: ["product", id],
     queryFn: () => getProductById(id),
   });
 
   const { data: wishlist = [] } = useQuery({
-    queryKey: ["wishlist"],
-    queryFn: getWishlist,
+    queryKey: ["wishlist", user?.id],
+    queryFn: getWishlist(user?.id),
+    enabled: !!user,
   })
+  
   const { data: cart = [] } = useQuery({
-    queryKey: ["cart"],
-    queryFn: getCart,
+    queryKey: ["cart", user?.id],
+    queryFn: getCart(user?.id),
+    enabled: !!user,
   });
 
   const cartMutation = useMutation({
@@ -66,11 +64,10 @@ function Products() {
   })
 
   const existingItem = wishlist.find(
-    (item) => String(item.productId) === String(product?.id)
+    (item) => 
+      String(item.productId) === String(product?.id) &&
+      String(item.userId) === String(user?.id) 
   );
-
-  const isWishlisted = !!existingItem;
-
 
   if (isLoading) return <p>Loading...</p>;
   if (error) return <p>Something went wrong.</p>;
@@ -100,7 +97,9 @@ function Products() {
     }
 
     const existingCartItem = cart.find(
-      (item) => String(item.productId) === String(product.id)
+      (item) => 
+        String(item.productId) === String(product.id) &&
+        String(item.userId) === String(user.id)
     );
 
     if (existingCartItem) {

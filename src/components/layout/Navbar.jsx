@@ -9,10 +9,12 @@ import { getCart } from '../../services/cartService';
 
 function Navbar() {
   const navigate = useNavigate();
+
   const [search, setSearch] = useState("");
 
   const { data: user } = useCurrentUser();
 
+//wishlist
   const { data: wishlist } = useQuery({
     queryKey: ["wishlist"],
     queryFn: getWishlist,
@@ -20,6 +22,7 @@ function Navbar() {
 
   const wishlistCount = wishlist?.length ?? 0;
 
+//cart  
   const { data: cart = [] } = useQuery({
     queryKey: ["cart"],
     queryFn: getCart,
@@ -130,7 +133,6 @@ function Navbar() {
               )}
             </Link>
           </div>
-
         </div>
       </div>
     </nav>

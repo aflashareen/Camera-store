@@ -430,32 +430,6 @@
   ],
   "wishlist": [
     {
-      "id": "l0fIu8JJzIM",
-      "name": "Sony Alpha 6000 (APS-C)",
-      "brand": "Sony",
-      "category": "Mirrorless",
-      "price": 59990,
-      "image": "/src/assets/images/products/sony-ilce-7rm3.jpg",
-      "description": "The Sony Alpha 6000 is a compact APS-C mirrorless camera designed for photographers who demand speed, portability, and exceptional image quality. Featuring a 24.3MP Exmor APS-C sensor, fast hybrid autofocus, and continuous shooting up to 11 fps, it captures sharp photos and Full HD videos with remarkable detail. Its lightweight design, interchangeable E-mount lens system, and intuitive controls make it an excellent choice for travel, street photography, portraits, and everyday creative shooting.",
-      "rating": 4.7,
-      "stock": 5,
-      "userId": "QLC9S6aT-eQ",
-      "productId": "3"
-    },
-    {
-      "id": "e9iKOvo4LoA",
-      "name": "Olympus OM-2 MD",
-      "brand": "Olympus",
-      "category": "Mirrorless",
-      "price": 42990,
-      "image": "/src/assets/images/products/olympus-om.jpg",
-      "description": "A timeless 35mm film SLR renowned for its precision engineering and elegant design. The Olympus OM-2 MD features aperture-priority automatic exposure, through-the-lens (TTL) metering, and a compact, lightweight body that makes it a favorite among film photography enthusiasts. Its exceptional Zuiko lens compatibility and reliable performance deliver beautifully detailed images, making it an excellent choice for both collectors and photographers seeking an authentic analog shooting experience.",
-      "rating": 4.7,
-      "stock": 5,
-      "userId": "QLC9S6aT-eQ",
-      "productId": "1"
-    },
-    {
       "id": "W8JjRWOn6sk",
       "name": "Sony Alpha 6000 (APS-C)",
       "brand": "Sony",
@@ -493,6 +467,32 @@
       "stock": 5,
       "userId": "NWdYytKWWrk",
       "productId": "2"
+    },
+    {
+      "id": "CsSHBAOP3PA",
+      "name": "Olympus OM-2 MD",
+      "brand": "Olympus",
+      "category": "Mirrorless",
+      "price": 42990,
+      "image": "/src/assets/images/products/olympus-om.jpg",
+      "description": "A timeless 35mm film SLR renowned for its precision engineering and elegant design. The Olympus OM-2 MD features aperture-priority automatic exposure, through-the-lens (TTL) metering, and a compact, lightweight body that makes it a favorite among film photography enthusiasts. Its exceptional Zuiko lens compatibility and reliable performance deliver beautifully detailed images, making it an excellent choice for both collectors and photographers seeking an authentic analog shooting experience.",
+      "rating": 4.7,
+      "stock": 5,
+      "userId": "QLC9S6aT-eQ",
+      "productId": "1"
+    },
+    {
+      "id": "PYq0WErVLp8",
+      "name": " Sony a9 III",
+      "brand": "Sony",
+      "category": "Mirrorless",
+      "price": 529990,
+      "image": "/src/assets/images/products/sony-ilce-1.jpg",
+      "description": "The Sony a9 III is a flagship full-frame mirrorless camera engineered for professionals who demand exceptional speed, precision, and image quality. Featuring advanced autofocus, high-speed continuous shooting, and outstanding low-light performance, it excels in sports, wildlife, events, and cinematic video production. Its durable design, intuitive controls, and cutting-edge technology make it the perfect companion for capturing every decisive moment with confidence.",
+      "rating": 4.7,
+      "stock": 5,
+      "userId": "QLC9S6aT-eQ",
+      "productId": "2"
     }
   ],
   "cart": [
@@ -521,6 +521,34 @@
       "rating": 4.7,
       "stock": 5,
       "userId": "NWdYytKWWrk",
+      "productId": "5",
+      "quantity": 1
+    },
+    {
+      "id": "rFrINwPnSdU",
+      "name": " Sony a9 III",
+      "brand": "Sony",
+      "category": "Mirrorless",
+      "price": 529990,
+      "image": "/src/assets/images/products/sony-ilce-1.jpg",
+      "description": "The Sony a9 III is a flagship full-frame mirrorless camera engineered for professionals who demand exceptional speed, precision, and image quality. Featuring advanced autofocus, high-speed continuous shooting, and outstanding low-light performance, it excels in sports, wildlife, events, and cinematic video production. Its durable design, intuitive controls, and cutting-edge technology make it the perfect companion for capturing every decisive moment with confidence.",
+      "rating": 4.7,
+      "stock": 5,
+      "userId": "QLC9S6aT-eQ",
+      "productId": "2",
+      "quantity": 1
+    },
+    {
+      "id": "R2nn3l1VlM0",
+      "name": "Nikon F Photomic FTn",
+      "brand": "Nikon",
+      "category": "DSLR",
+      "price": 24990,
+      "image": "/src/assets/images/products/nikon-film.jpg",
+      "description": "The Nikon F Photomic FTn is an iconic 35mm film SLR camera that helped define professional photography. Introduced in the late 1960s, it features the renowned Photomic FTn prism finder with center-weighted TTL metering, a rugged all-metal construction, and the legendary Nikon F mount. Built for reliability and precision, the F Photomic FTn remains a favorite among film photography enthusiasts, collectors, and professionals seeking a timeless shooting experience",
+      "rating": 4.7,
+      "stock": 5,
+      "userId": "QLC9S6aT-eQ",
       "productId": "5",
       "quantity": 1
     }
@@ -564,6 +592,150 @@
       "status": "Pending",
       "orderedAt": "2026-08-04T05:08:21.141Z",
       "id": "RPh2vi92Mp0"
+    },
+    {
+      "userId": "QLC9S6aT-eQ",
+      "items": [
+        {
+          "productId": "1",
+          "name": "Olympus OM-2 MD",
+          "image": "/src/assets/images/products/olympus-om.jpg",
+          "price": 42990,
+          "quantity": 1
+        }
+      ],
+      "total": 42990,
+      "status": "Pending",
+      "orderedAt": "2026-08-04T08:13:08.250Z",
+      "id": "U4SI44b8210"
+    },
+    {
+      "userId": "QLC9S6aT-eQ",
+      "customer": {
+        "fullName": "Afla Shareen",
+        "email": "aflasherin07@gmail.com",
+        "phone": "9702100265"
+      },
+      "shippingAddress": {
+        "address": "fgffn kmdfkdf",
+        "city": "vengara",
+        "state": "kerala",
+        "pincode": "676304"
+      },
+      "paymentMethod": "Cash on Delivery",
+      "items": [
+        {
+          "productId": "7",
+          "name": "Minolta X-370",
+          "image": "/src/assets/images/products/minolta-x-370.jpg",
+          "price": 17999,
+          "quantity": 1
+        },
+        {
+          "productId": "6",
+          "name": "Canon AE-1 Program",
+          "image": "/src/assets/images/products/canon-ae.jpg",
+          "price": 38700,
+          "quantity": 1
+        }
+      ],
+      "total": 56699,
+      "status": "Pending",
+      "orderedAt": "2026-08-04T15:58:30.238Z",
+      "id": "rkzjTp2r_m4"
+    },
+    {
+      "userId": "QLC9S6aT-eQ",
+      "customer": {
+        "fullName": "Afla Shareen",
+        "email": "aflasherin07@gmail.com",
+        "phone": "9702100265"
+      },
+      "shippingAddress": {
+        "address": "fddfjdjf kjddjfkdkf ",
+        "city": "vengara",
+        "state": "kerala",
+        "pincode": "676355"
+      },
+      "paymentMethod": "Cash on Delivery",
+      "items": [
+        {
+          "productId": "7",
+          "name": "Minolta X-370",
+          "image": "/src/assets/images/products/minolta-x-370.jpg",
+          "price": 17999,
+          "quantity": 1
+        },
+        {
+          "productId": "6",
+          "name": "Canon AE-1 Program",
+          "image": "/src/assets/images/products/canon-ae.jpg",
+          "price": 38700,
+          "quantity": 1
+        }
+      ],
+      "total": 56699,
+      "status": "Pending",
+      "orderedAt": "2026-08-04T15:59:06.169Z",
+      "id": "x7A9Pi_d9bc"
+    },
+    {
+      "userId": "QLC9S6aT-eQ",
+      "customer": {
+        "fullName": "Afla Shareen",
+        "email": "aflasherin07@gmail.com",
+        "phone": "1234567890"
+      },
+      "shippingAddress": {
+        "address": "dcdkmdjdfjff kfmfkjfmf dd",
+        "city": "vengara",
+        "state": "kerala",
+        "pincode": "676304"
+      },
+      "paymentMethod": "Cash on Delivery",
+      "items": [
+        {
+          "productId": "7",
+          "name": "Minolta X-370",
+          "image": "/src/assets/images/products/minolta-x-370.jpg",
+          "price": 17999,
+          "quantity": 1
+        },
+        {
+          "productId": "6",
+          "name": "Canon AE-1 Program",
+          "image": "/src/assets/images/products/canon-ae.jpg",
+          "price": 38700,
+          "quantity": 1
+        }
+      ],
+      "total": 56699,
+      "status": "Pending",
+      "orderedAt": "2026-08-04T16:01:52.509Z",
+      "id": "3u8JhfjBidU"
+    },
+    {
+      "userId": "QLC9S6aT-eQ",
+      "items": [
+        {
+          "productId": "7",
+          "name": "Minolta X-370",
+          "image": "/src/assets/images/products/minolta-x-370.jpg",
+          "price": 17999,
+          "quantity": 1
+        },
+        {
+          "productId": "6",
+          "name": "Canon AE-1 Program",
+          "image": "/src/assets/images/products/canon-ae.jpg",
+          "price": 38700,
+          "quantity": 1
+        }
+      ],
+      "total": 56699,
+      "status": "Pending",
+      "orderedAt": "2026-08-04T16:02:52.368Z",
+      "id": "NEh-NcplKCI"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
