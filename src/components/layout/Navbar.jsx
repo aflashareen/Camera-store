@@ -27,11 +27,11 @@ function Navbar() {
 
   const cartCount = cart?.length ?? 0;
 
-   const handleSearch = (e) =>{
+  const handleSearch = (e) => {
     const value = e.target.value;
     setSearch(value);
     navigate(`/shop?search=${value}`)
-   }
+  }
 
   return (
     <nav className="sticky top-0 z-50 bg-neutral-950 shadow-lg border h-15">
@@ -41,11 +41,51 @@ function Navbar() {
           <Link to="/hero"><h1>LENSÉ</h1></Link>
         </div>
 
-        <div className='flex items-center gap-4 text-zinc-850 tracking-wider font-thin uppercase'>
-          <Link to="/">Home</Link>{" "}
-          <Link to="/shop">Shop</Link>{" "}
-          <Link to="/collection">Collection</Link>
-          <Link to='/about'>About</Link>
+        <div className="flex items-center gap-8 tracking-[0.2em] uppercase text-sm">
+
+          <div className="group relative">
+            <Link
+              to="/"
+              className="text-zinc-400 transition-colors duration-300 group-hover:text-white"
+            >
+              Home
+            </Link>
+
+            <span className="absolute left-0 -bottom-2 h-[1px] w-0 bg-white transition-all duration-300 group-hover:w-full"></span>
+          </div>
+
+          <div className="group relative">
+            <Link
+              to="/shop"
+              className="text-zinc-400 transition-colors duration-300 group-hover:text-white"
+            >
+              Shop
+            </Link>
+
+            <span className="absolute left-0 -bottom-2 h-[1px] w-0 bg-white transition-all duration-300 group-hover:w-full"></span>
+          </div>
+
+          <div className="group relative">
+            <Link
+              to="/collection"
+              className="text-zinc-400 transition-colors duration-300 group-hover:text-white"
+            >
+              Collection
+            </Link>
+
+            <span className="absolute left-0 -bottom-2 h-[1px] w-0 bg-white transition-all duration-300 group-hover:w-full"></span>
+          </div>
+
+          <div className="group relative">
+            <Link
+              to="/about"
+              className="text-zinc-400 transition-colors duration-300 group-hover:text-white"
+            >
+              About
+            </Link>
+
+            <span className="absolute left-0 -bottom-2 h-[1px] w-0 bg-white transition-all duration-300 group-hover:w-full"></span>
+          </div>
         </div>
 
         <div className="flex items-center gap-6 p-4">
