@@ -26,10 +26,23 @@ function Cart() {
 
   if (userCart.length === 0) {
     return (
-      <div className="py-20 text-center">
-        <h2 className="text-3xl font-semibold">
-          Your Cart Is Empty
-        </h2>
+      <div className="min-h-screen bg-[radial-gradient(circle_at_top,#2A2A2A_0%,#18181B_45%,#09090B_100%)] flex items-center justify-center px-6">
+        <div className="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-2xl shadow-[0_20px_80px_rgba(0,0,0,0.45)] p-12 text-center max-w-lg w-full">
+          <h2 className="text-3xl font-bold text-white">
+            Your Cart Is Empty
+          </h2>
+
+          <p className="mt-4 text-gray-400">
+            Add premium cameras to your cart and continue shopping.
+          </p>
+
+          <button
+            onClick={() => navigate("/shop")}
+            className="mt-8 rounded-xl bg-white px-8 py-3 font-semibold text-black transition hover:bg-gray-200"
+          >
+            Explore Collection
+          </button>
+        </div>
       </div>
     );
   }
@@ -38,82 +51,83 @@ function Cart() {
   }, 0);
 
   return (
-    <div className="max-w-7xl mx-auto py-10 px-6">
+    <div className="min-h-screen bg-[radial-gradient(circle_at_top,#2A2A2A_0%,#18181B_45%,#09090B_100%)] text-white">
+      <div className="max-w-7xl mx-auto px-6 py-12">
 
-      <button
-        onClick={() => navigate(-1)}
-        className="flex items-center gap-2 mb-6"
-      >
-        <ArrowLeft size={20} />
-        Back
-      </button>
+        <button
+          onClick={() => navigate(-1)}
+          className="flex items-center gap-2 mb-8 text-gray-400 hover:text-white transition"
+        >
+          <ArrowLeft size={20} />
+          Back
+        </button>
 
-      <h1 className="text-4xl font-bold mb-10">
-        Shopping Cart
-      </h1>
+        <h1 className="text-4xl font-bold mb-10">
+          Shopping Cart
+        </h1>
 
 
-      <div className="flex flex-col gap-6">
-        {userCart.map((product) => (
-          <CartCard
-            key={product.id}
-            product={product}
-          />
-        ))}
-      </div>
-
-      <div className="mt-14 w-full bg-gray-100 rounded-xl p-8">
-        <h2 className="text-3xl font-bold mb-8">
-          Order Summary
-        </h2>
-
-        <div className="space-y-5">
-          {cart.map((item) => (
-            <div
-              key={item.id}
-              className="flex justify-between items-center"
-            >
-              <div>
-                <p className="font-medium">{item.name}</p>
-                <p className="text-sm text-gray-500">
-                  Qty: {item.quantity || 1}
-                </p>
-              </div>
-
-              <p className="font-semibold">
-                ₹{(item.price * (item.quantity || 1)).toLocaleString()}
-              </p>
-            </div>
+        <div className="flex flex-col gap-6">
+          {userCart.map((product) => (
+            <CartCard
+              key={product.id}
+              product={product}
+            />
           ))}
         </div>
 
-        <hr className="my-6" />
+        <div className="mt-14 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-2xl shadow-[0_20px_80px_rgba(0,0,0,0.45)] p-8">
+          <h2 className="text-3xl font-bold mb-8">
+            Order Summary
+          </h2>
 
-        <div className="space-y-4">
-          <div className="flex justify-between">
-            <span>Subtotal</span>
-            <span>₹{total.toLocaleString()}</span>
+          <div className="space-y-5">
+            {cart.map((item) => (
+              <div
+                key={item.id}
+                className="flex justify-between items-center"
+              >
+                <div>
+                  <p className="font-medium text-white">{item.name}</p>
+                  <p className="text-sm text-gray-400">
+                    Qty: {item.quantity || 1}
+                  </p>
+                </div>
+
+                <p className="font-semibold">
+                  ₹{(item.price * (item.quantity || 1)).toLocaleString()}
+                </p>
+              </div>
+            ))}
           </div>
 
-          <div className="flex justify-between">
-            <span>Shipping</span>
-            <span className="text-green-600">Free</span>
+          <hr className="my-6 border-white/10" />
+
+          <div className="space-y-4">
+            <div className="flex justify-between">
+              <span>Subtotal</span>
+              <span>₹{total.toLocaleString()}</span>
+            </div>
+
+            <div className="flex justify-between">
+              <span>Shipping</span>
+              <span className="text-green-600">Free</span>
+            </div>
+
+            <div className="flex justify-between text-2xl font-bold pt-2">
+              <span>Total</span>
+              <span>₹{total.toLocaleString()}</span>
+            </div>
           </div>
 
-          <div className="flex justify-between text-2xl font-bold pt-2">
-            <span>Total</span>
-            <span>₹{total.toLocaleString()}</span>
-          </div>
+          <Link to="/checkout">
+            <button className="w-full mt-8 rounded-xl bg-white py-4 font-semibold text-black transition-all duration-300 hover:bg-gray-200">
+              Proceed to Checkout
+            </button>
+          </Link>
         </div>
-
-        <Link to="/checkout">
-          <button className="w-full mt-8 bg-black text-white py-4 rounded-lg hover:bg-black/80 transition">
-            Proceed to Checkout
-          </button>
-        </Link>
       </div>
     </div>
-
   );
 }
 
