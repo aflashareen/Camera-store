@@ -9,17 +9,21 @@ function Filter({
 }) {
     return (
         <div className="max-w-screen-2xl mx-auto px-8 py-10">
+
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8 border-b border-zinc-800 pb-8">
                 <div>
                     <p className="text-xs uppercase tracking-[0.4em] text-zinc-500">
-                     Discover
+                        Discover
                     </p>
+
                     <h2 className="mt-2 text-4xl font-light text-white">
-                     Shop Cameras
+                        Shop Cameras
                     </h2>
                 </div>
 
+
                 <div className="flex flex-wrap items-center gap-8 ml-20">
+
                     {["All", ...categories].map((category) => (
                         <button
                             key={category}

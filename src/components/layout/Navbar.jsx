@@ -1,16 +1,19 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { Search, UserRound, Heart, ShoppingBag, Dice1 } from "lucide-react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useCurrentUser } from '../../hooks/UseCurrentUser';
 import { useQuery } from '@tanstack/react-query';
 import { getWishlist } from '../../services/wishlistService';
 import { getCart } from '../../services/cartService';
+import { setSearch } from '../../redux/slice/searchSlice';
 
 function Navbar() {
   const navigate = useNavigate();
 
-  const [search, setSearch] = useState("");
+  const dispatch = useDispatch();
+
+const search = useSelector((state) => state.search.search);
 
   const { data: user } = useCurrentUser();
 
@@ -31,10 +34,12 @@ function Navbar() {
   const cartCount = cart?.length ?? 0;
 
   const handleSearch = (e) => {
-    const value = e.target.value;
-    setSearch(value);
-    navigate(`/shop?search=${value}`)
-  }
+  const value = e.target.value;
+
+  dispatch(setSearch(value));
+
+  navigate("/shop");
+};
 
   return (
     <nav className="sticky top-0 z-50 bg-neutral-950 shadow-lg border h-15">

@@ -1,24 +1,27 @@
+import { useSelector } from "react-redux";
 import { useQuery } from "@tanstack/react-query";
 import { getProducts } from "../../services/productService";
 import ProductCard from "../../components/productCard/ProductCard";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import Filter from "../../components/filter/Filter";
-import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { setCategory, setSort } from "../../redux/slice/searchSlice";
+
 
 function Shop() {
   const navigate = useNavigate();
+  
+  const dispatch = useDispatch();
 
   const { data: products = [], isLoading, error } = useQuery({
     queryKey: ["products"],
     queryFn: getProducts,
   });
 
-  const [searchParams, setSearchParams] = useSearchParams();
-
-  const category = searchParams.get("category") || "All";
-  const search = searchParams.get("search") || "";
-  const sort = searchParams.get("sort") || "default";
+  const { search, category, sort } = useSelector(
+    (state) => state.search
+  );
 
   //category
   const filteredProducts = products
@@ -52,17 +55,9 @@ function Shop() {
       <Filter
         categories={[...new Set(products.map((p) => p.category))]}
         selectedCategory={category}
-        onCategoryChange={(value) => {
-          const params = new URLSearchParams(searchParams);
-          params.set("category", value);
-          setSearchParams(params);
-        }}
+        onCategoryChange={(value) => dispatch(setCategory(value))}
         sortBy={sort}
-        onSortChange={(value) => {
-          const params = new URLSearchParams(searchParams);
-          params.set("sort", value);
-          setSearchParams(params);
-        }}
+        onSortChange={(value) => dispatch(setSort(value))}
       />
 
       <div className="grid grid-cols-3 gap-8 p-8 bg-neutal-800">
