@@ -11,7 +11,7 @@ import { setCategory, setSort } from "../../redux/slice/searchSlice";
 
 function Shop() {
   const navigate = useNavigate();
-  
+
   const dispatch = useDispatch();
 
   const { data: products = [], isLoading, error } = useQuery({
@@ -61,8 +61,7 @@ function Shop() {
       />
 
       <div className="grid grid-cols-3 gap-8 p-8 bg-neutal-800">
-        {
-          filteredProducts.map(product => (
+        {filteredProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))
         }
