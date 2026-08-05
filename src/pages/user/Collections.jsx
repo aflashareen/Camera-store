@@ -67,15 +67,14 @@ function Collections() {
             hover:border-zinc-950
             hover:-translate-y-2
             hover:shadow-[0_20px_60px_rgba(255,255,255,0.06)]
-          "
-        >
+          " >
 
           <div className="relative overflow-hidden">
+
             <img
               src={collection.image}
               alt={collection.title}
-              className="h-72 w-full object-cover transition duration-700 group-hover:scale-105"
-            />
+              className="h-72 w-full object-cover transition duration-700 group-hover:scale-105" />
 
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
           </div>
@@ -106,8 +105,7 @@ function Collections() {
                 duration-300
                 hover:bg-white
                 hover:text-black
-              "
-            >
+              " >
               Explore →
             </button>
           </div>
@@ -115,7 +113,6 @@ function Collections() {
       </Link>
     ))}
   </div>
-
 </div>  );
 }
 

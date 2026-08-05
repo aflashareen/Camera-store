@@ -493,6 +493,19 @@
       "stock": 5,
       "userId": "QLC9S6aT-eQ",
       "productId": "2"
+    },
+    {
+      "id": "n8Wp6SNMIVo",
+      "name": "DIGITEK® Portable 65cm Octa Soft Box Kit",
+      "brand": "Digitek",
+      "category": "Accessories",
+      "price": 2299,
+      "image": "/src/assets/images/products/accessory-godox-softbox.jpg",
+      "description": "The Godox SL200 is a powerful 200W continuous LED video light series, featuring options like the Godox SL200III Daylight LED Video Light and the Godox SL200IIIBI Bi-Color LED Monolight, priced roughly between ₹28,999 and ₹44,413 depending on the exact version. It is widely used for studio setups, interviews, and film production.",
+      "rating": 4.9,
+      "stock": 5,
+      "userId": "QLC9S6aT-eQ",
+      "productId": "33"
     }
   ],
   "cart": [
@@ -551,32 +564,23 @@
       "userId": "QLC9S6aT-eQ",
       "productId": "5",
       "quantity": 1
+    },
+    {
+      "id": "kC36zLDucn0",
+      "name": "DIGITEK® Portable 65cm Octa Soft Box Kit",
+      "brand": "Digitek",
+      "category": "Accessories",
+      "price": 2299,
+      "image": "/src/assets/images/products/accessory-godox-softbox.jpg",
+      "description": "The Godox SL200 is a powerful 200W continuous LED video light series, featuring options like the Godox SL200III Daylight LED Video Light and the Godox SL200IIIBI Bi-Color LED Monolight, priced roughly between ₹28,999 and ₹44,413 depending on the exact version. It is widely used for studio setups, interviews, and film production.",
+      "rating": 4.9,
+      "stock": 5,
+      "userId": "QLC9S6aT-eQ",
+      "productId": "33",
+      "quantity": 1
     }
   ],
   "orders": [
-    {
-      "userId": "QLC9S6aT-eQ",
-      "items": [
-        {
-          "productId": "8",
-          "name": "Sony Alpha 7 III",
-          "image": "/src/assets/images/products/sony-a7.jpg",
-          "price": 127490,
-          "quantity": 1
-        },
-        {
-          "productId": "6",
-          "name": "Canon AE-1 Program",
-          "image": "/src/assets/images/products/canon-ae.jpg",
-          "price": 38700,
-          "quantity": 1
-        }
-      ],
-      "total": 166190,
-      "status": "Pending",
-      "orderedAt": "2026-08-03T11:05:36.872Z",
-      "id": "DBZKDtPZu0k"
-    },
     {
       "userId": "QLC9S6aT-eQ",
       "items": [
@@ -592,127 +596,6 @@
       "status": "Pending",
       "orderedAt": "2026-08-04T05:08:21.141Z",
       "id": "RPh2vi92Mp0"
-    },
-    {
-      "userId": "QLC9S6aT-eQ",
-      "items": [
-        {
-          "productId": "1",
-          "name": "Olympus OM-2 MD",
-          "image": "/src/assets/images/products/olympus-om.jpg",
-          "price": 42990,
-          "quantity": 1
-        }
-      ],
-      "total": 42990,
-      "status": "Pending",
-      "orderedAt": "2026-08-04T08:13:08.250Z",
-      "id": "U4SI44b8210"
-    },
-    {
-      "userId": "QLC9S6aT-eQ",
-      "customer": {
-        "fullName": "Afla Shareen",
-        "email": "aflasherin07@gmail.com",
-        "phone": "9702100265"
-      },
-      "shippingAddress": {
-        "address": "fgffn kmdfkdf",
-        "city": "vengara",
-        "state": "kerala",
-        "pincode": "676304"
-      },
-      "paymentMethod": "Cash on Delivery",
-      "items": [
-        {
-          "productId": "7",
-          "name": "Minolta X-370",
-          "image": "/src/assets/images/products/minolta-x-370.jpg",
-          "price": 17999,
-          "quantity": 1
-        },
-        {
-          "productId": "6",
-          "name": "Canon AE-1 Program",
-          "image": "/src/assets/images/products/canon-ae.jpg",
-          "price": 38700,
-          "quantity": 1
-        }
-      ],
-      "total": 56699,
-      "status": "Pending",
-      "orderedAt": "2026-08-04T15:58:30.238Z",
-      "id": "rkzjTp2r_m4"
-    },
-    {
-      "userId": "QLC9S6aT-eQ",
-      "customer": {
-        "fullName": "Afla Shareen",
-        "email": "aflasherin07@gmail.com",
-        "phone": "9702100265"
-      },
-      "shippingAddress": {
-        "address": "fddfjdjf kjddjfkdkf ",
-        "city": "vengara",
-        "state": "kerala",
-        "pincode": "676355"
-      },
-      "paymentMethod": "Cash on Delivery",
-      "items": [
-        {
-          "productId": "7",
-          "name": "Minolta X-370",
-          "image": "/src/assets/images/products/minolta-x-370.jpg",
-          "price": 17999,
-          "quantity": 1
-        },
-        {
-          "productId": "6",
-          "name": "Canon AE-1 Program",
-          "image": "/src/assets/images/products/canon-ae.jpg",
-          "price": 38700,
-          "quantity": 1
-        }
-      ],
-      "total": 56699,
-      "status": "Pending",
-      "orderedAt": "2026-08-04T15:59:06.169Z",
-      "id": "x7A9Pi_d9bc"
-    },
-    {
-      "userId": "QLC9S6aT-eQ",
-      "customer": {
-        "fullName": "Afla Shareen",
-        "email": "aflasherin07@gmail.com",
-        "phone": "1234567890"
-      },
-      "shippingAddress": {
-        "address": "dcdkmdjdfjff kfmfkjfmf dd",
-        "city": "vengara",
-        "state": "kerala",
-        "pincode": "676304"
-      },
-      "paymentMethod": "Cash on Delivery",
-      "items": [
-        {
-          "productId": "7",
-          "name": "Minolta X-370",
-          "image": "/src/assets/images/products/minolta-x-370.jpg",
-          "price": 17999,
-          "quantity": 1
-        },
-        {
-          "productId": "6",
-          "name": "Canon AE-1 Program",
-          "image": "/src/assets/images/products/canon-ae.jpg",
-          "price": 38700,
-          "quantity": 1
-        }
-      ],
-      "total": 56699,
-      "status": "Pending",
-      "orderedAt": "2026-08-04T16:01:52.509Z",
-      "id": "3u8JhfjBidU"
     },
     {
       "userId": "QLC9S6aT-eQ",

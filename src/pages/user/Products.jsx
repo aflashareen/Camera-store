@@ -132,7 +132,6 @@ function Products() {
           <img src={product.image} alt={product.name} />
         </div>
 
-        {/* right */}
         <div className="w-1/2 pl-10 flex flex-col">
 
           <p className="text-sm uppercase tracking-widest text-gray-500">

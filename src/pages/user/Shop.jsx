@@ -44,7 +44,7 @@ function Shop() {
     <div className="bg-black">
       <button
         onClick={() => navigate(-1)}
-        className="flex items-center gap-2 pt-4 pl-2 text-gray-700 hover:text-black transition"
+        className="flex items-center gap-2 p-2 text-gray-400 hover:text-white transition"
       >
         <ArrowLeft size={20} />
         Back

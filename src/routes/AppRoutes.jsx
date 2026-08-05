@@ -9,7 +9,6 @@ import Cart from '../pages/user/Cart'
 import Wishlist from '../pages/user/Wishlist';
 import Checkout from '../pages/user/Checkout';
 import Collection from '../pages/user/Collections';
-import Search from '../pages/user/Search';
 import Profile from '../pages/user/Profile';
 import About from '../pages/user/About';
 import Login from '../pages/user/auth/Login';
@@ -45,7 +44,6 @@ function AppRoutes() {
                                 <Profile />
                             </ProtectedRoute> }/>
 
-                    <Route path="/search" element={<Search />} />
                     <Route path="/wishlist" element={<Wishlist />} />
                     <Route path="/cart" element={<Cart />} />
                     <Route path="/checkout" element={<Checkout />} />

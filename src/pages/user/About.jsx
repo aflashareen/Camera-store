@@ -2,7 +2,6 @@ function About() {
   return (
     <div className="bg-black text-white">
 
-      {/* Hero */}
       <section className="min-h-screen flex items-center justify-center px-8">
         <div className="max-w-4xl text-center">
 
@@ -24,7 +23,6 @@ function About() {
         </div>
       </section>
 
-      {/* Hero Image */}
       <section className="px-8 pb-24">
         <div className="max-w-7xl mx-auto overflow-hidden rounded-3xl border border-zinc-800">
 
@@ -37,7 +35,6 @@ function About() {
         </div>
       </section>
 
-      {/* Story */}
       <section className="py-24 px-8 border-t border-zinc-900">
 
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-20">
@@ -77,7 +74,6 @@ function About() {
 
       </section>
 
-      {/* Stats */}
       <section className="py-24 px-8">
 
         <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 text-center gap-10">
@@ -114,7 +110,6 @@ function About() {
 
       </section>
 
-      {/* Values */}
       <section className="py-24 px-8 border-y border-zinc-900">
 
         <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-12">
@@ -147,7 +142,6 @@ function About() {
 
       </section>
 
-      {/* Quote */}
       <section className="py-32 px-8">
 
         <div className="max-w-4xl mx-auto text-center">
