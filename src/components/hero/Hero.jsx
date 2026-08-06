@@ -18,7 +18,7 @@ function Hero() {
       <div className="absolute inset-0 bg-black/50" />
 
       <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-white">
-        <h1 className="text-5xl font-bold font-serif">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-serif">
           Capture Every Moment
         </h1>
 
@@ -26,11 +26,11 @@ function Hero() {
           Discover premium cameras built for professionals and creators.
         </p>
 
-        <button 
-        onClick={()=>(
-          navigate("/shop")
-        )}
-        className="mt-8 rounded-full bg-white px-8 py-3 text-black font-medium hover:bg-gray-200 transition" >
+        <button
+          onClick={() => (
+            navigate("/shop")
+          )}
+          className="mt-8 rounded-full bg-white px-8 py-3 text-black font-medium hover:bg-gray-200 transition" >
           Shop Now
         </button>
       </div>

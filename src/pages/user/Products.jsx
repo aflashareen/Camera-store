@@ -7,7 +7,7 @@ import { getWishlist, addToWishlist, removeFromWishlist } from "../../services/w
 import { useCurrentUser } from "../../hooks/UseCurrentUser";
 import { addToCart, getCart } from "../../services/cartService";
 
-function Products() {
+function Products({isWishlisted}) {
   const { id } = useParams();
 
   const { data: user } = useCurrentUser();

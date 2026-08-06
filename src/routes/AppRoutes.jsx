@@ -19,6 +19,7 @@ import ProtectedRoute from "./ProtectedRoute";
 import PublicRoute from "./PublicRoute";
 import OrderSuccess from "../orders/OrderSuccess";
 import Orders from "../orders/Orders";
+import NotFound from "../notfound/NotFound";
 
 function AuthLayout() {
   return <Outlet />;
@@ -60,6 +61,7 @@ function AppRoutes() {
           </Route>
         </Route>
 
+        <Route path="*" element={<NotFound />}/>
       </Routes>
     </BrowserRouter>
   );

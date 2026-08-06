@@ -480,6 +480,19 @@
       "stock": 5,
       "userId": "QLC9S6aT-eQ",
       "productId": "33"
+    },
+    {
+      "id": "9-jRe3yJQbc",
+      "name": "Olympus OM-2 MD",
+      "brand": "Olympus",
+      "category": "Mirrorless",
+      "price": 42990,
+      "image": "/src/assets/images/products/olympus-om.jpg",
+      "description": "A timeless 35mm film SLR renowned for its precision engineering and elegant design. The Olympus OM-2 MD features aperture-priority automatic exposure, through-the-lens (TTL) metering, and a compact, lightweight body that makes it a favorite among film photography enthusiasts. Its exceptional Zuiko lens compatibility and reliable performance deliver beautifully detailed images, making it an excellent choice for both collectors and photographers seeking an authentic analog shooting experience.",
+      "rating": 4.7,
+      "stock": 5,
+      "userId": "QLC9S6aT-eQ",
+      "productId": "1"
     }
   ],
   "cart": [
@@ -512,17 +525,45 @@
       "quantity": 1
     },
     {
-      "id": "kC36zLDucn0",
-      "name": "DIGITEK® Portable 65cm Octa Soft Box Kit",
-      "brand": "Digitek",
-      "category": "Accessories",
-      "price": 2299,
-      "image": "/src/assets/images/products/accessory-godox-softbox.jpg",
-      "description": "The Godox SL200 is a powerful 200W continuous LED video light series, featuring options like the Godox SL200III Daylight LED Video Light and the Godox SL200IIIBI Bi-Color LED Monolight, priced roughly between ₹28,999 and ₹44,413 depending on the exact version. It is widely used for studio setups, interviews, and film production.",
-      "rating": 4.9,
+      "id": "zmjeGRBFk3g",
+      "name": " Sony a9 III",
+      "brand": "Sony",
+      "category": "Mirrorless",
+      "price": 529990,
+      "image": "/src/assets/images/products/sony-ilce-1.jpg",
+      "description": "The Sony a9 III is a flagship full-frame mirrorless camera engineered for professionals who demand exceptional speed, precision, and image quality. Featuring advanced autofocus, high-speed continuous shooting, and outstanding low-light performance, it excels in sports, wildlife, events, and cinematic video production. Its durable design, intuitive controls, and cutting-edge technology make it the perfect companion for capturing every decisive moment with confidence.",
+      "rating": 4.7,
       "stock": 5,
       "userId": "QLC9S6aT-eQ",
-      "productId": "33",
+      "productId": "2",
+      "quantity": 4
+    },
+    {
+      "id": "wk353EVgsn4",
+      "name": "Olympus OM-2 MD",
+      "brand": "Olympus",
+      "category": "Mirrorless",
+      "price": 42990,
+      "image": "/src/assets/images/products/olympus-om.jpg",
+      "description": "A timeless 35mm film SLR renowned for its precision engineering and elegant design. The Olympus OM-2 MD features aperture-priority automatic exposure, through-the-lens (TTL) metering, and a compact, lightweight body that makes it a favorite among film photography enthusiasts. Its exceptional Zuiko lens compatibility and reliable performance deliver beautifully detailed images, making it an excellent choice for both collectors and photographers seeking an authentic analog shooting experience.",
+      "rating": 4.7,
+      "stock": 5,
+      "userId": "QLC9S6aT-eQ",
+      "productId": "1",
+      "quantity": 1
+    },
+    {
+      "id": "8cQvobiGEdw",
+      "name": "Olympus OM-2 MD",
+      "brand": "Olympus",
+      "category": "Mirrorless",
+      "price": 42990,
+      "image": "/src/assets/images/products/olympus-om.jpg",
+      "description": "A timeless 35mm film SLR renowned for its precision engineering and elegant design. The Olympus OM-2 MD features aperture-priority automatic exposure, through-the-lens (TTL) metering, and a compact, lightweight body that makes it a favorite among film photography enthusiasts. Its exceptional Zuiko lens compatibility and reliable performance deliver beautifully detailed images, making it an excellent choice for both collectors and photographers seeking an authentic analog shooting experience.",
+      "rating": 4.7,
+      "stock": 5,
+      "userId": "QLC9S6aT-eQ",
+      "productId": "1",
       "quantity": 1
     }
   ],
@@ -565,6 +606,22 @@
       "status": "Pending",
       "orderedAt": "2026-08-04T16:02:52.368Z",
       "id": "NEh-NcplKCI"
+    },
+    {
+      "userId": "QLC9S6aT-eQ",
+      "items": [
+        {
+          "productId": "33",
+          "name": "DIGITEK® Portable 65cm Octa Soft Box Kit",
+          "image": "/src/assets/images/products/accessory-godox-softbox.jpg",
+          "price": 2299,
+          "quantity": 1
+        }
+      ],
+      "total": 2299,
+      "status": "Pending",
+      "orderedAt": "2026-08-05T09:39:29.861Z",
+      "id": "0LpEb9Ou-RQ"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
