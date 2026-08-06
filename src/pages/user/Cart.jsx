@@ -6,6 +6,7 @@ import { getCart } from "../../services/cartService";
 import CartCard from "../../components/productCard/CartCard";
 import { Link } from "react-router-dom";
 import { useCurrentUser } from "../../hooks/UseCurrentUser";
+import { calculateTotal } from "../../cart";
 
 function Cart() {
   const navigate = useNavigate();
@@ -46,14 +47,11 @@ function Cart() {
       </div>
     );
   }
-  const total = userCart.reduce((sum, item) => {
-    return sum + item.price * (item.quantity || 1);
-  }, 0);
+  const total = calculateTotal(cart);
 
   return (
     <div className="min-h-screen bg-[radial-gradient(circle_at_top,#2A2A2A_0%,#18181B_45%,#09090B_100%)] text-white">
       <div className="max-w-7xl mx-auto px-6 py-12">
-
         <button
           onClick={() => navigate(-1)}
           className="flex items-center gap-2 mb-8 text-gray-400 hover:text-white transition"
@@ -66,65 +64,68 @@ function Cart() {
           Shopping Cart
         </h1>
 
+        <div className="grid lg:grid-cols-[2fr_1fr] gap-8">
 
-        <div className="flex flex-col gap-6">
-          {userCart.map((product) => (
-            <CartCard
-              key={product.id}
-              product={product}
-            />
-          ))}
-        </div>
-
-        <div className="mt-14 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-2xl shadow-[0_20px_80px_rgba(0,0,0,0.45)] p-8">
-          <h2 className="text-3xl font-bold mb-8">
-            Order Summary
-          </h2>
-
-          <div className="space-y-5">
-            {cart.map((item) => (
-              <div
-                key={item.id}
-                className="flex justify-between items-center"
-              >
-                <div>
-                  <p className="font-medium text-white">{item.name}</p>
-                  <p className="text-sm text-gray-400">
-                    Qty: {item.quantity || 1}
-                  </p>
-                </div>
-
-                <p className="font-semibold">
-                  ₹{(item.price * (item.quantity || 1)).toLocaleString()}
-                </p>
-              </div>
+          <div className="flex flex-col gap-6">
+            {userCart.map((product) => (
+              <CartCard
+                key={product.id}
+                product={product}
+              />
             ))}
           </div>
 
-          <hr className="my-6 border-white/10" />
 
-          <div className="space-y-4">
-            <div className="flex justify-between">
-              <span>Subtotal</span>
-              <span>₹{total.toLocaleString()}</span>
+          <div className="sticky top-24 h-fit rounded-3xl border border-white/10 bg-white/5 backdrop-blur-2xl shadow-[0_20px_80px_rgba(0,0,0,0.45)] p-8">
+            <h2 className="text-3xl font-bold mb-8">
+              Order Summary
+            </h2>
+
+            <div className="space-y-5">
+              {userCart.map((item) => (
+                <div
+                  key={item.id}
+                  className="flex justify-between items-center"
+                >
+                  <div>
+                    <p className="font-medium">{item.name}</p>
+                    <p className="text-sm text-gray-400">
+                      Qty: {item.quantity || 1}
+                    </p>
+                  </div>
+
+                  <p>
+                    ₹{(item.price * (item.quantity || 1)).toLocaleString()}
+                  </p>
+                </div>
+              ))}
             </div>
 
-            <div className="flex justify-between">
-              <span>Shipping</span>
-              <span className="text-green-600">Free</span>
+            <hr className="my-6 border-white/10" />
+
+            <div className="space-y-4">
+              <div className="flex justify-between">
+                <span>Subtotal</span>
+                <span>₹{total.toLocaleString()}</span>
+              </div>
+
+              <div className="flex justify-between">
+                <span>Shipping</span>
+                <span className="text-green-500">Free</span>
+              </div>
+
+              <div className="flex justify-between text-2xl font-bold">
+                <span>Total</span>
+                <span>₹{total.toLocaleString()}</span>
+              </div>
             </div>
 
-            <div className="flex justify-between text-2xl font-bold pt-2">
-              <span>Total</span>
-              <span>₹{total.toLocaleString()}</span>
-            </div>
+            <Link to="/checkout">
+              <button className="w-full mt-8 rounded-xl bg-white py-4 font-semibold text-black hover:bg-gray-200">
+                Proceed to Checkout
+              </button>
+            </Link>
           </div>
-
-          <Link to="/checkout">
-            <button className="w-full mt-8 rounded-xl bg-white py-4 font-semibold text-black transition-all duration-300 hover:bg-gray-200">
-              Proceed to Checkout
-            </button>
-          </Link>
         </div>
       </div>
     </div>

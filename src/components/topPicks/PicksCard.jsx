@@ -8,7 +8,7 @@ function PicksCard({ product }) {
           src={product.image}
           alt={product.name}
           className="h-80 w-full object-cover"
-        />
+        /> 
 
         <div className="p-5">
           <p className="text-sm text-zinc-500">{product.brand}</p>

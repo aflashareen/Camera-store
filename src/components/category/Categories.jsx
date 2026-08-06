@@ -1,17 +1,47 @@
-import { useQuery } from '@tanstack/react-query'
 import React from 'react'
-import { getCategories } from '../../services/categoryService'
 import CategoryCard from './CategoryCard';
 
+import mirrorless from '../../assets/images/categories/mirrorless.webp';
+import dslr from "../../assets/images/categories/dslr.webp";
+import cinema from "../../assets/images/categories/cinema.webp";
+import vlogging from "../../assets/images/categories/vlogging.webp";
+import lens from "../../assets/images/categories/lens.webp";
+import accessories from "../../assets/images/categories/accessories.webp";
+
+export const categories = [
+  {
+    id: 1,
+    name: "Mirrorless",
+    image: mirrorless,
+  },
+  {
+    id: 2,
+    name: "DSLR",
+    image: dslr,
+  },
+  {
+    id: 3,
+    name: "Cinema",
+    image: cinema,
+  },
+  {
+    id: 4,
+    name: "Vlogging",
+    image: vlogging,
+  },
+  {
+    id: 5,
+    name: "Lenses",
+    image: lens,
+  },
+  {
+    id: 6,
+    name: "Accessories",
+    image: accessories,
+  },
+];
+
 function Categories() {
-    const { data: categories, isLoading, error } = useQuery({
-        queryKey: ["categories"],
-        queryFn: getCategories,
-    });
-
-    if (isLoading) return <p>Loading...</p>;
-    if (error) return <p>Something went wrong.</p>;
-
     return (
         <section className='bg-neutral-950 py-24 text-white'>
             <div className='mx-auto max-w-7xl px-6'>

@@ -2,9 +2,9 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Heart } from "lucide-react";
 import { useCurrentUser } from "../../hooks/UseCurrentUser";
-import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { removeFromWishlist } from "../../services/wishlistService";
-import { addToCart } from "../../services/cartService";
+import { getCart,addToCart } from "../../services/cartService";
 
 function WishlistCard({ product }) {
 
@@ -12,6 +12,13 @@ function WishlistCard({ product }) {
   const queryClient = useQueryClient();
 
   const { data: user } = useCurrentUser();
+
+  const { data: cart = [] } = useQuery({
+  queryKey: ["cart"],
+  queryFn: getCart,
+  enabled: !!user,
+});
+  
 
   const removeMutation = useMutation({
     mutationFn: removeFromWishlist,
@@ -41,21 +48,36 @@ function WishlistCard({ product }) {
     },
   });
 
-  const handleCart = (e) => {
-    e.preventDefault();
+ const handleCart = async (e) => {
+  e.preventDefault();
 
-    if (!user) {
-      navigate("/login");
-      return;
-    }
+  if (!user) {
+    navigate("/login");
+    return;
+  }
 
-    cartMutation.mutate({
+  const existingItem = cart.find(
+    (item) =>
+      String(item.userId) === String(user.id) &&
+      String(item.productId) === String(product.productId)
+  );
+
+  if (!existingItem) {
+    await cartMutation.mutateAsync({
       ...product,
       userId: user.id,
       productId: product.productId,
       quantity: 1,
     });
-  };
+  }
+
+  await removeMutation.mutateAsync(product.id);
+
+  queryClient.invalidateQueries({ queryKey: ["cart"] });
+  queryClient.invalidateQueries({ queryKey: ["wishlist"] });
+
+  navigate("/cart");
+};
 
   return (
     <Link to={`/product/${product.productId}`}>

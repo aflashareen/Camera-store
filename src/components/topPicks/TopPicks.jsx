@@ -1,6 +1,12 @@
+import { useRef, useLayoutEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { getProducts } from "../../services/productService";
 import PicksCard from "./PicksCard";
+
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 function TopPicks() {
   const { data: products = [], isLoading, error } = useQuery({
@@ -8,23 +14,59 @@ function TopPicks() {
     queryFn: getProducts,
   });
 
+  const sectionRef = useRef(null);
+  const sliderRef = useRef(null);
+
+useLayoutEffect(() => {
+  if (!products.length) return;
+
+  const slider = sliderRef.current;
+  const section = sectionRef.current;
+
+  const distance = slider.scrollWidth - window.innerWidth;
+
+  const ctx = gsap.context(() => {
+    gsap.to(slider, {
+      x: -distance,
+      ease: "none",
+      scrollTrigger: {
+        trigger: section,
+        start: "top top",
+        end: "+=" + distance,
+        pin: true,
+        scrub: true,
+        invalidateOnRefresh: true,
+      },
+    });
+  }, section);
+
+  ScrollTrigger.refresh();
+
+  return () => ctx.revert();
+}, [products]);
+
   if (isLoading) return <p>Loading...</p>;
   if (error) return <p>Something went wrong.</p>;
 
   return (
-    <section className="bg-[radial-gradient(circle_at_top,#2A2A2A_0%,#18181B_45%,#09090B_100%)] text-white py-24">
-      <div className="max-w-7xl mx-auto px-6">
-        <p className="uppercase tracking-[0.35em] text-zinc-500">
+    <section
+      ref={sectionRef}
+      className="overflow-hidden bg-zinc-900 py-20"
+    >
+      <div className="px-8">
+        <h2 className="text-5xl text-white mb-10">
           Top Picks
-        </p>
-
-        <h2 className="text-4xl font-semibold mt-3">
-          Editor's Selection
         </h2>
 
-        <div className="mt-12 flex gap-6 overflow-x-auto pb-4">
-          {products.slice(9, 15).map((product) => (
-            <PicksCard key={product.id} product={product} />
+        <div
+          ref={sliderRef}
+          className="flex gap-6 w-max"
+        >
+          {products.slice(9, 16).map((product) => (
+            <PicksCard
+              key={product.id}
+              product={product}
+            />
           ))}
         </div>
       </div>
