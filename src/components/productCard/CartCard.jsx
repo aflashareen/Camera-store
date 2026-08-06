@@ -63,7 +63,7 @@ function CartCard({ product }) {
               onClick={(e) => handleQuantity(e, -1)}
               className="border rounded-md p-2"
             >
-              <Minus size={16} />
+              <Minus size={12} />
             </button>
 
             <span className="font-semibold text-lg">
@@ -74,7 +74,7 @@ function CartCard({ product }) {
               onClick={(e) => handleQuantity(e, 1)}
               className="border rounded-md p-2"
             >
-              <Plus size={16} />
+              <Plus size={12} />
             </button>
           </div>
         </div>

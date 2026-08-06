@@ -6,7 +6,7 @@ import { getCart } from "../../services/cartService";
 import CartCard from "../../components/productCard/CartCard";
 import { Link } from "react-router-dom";
 import { useCurrentUser } from "../../hooks/UseCurrentUser";
-import { calculateTotal } from "../../cart";
+import { calculateTotal } from "../../utils/cart";
 
 function Cart() {
   const navigate = useNavigate();
