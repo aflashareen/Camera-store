@@ -1,22 +1,66 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+import React from "react";
+import { NavLink } from "react-router-dom";
+import {
+  LayoutDashboard,
+  Package,
+  Users,
+  ShoppingCart,
+  LogOut,
+} from "lucide-react";
 
-function SideBar() {
+function Sidebar() {
   return (
-    <aside>
-        <h1>Admin</h1>
+    <aside className="flex h-auto lg:h-[calc(100vh-40px)] w-full lg:w-72 flex-col rounded-3xl border border-white/5 bg-[#121212] p-6 shadow-2xl">
 
-        <nav>
-            <NavLink>Dashboard</NavLink>
+      <div>
+        <h1 className="mb-10 text-2xl font-semibold text-white">
+          LENSÉ
+        </h1>
 
-            <NavLink>Products</NavLink>
+        <nav className="space-y-2">
 
-            <NavLink>Users</NavLink>
+          <NavLink
+            to="/admin/dashboard"
+            className="flex items-center gap-3 rounded-xl px-4 py-3 text-zinc-400 hover:bg-[#1E1E1E] hover:text-white"
+          >
+            <LayoutDashboard size={20} />
+            Dashboard
+          </NavLink>
 
-            <NavLink>Orders</NavLink>
+          <NavLink
+            to="/admin/products"
+            className="flex items-center gap-3 rounded-xl px-4 py-3 text-zinc-400 hover:bg-[#1E1E1E] hover:text-white"
+          >
+            <Package size={20} />
+            Products
+          </NavLink>
+
+          <NavLink
+            to="/admin/users"
+            className="flex items-center gap-3 rounded-xl px-4 py-3 text-zinc-400 hover:bg-[#1E1E1E] hover:text-white"
+          >
+            <Users size={20} />
+            Users
+          </NavLink>
+
+          <NavLink
+            to="/admin/orders"
+            className="flex items-center gap-3 rounded-xl px-4 py-3 text-zinc-400 hover:bg-[#1E1E1E] hover:text-white"
+          >
+            <ShoppingCart size={20} />
+            Orders
+          </NavLink>
+
         </nav>
+      </div>
+
+      <button className="mt-auto flex items-center gap-3 rounded-xl bg-neutral-600 px-4 py-3 text-white transition hover:bg-neutral-700">
+        <LogOut size={20} />
+        Logout
+      </button>
+
     </aside>
-  )
+  );
 }
 
-export default SideBar
+export default Sidebar;

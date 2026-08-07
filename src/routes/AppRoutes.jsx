@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "../components/layout/Layout";
 import { Outlet } from "react-router-dom";
 
-// Pages
+// user
 import Home from "../pages/user/Home";
 import Shop from "../pages/user/Shop";
 import Products from "../pages/user/Products";
@@ -20,6 +20,14 @@ import PublicRoute from "./PublicRoute";
 import OrderSuccess from "../orders/OrderSuccess";
 import Orders from "../orders/Orders";
 import NotFound from "../notfound/NotFound";
+
+//admin
+import AdminRoute from "./AdminRoute";
+import Dashboard from "../pages/admin/Dashboard";
+import AdminProducts from "../pages/admin/Products";
+import Users from "../pages/admin/Users";
+import AdminOrders from "../pages/admin/Orders";
+import AdminLayout from "../components/admin/AdminLayout";
 
 function AuthLayout() {
   return <Outlet />;
@@ -61,7 +69,22 @@ function AppRoutes() {
           </Route>
         </Route>
 
-        <Route path="*" element={<NotFound />}/>
+
+{/* //admin */}
+        <Route
+          path="/admin"
+          element={
+            <AdminRoute>
+              <AdminLayout />
+            </AdminRoute>
+          }
+        >
+          <Route path="dashboard" element={<Dashboard />} />
+          <Route path="products" element={<AdminProducts />} />
+          <Route path="users" element={<Users />} />
+          <Route path="orders" element={<AdminOrders />} />
+        </Route>
+      <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );

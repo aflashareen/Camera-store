@@ -13,6 +13,6 @@ body{
 html,
 body,
 #root {
-  background: black;
+  /* background: black; */
   min-height: 100%;
 }

@@ -1,22 +1,26 @@
-import React from 'react'
-import SideBar from './SideBar'
-import Header from './Header'
-import { Outlet } from 'react-router-dom'
+import React from "react";
+import Sidebar from "./Sidebar";
+import Header from "./Header";
+import { Outlet } from "react-router-dom";
 
 function AdminLayout() {
   return (
-    <div className='flex min-h-screen bg-gray-100'>
-        <SideBar />
+    <div className="min-h-screen bg-zinc-500 p-3 md:p-5">
+      <div className="flex flex-col gap-5 lg:flex-row">
 
-        <div className='flex flex-1 flex-col'>
-            <Header />
+        <Sidebar />
 
-            <main className='flex-1 p-6'>
-                <Outlet />
-            </main>
+        <div className="flex flex-1 flex-col gap-5">
+          <Header />
+
+          <main className="flex-1 rounded-3xl border border-white/5 bg-[#151515] p-4 md:p-6 shadow-2xl">
+            <Outlet />
+          </main>
         </div>
+
+      </div>
     </div>
-  )
+  );
 }
 
 export default AdminLayout;
