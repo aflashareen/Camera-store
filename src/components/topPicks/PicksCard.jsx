@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 function PicksCard({ product }) {
   return (
     <Link to={`/product/${product.id}`}>
-      <div className="min-w-[450px] rounded-xl bg-zinc-900 overflow-hidden hover:scale-[1.02] transition duration-300">
+      <div className="min-w-[450px]  bg-zinc-900 overflow-hidden hover:scale-[1.02] transition duration-300">
         <img
           src={product.image}
           alt={product.name}
@@ -11,15 +11,15 @@ function PicksCard({ product }) {
         /> 
 
         <div className="p-5">
-          <p className="text-sm text-zinc-500">{product.brand}</p>
+          {/* <p className="text-sm text-zinc-500">{product.brand}</p> */}
 
-          <h3 className="mt-2 text-xl font-medium">
+          <h3 className="mt-2 text-xl font-medium flex justify-center text-zinc-400">
             {product.name}
           </h3>
 
-          <p className="mt-4 text-lg font-semibold">
+          {/* <p className="mt-4 text-lg font-semibold">
             ₹{product.price.toLocaleString()}
-          </p>
+          </p> */}
         </div>
       </div>
     </Link>

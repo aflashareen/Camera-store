@@ -25,7 +25,7 @@ function Filter({
                     </h2>
                 </div>
 
-
+ 
                 <div className="flex items-center gap-4 overflow-x-auto whitespace-nowrap scrollbar-hide pb-2">
 
                     {categoryList.map((category) => (

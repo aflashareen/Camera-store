@@ -51,6 +51,9 @@ function Shop() {
     return [...new Set(products.map((p) => p.category))];
   }, [products]);
 
+  // if(filteredProducts !== search){
+  //   return <h1>no products</h1>
+  // }
   if (isLoading) return <p className="text-white text-center py-20">Loading...</p>
   if (error) return <p className="text-red-500 text-center py-20">something went wrong</p>
 

@@ -409,23 +409,25 @@
   ],
   "users": [
     {
-      "fullname": "Afla",
-      "email": "afla@gmail.com",
-      "password": "123456",
-      "confirmPassword": "123456",
-      "id": "hkDOLM41IZg"
-    },
-    {
       "fullname": "Afla Shareen",
       "email": "aflasherin07@gmail.com",
       "password": "amjad140321",
-      "id": "QLC9S6aT-eQ"
+      "id": "QLC9S6aT-eQ",
+      "role": "user"
     },
     {
       "fullname": "amjad k",
       "email": "amj@gmail.com",
       "password": "afla140321",
-      "id": "NWdYytKWWrk"
+      "id": "NWdYytKWWrk",
+      "role": "user"
+    },
+    {
+      "id": "1",
+      "fullname": "Admin",
+      "email": "admin@gmail.com",
+      "password": "12345678",
+      "role": "admin"
     }
   ],
   "wishlist": [
@@ -506,6 +508,19 @@
       "stock": 5,
       "userId": "QLC9S6aT-eQ",
       "productId": "8"
+    },
+    {
+      "id": "WHZAnqxlV_U",
+      "name": " Sony a9 III",
+      "brand": "Sony",
+      "category": "Mirrorless",
+      "price": 529990,
+      "image": "/src/assets/images/products/sony-ilce-1.jpg",
+      "description": "The Sony a9 III is a flagship full-frame mirrorless camera engineered for professionals who demand exceptional speed, precision, and image quality. Featuring advanced autofocus, high-speed continuous shooting, and outstanding low-light performance, it excels in sports, wildlife, events, and cinematic video production. Its durable design, intuitive controls, and cutting-edge technology make it the perfect companion for capturing every decisive moment with confidence.",
+      "rating": 4.7,
+      "stock": 5,
+      "userId": "1",
+      "productId": "2"
     }
   ],
   "cart": [
@@ -558,7 +573,7 @@
       "brand": "Sony",
       "price": 529990,
       "image": "/src/assets/images/products/sony-ilce-1.jpg",
-      "quantity": 1,
+      "quantity": 2,
       "category": "Mirrorless",
       "description": "The Sony a9 III is a flagship full-frame mirrorless camera engineered for professionals who demand exceptional speed, precision, and image quality. Featuring advanced autofocus, high-speed continuous shooting, and outstanding low-light performance, it excels in sports, wildlife, events, and cinematic video production. Its durable design, intuitive controls, and cutting-edge technology make it the perfect companion for capturing every decisive moment with confidence.",
       "rating": 4.7,
@@ -591,6 +606,34 @@
       "stock": 5,
       "userId": "QLC9S6aT-eQ",
       "productId": "8",
+      "quantity": 1
+    },
+    {
+      "id": "P4_cROo_cu0",
+      "name": " Sony a9 III",
+      "brand": "Sony",
+      "category": "Mirrorless",
+      "price": 529990,
+      "image": "/src/assets/images/products/sony-ilce-1.jpg",
+      "description": "The Sony a9 III is a flagship full-frame mirrorless camera engineered for professionals who demand exceptional speed, precision, and image quality. Featuring advanced autofocus, high-speed continuous shooting, and outstanding low-light performance, it excels in sports, wildlife, events, and cinematic video production. Its durable design, intuitive controls, and cutting-edge technology make it the perfect companion for capturing every decisive moment with confidence.",
+      "rating": 4.7,
+      "stock": 5,
+      "userId": "1",
+      "productId": "2",
+      "quantity": 1
+    },
+    {
+      "id": "W7284CFVs-A",
+      "name": " Sony a9 III",
+      "brand": "Sony",
+      "category": "Mirrorless",
+      "price": 529990,
+      "image": "/src/assets/images/products/sony-ilce-1.jpg",
+      "description": "The Sony a9 III is a flagship full-frame mirrorless camera engineered for professionals who demand exceptional speed, precision, and image quality. Featuring advanced autofocus, high-speed continuous shooting, and outstanding low-light performance, it excels in sports, wildlife, events, and cinematic video production. Its durable design, intuitive controls, and cutting-edge technology make it the perfect companion for capturing every decisive moment with confidence.",
+      "rating": 4.7,
+      "stock": 5,
+      "userId": "1",
+      "productId": "2",
       "quantity": 1
     }
   ],
