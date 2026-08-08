@@ -9,3 +9,13 @@ export const getProductById = async (id) => {
   const response = await api.get(`/products/${id}`);
   return response.data;
 };
+
+//for admin product details
+export const updateProduct = async ({ id, data }) => {
+  const res = await api.patch(`/products/${id}`, data);
+  return res.data;
+};
+export const addProduct = async (product) => {
+  const res = await api.post("/products", product);
+  return res.data;
+};

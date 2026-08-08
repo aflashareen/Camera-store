@@ -56,8 +56,6 @@ function Sidebar() {
         <LogOut size={20} />
         Logout
       </button>
-
-
     </aside>
   );
 }
