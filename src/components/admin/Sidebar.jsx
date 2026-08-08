@@ -5,12 +5,12 @@ import {
   Package,
   Users,
   ShoppingCart,
-  LogOut,
+  LogOut
 } from "lucide-react";
 
 function Sidebar() {
   return (
-    <aside className="flex h-auto lg:h-[calc(100vh-40px)] w-full lg:w-72 flex-col rounded-3xl border border-white/5 bg-[#121212] p-6 shadow-2xl">
+    <aside className="flex min-h-screen w-full lg:w-72 flex-col rounded-3xl border border-white/5 bg-[#121212] p-6 shadow-2xl">
 
       <div>
         <h1 className="mb-10 text-2xl font-semibold text-white">
@@ -50,14 +50,13 @@ function Sidebar() {
             <ShoppingCart size={20} />
             Orders
           </NavLink>
-
         </nav>
       </div>
-
-      <button className="mt-auto flex items-center gap-3 rounded-xl bg-neutral-600 px-4 py-3 text-white transition hover:bg-neutral-700">
+      <button className="mt-auto flex items-center gap-3 rounded-xl px-4 py-3 text-white transition hover:bg-[#1E1E1E]">
         <LogOut size={20} />
         Logout
       </button>
+
 
     </aside>
   );
