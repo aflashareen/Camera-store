@@ -2,9 +2,11 @@ import FormField from "./FormField.";
 
 function ProductForm({
   formData,
+  errors,
   onChange,
   onSubmit,
   isLoading,
+  buttonText = "Add Product",
 }) {
   return (
     <form onSubmit={onSubmit} className="space-y-4">
@@ -15,6 +17,7 @@ function ProductForm({
         value={formData.name}
         onChange={onChange}
         placeholder="Enter product name"
+        error={errors?.name}
       />
 
       <FormField
@@ -23,6 +26,7 @@ function ProductForm({
         value={formData.brand}
         onChange={onChange}
         placeholder="Enter brand"
+        error={errors?.brand}
       />
 
       <FormField
@@ -31,6 +35,7 @@ function ProductForm({
         value={formData.category}
         onChange={onChange}
         placeholder="Enter category"
+        error={errors?.category}
       />
 
       <div className="grid grid-cols-2 gap-3">
@@ -41,6 +46,7 @@ function ProductForm({
           value={formData.price}
           onChange={onChange}
           placeholder="₹ Price"
+          error={errors?.price}
         />
 
         <FormField
@@ -50,6 +56,7 @@ function ProductForm({
           value={formData.stock}
           onChange={onChange}
           placeholder="Stock"
+          error={errors?.stock}
         />
       </div>
 
@@ -59,6 +66,7 @@ function ProductForm({
         value={formData.image}
         onChange={onChange}
         placeholder="Enter image URL"
+        error={errors?.image}
       />
 
       <FormField
@@ -71,6 +79,7 @@ function ProductForm({
         min="0"
         max="5"
         step="0.1"
+        error={errors?.rating}
       />
 
       <FormField
@@ -80,14 +89,15 @@ function ProductForm({
         value={formData.description}
         onChange={onChange}
         placeholder="Enter description"
+        error={errors?.description}
       />
 
       <button
         type="submit"
         disabled={isLoading}
-        className="w-full rounded-xl bg-white py-3 text-black"
+        className="w-full rounded-xl bg-white py-3 text-black disabled:opacity-50"
       >
-        {isLoading ? "Adding..." : "Add Product"}
+        {isLoading ? "Saving..." : buttonText}
       </button>
 
     </form>

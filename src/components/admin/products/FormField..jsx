@@ -1,12 +1,6 @@
-function FormField({
-  label,
-  name,
-  type = "text",
-  value,
-  onChange,
-  placeholder,
-  ...props
-}) {
+
+function FormField({ label,name,type = "text",value,onChange,placeholder,error,...props}) {
+
   return (
     <div>
       <label className="mb-1 block text-sm text-zinc-400">
@@ -21,9 +15,7 @@ function FormField({
           placeholder={placeholder}
           rows={5}
           className="w-full resize-none rounded-lg bg-zinc-800 p-3 outline-none"
-          {...props}
-        />
-      ) : (
+          {...props} />) : (
         <input
           type={type}
           name={name}
@@ -31,8 +23,10 @@ function FormField({
           onChange={onChange}
           placeholder={placeholder}
           className="w-full rounded-lg bg-zinc-800 p-3 outline-none"
-          {...props}
-        />
+          {...props} />
+      )}
+      {error && (
+        <p className="mt-1 text-sm text-red-400">{error}</p>
       )}
     </div>
   );

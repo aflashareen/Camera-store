@@ -3,6 +3,7 @@ import { X } from "lucide-react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { addProduct } from "../../../services/productService";
 import ProductForm from "./ProductForm";
+import { validateProduct } from "../../../utils/ProductValidation";
 
 function AddProduct({ onClose }) {
   const queryClient = useQueryClient();
@@ -17,6 +18,7 @@ function AddProduct({ onClose }) {
     description: "",
     rating: "",
   });
+  const [errors, setErrors] = useState({});
 
   const addMutation = useMutation({
     mutationFn: addProduct,
@@ -35,17 +37,26 @@ function AddProduct({ onClose }) {
     }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+const handleSubmit = (e) => {
+  e.preventDefault();
 
-    addMutation.mutate({
-      ...formData,
-      price: Number(formData.price),
-      stock: Number(formData.stock),
-      rating: Number(formData.rating),
-      isDeleted: false,
-    });
-  };
+  const validationErrors = validateProduct(formData);
+
+  if (Object.keys(validationErrors).length > 0) {
+    setErrors(validationErrors);
+    return;
+  }
+
+  setErrors({});
+
+addMutation.mutate({
+  ...formData,
+  price: Number(formData.price),
+  stock: Number(formData.stock),
+  rating: Number(formData.rating),
+  isDeleted: false,
+});
+};
 
   return (
     <div className="fixed right-0 top-0 z-50 h-screen w-96 overflow-y-auto bg-zinc-900 p-6 text-white shadow-2xl">
@@ -62,6 +73,7 @@ function AddProduct({ onClose }) {
 
       <ProductForm
         formData={formData}
+        errors={errors}
         onChange={handleChange}
         onSubmit={handleSubmit}
         isLoading={addMutation.isPending}

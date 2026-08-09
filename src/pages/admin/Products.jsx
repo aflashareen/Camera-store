@@ -18,25 +18,21 @@ function AdminProducts() {
   if (isLoading) return <p>Loading...</p>;
   if (error) return <p>Something went wrong.</p>;
 
-  const handleAddProduct = () =>{
-
-  }
-
   return (
     <div className='text-white'>
-<div className="mb-5 flex items-center justify-between p-5">
-  <h1 className="text-3xl font-black">
-    Products
-  </h1>
+      <div className="mb-5 flex items-center justify-between p-5">
+        <h1 className="text-3xl font-black">
+          Products
+        </h1>
 
-  <button
-    onClick={()=> setIsAdding(true)}
-    className="flex items-center gap-2 rounded-xl bg-white px-4 py-2 text-black hover:bg-zinc-200"
-  >
-    <Plus className="h-5 w-5" />
-    Add Product
-  </button>
-</div>
+        <button
+          onClick={() => setIsAdding(true)}
+          className="flex items-center gap-2 rounded-xl bg-white px-4 py-2 text-black hover:bg-zinc-200"
+        >
+          <Plus className="h-5 w-5" />
+          Add Product
+        </button>
+      </div>
 
       <div className="overflow-x-auto">
         <table className="w-full border-collapse">
@@ -101,17 +97,17 @@ function AdminProducts() {
         />
       )}
       {isAdding && (
-  <AddProduct
-    onClose={() => setIsAdding(false)}
-  />
-)}
+        <AddProduct
+          onClose={() => setIsAdding(false)}
+        />
+      )}
 
-{selectedProduct && (
-  <ProductsDetails
-    product={selectedProduct}
-    onClose={() => setSelectedProduct(null)}
-  />
-)}
+      {selectedProduct && (
+        <ProductsDetails
+          product={selectedProduct}
+          onClose={() => setSelectedProduct(null)}
+        />
+      )}
       <div className="flex justify-center items-center gap-2 mt-6">
         <button
           disabled={currentPage === 1}

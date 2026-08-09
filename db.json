@@ -397,6 +397,18 @@
       "rating": 4.9,
       "isDeleted": false,
       "id": "Fj4oFiNTxYE"
+    },
+    {
+      "name": "",
+      "brand": "",
+      "category": "",
+      "price": 0,
+      "stock": 0,
+      "image": "",
+      "description": "",
+      "rating": 0,
+      "isDeleted": false,
+      "id": "RBfnZubD_n0"
     }
   ],
   "categories": [
