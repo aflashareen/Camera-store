@@ -1,5 +1,5 @@
 import { useNavigate, useParams } from "react-router-dom";
-import { useQuery, useQueryClient } from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query";
 import { getProductById } from "../../services/productService";
 
 import { Heart } from "lucide-react";
@@ -29,6 +29,29 @@ function Products() {
 
   if (isLoading) return <p>Loading...</p>;
   if (error) return <p>Something went wrong.</p>;
+
+  if (product.isDeleted) {
+  return (
+    <div className="flex min-h-screen items-center justify-center">
+      <div className="text-center">
+        <h1 className="text-2xl font-semibold">
+          Product Not Available
+        </h1>
+
+        <p className="mt-2 text-gray-500">
+          This product is no longer available.
+        </p>
+
+        <button
+          onClick={() => navigate("/shop")}
+          className="mt-6 rounded-lg bg-black px-6 py-3 text-white"
+        >
+          Back to Shop
+        </button>
+      </div>
+    </div>
+  );
+}
 
   const handleBuynow = (e) =>{
     e.preventDefault();
@@ -87,18 +110,15 @@ function Products() {
 
           <button
             onClick={handleCart}
-            className="mt-10 w-full bg-black text-white py-4 rounded-lg hover:bg-zinc-800 transition"
-          >
+            className="mt-10 w-full bg-black text-white py-4 rounded-lg hover:bg-zinc-800 transition">
             Add to Cart
           </button>
 
           <button
             onClick={handleBuynow}
-            className="mt-2 w-full bg-black text-white py-4 rounded-lg hover:bg-zinc-800 transition"
-          >
+            className="mt-2 w-full bg-black text-white py-4 rounded-lg hover:bg-zinc-800 transition">
             Buy Now
           </button>
-
         </div>
       </div>
     </div>

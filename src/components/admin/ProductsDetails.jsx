@@ -58,7 +58,6 @@ function ProductsDetails({ product, onClose }) {
   return (
     <div className="fixed right-0 top-0 z-50 h-screen w-96 overflow-y-auto scrollbar-hide bg-zinc-900 p-6 text-white shadow-2xl">
 
-      {/* Header */}
       <div className="mb-6 flex items-center justify-between">
         <h2 className="text-xl font-semibold">
           {isEditing ? "Edit Product" : "Product Details"}

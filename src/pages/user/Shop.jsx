@@ -27,6 +27,7 @@ function Shop() {
   //category
   const filteredProducts = useMemo(() => {
     return products
+    .filter((product) => !product.isDeleted)
       .filter((product) => {
         const matchesCategory =
           category === "All" || product.category === category;
@@ -48,7 +49,7 @@ function Shop() {
 
 
   const categories = useMemo(() => {
-    return [...new Set(products.map((p) => p.category))];
+    return [...new Set(products.filter((product) => !product.isDeleted).map((p) => p.category))];
   }, [products]);
 
   // if(filteredProducts !== search){
@@ -80,7 +81,6 @@ function Shop() {
         ))
         }
       </div>
-
     </div>
   );
 }

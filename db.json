@@ -328,7 +328,8 @@
       "image": "/src/assets/images/products/accessory-flash.jpg",
       "description": "The Sony FX5 is a professional full-frame cinema camera built for filmmakers and video creators. It features a 16.6MP stacked CMOS sensor, 5K open-gate recording, internal RAW recording, AI-powered autofocus, 15+ stops of dynamic range, and advanced 4K video capabilities in a compact Cinema Line body.",
       "rating": 4.9,
-      "stock": 5
+      "stock": 5,
+      "isDeleted": false
     },
     {
       "id": "31",
@@ -385,30 +386,6 @@
       "rating": 5,
       "isDeleted": false,
       "id": "J2Mt19L3NpY"
-    },
-    {
-      "name": "Jalala",
-      "brand": "Sony",
-      "category": "DSLR",
-      "price": 10,
-      "stock": 2,
-      "image": "/src/assets/images/products/canon-eos.jpg",
-      "description": "good quality",
-      "rating": 4.9,
-      "isDeleted": false,
-      "id": "Fj4oFiNTxYE"
-    },
-    {
-      "name": "",
-      "brand": "",
-      "category": "",
-      "price": 0,
-      "stock": 0,
-      "image": "",
-      "description": "",
-      "rating": 0,
-      "isDeleted": false,
-      "id": "RBfnZubD_n0"
     }
   ],
   "categories": [
@@ -570,7 +547,7 @@
       "isDeleted": false,
       "id": "jzrDwnWgAkc",
       "userId": "1",
-      "productId": "Fj4oFiNTxYE"
+      "productId": null
     },
     {
       "name": "Jalala",
@@ -584,7 +561,7 @@
       "isDeleted": false,
       "id": "ui_lFm6FqnM",
       "userId": "1",
-      "productId": "Fj4oFiNTxYE"
+      "productId": null
     },
     {
       "name": "Jalala",
@@ -598,7 +575,7 @@
       "isDeleted": false,
       "id": "2zrck3_WxWg",
       "userId": "1",
-      "productId": "Fj4oFiNTxYE"
+      "productId": null
     },
     {
       "name": "Afla",
@@ -792,7 +769,7 @@
       "isDeleted": false,
       "id": "U3ak1TAhTXA",
       "userId": "1",
-      "productId": "Fj4oFiNTxYE",
+      "productId": null,
       "quantity": 1
     },
     {

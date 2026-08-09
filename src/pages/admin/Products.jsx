@@ -5,6 +5,7 @@ import { Eye, Plus, Trash2 } from 'lucide-react';
 import { useState } from 'react';
 import ProductsDetails from '../../components/admin/ProductsDetails';
 import AddProduct from '../../components/admin/products/AddProducts';
+import DeleteProduct from '../../components/admin/products/DeleteProduct';
 
 function AdminProducts() {
   const { data: products, isLoading, error } = useQuery({
@@ -13,6 +14,7 @@ function AdminProducts() {
   });
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [isAdding, setIsAdding] = useState(false);
+  const [deleteProduct, setDeleteProduct] = useState(null);
 
   const { currentPage, setCurrentPage, totalPages, currentItems } = usePagination(products ?? [], 5)
   if (isLoading) return <p>Loading...</p>;
@@ -27,8 +29,7 @@ function AdminProducts() {
 
         <button
           onClick={() => setIsAdding(true)}
-          className="flex items-center gap-2 rounded-xl bg-white px-4 py-2 text-black hover:bg-zinc-200"
-        >
+          className="flex items-center gap-2 rounded-xl bg-white px-4 py-2 text-black hover:bg-zinc-200">
           <Plus className="h-5 w-5" />
           Add Product
         </button>
@@ -51,32 +52,26 @@ function AdminProducts() {
             {currentItems.map((product) => (
               <tr
                 key={product.id}
-                className="border-b border-zinc-800 hover:bg-zinc-900"
-              >
+                className="border-b border-zinc-800 hover:bg-zinc-900" >
                 <td className="px-4 py-3">
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="h-16 w-16 rounded-lg object-cover"
-                  />
+                    className="h-16 w-16 rounded-lg object-cover"/>
                 </td>
-
                 <td className="px-4 py-3">{product.name}</td>
-
                 <td className="px-4 py-3">₹{product.price}</td>
-
                 <td className="px-4 py-3">{product.stock}</td>
-
                 <td className="px-4 py-3">
-
                   <span className="rounded-full bg-green-500/20 px-3 py-1 text-sm text-green-400">
                     Available
                   </span>
-
                 </td>
 
                 <td className="px-4 py-3 text-center">
-                  <button className="rounded-lg p-2 hover:bg-[red-500]/20">
+                  <button
+                    onClick={() => setDeleteProduct(product)}
+                    className="rounded-lg p-2 hover:bg-[red-500]/20">
                     <Trash2 className="h-5 w-5 text-red-500" />
                   </button>
                   <button
@@ -89,24 +84,27 @@ function AdminProducts() {
             ))}
           </tbody>
         </table>
+          
       </div>
       {selectedProduct && (
         <ProductsDetails
           product={selectedProduct}
-          onClose={() => setSelectedProduct(null)}
-        />
+          onClose={() => setSelectedProduct(null)} />
       )}
       {isAdding && (
         <AddProduct
-          onClose={() => setIsAdding(false)}
-        />
+          onClose={() => setIsAdding(false)} />
       )}
 
       {selectedProduct && (
         <ProductsDetails
           product={selectedProduct}
-          onClose={() => setSelectedProduct(null)}
-        />
+          onClose={() => setSelectedProduct(null)} />
+      )}
+      {deleteProduct && (
+        <DeleteProduct
+          product={deleteProduct}
+          onClose={() => setDeleteProduct(null)} />
       )}
       <div className="flex justify-center items-center gap-2 mt-6">
         <button
