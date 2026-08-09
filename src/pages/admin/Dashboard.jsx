@@ -1,7 +1,22 @@
 import React from "react";
 import { IndianRupee, ShoppingBag, Package } from "lucide-react";
+import { useQuery } from "@tanstack/react-query";
+import { getProducts } from "../../services/productService";
+import { getOrders } from "../../services/orderService";
+import RecentOrders from "../../components/admin/dashboard/RecentOrders";
 
 function Dashboard() {
+  const { data: products=[] } = useQuery({
+    queryKey: ["products"],
+    queryFn: getProducts
+  });
+  const { data: orders=[] } = useQuery({
+    queryKey: ["orders"],
+    queryFn: getOrders
+  });
+  const revenue = orders.reduce((total, order) => {
+  return total + Number(order.total || 0);
+}, 0);
   return (
     <div className="text-white">
       <h1 className="text-3xl font-bold">Dashboard</h1>
@@ -15,7 +30,7 @@ function Dashboard() {
           </div>
 
           <h2 className="text-3xl font-semibold mt-4">
-            ₹0
+            ₹{revenue.toLocaleString()}
           </h2>
         </div>
 
@@ -26,7 +41,7 @@ function Dashboard() {
           </div>
 
           <h2 className="text-3xl font-semibold mt-4">
-            0
+            {orders.length}
           </h2>
         </div>
 
@@ -37,11 +52,12 @@ function Dashboard() {
           </div>
 
           <h2 className="text-3xl font-semibold mt-4">
-            0
+            {products.length}
           </h2>
         </div>
 
       </div>
+      <RecentOrders orders={orders} />
     </div>
   );
 }

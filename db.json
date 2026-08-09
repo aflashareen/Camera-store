@@ -642,6 +642,45 @@
       "stock": 5,
       "userId": "1",
       "productId": "28"
+    },
+    {
+      "id": "RU_Ako1e1d0",
+      "name": "Olympus OM-2N",
+      "brand": "Olympus",
+      "category": "Mirrorless",
+      "price": 28990,
+      "image": "/src/assets/images/products/olympus-2n.jpg",
+      "description": "The Olympus OM-2N is a legendary 35mm SLR film camera celebrated for its compact design, dependable build quality, and aperture-priority automatic exposure. Designed for both enthusiasts and professionals, it delivers sharp, timeless images while offering full manual control for a classic analog photography experience. Lightweight yet durable, the OM-2N remains one of the most sought-after vintage cameras for film photography.",
+      "rating": 4.7,
+      "stock": 5,
+      "userId": "1",
+      "productId": "4"
+    },
+    {
+      "id": "HBsyUyHLfRU",
+      "name": "Olympus OM-2N",
+      "brand": "Olympus",
+      "category": "Mirrorless",
+      "price": 28990,
+      "image": "/src/assets/images/products/olympus-2n.jpg",
+      "description": "The Olympus OM-2N is a legendary 35mm SLR film camera celebrated for its compact design, dependable build quality, and aperture-priority automatic exposure. Designed for both enthusiasts and professionals, it delivers sharp, timeless images while offering full manual control for a classic analog photography experience. Lightweight yet durable, the OM-2N remains one of the most sought-after vintage cameras for film photography.",
+      "rating": 4.7,
+      "stock": 5,
+      "userId": "1",
+      "productId": "4"
+    },
+    {
+      "id": "d8ufTZLpLHg",
+      "name": "Olympus OM-2 MD",
+      "brand": "Olympus",
+      "category": "Mirrorless",
+      "price": 42990,
+      "image": "/src/assets/images/products/olympus-om.jpg",
+      "description": "A timeless 35mm film SLR renowned for its precision engineering and elegant design. The Olympus OM-2 MD features aperture-priority automatic exposure, through-the-lens (TTL) metering, and a compact, lightweight body that makes it a favorite among film photography enthusiasts. Its exceptional Zuiko lens compatibility and reliable performance deliver beautifully detailed images, making it an excellent choice for both collectors and photographers seeking an authentic analog shooting experience.",
+      "rating": 4.7,
+      "stock": 5,
+      "userId": "1",
+      "productId": "1"
     }
   ],
   "cart": [
@@ -812,6 +851,34 @@
       "stock": 5,
       "userId": "1",
       "productId": "28",
+      "quantity": 1
+    },
+    {
+      "id": "t4sRsemhqAs",
+      "name": "Sony Alpha 6000 (APS-C)",
+      "brand": "Sony",
+      "category": "Mirrorless",
+      "price": 59990,
+      "image": "/src/assets/images/products/sony-ilce-7rm3.jpg",
+      "description": "The Sony Alpha 6000 is a compact APS-C mirrorless camera designed for photographers who demand speed, portability, and exceptional image quality. Featuring a 24.3MP Exmor APS-C sensor, fast hybrid autofocus, and continuous shooting up to 11 fps, it captures sharp photos and Full HD videos with remarkable detail. Its lightweight design, interchangeable E-mount lens system, and intuitive controls make it an excellent choice for travel, street photography, portraits, and everyday creative shooting.",
+      "rating": 4.7,
+      "stock": 5,
+      "userId": "1",
+      "productId": "3",
+      "quantity": 1
+    },
+    {
+      "id": "WAc2cv6T2N8",
+      "name": " Sony a9 III",
+      "brand": "Sony",
+      "category": "Mirrorless",
+      "price": 529990,
+      "image": "/src/assets/images/products/sony-ilce-1.jpg",
+      "description": "The Sony a9 III is a flagship full-frame mirrorless camera engineered for professionals who demand exceptional speed, precision, and image quality. Featuring advanced autofocus, high-speed continuous shooting, and outstanding low-light performance, it excels in sports, wildlife, events, and cinematic video production. Its durable design, intuitive controls, and cutting-edge technology make it the perfect companion for capturing every decisive moment with confidence.",
+      "rating": 4.7,
+      "stock": 5,
+      "userId": "1",
+      "productId": "2",
       "quantity": 1
     }
   ],
