@@ -30,28 +30,28 @@ function Products() {
   if (isLoading) return <p>Loading...</p>;
   if (error) return <p>Something went wrong.</p>;
 
-  if (product.isDeleted) {
-  return (
-    <div className="flex min-h-screen items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-2xl font-semibold">
-          Product Not Available
-        </h1>
+  // if (product.isDeleted) {
+  // return (
+  //   <div className="flex min-h-screen items-center justify-center">
+  //     <div className="text-center">
+  //       <h1 className="text-2xl font-semibold">
+  //         Product Not Available
+  //       </h1>
 
-        <p className="mt-2 text-gray-500">
-          This product is no longer available.
-        </p>
+  //       <p className="mt-2 text-gray-500">
+  //         This product is no longer available.
+  //       </p>
 
-        <button
-          onClick={() => navigate("/shop")}
-          className="mt-6 rounded-lg bg-black px-6 py-3 text-white"
-        >
-          Back to Shop
-        </button>
-      </div>
-    </div>
-  );
-}
+  //       <button
+  //         onClick={() => navigate("/shop")}
+  //         className="mt-6 rounded-lg bg-black px-6 py-3 text-white"
+  //       >
+  //         Back to Shop
+  //       </button>
+  //     </div>
+  //   </div>
+  // );
+// }
 
   const handleBuynow = (e) =>{
     e.preventDefault();

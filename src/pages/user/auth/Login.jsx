@@ -33,10 +33,13 @@ function Login() {
         return;
       }
 
+      if (user.isBlocked) {
+        setErrors({ general:"Your account has been blocked."});
+        return; }
+
       localStorage.setItem("userId", user.id);
 
       queryClient.setQueryData(["currentUser", user.id], user);
-
       navigate("/");
 
     },

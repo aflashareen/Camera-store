@@ -9,7 +9,8 @@
       "image": "/src/assets/images/products/olympus-om.jpg",
       "description": "A timeless 35mm film SLR renowned for its precision engineering and elegant design. The Olympus OM-2 MD features aperture-priority automatic exposure, through-the-lens (TTL) metering, and a compact, lightweight body that makes it a favorite among film photography enthusiasts. Its exceptional Zuiko lens compatibility and reliable performance deliver beautifully detailed images, making it an excellent choice for both collectors and photographers seeking an authentic analog shooting experience.",
       "rating": 4.7,
-      "stock": 5
+      "stock": 3,
+      "isDeleted": false
     },
     {
       "id": "2",
@@ -20,7 +21,8 @@
       "image": "/src/assets/images/products/sony-ilce-1.jpg",
       "description": "The Sony a9 III is a flagship full-frame mirrorless camera engineered for professionals who demand exceptional speed, precision, and image quality. Featuring advanced autofocus, high-speed continuous shooting, and outstanding low-light performance, it excels in sports, wildlife, events, and cinematic video production. Its durable design, intuitive controls, and cutting-edge technology make it the perfect companion for capturing every decisive moment with confidence.",
       "rating": 4.7,
-      "stock": 5
+      "stock": 5,
+      "isDeleted": false
     },
     {
       "id": "3",
@@ -426,7 +428,8 @@
       "email": "aflasherin07@gmail.com",
       "password": "amjad140321",
       "id": "QLC9S6aT-eQ",
-      "role": "user"
+      "role": "user",
+      "isBlocked": false
     },
     {
       "fullname": "amjad k",
@@ -441,6 +444,13 @@
       "email": "admin@gmail.com",
       "password": "12345678",
       "role": "admin"
+    },
+    {
+      "fullname": "Afla Amj",
+      "email": "aflaamj@gmail.com",
+      "password": "140321march",
+      "id": "mesMjGMjigM",
+      "isBlocked": true
     }
   ],
   "wishlist": [
@@ -681,6 +691,19 @@
       "stock": 5,
       "userId": "1",
       "productId": "1"
+    },
+    {
+      "id": "zQbpv9LDx_I",
+      "name": " Sony a9 III",
+      "brand": "Sony",
+      "category": "Mirrorless",
+      "price": 529990,
+      "image": "/src/assets/images/products/sony-ilce-1.jpg",
+      "description": "The Sony a9 III is a flagship full-frame mirrorless camera engineered for professionals who demand exceptional speed, precision, and image quality. Featuring advanced autofocus, high-speed continuous shooting, and outstanding low-light performance, it excels in sports, wildlife, events, and cinematic video production. Its durable design, intuitive controls, and cutting-edge technology make it the perfect companion for capturing every decisive moment with confidence.",
+      "rating": 4.7,
+      "stock": 5,
+      "userId": "mesMjGMjigM",
+      "productId": "2"
     }
   ],
   "cart": [
@@ -880,6 +903,20 @@
       "userId": "1",
       "productId": "2",
       "quantity": 1
+    },
+    {
+      "id": "70z35B-2qo4",
+      "name": " Sony a9 III",
+      "brand": "Sony",
+      "category": "Mirrorless",
+      "price": 529990,
+      "image": "/src/assets/images/products/sony-ilce-1.jpg",
+      "description": "The Sony a9 III is a flagship full-frame mirrorless camera engineered for professionals who demand exceptional speed, precision, and image quality. Featuring advanced autofocus, high-speed continuous shooting, and outstanding low-light performance, it excels in sports, wildlife, events, and cinematic video production. Its durable design, intuitive controls, and cutting-edge technology make it the perfect companion for capturing every decisive moment with confidence.",
+      "rating": 4.7,
+      "stock": 5,
+      "userId": "mesMjGMjigM",
+      "productId": "2",
+      "quantity": 1
     }
   ],
   "orders": [
@@ -937,6 +974,52 @@
       "status": "Pending",
       "orderedAt": "2026-08-05T09:39:29.861Z",
       "id": "0LpEb9Ou-RQ"
+    },
+    {
+      "userId": "mesMjGMjigM",
+      "items": [
+        {
+          "productId": "2",
+          "name": " Sony a9 III",
+          "image": "/src/assets/images/products/sony-ilce-1.jpg",
+          "price": 529990,
+          "quantity": 1
+        },
+        {
+          "productId": "10",
+          "name": "Sony FX5",
+          "image": "/src/assets/images/products/sony-fx5.jpg",
+          "price": 489900,
+          "quantity": 1
+        },
+        {
+          "productId": "13",
+          "name": "Sony FX3",
+          "image": "/src/assets/images/products/sony-fx3.jpg",
+          "price": 489900,
+          "quantity": 1
+        }
+      ],
+      "total": 1509790,
+      "status": "Pending",
+      "orderedAt": "2026-08-10T05:04:34.274Z",
+      "id": "OyXpjhp57qc"
+    },
+    {
+      "userId": "mesMjGMjigM",
+      "items": [
+        {
+          "productId": "22",
+          "name": "FE 85 mm F1.4 GM II",
+          "image": "/src/assets/images/products/lens-FE85.jpg",
+          "price": 185900,
+          "quantity": 1
+        }
+      ],
+      "total": 185900,
+      "status": "Pending",
+      "orderedAt": "2026-08-10T05:06:18.704Z",
+      "id": "w7sO3W594zU"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
