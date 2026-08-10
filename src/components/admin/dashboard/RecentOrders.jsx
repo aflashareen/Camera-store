@@ -20,8 +20,7 @@ function RecentOrders({ orders }) {
         {recentOrders.map((order) => (
           <div
             key={order.id}
-            className="grid grid-cols-4 border-b border-white/5 px-6 py-4 text-sm text-white last:border-b-0"
-          >
+            className="grid grid-cols-4 border-b border-white/5 px-6 py-4 text-sm text-white last:border-b-0" >
             <p>#{order.id}</p>
 
             <p>₹{Number(order.total || 0).toLocaleString()}</p>
