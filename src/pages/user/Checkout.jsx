@@ -89,6 +89,7 @@ function Checkout() {
 
     const order = {
       userId: user.id,
+
       items: cart.map((item) => ({
         productId: item.productId,
         name: item.name,
@@ -96,13 +97,23 @@ function Checkout() {
         price: item.price,
         quantity: item.quantity || 1,
       })),
+
       total,
       status: "Pending",
       orderedAt: new Date().toISOString(),
+
+      shippingAddress: {
+        fullName: formData.fullName,
+        email: formData.email,
+        phone: formData.phone,
+        address: formData.address,
+        city: formData.city,
+        state: formData.state,
+        pincode: formData.pincode,
+      },
+
+      paymentMethod: formData.paymentMethod,
     };
-
-    navigate("/ordersuccess")
-
     placeOrderMutation.mutate(order);
   };
 

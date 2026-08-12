@@ -78,11 +78,11 @@ function Dashboard() {
         </h2>
       </div>
       </div>
-      <div className="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2">
+      <div >
         <SalesOverview orders={orders} />
-        <RecentOrders orders={orders} />
       </div>
-      <div>
+      <div className="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2">
+        <RecentOrders orders={orders} />
         <TopSelling orders={orders}/>
       </div>
     </div>

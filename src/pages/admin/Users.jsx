@@ -11,11 +11,12 @@ function AdminUsers() {
 
   const updateUserMutation = useMutation({
   mutationFn: updateUser,
-  
+
   onSuccess: () => {
     queryClient.invalidateQueries({
       queryKey: ["users"],
     });
+    
   },
 });
 

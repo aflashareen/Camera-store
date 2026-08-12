@@ -475,6 +475,13 @@
       "password": "140321march",
       "id": "mesMjGMjigM",
       "isBlocked": false
+    },
+    {
+      "fullname": "Musthari Jalala",
+      "email": "jalala@gmail.com",
+      "password": "jalu1234",
+      "id": "_Fm7Y5Tu3g8",
+      "isBlocked": false
     }
   ],
   "wishlist": [
@@ -760,62 +767,6 @@
       "quantity": 1
     },
     {
-      "userId": "QLC9S6aT-eQ",
-      "productId": "1",
-      "name": "Olympus OM-2 MD",
-      "brand": "Olympus",
-      "price": 42990,
-      "image": "/src/assets/images/products/olympus-om.jpg",
-      "quantity": 1,
-      "category": "Mirrorless",
-      "description": "A timeless 35mm film SLR renowned for its precision engineering and elegant design. The Olympus OM-2 MD features aperture-priority automatic exposure, through-the-lens (TTL) metering, and a compact, lightweight body that makes it a favorite among film photography enthusiasts. Its exceptional Zuiko lens compatibility and reliable performance deliver beautifully detailed images, making it an excellent choice for both collectors and photographers seeking an authentic analog shooting experience.",
-      "rating": 4.7,
-      "stock": 5,
-      "id": "9rDVs6k1HP0"
-    },
-    {
-      "userId": "QLC9S6aT-eQ",
-      "productId": "2",
-      "name": " Sony a9 III",
-      "brand": "Sony",
-      "price": 529990,
-      "image": "/src/assets/images/products/sony-ilce-1.jpg",
-      "quantity": 2,
-      "category": "Mirrorless",
-      "description": "The Sony a9 III is a flagship full-frame mirrorless camera engineered for professionals who demand exceptional speed, precision, and image quality. Featuring advanced autofocus, high-speed continuous shooting, and outstanding low-light performance, it excels in sports, wildlife, events, and cinematic video production. Its durable design, intuitive controls, and cutting-edge technology make it the perfect companion for capturing every decisive moment with confidence.",
-      "rating": 4.7,
-      "stock": 5,
-      "id": "LLQ6b5vhVh0"
-    },
-    {
-      "id": "YIN7FMPCMOE",
-      "name": "Nikon F Photomic FTn",
-      "brand": "Nikon",
-      "category": "DSLR",
-      "price": 24990,
-      "image": "/src/assets/images/products/nikon-film.jpg",
-      "description": "The Nikon F Photomic FTn is an iconic 35mm film SLR camera that helped define professional photography. Introduced in the late 1960s, it features the renowned Photomic FTn prism finder with center-weighted TTL metering, a rugged all-metal construction, and the legendary Nikon F mount. Built for reliability and precision, the F Photomic FTn remains a favorite among film photography enthusiasts, collectors, and professionals seeking a timeless shooting experience",
-      "rating": 4.7,
-      "stock": 5,
-      "userId": "QLC9S6aT-eQ",
-      "productId": "5",
-      "quantity": 1
-    },
-    {
-      "id": "RugZXgZWhrM",
-      "name": "Sony Alpha 7 III",
-      "brand": "Sony",
-      "category": "Mirrorless Camera",
-      "price": 127490,
-      "image": "/src/assets/images/products/sony-a7.jpg",
-      "description": "The Sony Alpha 7 III is a versatile full-frame mirrorless camera built for photographers and content creators. Featuring a 24.2MP back-illuminated CMOS sensor, advanced autofocus with real-time Eye AF, 5-axis in-body image stabilization, and stunning 4K video recording, it delivers exceptional image quality in both daylight and low-light conditions. Its compact, weather-resistant design and long-lasting battery make it an excellent choice for travel, portraits, landscapes, weddings, and professional video production.",
-      "rating": 4.7,
-      "stock": 5,
-      "userId": "QLC9S6aT-eQ",
-      "productId": "8",
-      "quantity": 1
-    },
-    {
       "id": "P4_cROo_cu0",
       "name": " Sony a9 III",
       "brand": "Sony",
@@ -945,47 +896,101 @@
   ],
   "orders": [
     {
+      "id": "1",
       "userId": "QLC9S6aT-eQ",
       "items": [
         {
           "productId": "2",
-          "name": " Sony a9 III",
-          "image": "/src/assets/images/products/sony-ilce-1.jpg",
+          "name": "Sony a9 III",
           "price": 529990,
           "quantity": 1
         }
       ],
       "total": 529990,
       "status": "Pending",
-      "orderedAt": "2026-08-04T05:08:21.141Z",
-      "id": "RPh2vi92Mp0"
+      "orderedAt": "2026-08-12T10:30:00.000Z",
+      "shippingAddress": {
+        "fullName": "Afla Shareen",
+        "email": "afla@gmail.com",
+        "phone": "9876543210",
+        "address": "ABC House",
+        "city": "Malappuram",
+        "state": "Kerala",
+        "pincode": "676XXX"
+      },
+      "paymentMethod": "Cash on Delivery"
     },
     {
       "userId": "QLC9S6aT-eQ",
       "items": [
         {
-          "productId": "7",
-          "name": "Minolta X-370",
-          "image": "/src/assets/images/products/minolta-x-370.jpg",
-          "price": 17999,
+          "productId": "1",
+          "name": "Olympus OM-2 MD",
+          "image": "/src/assets/images/products/olympus-om.jpg",
+          "price": 42990,
           "quantity": 1
         },
         {
-          "productId": "6",
-          "name": "Canon AE-1 Program",
-          "image": "/src/assets/images/products/canon-ae.jpg",
-          "price": 38700,
+          "productId": "2",
+          "name": " Sony a9 III",
+          "image": "/src/assets/images/products/sony-ilce-1.jpg",
+          "price": 529990,
+          "quantity": 2
+        },
+        {
+          "productId": "5",
+          "name": "Nikon F Photomic FTn",
+          "image": "/src/assets/images/products/nikon-film.jpg",
+          "price": 24990,
+          "quantity": 1
+        },
+        {
+          "productId": "8",
+          "name": "Sony Alpha 7 III",
+          "image": "/src/assets/images/products/sony-a7.jpg",
+          "price": 127490,
           "quantity": 1
         }
       ],
-      "total": 56699,
+      "total": 1255450,
       "status": "Pending",
-      "orderedAt": "2026-08-04T16:02:52.368Z",
-      "id": "NEh-NcplKCI"
+      "orderedAt": "2026-08-12T08:41:14.364Z",
+      "shippingAddress": {
+        "fullName": "Afla Shareen",
+        "email": "aflasherin07@gmail.com",
+        "phone": "0123456789",
+        "address": "ddd jjjj dddd dfdkdkdk",
+        "city": "vengara",
+        "state": "kerala",
+        "pincode": "666666"
+      },
+      "paymentMethod": "Cash on Delivery",
+      "id": "8RRUCc-PB4s"
     },
     {
-      "userId": "QLC9S6aT-eQ",
+      "userId": "_Fm7Y5Tu3g8",
       "items": [
+        {
+          "productId": "zo_Ovs_pXLg",
+          "name": "Jalala",
+          "image": "/src/assets/images/products/canon-eos.jpg",
+          "price": 500000,
+          "quantity": 1
+        },
+        {
+          "productId": "J2Mt19L3NpY",
+          "name": "Afla",
+          "image": "/src/assets/images/products/olympus-om.jpg",
+          "price": 100000,
+          "quantity": 1
+        },
+        {
+          "productId": "34",
+          "name": "DJI RS 5 Gimbal Stabilizer",
+          "image": "/src/assets/images/products/accessory-gimbal-rs5.jpg",
+          "price": 49990,
+          "quantity": 1
+        },
         {
           "productId": "33",
           "name": "DIGITEK® Portable 65cm Octa Soft Box Kit",
@@ -994,56 +999,20 @@
           "quantity": 1
         }
       ],
-      "total": 2299,
+      "total": 652289,
       "status": "Pending",
-      "orderedAt": "2026-08-05T09:39:29.861Z",
-      "id": "0LpEb9Ou-RQ"
-    },
-    {
-      "userId": "mesMjGMjigM",
-      "items": [
-        {
-          "productId": "2",
-          "name": " Sony a9 III",
-          "image": "/src/assets/images/products/sony-ilce-1.jpg",
-          "price": 529990,
-          "quantity": 1
-        },
-        {
-          "productId": "10",
-          "name": "Sony FX5",
-          "image": "/src/assets/images/products/sony-fx5.jpg",
-          "price": 489900,
-          "quantity": 1
-        },
-        {
-          "productId": "13",
-          "name": "Sony FX3",
-          "image": "/src/assets/images/products/sony-fx3.jpg",
-          "price": 489900,
-          "quantity": 1
-        }
-      ],
-      "total": 1509790,
-      "status": "Pending",
-      "orderedAt": "2026-08-10T05:04:34.274Z",
-      "id": "OyXpjhp57qc"
-    },
-    {
-      "userId": "mesMjGMjigM",
-      "items": [
-        {
-          "productId": "22",
-          "name": "FE 85 mm F1.4 GM II",
-          "image": "/src/assets/images/products/lens-FE85.jpg",
-          "price": 185900,
-          "quantity": 1
-        }
-      ],
-      "total": 185900,
-      "status": "Pending",
-      "orderedAt": "2026-08-10T05:06:18.704Z",
-      "id": "w7sO3W594zU"
+      "orderedAt": "2026-08-12T09:26:01.337Z",
+      "shippingAddress": {
+        "fullName": "musthari jalala",
+        "email": "jalala@gmail.com",
+        "phone": "1234556789",
+        "address": "vengara,kooriyad ",
+        "city": "vengara",
+        "state": "kerala",
+        "pincode": "666666"
+      },
+      "paymentMethod": "Credit / Debit Card",
+      "id": "BviBu4Xrao4"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

@@ -11,6 +11,6 @@ export const useCurrentUser = () => {
     queryKey: ["currentUser", userId],
     queryFn: () => getUserById(userId),
     enabled: !!userId,
-
+    refetchInterval: 1000
   });
 };
