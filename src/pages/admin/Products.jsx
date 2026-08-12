@@ -83,8 +83,7 @@ function AdminProducts() {
               </tr>
             ))}
           </tbody>
-        </table>
-          
+        </table>          
       </div>
       {selectedProduct && (
         <ProductsDetails
@@ -94,12 +93,6 @@ function AdminProducts() {
       {isAdding && (
         <AddProduct
           onClose={() => setIsAdding(false)} />
-      )}
-
-      {selectedProduct && (
-        <ProductsDetails
-          product={selectedProduct}
-          onClose={() => setSelectedProduct(null)} />
       )}
       {deleteProduct && (
         <DeleteProduct

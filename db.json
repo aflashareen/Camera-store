@@ -388,6 +388,30 @@
       "rating": 5,
       "isDeleted": false,
       "id": "J2Mt19L3NpY"
+    },
+    {
+      "name": "Jalala",
+      "brand": "Sony",
+      "category": "Mirrorless",
+      "price": 500000,
+      "stock": 5,
+      "image": "/src/assets/images/products/canon-eos.jpg",
+      "description": "good product nallath ann vangikuka",
+      "rating": 4.5,
+      "isDeleted": false,
+      "id": "zo_Ovs_pXLg"
+    },
+    {
+      "name": "rida",
+      "brand": "Canon",
+      "category": "DSLR",
+      "price": 999835,
+      "stock": 5,
+      "image": "/src/assets/images/products/canon-eos.jpg",
+      "description": "best product everrrrr",
+      "rating": 1.5,
+      "isDeleted": true,
+      "id": "toBPQ2Hzf74"
     }
   ],
   "categories": [
@@ -429,7 +453,7 @@
       "password": "amjad140321",
       "id": "QLC9S6aT-eQ",
       "role": "user",
-      "isBlocked": false
+      "isBlocked": true
     },
     {
       "fullname": "amjad k",
@@ -450,7 +474,7 @@
       "email": "aflaamj@gmail.com",
       "password": "140321march",
       "id": "mesMjGMjigM",
-      "isBlocked": true
+      "isBlocked": false
     }
   ],
   "wishlist": [

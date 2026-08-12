@@ -5,6 +5,7 @@ import { getUserByEmail } from "../../../services/authService";
 
 function Login() {
   const [errors, setErrors] = useState({});
+  const [isBlocked, setIsBlocked] = useState(false);
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -26,16 +27,17 @@ function Login() {
 
       const user = data[0];
 
+      if (user.isBlocked) {
+        setIsBlocked(true);
+        return;
+      }
+
       if (user.password !== formData.password) {
         setErrors({
           password: "Incorrect password",
         });
         return;
       }
-
-      if (user.isBlocked) {
-        setErrors({ general:"Your account has been blocked."});
-        return; }
 
       localStorage.setItem("userId", user.id);
 
@@ -54,6 +56,7 @@ function Login() {
     e.preventDefault();
 
     setErrors({});
+    setIsBlocked(false);
 
     loginMutation.mutate(formData.email);
   };
@@ -114,6 +117,21 @@ function Login() {
           </Link>
 
         </div>
+        {isBlocked && (
+          <div className="mb-5 rounded-lg border border-red-200 bg-red-50 p-4 text-center">
+            <h3 className="font-semibold text-red-600">
+              Account Blocked
+            </h3>
+
+            <p className="mt-1 text-sm text-red-500">
+              Your account has been blocked by the administrator.
+            </p>
+
+            <p className="mt-1 text-xs text-gray-500">
+              Please contact support if you believe this was a mistake.
+            </p>
+          </div>
+        )}
       </div>
     </form>
   );

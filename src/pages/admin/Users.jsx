@@ -9,14 +9,13 @@ function AdminUsers() {
   });
   const queryClient = useQueryClient();
   const updateUserMutation = useMutation({
-    mutationFn: ({ id, isBlocked }) => updateUser(id, { isBlocked }),
-
-    onSuccess: () => {
-      queryClient.invalidateQueries({
-        queryKey: ["users"],
-      });
-    },
-  });
+  mutationFn: updateUser,
+  onSuccess: () => {
+    queryClient.invalidateQueries({
+      queryKey: ["users"],
+    });
+  },
+});
 
   if (isLoading) return <p className="text-white">Loading users...</p>;
   if (isError) return <p className="text-red-400">Failed to load users.</p>;

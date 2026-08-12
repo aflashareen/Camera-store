@@ -13,6 +13,9 @@ function AdminRoute({ children }) {
   if (user.role !== "admin") {
     return <Navigate to="/" replace />;
   }
+  if (user.blocked) {
+    return <Navigate to="/blocked" />;
+  }
 
   return children;
 }

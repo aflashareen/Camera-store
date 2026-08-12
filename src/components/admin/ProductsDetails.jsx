@@ -3,6 +3,7 @@ import { X } from "lucide-react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { updateProduct } from "../../services/productService";
 import ProductForm from "./products/ProductForm";
+import toast from "react-hot-toast";
 
 function ProductsDetails({ product, onClose }) {
   const queryClient = useQueryClient();
@@ -27,6 +28,8 @@ function ProductsDetails({ product, onClose }) {
       queryClient.invalidateQueries({
         queryKey: ["products"],
       });
+      toast.success("Product updated successfully!");
+      onClose();
 
       setIsEditing(false);
     },

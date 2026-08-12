@@ -1,4 +1,3 @@
-
 function FormField({ label,name,type = "text",value,onChange,placeholder,error,...props}) {
 
   return (
@@ -14,7 +13,7 @@ function FormField({ label,name,type = "text",value,onChange,placeholder,error,.
           onChange={onChange}
           placeholder={placeholder}
           rows={5}
-          className="w-full resize-none rounded-lg bg-zinc-800 p-3 outline-none"
+          className="w-full h-screen resize-none rounded-lg bg-zinc-800 p-3 outline-none"
           {...props} />) : (
         <input
           type={type}

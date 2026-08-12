@@ -4,6 +4,7 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { addProduct } from "../../../services/productService";
 import ProductForm from "./ProductForm";
 import { validateProduct } from "../../../utils/ProductValidation";
+import toast from "react-hot-toast";
 
 function AddProduct({ onClose }) {
   const queryClient = useQueryClient();
@@ -24,8 +25,13 @@ function AddProduct({ onClose }) {
     mutationFn: addProduct,
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["products"] });
+
+      toast.success("Product added successfully!");
       onClose();
     },
+      onError: () => {
+    toast.error("Failed to add product");
+  },
   });
 
   const handleChange = (e) => {
@@ -59,7 +65,7 @@ addMutation.mutate({
 };
 
   return (
-    <div className="fixed right-0 top-0 z-50 h-screen w-96 overflow-y-auto bg-zinc-900 p-6 text-white shadow-2xl">
+    <div className="fixed right-0 top-0 z-50 h-screen w-96 overflow-y-auto scrollbar-hide bg-zinc-900 p-6 text-white shadow-2xl">
 
       <div className="mb-6 flex items-center justify-between border-b border-zinc-800 pb-4">
         <h2 className="text-xl font-semibold">
@@ -76,8 +82,7 @@ addMutation.mutate({
         errors={errors}
         onChange={handleChange}
         onSubmit={handleSubmit}
-        isLoading={addMutation.isPending}
-      />
+        isLoading={addMutation.isPending} />
 
     </div>
   );

@@ -71,14 +71,12 @@ function AppRoutes() {
 
 
 {/* //admin */}
-        <Route
-          path="/admin"
-          element={
-            <AdminRoute>
+        <Route path="/admin" element={
+          <AdminRoute>
               <AdminLayout />
-            </AdminRoute>
-          }
-        >
+          </AdminRoute>
+          }>
+          <Route index element={<Dashboard />}/>
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="products" element={<AdminProducts />} />
           <Route path="users" element={<Users />} />

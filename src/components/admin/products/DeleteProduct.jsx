@@ -1,10 +1,11 @@
 import { X } from "lucide-react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { softDeleteProduct, hardDeleteProduct, restoreProduct } from "../../../services/productService";
+import toast from "react-hot-toast";
 
 function DeleteProduct({ product, onClose }) {
-    const queryClient = useQueryClient();
 
+    const queryClient = useQueryClient();
     const softDeleteMutation = useMutation({
         mutationFn: softDeleteProduct,
 
@@ -12,7 +13,7 @@ function DeleteProduct({ product, onClose }) {
             queryClient.invalidateQueries({
                 queryKey: ["products"],
             });
-
+            toast.success("Product deleted temporarily!");
             onClose();
         },
     });
@@ -24,7 +25,7 @@ function DeleteProduct({ product, onClose }) {
             queryClient.invalidateQueries({
                 queryKey: ["products"],
             });
-
+            toast.success("Product deleted successfully!");
             onClose();
         },
     });
@@ -36,15 +37,14 @@ function DeleteProduct({ product, onClose }) {
             queryClient.invalidateQueries({
                 queryKey: ["products"],
             });
-
+            toast.success("Product restored successfully!");
             onClose();
         },
     });
 
     if (!product) return null;
 
-    const isDeleting =
-        softDeleteMutation.isPending || hardDeleteMutation.isPending;
+    const isDeleting = softDeleteMutation.isPending || hardDeleteMutation.isPending;
 
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70">
