@@ -8,9 +8,9 @@ export const getUsers = async () => {
   const { data } = await api.get("/users");
   return data;
 };
-export const updateUser = async (id) => {
-  const { data: updateUser } = await api.patch(`/users/${id}`,{
+export const updateUser = async ({ id, isBlocked }) => {
+  const { data } = await api.patch(`/users/${id}`,{
     isBlocked,
   })
-  return updateUser;
+  return data;
 }

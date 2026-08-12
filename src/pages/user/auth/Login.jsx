@@ -118,7 +118,7 @@ function Login() {
 
         </div>
         {isBlocked && (
-          <div className="mb-5 rounded-lg border border-red-200 bg-red-50 p-4 text-center">
+          <div className="mb-5 border border-red-200 bg-red-50 p-4 text-center">
             <h3 className="font-semibold text-red-600">
               Account Blocked
             </h3>

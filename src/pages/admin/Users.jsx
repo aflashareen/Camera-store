@@ -8,8 +8,10 @@ function AdminUsers() {
     queryFn: getUsers,
   });
   const queryClient = useQueryClient();
+
   const updateUserMutation = useMutation({
   mutationFn: updateUser,
+  
   onSuccess: () => {
     queryClient.invalidateQueries({
       queryKey: ["users"],
