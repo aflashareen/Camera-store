@@ -1,5 +1,5 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { getOrders, updateOrder } from '../../services/orderService'
 import { Eye } from 'lucide-react';
 import { useState } from 'react';
@@ -31,6 +31,21 @@ function AdminOrders() {
       },
     });
   };
+
+  const dropdownRef = useRef(null);
+  
+      useEffect(()=>{
+          function handleClickOutside(e){
+              if(dropdownRef.current && !dropdownRef.current.contains(e.target)){
+                  setSelectedOrder(null);
+              }
+          }
+          document.addEventListener("mousedown",handleClickOutside);
+  
+          return () =>{
+              document.removeEventListener("mousedown",handleClickOutside);
+          }
+      },[]);
   // const { currentPage, setCurrentPage, totalPages, currentItems } = usePagination(products ?? [], 5)
 
   if (isLoading) return <p>Loading...</p>;
@@ -95,6 +110,7 @@ function AdminOrders() {
       {selectedOrder && (
         <OrderDetails
           order={selectedOrder}
+          dropdownRef={dropdownRef}
           onClose={() => setSelectedOrder(null)} />
       )}
     </div>

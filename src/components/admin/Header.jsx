@@ -29,7 +29,7 @@ function Header() {
         }
     },[]);
     return (
-        <header className="flex flex-col gap-4 rounded-3xl border border-white/10 bg-[#151515] p-4 md:px-6 md:py-5 shadow-xl lg:flex-row       lg:items-center lg:justify-between">
+        <header className="flex flex-col gap-4 rounded-3xl bg-white/[0.06] backdrop-blur-2xl border border-white/10 p-4 md:px-6 md:py-5 shadow-xl lg:flex-row  lg:items-center lg:justify-between">
 
             <div>
                 <p className="text-sm text-zinc-400">
@@ -62,7 +62,7 @@ function Header() {
 
                     <span className="absolute right-3 top-3 h-2 w-2 rounded-full bg-red-500" />
                 </button>
-  <div className="relative" ref={dropdownRef}>
+               <div className="relative" ref={dropdownRef}>
                 <button
                     onClick={() => setIsOpen(!isOpen)}
                     className="flex items-center gap-3 rounded-xl bg-[#1D1D1D] px-3 py-2 transition hover:bg-[#262626]">
@@ -84,7 +84,7 @@ function Header() {
                     <ChevronDown size={16} className="hidden text-zinc-400 md:block" />
 
                 </button>
-                                {isOpen && (
+                        {isOpen && (
                     <div className="absolute right-0 top-full mt-2 w-64 rounded-2xl border border-white/10 bg-[#1A1A1A] p-4 shadow-2xl z-50">
 
                         <p className="font-semibold text-white">

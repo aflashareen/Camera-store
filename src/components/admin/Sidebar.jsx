@@ -10,7 +10,7 @@ import {
 
 function Sidebar() {
   return (
-    <aside className="flex min-h-screen w-full lg:w-72 flex-col rounded-3xl border border-white/5 bg-[#121212] p-6 shadow-2xl">
+    <aside className="flex h-full w-full lg:w-72 flex-col p-6 rounded-3xl bg-white/[0.06] backdrop-blur-2xl border border-white/10">
 
       <div>
         <h1 className="mb-10 text-2xl font-semibold text-white">
@@ -22,7 +22,7 @@ function Sidebar() {
           <NavLink
             to="/admin/dashboard"
             className={({ isActive }) => `flex items-center gap-3 rounded-xl px-4 py-3 ${isActive
-              ? "bg-[#1E1E1E] text-white" : "text-zinc-400 hover:bg-[#1E1E1E] hover:text-white"
+              ? "bg-white/[0.09] text-white" : "text-zinc-400 hover:bg-white/[0.06] hover:text-white"
               }`}>
             <LayoutDashboard size={20} />
             Dashboard
@@ -31,7 +31,7 @@ function Sidebar() {
           <NavLink
             to="/admin/products"
             className={({ isActive }) => `flex items-center gap-3 rounded-xl px-4 py-3 ${isActive
-              ? "bg-[#1E1E1E] text-white" : "text-zinc-400 hover:bg-[#1E1E1E] hover:text-white"
+              ? "bg-white/[0.09] text-white" : "text-zinc-400 hover:bg-white/[0.06] hover:text-white"
               }`}>
             <Package size={20} />
             Products
@@ -40,7 +40,7 @@ function Sidebar() {
           <NavLink
             to="/admin/users"
             className={({ isActive }) => `flex items-center gap-3 rounded-xl px-4 py-3 ${isActive
-              ? "bg-[#1E1E1E] text-white" : "text-zinc-400 hover:bg-[#1E1E1E] hover:text-white"
+              ? "bg-white/[0.09] text-white" : "text-zinc-400 hover:bg-white/[0.06] hover:text-white"
               }`}>
             <Users size={20} />
             Users
@@ -49,7 +49,7 @@ function Sidebar() {
           <NavLink
             to="/admin/orders"
             className={({ isActive }) => `flex items-center gap-3 rounded-xl px-4 py-3 ${isActive
-              ? "bg-[#1E1E1E] text-white" : "text-zinc-400 hover:bg-[#1E1E1E] hover:text-white"
+              ? "bg-white/[0.09] text-white" : "text-zinc-400 hover:bg-white/[0.06] hover:text-white"
               }`}>
             <ShoppingCart size={20} />
             Orders
