@@ -874,12 +874,13 @@
         {
           "productId": "2",
           "name": "Sony a9 III",
+          "image": "/src/assets/images/products/sony-ilce-1.jpg",
           "price": 529990,
           "quantity": 1
         }
       ],
       "total": 529990,
-      "status": "Pending",
+      "status": "Shipped",
       "orderedAt": "2026-08-12T10:30:00.000Z",
       "shippingAddress": {
         "fullName": "Afla Shareen",
@@ -925,7 +926,7 @@
         }
       ],
       "total": 1255450,
-      "status": "Pending",
+      "status": "Delivered",
       "orderedAt": "2026-08-12T08:41:14.364Z",
       "shippingAddress": {
         "fullName": "Afla Shareen",
@@ -972,7 +973,7 @@
         }
       ],
       "total": 652289,
-      "status": "Pending",
+      "status": "Shipped",
       "orderedAt": "2026-08-12T09:26:01.337Z",
       "shippingAddress": {
         "fullName": "musthari jalala",
@@ -998,7 +999,7 @@
         }
       ],
       "total": 100000,
-      "status": "Pending",
+      "status": "Processing",
       "orderedAt": "2026-08-12T10:54:24.587Z",
       "shippingAddress": {
         "fullName": "Amj",
@@ -1024,7 +1025,7 @@
         }
       ],
       "total": 489900,
-      "status": "Pending",
+      "status": "Cancelled",
       "orderedAt": "2026-08-12T10:55:04.614Z",
       "shippingAddress": {
         "fullName": "Amj",

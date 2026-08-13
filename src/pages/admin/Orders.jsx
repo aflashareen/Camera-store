@@ -1,13 +1,36 @@
-import { useQuery } from '@tanstack/react-query';
+import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import React from 'react'
-import { getOrders } from '../../services/orderService'
+import { getOrders, updateOrder } from '../../services/orderService'
 import { Eye } from 'lucide-react';
+import { useState } from 'react';
+import OrderDetails from '../../components/admin/order/OrderDetails';
 
 function AdminOrders() {
   const { data: orders = [], isLoading, isError } = useQuery({
     queryKey: ["orders"],
     queryFn: getOrders,
   });
+  const [selectedOrder, setSelectedOrder] = useState(null);
+  const queryClient = useQueryClient();
+
+  const updateStatusMutation = useMutation({
+    mutationFn: updateOrder,
+
+    onSuccess: () => {
+      queryClient.invalidateQueries({
+        queryKey: ["orders"],
+      });
+    },
+  });
+
+  const handleStatusChange = (order, e) => {
+    updateStatusMutation.mutate({
+      id: order.id,
+      data: {
+        status: e.target.value,
+      },
+    });
+  };
   // const { currentPage, setCurrentPage, totalPages, currentItems } = usePagination(products ?? [], 5)
 
   if (isLoading) return <p>Loading...</p>;
@@ -38,9 +61,28 @@ function AdminOrders() {
                 <td className="px-4 py-3">{order.items.length}</td>
                 <td className="px-4 py-3">{order.total.toLocaleString()}</td>
                 <td className="px-4 py-3">{order.paymentMethod}</td>
-                <td className="px-4 py-3">{order.status}</td>
+                <td className="px-4 py-3">
+                  <select
+                    value={order.status}
+                    onChange={(e) => handleStatusChange(order, e)}
+                    disabled={updateStatusMutation.isPending}
+                    className={`rounded-full px-3 py-1.5 text-xs font-medium border outline-none cursor-pointer appearance-none transition
+                      ${order.status === "Pending"
+                        ? "bg-yellow-500/10 text-yellow-400 border-yellow-500/20" : order.status === "Processing"
+                          ? "bg-blue-500/10 text-blue-400 border-blue-500/20" : order.status === "Shipped"
+                            ? "bg-purple-500/10 text-purple-400 border-purple-500/20" : order.status === "Delivered"
+                              ? "bg-green-500/10 text-green-400 border-green-500/20" : "bg-red-500/10 text-red-400 border-red-500/20"
+                      }`}>
+                    <option value="Pending" className="bg-[#151515] text-yellow-400">Pending</option>
+                    <option value="Processing" className="bg-[#151515] text-blue-400">Processing</option>
+                    <option value="Shipped" className="bg-[#151515] text-purple-400">Shipped</option>
+                    <option value="Delivered" className="bg-[#151515] text-green-400">Delivered</option>
+                    <option value="Cancelled" className="bg-[#151515] text-red-400">Cancelled</option>
+                  </select>
+                </td>
                 <td className="px-4 py-3 text-center">
                   <button
+                    onClick={() => setSelectedOrder(order)}
                     className="p-2 hover:bg-zinc-800 rounded-lg" >
                     <Eye size={18} />
                   </button>
@@ -50,6 +92,11 @@ function AdminOrders() {
           </tbody>
         </table>
       </div>
+      {selectedOrder && (
+        <OrderDetails
+          order={selectedOrder}
+          onClose={() => setSelectedOrder(null)} />
+      )}
     </div>
 
   )
