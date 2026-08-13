@@ -4,11 +4,16 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { updateProduct } from "../../services/productService";
 import ProductForm from "./products/ProductForm";
 import toast from "react-hot-toast";
+import { useRef} from "react";
+import useClickOutside from "../../hooks/useClickOutside";
 
 function ProductsDetails({ product, onClose }) {
   const queryClient = useQueryClient();
 
   const [isEditing, setIsEditing] = useState(false);
+  const modalRef = useRef(null);
+
+useClickOutside(modalRef, onClose);
 
   const [formData, setFormData] = useState({
     name: product.name,
@@ -55,11 +60,14 @@ function ProductsDetails({ product, onClose }) {
       },
     });
   };
+  
 
   if (!product) return null;
 
   return (
-    <div className="fixed right-0 top-0 z-50 h-screen w-96 overflow-y-auto scrollbar-hide bg-zinc-900 p-6 text-white shadow-2xl">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-6">
+    <div ref={modalRef}
+     className="w-full max-w-2xl max-h-[90vh] overflow-y-auto scrollbar-hide rounded-2xl border border-white/10 bg-[#151515] p-6 text-white shadow-2xl">
 
       <div className="mb-6 flex items-center justify-between">
         <h2 className="text-xl font-semibold">
@@ -116,6 +124,7 @@ function ProductsDetails({ product, onClose }) {
           </div>
         </>
       )}
+      </div>
     </div>
   );
 }

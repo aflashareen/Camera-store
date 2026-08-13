@@ -880,7 +880,7 @@
         }
       ],
       "total": 529990,
-      "status": "Shipped",
+      "status": "Pending",
       "orderedAt": "2026-08-12T10:30:00.000Z",
       "shippingAddress": {
         "fullName": "Afla Shareen",

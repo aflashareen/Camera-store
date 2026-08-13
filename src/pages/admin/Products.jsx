@@ -37,7 +37,7 @@ function AdminProducts() {
 
       <div className="overflow-x-auto">
         <table className="w-full border-collapse">
-          <thead className="bg-zinc-900">
+          <thead className="white/[0.03]">
             <tr>
               <th className="px-4 py-3 text-left">Image</th>
               <th className="px-4 py-3 text-left">Name</th>
@@ -52,7 +52,7 @@ function AdminProducts() {
             {currentItems.map((product) => (
               <tr
                 key={product.id}
-                className="border-b border-zinc-800 hover:bg-zinc-900" >
+                className="border-b border-zinc-800 hover:bg-white/[0.03]" >
                 <td className="px-4 py-3">
                   <img
                     src={product.image}

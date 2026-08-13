@@ -4,6 +4,7 @@ import { getOrders, updateOrder } from '../../services/orderService'
 import { Eye } from 'lucide-react';
 import { useState } from 'react';
 import OrderDetails from '../../components/admin/order/OrderDetails';
+import useClickOutside from '../../hooks/UseClickOutside';
 
 function AdminOrders() {
   const { data: orders = [], isLoading, isError } = useQuery({
@@ -31,21 +32,11 @@ function AdminOrders() {
       },
     });
   };
+const orderDetailsRef = useRef(null);
 
-  const dropdownRef = useRef(null);
-  
-      useEffect(()=>{
-          function handleClickOutside(e){
-              if(dropdownRef.current && !dropdownRef.current.contains(e.target)){
-                  setSelectedOrder(null);
-              }
-          }
-          document.addEventListener("mousedown",handleClickOutside);
-  
-          return () =>{
-              document.removeEventListener("mousedown",handleClickOutside);
-          }
-      },[]);
+useClickOutside(orderDetailsRef, () => {
+  setSelectedOrder(null);
+});
   // const { currentPage, setCurrentPage, totalPages, currentItems } = usePagination(products ?? [], 5)
 
   if (isLoading) return <p>Loading...</p>;
@@ -110,7 +101,7 @@ function AdminOrders() {
       {selectedOrder && (
         <OrderDetails
           order={selectedOrder}
-          dropdownRef={dropdownRef}
+          dropdownRef={orderDetailsRef}
           onClose={() => setSelectedOrder(null)} />
       )}
     </div>

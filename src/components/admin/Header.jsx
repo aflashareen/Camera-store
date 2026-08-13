@@ -29,7 +29,7 @@ function Header() {
         }
     },[]);
     return (
-        <header className="flex flex-col gap-4 rounded-3xl bg-white/[0.06] backdrop-blur-2xl border border-white/10 p-4 md:px-6 md:py-5 shadow-xl lg:flex-row  lg:items-center lg:justify-between">
+        <header className="flex flex-col gap-4 rounded-3xl border border-white/10 bg-[#151515] p-4 md:px-6 md:py-5 shadow-xl lg:flex-row  lg:items-center lg:justify-between">
 
             <div>
                 <p className="text-sm text-zinc-400">

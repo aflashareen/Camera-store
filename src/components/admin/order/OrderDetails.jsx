@@ -1,7 +1,7 @@
 function OrderDetails({ order, onClose, dropdownRef }) {
 
     return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-6">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-zinc-950/70 p-6">
             <div ref={dropdownRef}
             className="w-full max-w-3xl max-h-[90vh] overflow-y-auto scrollbar-hide rounded-2xl border border-white/10 bg-[#151515] p-8 text-white">
                 <div className="flex items-center justify-between mb-8">
