@@ -51,9 +51,7 @@ function DeleteProduct({ product, onClose }) {
             <div className="w-full max-w-md rounded-2xl bg-[#151515] p-6">
 
                 <div className="mb-4 flex items-center justify-between">
-                    <h2 className="text-xl font-semibold">
-                        Delete Product
-                    </h2>
+                    <h2 className="text-xl font-semibold">Delete Product</h2>
                     <button
                         onClick={onClose}
                         disabled={isDeleting}
@@ -62,11 +60,8 @@ function DeleteProduct({ product, onClose }) {
                     </button>
                 </div>
 
-                <p className="text-zinc-400">
-                    What do you want to do with{" "}
-                    <span className="font-medium text-white">
-                        {product.name}
-                    </span> ? 
+                <p className="text-zinc-400">What do you want to do with{" "}
+                    <span className="font-medium text-white">{product.name}</span> ? 
                 </p>
 
                 <div className="mt-6 flex gap-3">
@@ -93,7 +88,6 @@ function DeleteProduct({ product, onClose }) {
                                 Delete Permanently
                             </button>
                         </> )}
-
                 </div>
                 <button
                     onClick={onClose}

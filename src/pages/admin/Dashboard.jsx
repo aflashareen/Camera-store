@@ -39,10 +39,7 @@ function Dashboard() {
             <p className="text-gray-400">Revenue</p>
             <IndianRupee size={20} />
           </div>
-
-          <h2 className="text-3xl font-semibold mt-4">
-            ₹{revenue.toLocaleString()}
-          </h2>
+          <h2 className="text-3xl font-semibold mt-4">₹{revenue.toLocaleString()}</h2>
         </div>
 
         <div className="bg-[#151515] border border-white/10 rounded-2xl p-6">

@@ -42,6 +42,7 @@ function AppRoutes() {
           <Route path="/" element={<Home />} />
           <Route path="/hero" element={<Hero />} />
           <Route path="/shop" element={<Shop />} />
+          <Route path="/shop/category/:category" element={<Shop />} />
           <Route path="/collection" element={<Collection />} />
           <Route path="/product/:id" element={<Products />} />
           <Route path="/about" element={<About />} />
@@ -70,19 +71,19 @@ function AppRoutes() {
         </Route>
 
 
-{/* //admin */}
+        {/* //admin */}
         <Route path="/admin" element={
           <AdminRoute>
-              <AdminLayout />
+            <AdminLayout />
           </AdminRoute>
-          }>
-          <Route index element={<Dashboard />}/>
+        }>
+          <Route index element={<Dashboard />} />
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="products" element={<AdminProducts />} />
           <Route path="users" element={<Users />} />
           <Route path="orders" element={<AdminOrders />} />
         </Route>
-      <Route path="*" element={<NotFound />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );

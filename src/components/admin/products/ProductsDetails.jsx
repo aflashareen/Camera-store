@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { X } from "lucide-react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { updateProduct } from "../../services/productService";
-import ProductForm from "./products/ProductForm";
+import { updateProduct } from "../../../services/productService";
+import ProductForm from "./ProductForm";
 import toast from "react-hot-toast";
 import { useRef} from "react";
-import useClickOutside from "../../hooks/useClickOutside";
+import useClickOutside from "../../../hooks/useClickOutside";
 
 function ProductsDetails({ product, onClose }) {
   const queryClient = useQueryClient();

@@ -3,7 +3,7 @@ import { getProducts } from '../../services/productService';
 import { usePagination } from '../../hooks/UsePagination';
 import { Eye, Plus, Trash2 } from 'lucide-react';
 import { useState } from 'react';
-import ProductsDetails from '../../components/admin/ProductsDetails';
+import ProductsDetails from '../../components/admin/products/ProductsDetails';
 import AddProduct from '../../components/admin/products/AddProducts';
 import DeleteProduct from '../../components/admin/products/DeleteProduct';
 

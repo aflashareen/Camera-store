@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function Filter({
     categories,
@@ -7,10 +8,21 @@ function Filter({
     sortBy,
     onSortChange,
 }) {
+    const navigate = useNavigate();
     const categoryList = React.useMemo(
         () => ["All", ...categories],
         [categories]
     );
+
+     const handleCategoryChange = (category) => {
+    onCategoryChange(category);
+
+    if (category === "All") {
+      navigate("/shop");
+    } else {
+      navigate(`/shop/category/${category.toLowerCase()}`);
+    }
+  };
     return (
         <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
 
