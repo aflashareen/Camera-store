@@ -481,7 +481,7 @@
       "email": "jalala@gmail.com",
       "password": "jalu1234",
       "id": "_Fm7Y5Tu3g8",
-      "isBlocked": false
+      "isBlocked": true
     }
   ],
   "wishlist": [
@@ -739,34 +739,6 @@
   ],
   "cart": [
     {
-      "id": "_BQMkJ6DKXM",
-      "name": " Sony a9 III",
-      "brand": "Sony",
-      "category": "Mirrorless",
-      "price": 529990,
-      "image": "/src/assets/images/products/sony-ilce-1.jpg",
-      "description": "The Sony a9 III is a flagship full-frame mirrorless camera engineered for professionals who demand exceptional speed, precision, and image quality. Featuring advanced autofocus, high-speed continuous shooting, and outstanding low-light performance, it excels in sports, wildlife, events, and cinematic video production. Its durable design, intuitive controls, and cutting-edge technology make it the perfect companion for capturing every decisive moment with confidence.",
-      "rating": 4.7,
-      "stock": 5,
-      "userId": "NWdYytKWWrk",
-      "productId": "2",
-      "quantity": 1
-    },
-    {
-      "id": "RAaa4azFw40",
-      "name": "Nikon F Photomic FTn",
-      "brand": "Nikon",
-      "category": "DSLR",
-      "price": 24990,
-      "image": "/src/assets/images/products/nikon-film.jpg",
-      "description": "The Nikon F Photomic FTn is an iconic 35mm film SLR camera that helped define professional photography. Introduced in the late 1960s, it features the renowned Photomic FTn prism finder with center-weighted TTL metering, a rugged all-metal construction, and the legendary Nikon F mount. Built for reliability and precision, the F Photomic FTn remains a favorite among film photography enthusiasts, collectors, and professionals seeking a timeless shooting experience",
-      "rating": 4.7,
-      "stock": 5,
-      "userId": "NWdYytKWWrk",
-      "productId": "5",
-      "quantity": 1
-    },
-    {
       "id": "P4_cROo_cu0",
       "name": " Sony a9 III",
       "brand": "Sony",
@@ -1013,6 +985,58 @@
       },
       "paymentMethod": "Credit / Debit Card",
       "id": "BviBu4Xrao4"
+    },
+    {
+      "userId": "NWdYytKWWrk",
+      "items": [
+        {
+          "productId": "J2Mt19L3NpY",
+          "name": "Afla",
+          "image": "/src/assets/images/products/olympus-om.jpg",
+          "price": 100000,
+          "quantity": 1
+        }
+      ],
+      "total": 100000,
+      "status": "Pending",
+      "orderedAt": "2026-08-12T10:54:24.587Z",
+      "shippingAddress": {
+        "fullName": "Amj",
+        "email": "amj@gmail.com",
+        "phone": "0123456789",
+        "address": "ddd jjjj dddd dfdkdkdk",
+        "city": "vengara",
+        "state": "kerala",
+        "pincode": "666666"
+      },
+      "paymentMethod": "Cash on Delivery",
+      "id": "fYaSUHEY48E"
+    },
+    {
+      "userId": "NWdYytKWWrk",
+      "items": [
+        {
+          "productId": "13",
+          "name": "Sony FX3",
+          "image": "/src/assets/images/products/sony-fx3.jpg",
+          "price": 489900,
+          "quantity": 1
+        }
+      ],
+      "total": 489900,
+      "status": "Pending",
+      "orderedAt": "2026-08-12T10:55:04.614Z",
+      "shippingAddress": {
+        "fullName": "Amj",
+        "email": "amj@gmail.com",
+        "phone": "1234567890",
+        "address": "ddd jjjj dddd dfdkdkdk",
+        "city": "vengara",
+        "state": "kerala",
+        "pincode": "666666"
+      },
+      "paymentMethod": "Cash on Delivery",
+      "id": "b3ewtv__85w"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

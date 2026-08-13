@@ -13,11 +13,6 @@ function AdminRoute({ children }) {
   if (user.role !== "admin") {
     return <Navigate to="/" replace />;
   }
-  
-  if (user.isBlocked) {
-    localStorage.removeItem("userId");
-    return <Navigate to="/login" />;
-  }
 
   return children;
 }

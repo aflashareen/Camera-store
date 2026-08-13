@@ -21,32 +21,36 @@ function Sidebar() {
 
           <NavLink
             to="/admin/dashboard"
-            className="flex items-center gap-3 rounded-xl px-4 py-3 text-zinc-400 hover:bg-[#1E1E1E] hover:text-white"
-          >
+            className={({ isActive }) => `flex items-center gap-3 rounded-xl px-4 py-3 ${isActive
+              ? "bg-[#1E1E1E] text-white" : "text-zinc-400 hover:bg-[#1E1E1E] hover:text-white"
+              }`}>
             <LayoutDashboard size={20} />
             Dashboard
           </NavLink>
 
           <NavLink
             to="/admin/products"
-            className="flex items-center gap-3 rounded-xl px-4 py-3 text-zinc-400 hover:bg-[#1E1E1E] hover:text-white"
-          >
+            className={({ isActive }) => `flex items-center gap-3 rounded-xl px-4 py-3 ${isActive
+              ? "bg-[#1E1E1E] text-white" : "text-zinc-400 hover:bg-[#1E1E1E] hover:text-white"
+              }`}>
             <Package size={20} />
             Products
           </NavLink>
 
           <NavLink
             to="/admin/users"
-            className="flex items-center gap-3 rounded-xl px-4 py-3 text-zinc-400 hover:bg-[#1E1E1E] hover:text-white"
-          >
+            className={({ isActive }) => `flex items-center gap-3 rounded-xl px-4 py-3 ${isActive
+              ? "bg-[#1E1E1E] text-white" : "text-zinc-400 hover:bg-[#1E1E1E] hover:text-white"
+              }`}>
             <Users size={20} />
             Users
           </NavLink>
 
           <NavLink
             to="/admin/orders"
-            className="flex items-center gap-3 rounded-xl px-4 py-3 text-zinc-400 hover:bg-[#1E1E1E] hover:text-white"
-          >
+            className={({ isActive }) => `flex items-center gap-3 rounded-xl px-4 py-3 ${isActive
+              ? "bg-[#1E1E1E] text-white" : "text-zinc-400 hover:bg-[#1E1E1E] hover:text-white"
+              }`}>
             <ShoppingCart size={20} />
             Orders
           </NavLink>
