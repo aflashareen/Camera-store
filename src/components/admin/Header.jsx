@@ -31,7 +31,7 @@ function Header() {
     return (
         <header className="flex flex-col gap-4 rounded-3xl border border-white/10 bg-[#151515] p-4 md:px-6 md:py-5 shadow-xl lg:flex-row  lg:items-center lg:justify-between">
 
-            <div>
+            <div className="hidden md:block">
                 <p className="text-sm text-zinc-400">
                     {greeting}
                 </p>
@@ -42,7 +42,7 @@ function Header() {
             </div>
 
 
-            <div className="flex w-full items-center gap-3 lg:w-auto">
+            <div className="ml-auto flex items-center gap-2 md:gap-3">
 
                 <div className="relative flex-1 max-w-md">
                     <Search

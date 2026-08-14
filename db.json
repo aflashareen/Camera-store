@@ -481,7 +481,7 @@
       "email": "jalala@gmail.com",
       "password": "jalu1234",
       "id": "_Fm7Y5Tu3g8",
-      "isBlocked": true
+      "isBlocked": false
     }
   ],
   "wishlist": [
@@ -523,45 +523,6 @@
       "stock": 5,
       "userId": "NWdYytKWWrk",
       "productId": "2"
-    },
-    {
-      "id": "dyiGajBJt_c",
-      "name": " Sony a9 III",
-      "brand": "Sony",
-      "category": "Mirrorless",
-      "price": 529990,
-      "image": "/src/assets/images/products/sony-ilce-1.jpg",
-      "description": "The Sony a9 III is a flagship full-frame mirrorless camera engineered for professionals who demand exceptional speed, precision, and image quality. Featuring advanced autofocus, high-speed continuous shooting, and outstanding low-light performance, it excels in sports, wildlife, events, and cinematic video production. Its durable design, intuitive controls, and cutting-edge technology make it the perfect companion for capturing every decisive moment with confidence.",
-      "rating": 4.7,
-      "stock": 5,
-      "userId": "QLC9S6aT-eQ",
-      "productId": "2"
-    },
-    {
-      "id": "0cxKez0xPXA",
-      "name": "Sony Alpha 6000 (APS-C)",
-      "brand": "Sony",
-      "category": "Mirrorless",
-      "price": 59990,
-      "image": "/src/assets/images/products/sony-ilce-7rm3.jpg",
-      "description": "The Sony Alpha 6000 is a compact APS-C mirrorless camera designed for photographers who demand speed, portability, and exceptional image quality. Featuring a 24.3MP Exmor APS-C sensor, fast hybrid autofocus, and continuous shooting up to 11 fps, it captures sharp photos and Full HD videos with remarkable detail. Its lightweight design, interchangeable E-mount lens system, and intuitive controls make it an excellent choice for travel, street photography, portraits, and everyday creative shooting.",
-      "rating": 4.7,
-      "stock": 5,
-      "userId": "QLC9S6aT-eQ",
-      "productId": "3"
-    },
-    {
-      "id": "dkLFe5CD1LE",
-      "name": "Sony Alpha 7 III",
-      "brand": "Sony",
-      "category": "Mirrorless Camera",
-      "price": 127490,
-      "image": "/src/assets/images/products/sony-a7.jpg",
-      "description": "The Sony Alpha 7 III is a versatile full-frame mirrorless camera built for photographers and content creators. Featuring a 24.2MP back-illuminated CMOS sensor, advanced autofocus with real-time Eye AF, 5-axis in-body image stabilization, and stunning 4K video recording, it delivers exceptional image quality in both daylight and low-light conditions. Its compact, weather-resistant design and long-lasting battery make it an excellent choice for travel, portraits, landscapes, weddings, and professional video production.",
-      "rating": 4.7,
-      "stock": 5,
-      "userId": "QLC9S6aT-eQ",
-      "productId": "8"
     },
     {
       "id": "WHZAnqxlV_U",
@@ -735,6 +696,72 @@
       "stock": 5,
       "userId": "mesMjGMjigM",
       "productId": "2"
+    },
+    {
+      "id": "UsLP_8mkuOI",
+      "name": " Sony a9 III",
+      "brand": "Sony",
+      "category": "Mirrorless",
+      "price": 529990,
+      "image": "/src/assets/images/products/sony-ilce-1.jpg",
+      "description": "The Sony a9 III is a flagship full-frame mirrorless camera engineered for professionals who demand exceptional speed, precision, and image quality. Featuring advanced autofocus, high-speed continuous shooting, and outstanding low-light performance, it excels in sports, wildlife, events, and cinematic video production. Its durable design, intuitive controls, and cutting-edge technology make it the perfect companion for capturing every decisive moment with confidence.",
+      "rating": 4.7,
+      "stock": 5,
+      "isDeleted": false,
+      "userId": "1",
+      "productId": "2"
+    },
+    {
+      "id": "2KG2-2dss_c",
+      "name": "Sony α7 V (A7M5)",
+      "brand": "Sony",
+      "category": "Mirrorless",
+      "price": 270990,
+      "image": "/src/assets/images/products/sony-a7m5.jpg",
+      "description": "The Sony α7 V (A7M5) is a premium full-frame mirrorless camera featuring a 33MP sensor, AI-powered autofocus, 5-axis image stabilization, and professional 4K video recording. Designed for photographers and filmmakers, it delivers exceptional image quality, fast performance, and reliable tracking for portraits, wildlife, sports, and cinematic content.",
+      "rating": 4.9,
+      "stock": 5,
+      "userId": "1",
+      "productId": "9"
+    },
+    {
+      "id": "Ct7k878mafg",
+      "name": "Sony α7 V (A7M5)",
+      "brand": "Sony",
+      "category": "Mirrorless",
+      "price": 270990,
+      "image": "/src/assets/images/products/sony-a7m5.jpg",
+      "description": "The Sony α7 V (A7M5) is a premium full-frame mirrorless camera featuring a 33MP sensor, AI-powered autofocus, 5-axis image stabilization, and professional 4K video recording. Designed for photographers and filmmakers, it delivers exceptional image quality, fast performance, and reliable tracking for portraits, wildlife, sports, and cinematic content.",
+      "rating": 4.9,
+      "stock": 5,
+      "userId": "1",
+      "productId": "9"
+    },
+    {
+      "id": "CH_6mhwp8R8",
+      "name": "Sony Alpha 6000 (APS-C)",
+      "brand": "Sony",
+      "category": "Mirrorless",
+      "price": 59990,
+      "image": "/src/assets/images/products/sony-ilce-7rm3.jpg",
+      "description": "The Sony Alpha 6000 is a compact APS-C mirrorless camera designed for photographers who demand speed, portability, and exceptional image quality. Featuring a 24.3MP Exmor APS-C sensor, fast hybrid autofocus, and continuous shooting up to 11 fps, it captures sharp photos and Full HD videos with remarkable detail. Its lightweight design, interchangeable E-mount lens system, and intuitive controls make it an excellent choice for travel, street photography, portraits, and everyday creative shooting.",
+      "rating": 4.7,
+      "stock": 5,
+      "userId": "1",
+      "productId": "3"
+    },
+    {
+      "id": "zcWU0tVi01s",
+      "name": "Sony FX5",
+      "brand": "Sony",
+      "category": "Cinema",
+      "price": 489900,
+      "image": "/src/assets/images/products/sony-fx5.jpg",
+      "description": "The Sony FX5 is a professional full-frame cinema camera built for filmmakers and video creators. It features a 16.6MP stacked CMOS sensor, 5K open-gate recording, internal RAW recording, AI-powered autofocus, 15+ stops of dynamic range, and advanced 4K video capabilities in a compact Cinema Line body.",
+      "rating": 4.9,
+      "stock": 5,
+      "userId": "QLC9S6aT-eQ",
+      "productId": "10"
     }
   ],
   "cart": [
@@ -880,7 +907,7 @@
         }
       ],
       "total": 529990,
-      "status": "Pending",
+      "status": "Shipped",
       "orderedAt": "2026-08-12T10:30:00.000Z",
       "shippingAddress": {
         "fullName": "Afla Shareen",
@@ -1038,6 +1065,39 @@
       },
       "paymentMethod": "Cash on Delivery",
       "id": "b3ewtv__85w"
+    },
+    {
+      "userId": "QLC9S6aT-eQ",
+      "items": [
+        {
+          "productId": "29",
+          "name": "Canon EOS 5D Mark III",
+          "image": "/src/assets/images/products/canon-eos.jpg",
+          "price": 299990,
+          "quantity": 1
+        },
+        {
+          "productId": "22",
+          "name": "FE 85 mm F1.4 GM II",
+          "image": "/src/assets/images/products/lens-FE85.jpg",
+          "price": 185900,
+          "quantity": 1
+        }
+      ],
+      "total": 485890,
+      "status": "Processing",
+      "orderedAt": "2026-08-14T03:23:36.243Z",
+      "shippingAddress": {
+        "fullName": "jalala",
+        "email": "jalala@gmail.com",
+        "phone": "0123456789",
+        "address": "kooriyaduu malappuram",
+        "city": "vengara",
+        "state": "kerala",
+        "pincode": "666666"
+      },
+      "paymentMethod": "Cash on Delivery",
+      "id": "31hrvaLiO-M"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

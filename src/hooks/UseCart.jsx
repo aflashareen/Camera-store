@@ -18,18 +18,28 @@ export const useCart = () => {
 
     const cartMutation = useMutation({
         mutationFn: addToCart,
-        onSuccess: () =>
+        onSuccess: () =>{
             queryClient.invalidateQueries({
                 queryKey: ["cart"]
             }),
+            toast.success("Added to cart")
+        },
+        onError:()=>{
+            toast.error("Failed to add to cart")
+        }
     });
 
     const removeMutation = useMutation({
         mutationFn: removeFromCart,
-        onSuccess: () =>
+        onSuccess: () =>{
             queryClient.invalidateQueries({
                 queryKey: ["cart"]
             }),
+            toast.error("Removed from cart")
+        },
+        onError:()=>{
+            toast.error("Failed to remove from cart")
+        }
     });
     const updateMutation = useMutation({
         mutationFn: updateCart,

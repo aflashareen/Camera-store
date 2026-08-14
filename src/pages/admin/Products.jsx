@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import { getProducts } from '../../services/productService';
-import { usePagination } from '../../hooks/UsePagination';
+import { usePagination } from '../../hooks/UsePagination.jsx';
 import { Eye, Plus, Trash2 } from 'lucide-react';
 import { useState } from 'react';
 import ProductsDetails from '../../components/admin/products/ProductsDetails';

@@ -2,6 +2,7 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useNavigate } from "react-router-dom"
 import { useCurrentUser } from "./UseCurrentUser";
 import { addToWishlist, getWishlist, removeFromWishlist } from "../services/wishlistService";
+import toast from "react-hot-toast";
 
 export const UseWishlist = (product) => {
     const navigate = useNavigate();
@@ -24,14 +25,24 @@ export const UseWishlist = (product) => {
 
     const addMutation = useMutation({
         mutationFn: addToWishlist,
-        onSuccess: () => 
-            queryClient.invalidateQueries({ queryKey: ["wishlist"] }),
+        onSuccess: () => {
+            queryClient.invalidateQueries({ queryKey: ["wishlist"], });
+        toast.success("Added to wishlist");
+    },
+    onError: () =>{
+        toast.error("Failed to add to wishlist")
+    }
     });
 
     const removeMutation = useMutation({
         mutationFn: removeFromWishlist,
-        onSuccess: () =>
+        onSuccess: () =>{
             queryClient.invalidateQueries({ queryKey: ["wishlist"] }),
+            toast.error("Removed from wishlist")
+        },
+        onError:()=>{
+            toast.error("Failed to remove from wishlist")
+        }
     });
 
     const handleWishlist = (e) => {

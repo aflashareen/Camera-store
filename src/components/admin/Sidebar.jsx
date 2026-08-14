@@ -10,15 +10,21 @@ import {
 
 function Sidebar() {
   return (
-    <aside className="flex h-screen w-full lg:w-72 flex-col rounded-3xl border border-white/5 bg-[#121212] p-6 shadow-2xl">
+    <aside className="flex lg:h-screen w-full lg:w-72 flex-col rounded-3xl border border-white/5 bg-[#121212] p-6 shadow-2xl">
 
       <div>
-        <h1 className="mb-10 text-2xl font-semibold text-white">
+        <h1 className="hidden md:block mb-10 text-2xl font-semibold text-white">
           LENSÉ
         </h1>
 
-        <nav className="space-y-2">
-
+        <nav className="space-y-2 flex w-full items-center gap-2
+           overflow-x-auto
+           whitespace-nowrap
+           scrollbar-hide
+           lg:flex-col
+           lg:items-stretch
+           lg:overflow-visible
+           lg:whitespace-normal">
           <NavLink
             to="/admin/dashboard"
             className={({ isActive }) => `flex items-center gap-3 rounded-xl px-4 py-3 ${isActive
@@ -56,7 +62,7 @@ function Sidebar() {
           </NavLink>
         </nav>
       </div>
-      <button className="mt-auto flex items-center gap-3 rounded-xl px-4 py-3 text-white transition hover:bg-[#1E1E1E]">
+      <button className="hidden md:block mt-auto flex items-center gap-3 rounded-xl px-4 py-3 text-white transition hover:bg-[#1E1E1E]">
         <LogOut size={20} />
         Logout
       </button>
