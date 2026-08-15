@@ -8,7 +8,6 @@ function AdminUsers() {
     queryFn: getUsers,
   });
   const queryClient = useQueryClient();
-
   const updateUserMutation = useMutation({
   mutationFn: updateUser,
 
@@ -16,7 +15,6 @@ function AdminUsers() {
     queryClient.invalidateQueries({
       queryKey: ["users"],
     });
-    
   },
 });
 
@@ -38,12 +36,8 @@ function AdminUsers() {
         <div className="rounded-2xl border border-white/10 bg-[#151515] p-5">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm text-gray-500">
-                Total Users
-              </p>
-              <h2 className="mt-2 text-2xl font-semibold text-white">
-                {users.length}
-              </h2>
+              <p className="text-sm text-gray-500"> Total Users</p>
+              <h2 className="mt-2 text-2xl font-semibold text-white">{users.length}</h2>
             </div>
             <Users className="h-5 w-5 text-gray-400" />
           </div>
@@ -52,9 +46,7 @@ function AdminUsers() {
         <div className="rounded-2xl border border-white/10 bg-[#151515] p-5">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm text-gray-500">
-                Active Users
-              </p>
+              <p className="text-sm text-gray-500">Active Users</p>
               <h2 className="mt-2 text-2xl font-semibold text-white">
                 {users.filter((user) => !user.isBlocked).length}
               </h2>
@@ -66,9 +58,7 @@ function AdminUsers() {
         <div className="rounded-2xl border border-white/10 bg-[#151515] p-5">
           <div className="flex items-center justify-between">
             <div>
-              <p className="text-sm text-gray-500">
-                Blocked Users
-              </p>
+              <p className="text-sm text-gray-500">Blocked Users</p>
               <h2 className="mt-2 text-2xl font-semibold text-white">
                 {users.filter((user) => user.isBlocked).length}
               </h2>
@@ -82,31 +72,17 @@ function AdminUsers() {
         <table className="w-full">
           <thead>
             <tr className="border-b border-white/10 text-left text-sm text-gray-500">
-              <th className="px-6 py-4">
-                Name
-              </th>
-              <th className="px-6 py-4">
-                Email
-              </th>
-              <th className="px-6 py-4">
-                Status
-              </th>
-              <th className="px-6 py-4">
-                Action
-              </th>
+              <th className="px-6 py-4">Name</th>
+              <th className="px-6 py-4">Email</th>
+              <th className="px-6 py-4">Status</th>
+              <th className="px-6 py-4">Action</th>
             </tr>
           </thead>
           <tbody>
             {users.map((user) => (
-              <tr
-                key={user.id}
-                className="border-b border-white/5" >
-                <td className="px-6 py-4 text-sm text-white">
-                  {user.fullname}
-                </td>
-                <td className="px-6 py-4 text-sm text-gray-400">
-                  {user.email}
-                </td>
+              <tr key={user.id} className="border-b border-white/5" >
+                <td className="px-6 py-4 text-sm text-white">{user.fullname}</td>
+                <td className="px-6 py-4 text-sm text-gray-400">{user.email}</td>
                 <td className="px-6 py-4 text-sm">
                   {user.isBlocked ? (
                     <span className="text-red-400">Blocked</span>

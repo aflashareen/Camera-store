@@ -28,6 +28,7 @@ function Dashboard() {
     return total + Number(order.total || 0);
   }, 0);
 
+
   return (
     <div className="text-white">
       <h1 className="text-3xl font-bold">Dashboard</h1>

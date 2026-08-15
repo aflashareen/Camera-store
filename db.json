@@ -44,7 +44,7 @@
       "image": "/src/assets/images/products/olympus-2n.jpg",
       "description": "The Olympus OM-2N is a legendary 35mm SLR film camera celebrated for its compact design, dependable build quality, and aperture-priority automatic exposure. Designed for both enthusiasts and professionals, it delivers sharp, timeless images while offering full manual control for a classic analog photography experience. Lightweight yet durable, the OM-2N remains one of the most sought-after vintage cameras for film photography.",
       "rating": 4.7,
-      "stock": 5
+      "stock": 0
     },
     {
       "id": "5",
@@ -72,7 +72,7 @@
       "id": "7",
       "name": "Minolta X-370",
       "brand": "Minolta",
-      "category": "Film Camera",
+      "category": "Film camera",
       "price": 17999,
       "image": "/src/assets/images/products/minolta-x-370.jpg",
       "description": "High performance camera for photography and video.",
@@ -83,7 +83,7 @@
       "id": "8",
       "name": "Sony Alpha 7 III",
       "brand": "Sony",
-      "category": "Mirrorless Camera",
+      "category": "Mirrorless",
       "price": 127490,
       "image": "/src/assets/images/products/sony-a7.jpg",
       "description": "The Sony Alpha 7 III is a versatile full-frame mirrorless camera built for photographers and content creators. Featuring a 24.2MP back-illuminated CMOS sensor, advanced autofocus with real-time Eye AF, 5-axis in-body image stabilization, and stunning 4K video recording, it delivers exceptional image quality in both daylight and low-light conditions. Its compact, weather-resistant design and long-lasting battery make it an excellent choice for travel, portraits, landscapes, weddings, and professional video production.",
@@ -116,7 +116,7 @@
       "id": "11",
       "name": "Sony α1 II",
       "brand": "Sony",
-      "category": "Flagship Full-Frame Mirrorless Camera",
+      "category": "Mirrorless",
       "price": 599990,
       "image": "/src/assets/images/products/sony-a1.jpg",
       "description": "The Sony α1 II is Sony's flagship full-frame mirrorless camera, combining a 50.1MP stacked Exmor RS sensor, AI-powered autofocus, blackout-free continuous shooting up to 30 fps, and professional 8K video recording. Built for sports, wildlife, commercial photography, and filmmaking, it delivers exceptional speed, accuracy, and image quality.",
@@ -127,7 +127,7 @@
       "id": "12",
       "name": "Sony α7R VI",
       "brand": "Sony",
-      "category": "High-Resolution Full-Frame Mirrorless Camera",
+      "category": "Mirrorless",
       "price": 470990,
       "image": "/src/assets/images/products/sony-a7r6.jpg",
       "description": "The Sony α7R VI is a premium full-frame mirrorless camera featuring a 66.8MP stacked Exmor RS CMOS sensor, AI-powered autofocus, up to 30 fps continuous shooting, and 8K video recording. Built for professional photographers and filmmakers, it delivers exceptional detail, speed, and dynamic range, making it ideal for landscape, commercial, wildlife, portrait, and studio photography.",
@@ -412,6 +412,18 @@
       "rating": 1.5,
       "isDeleted": true,
       "id": "toBPQ2Hzf74"
+    },
+    {
+      "name": "Sony FX6",
+      "brand": "Sony",
+      "category": "cinema",
+      "price": 3350000,
+      "stock": 6,
+      "image": "/src/assets/images/products/sony-fx6.jpg",
+      "description": "The Sony FX6 is a professional full-frame cinema camera featuring a 10.2MP Exmor R sensor, 4K up to 120p recording, and an electronic variable ND filter",
+      "rating": 4.5,
+      "isDeleted": false,
+      "id": "HpLcGj1gqko"
     }
   ],
   "categories": [
@@ -762,6 +774,20 @@
       "stock": 5,
       "userId": "QLC9S6aT-eQ",
       "productId": "10"
+    },
+    {
+      "id": "4XGCSeN1usk",
+      "name": " Sony a9 III",
+      "brand": "Sony",
+      "category": "Mirrorless",
+      "price": 529990,
+      "image": "/src/assets/images/products/sony-ilce-1.jpg",
+      "description": "The Sony a9 III is a flagship full-frame mirrorless camera engineered for professionals who demand exceptional speed, precision, and image quality. Featuring advanced autofocus, high-speed continuous shooting, and outstanding low-light performance, it excels in sports, wildlife, events, and cinematic video production. Its durable design, intuitive controls, and cutting-edge technology make it the perfect companion for capturing every decisive moment with confidence.",
+      "rating": 4.7,
+      "stock": 5,
+      "isDeleted": false,
+      "userId": "1",
+      "productId": "2"
     }
   ],
   "cart": [
@@ -889,6 +915,65 @@
       "rating": 4.7,
       "stock": 5,
       "userId": "mesMjGMjigM",
+      "productId": "2",
+      "quantity": 1
+    },
+    {
+      "id": "2zAHVqKxlOw",
+      "name": "Sony Alpha 6000 (APS-C)",
+      "brand": "Sony",
+      "category": "Mirrorless",
+      "price": 59990,
+      "image": "/src/assets/images/products/sony-ilce-7rm3.jpg",
+      "description": "The Sony Alpha 6000 is a compact APS-C mirrorless camera designed for photographers who demand speed, portability, and exceptional image quality. Featuring a 24.3MP Exmor APS-C sensor, fast hybrid autofocus, and continuous shooting up to 11 fps, it captures sharp photos and Full HD videos with remarkable detail. Its lightweight design, interchangeable E-mount lens system, and intuitive controls make it an excellent choice for travel, street photography, portraits, and everyday creative shooting.",
+      "rating": 4.7,
+      "stock": 5,
+      "userId": "QLC9S6aT-eQ",
+      "productId": "3",
+      "quantity": 1
+    },
+    {
+      "id": "x-yuEla8yLY",
+      "name": "Olympus OM-2 MD",
+      "brand": "Olympus",
+      "category": "Mirrorless",
+      "price": 42990,
+      "image": "/src/assets/images/products/olympus-om.jpg",
+      "description": "A timeless 35mm film SLR renowned for its precision engineering and elegant design. The Olympus OM-2 MD features aperture-priority automatic exposure, through-the-lens (TTL) metering, and a compact, lightweight body that makes it a favorite among film photography enthusiasts. Its exceptional Zuiko lens compatibility and reliable performance deliver beautifully detailed images, making it an excellent choice for both collectors and photographers seeking an authentic analog shooting experience.",
+      "rating": 4.7,
+      "stock": 3,
+      "isDeleted": false,
+      "userId": "1",
+      "productId": "1",
+      "quantity": 1
+    },
+    {
+      "id": "orLtVmXZMGA",
+      "name": "Olympus OM-2 MD",
+      "brand": "Olympus",
+      "category": "Mirrorless",
+      "price": 42990,
+      "image": "/src/assets/images/products/olympus-om.jpg",
+      "description": "A timeless 35mm film SLR renowned for its precision engineering and elegant design. The Olympus OM-2 MD features aperture-priority automatic exposure, through-the-lens (TTL) metering, and a compact, lightweight body that makes it a favorite among film photography enthusiasts. Its exceptional Zuiko lens compatibility and reliable performance deliver beautifully detailed images, making it an excellent choice for both collectors and photographers seeking an authentic analog shooting experience.",
+      "rating": 4.7,
+      "stock": 3,
+      "isDeleted": false,
+      "userId": "1",
+      "productId": "1",
+      "quantity": 1
+    },
+    {
+      "id": "V4w3NzRn7NY",
+      "name": " Sony a9 III",
+      "brand": "Sony",
+      "category": "Mirrorless",
+      "price": 529990,
+      "image": "/src/assets/images/products/sony-ilce-1.jpg",
+      "description": "The Sony a9 III is a flagship full-frame mirrorless camera engineered for professionals who demand exceptional speed, precision, and image quality. Featuring advanced autofocus, high-speed continuous shooting, and outstanding low-light performance, it excels in sports, wildlife, events, and cinematic video production. Its durable design, intuitive controls, and cutting-edge technology make it the perfect companion for capturing every decisive moment with confidence.",
+      "rating": 4.7,
+      "stock": 5,
+      "isDeleted": false,
+      "userId": "1",
       "productId": "2",
       "quantity": 1
     }

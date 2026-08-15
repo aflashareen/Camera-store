@@ -3,7 +3,7 @@ import { getUserById } from "../services/userService";
 
 
 export const useCurrentUser = () => {
-
+  
   const userId = localStorage.getItem("userId");
 
   return useQuery({

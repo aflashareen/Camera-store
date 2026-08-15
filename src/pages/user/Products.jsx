@@ -80,7 +80,7 @@ function Products() {
         <div className="w-[50%]">
           <img src={product.image} alt={product.name} />
         </div>
-
+        <input type="text" />
         <div className="w-1/2 pl-10 flex flex-col">
 
           <p className="text-sm uppercase tracking-widest text-gray-500">

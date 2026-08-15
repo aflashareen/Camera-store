@@ -1,5 +1,5 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { getUserByEmail } from "../../../services/authService";
 
@@ -31,7 +31,6 @@ function Login() {
         setIsBlocked(true);
         return;
       }
-
       if (user.password !== formData.password) {
         setErrors({
           password: "Incorrect password",
@@ -39,11 +38,17 @@ function Login() {
         return;
       }
 
+      //store logged in users
       localStorage.setItem("userId", user.id);
+      localStorage.setItem("role",user.role)
 
+      //store user in react query cache
       queryClient.setQueryData(["currentUser", user.id], user);
-      navigate("/");
-
+      if(user.role === "admin"){
+        navigate("/admin");
+      }else{
+        navigate("/");
+      }
     },
     onError: (error) => {
       setErrors({

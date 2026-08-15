@@ -2,7 +2,8 @@ import { useQuery } from '@tanstack/react-query';
 import { getProducts } from '../../services/productService';
 import { usePagination } from '../../hooks/UsePagination.jsx';
 import { Eye, Plus, Trash2 } from 'lucide-react';
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import ProductsDetails from '../../components/admin/products/ProductsDetails';
 import AddProduct from '../../components/admin/products/AddProducts';
 import DeleteProduct from '../../components/admin/products/DeleteProduct';
@@ -15,8 +16,22 @@ function AdminProducts() {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [isAdding, setIsAdding] = useState(false);
   const [deleteProduct, setDeleteProduct] = useState(null);
+  const [searchParams] = useSearchParams();
 
-  const { currentPage, setCurrentPage, totalPages, currentItems } = usePagination(products ?? [], 5)
+  const search = searchParams.get("search") || "";
+
+  const filteredProducts = (products ?? []).filter((product) => {
+    const value = search.toLowerCase();
+
+    return (
+      product.name?.toLowerCase().includes(value) ||
+      product.brand?.toLowerCase().includes(value) ||
+      product.category?.toLowerCase().includes(value)
+    );
+  });
+
+  const { currentPage, setCurrentPage, totalPages, currentItems } = usePagination(filteredProducts, 5)
+  
   if (isLoading) return <p>Loading...</p>;
   if (error) return <p>Something went wrong.</p>;
 
@@ -63,15 +78,19 @@ function AdminProducts() {
                 <td className="px-4 py-3">₹{product.price}</td>
                 <td className="px-4 py-3">{product.stock}</td>
                 <td className="px-4 py-3">
-                  <span className="rounded-full bg-green-500/20 px-3 py-1 text-sm text-green-400">
-                    Available
+                  <span className={`rounded-full px-3 py-1 text-sm ${
+                    product.stock <= 0 ? "bg-red-500/20 text-red-400"
+                    :product.stock < 2 ? "bg-yellow-500/20 text-yellow-400"
+                    :"bg-green-500/20 text-green-400"
+                  }`}>
+                    {product.stock <= 0 ? "Out of stock" : product.stock < 2 ?"Low stock":"In stock"}
                   </span>
                 </td>
 
                 <td className="px-4 py-3 text-center">
                   <button
                     onClick={() => setDeleteProduct(product)}
-                    className="rounded-lg p-2 hover:bg-[red-500]/20">
+                    className="rounded-lg p-2 hover:bg-red-500/20">
                     <Trash2 className="h-5 w-5 text-red-500" />
                   </button>
                   <button

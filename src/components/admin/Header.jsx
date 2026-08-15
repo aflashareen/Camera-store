@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Search, Bell, ChevronDown, LogOut } from "lucide-react";
 import { useCurrentUser } from "../../hooks/UseCurrentUser";
+import { useSearchParams } from "react-router-dom";
 
 function Header() {
     const { data: user } = useCurrentUser();
@@ -15,6 +16,20 @@ function Header() {
 
     const [isOpen, setIsOpen] = useState(false);
     const dropdownRef = useRef(null);
+
+    const [searchParams, setSearchParams] = useSearchParams();
+
+const search = searchParams.get("search") || "";
+
+const handleSearch = (e) => {
+    const value = e.target.value;
+
+    if (value) {
+        setSearchParams({ search: value });
+    } else {
+        setSearchParams({});
+    }
+};
 
     useEffect(()=>{
         function handleClickOutside(e){
@@ -47,14 +62,14 @@ function Header() {
                 <div className="relative flex-1 max-w-md">
                     <Search
                         size={18}
-                        className="absolute left-4 top-1/2 -translate-y-1/2 text-zinc-500"
-                    />
+                        className="absolute left-4 top-1/2 -translate-y-1/2 text-zinc-500"/>
 
                     <input
                         type="text"
                         placeholder="Search..."
-                        className="w-full rounded-xl border border-white/10 bg-[#1D1D1D] py-3 pl-11 pr-4 text-sm text-white placeholder:text-zinc-500 outline-none transition focus:border-white/20"
-                    />
+                        value={search}
+                        onChange={handleSearch}
+                        className="w-full rounded-xl border border-white/10 bg-[#1D1D1D] py-3 pl-11 pr-4 text-sm text-white placeholder:text-zinc-500 outline-none transition focus:border-white/20"/>
                 </div>
 
                 <button className="relative rounded-xl bg-[#1D1D1D] p-3 transition hover:bg-[#262626]">
