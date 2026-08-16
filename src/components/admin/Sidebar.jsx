@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import {
   LayoutDashboard,
   Package,
@@ -9,8 +9,15 @@ import {
 } from "lucide-react";
 
 function Sidebar() {
+  const navigate = useNavigate();
+  const handleLogout = (user) =>{
+    localStorage.removeItem("userId");
+    if(user.role !== "admin"){
+      navigate("/login")
+    }
+  }
   return (
-    <aside className="flex lg:h-screen w-full lg:w-72 flex-col rounded-3xl border border-white/5 bg-[#121212] p-6 shadow-2xl">
+    <aside className="flex h-full w-full flex-col rounded-3xl border border-white/5 bg-[#121212] p-6 shadow-2xl">
 
       <div>
         <h1 className="hidden md:block mb-10 text-2xl font-semibold text-white">
@@ -62,7 +69,8 @@ function Sidebar() {
           </NavLink>
         </nav>
       </div>
-      <button className="hidden md:block mt-auto flex items-center gap-3 rounded-xl px-4 py-3 text-white transition hover:bg-[#1E1E1E]">
+      <button onClick={handleLogout}
+      className="mt-auto flex w-full items-center justify-start gap-3 rounded-xl px-4 py-3 text-white transition hover:bg-[#1E1E1E]">
         <LogOut size={20} />
         Logout
       </button>

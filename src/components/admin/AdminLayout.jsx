@@ -5,17 +5,17 @@ import { Outlet } from "react-router-dom";
 
 function AdminLayout() {
   return (
-    <div className="min-h-screen  bg-[#080808] bg-[radial-gradient(circle_at_15%_10%,rgba(161,161,170,0.25),transparent_35%),radial-gradient(circle_at_85%_90%,rgba(113,113,122,0.12),transparent_45%)] p-3 md:p-5">
+    <div className="min-h-screen bg-[#080808] bg-[radial-gradient(circle_at_15%_10%,rgba(161,161,170,0.25),transparent_35%),radial-gradient(circle_at_85%_90%,rgba(113,113,122,0.12),transparent_45%)] p-3 md:p-5">
       <div className="flex flex-col gap-2 lg:flex-row">
 
-        <aside>
+        <aside className="fixed left-3 top-3 z-40 hidden h-[calc(100vh-1.5rem)] w-72 lg:block">
           <Sidebar />
         </aside>
         
-        <div className="flex flex-1 flex-col gap-2">
+        <div className="flex min-w-0 flex-1 flex-col gap-2 lg:ml-[18rem]">
           <Header />
 
-          <main className="flex-1 rounded-3xl border border-white/5 bg-[#151515] p-4 md:p-6 shadow-2xl">
+          <main className="min-h-[calc(100vh-7rem)] rounded-3xl border border-white/5 bg-[#151515] p-4 shadow-2xl md:p-6">
             <Outlet />
           </main>
         </div>

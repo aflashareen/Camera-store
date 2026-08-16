@@ -28,7 +28,6 @@ function Dashboard() {
     return total + Number(order.total || 0);
   }, 0);
 
-
   return (
     <div className="text-white">
       <h1 className="text-3xl font-bold">Dashboard</h1>
@@ -48,10 +47,7 @@ function Dashboard() {
             <p className="text-gray-400">Orders</p>
             <ShoppingBag size={20} />
           </div>
-
-          <h2 className="text-3xl font-semibold mt-4">
-            {orders.length}
-          </h2>
+          <h2 className="text-3xl font-semibold mt-4">{orders.length}</h2>
         </div>
 
         <div className="bg-[#151515] border border-white/10 rounded-2xl p-6">
@@ -59,10 +55,7 @@ function Dashboard() {
             <p className="text-gray-400">Products</p>
             <Package size={20} />
           </div>
-
-          <h2 className="text-3xl font-semibold mt-4">
-            {products.length}
-          </h2>
+          <h2 className="text-3xl font-semibold mt-4">{products.length}</h2>
         </div>
         
       <div className="bg-[#151515] border border-white/10 rounded-2xl p-6">
@@ -70,10 +63,7 @@ function Dashboard() {
           <p className="text-gray-400">Active Users</p>
           <Users size={20} />
         </div>
-
-        <h2 className="text-3xl font-semibold mt-4">
-          {activeUsers}
-        </h2>
+        <h2 className="text-3xl font-semibold mt-4">{activeUsers}</h2>
       </div>
       </div>
       <div >

@@ -69,8 +69,7 @@ function AdminProducts() {
                 key={product.id}
                 className="border-b border-zinc-800 hover:bg-white/[0.03]" >
                 <td className="px-4 py-3">
-                  <img
-                    src={product.image}
+                  <img src={product.image}
                     alt={product.name}
                     className="h-16 w-16 rounded-lg object-cover"/>
                 </td>

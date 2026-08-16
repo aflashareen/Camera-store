@@ -105,7 +105,6 @@ useClickOutside(orderDetailsRef, () => {
           onClose={() => setSelectedOrder(null)} />
       )}
     </div>
-
   )
 }
 

@@ -47,9 +47,7 @@ const handleSearch = (e) => {
         <header className="flex flex-col gap-4 rounded-3xl border border-white/10 bg-[#151515] p-4 md:px-6 md:py-5 shadow-xl lg:flex-row  lg:items-center lg:justify-between">
 
             <div className="hidden md:block">
-                <p className="text-sm text-zinc-400">
-                    {greeting}
-                </p>
+                <p className="text-sm text-zinc-400">{greeting}</p>
 
                 <h1 className="mt-1 text-xl md:text-2xl font-semibold text-white">
                     {user?.name ?? "Admin"}
