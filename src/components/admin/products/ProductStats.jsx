@@ -25,7 +25,7 @@ function ProductStats({products=[]}) {
             <div>
               <p className="text-sm text-gray-500">Available Products</p>
               <h2 className="mt-2 text-2xl font-semibold text-white">
-                {products.filter((product)=>product.stock > 2).length}
+                {availableProducts}
               </h2>
             </div>
           </div>
@@ -36,7 +36,7 @@ function ProductStats({products=[]}) {
             <div>
               <p className="text-sm text-gray-500">Out of stock</p>
               <h2 className="mt-2 text-2xl font-semibold text-white">
-                {products.filter((product)=>product.stock > 0 && product.stock <= 2).length}
+                {outOfStock}
               </h2>
             </div>
           </div>

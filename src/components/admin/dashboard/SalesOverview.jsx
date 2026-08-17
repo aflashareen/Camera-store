@@ -2,7 +2,7 @@ import React, { useMemo } from 'react'
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts'
 
 function SalesOverview({ orders }) {
-    const salesData =useMemo(()=>{
+    const salesData = useMemo(()=>{
         return orders.map((order) => ({
         date: new Date(order.orderedAt).toLocaleDateString(),
         sales: Number(order.total || 0),

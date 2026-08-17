@@ -9,20 +9,25 @@ import { useCart } from "../../hooks/UseCart";
 function CartCard({ product }) {
 
   const { removeItem, updateQuantity, } = useCart();
+  const queryClient = useQueryClient();
 
   const handleRemove = (e) => {
     e.preventDefault();
     removeItem(product.id);
   };
 
-  const handleQuantity = (e, change) => {
+  const handleQuantity = async (e, change) => {
     e.preventDefault();
 
     const quantity = (product.quantity || 1) + change;
 
     if (quantity < 1) return;
 
-    updateQuantity(product.id, quantity);
+    await updateQuantity(product.id, quantity);
+
+    queryClient.invalidateQueries({
+      queryKey: ["cart"],
+    });
   };
 
   return (
@@ -39,9 +44,9 @@ function CartCard({ product }) {
 
           <button
             onClick={handleRemove}
-            className="absolute top-20 right-10"
+            className="absolute right-4 top-4 sm:right-6 sm:top-6 lg:right-10 lg:top-20"
           >
-            <Trash2 className="text-red-500" size={20} />
+            <Trash2 className="text-red-600" size={20} />
           </button>
 
           <div>

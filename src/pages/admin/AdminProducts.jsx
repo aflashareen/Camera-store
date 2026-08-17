@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import { getProducts } from '../../services/productService';
 import { usePagination } from '../../hooks/UsePagination.jsx';
-import { Eye, Plus, Search, Trash2 } from 'lucide-react';
+import {  Plus, Search } from 'lucide-react';
 import { useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import ProductsDetails from '../../components/admin/products/ProductsDetails';
@@ -31,9 +31,12 @@ function AdminProducts() {
       product.brand?.toLowerCase().includes(value) ||
       product.category?.toLowerCase().includes(value);
 
+    const stock = Number(product.stock);
+    const status = searchParams.get("status") || "all";
+
     const matchesStatus = status === "all" ||
       (status === "instock" && product.stock > 2) ||
-      (status === "lowstock" && product.stock > 0 && product.stock <= 2) ||
+      (status === "lowstock" && product.stock > 0 && product.stock < 2) ||
       (status === "outofstock" && product.stock <= 0);
 
     return matchesSearch && matchesStatus;
@@ -69,10 +72,10 @@ function AdminProducts() {
 
         <select value={status}
           onChange={(e) => handleStatusChange(e.target.value)}
-          className='bg-black'>
-          <option value="instock">In stock</option>
-          <option value="lowstock" >Low stock</option>
-          <option value="outofstock">Out of stock</option>
+          className='rounded-lg border-none bg-zinc-800 px-3 py-2 text-white outline-none'>
+          <option value="instock" className='bg-zinc-900 text-white'>In stock</option>
+          <option value="lowstock" className='bg-zinc-900 text-white' >Low stock</option>
+          <option value="outofstock" className='bg-zinc-900 text-white'>Out of stock</option>
         </select>
 
 

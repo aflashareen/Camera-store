@@ -13,7 +13,8 @@ function Header() {
     if (hour < 12) greeting = "Good morning,";
     else if (hour < 17) greeting = "Good Afternoon,";
     else greeting = "Good Evening,";
-     const navigate = useNavigate();
+
+    const navigate = useNavigate();
     const [isOpen, setIsOpen] = useState(false);
     const dropdownRef = useRef(null);
 

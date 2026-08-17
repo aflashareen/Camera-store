@@ -1,17 +1,33 @@
-import { useQuery } from "@tanstack/react-query";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useCurrentUser } from "../hooks/UseCurrentUser";
-import { getOrderById } from "../services/orderService";
+import { getOrderById, updateOrder } from "../services/orderService";
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 
 function Orders() {
   const { data: user } = useCurrentUser();
   const navigate = useNavigate();
-
+  const queryClient = useQueryClient();
   const { data: orders = [], isLoading } = useQuery({
     queryKey: ["orders", user?.id],
     queryFn: () => getOrderById(user.id),
     enabled: !!user,
+  });
+
+  const cancelOrderMutation = useMutation({
+    mutationFn: ({ id }) =>
+      updateOrder({
+        id,
+        data: {
+          status: "Cancelled",
+        },
+      }),
+    onSuccess: () => {
+      queryClient.invalidateQueries({
+        queryKey: ["orders", user?.id],
+      })
+    }
+
   });
 
   if (isLoading) return <p>Loading...</p>;
@@ -56,7 +72,19 @@ function Orders() {
                 </p>
               </div>
 
-              <span className="rounded-full bg-green-500/15 border border-green-400/20 px-4 py-2 text-green-400 text-sm font-semibold">
+              {order.status !== "Cancelled" && (
+                <button
+                  onClick={() => cancelOrderMutation.mutate({ id: order.id })}
+                  className="rounded-full border border-red-500/30 bg-red-500/10 px-4 py-2 text-sm font-medium text-red-400 hover:bg-red-500/20" >
+                  Cancel order
+                </button>
+              )}
+              <span
+                className={`rounded-full border px-4 py-2 text-sm font-semibold ${order.status === "Cancelled"
+                    ? "border-red-400/20 bg-red-500/15 text-red-400"
+                    : "border-green-400/20 bg-green-500/15 text-green-400"
+                  }`}
+              >
                 {order.status}
               </span>
             </div>

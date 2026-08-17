@@ -496,7 +496,8 @@
       "email": "amj@gmail.com",
       "password": "afla140321",
       "id": "NWdYytKWWrk",
-      "role": "user"
+      "role": "user",
+      "isBlocked": false
     },
     {
       "id": "1",
@@ -787,19 +788,6 @@
       "productId": "3"
     },
     {
-      "id": "zcWU0tVi01s",
-      "name": "Sony FX5",
-      "brand": "Sony",
-      "category": "Cinema",
-      "price": 489900,
-      "image": "/src/assets/images/products/sony-fx5.jpg",
-      "description": "The Sony FX5 is a professional full-frame cinema camera built for filmmakers and video creators. It features a 16.6MP stacked CMOS sensor, 5K open-gate recording, internal RAW recording, AI-powered autofocus, 15+ stops of dynamic range, and advanced 4K video capabilities in a compact Cinema Line body.",
-      "rating": 4.9,
-      "stock": 5,
-      "userId": "QLC9S6aT-eQ",
-      "productId": "10"
-    },
-    {
       "id": "4XGCSeN1usk",
       "name": " Sony a9 III",
       "brand": "Sony",
@@ -814,12 +802,12 @@
       "productId": "2"
     },
     {
-      "id": "jqRXh1MLr00",
+      "id": "1FbrCX3RSK0",
       "name": "Sony Alpha 6000 (APS-C)",
       "brand": "Sony",
       "category": "Mirrorless",
       "price": 59990,
-      "image": "/src/assets/images/products/sony-ilce-7rm3.jpg",
+      "image": "/src/assets/images/products/sony-alpha.webp",
       "description": "The Sony Alpha 6000 is a compact APS-C mirrorless camera designed for photographers who demand speed, portability, and exceptional image quality. Featuring a 24.3MP Exmor APS-C sensor, fast hybrid autofocus, and continuous shooting up to 11 fps, it captures sharp photos and Full HD videos with remarkable detail. Its lightweight design, interchangeable E-mount lens system, and intuitive controls make it an excellent choice for travel, street photography, portraits, and everyday creative shooting.",
       "rating": 4.7,
       "stock": 5,
@@ -956,20 +944,6 @@
       "quantity": 1
     },
     {
-      "id": "2zAHVqKxlOw",
-      "name": "Sony Alpha 6000 (APS-C)",
-      "brand": "Sony",
-      "category": "Mirrorless",
-      "price": 59990,
-      "image": "/src/assets/images/products/sony-ilce-7rm3.jpg",
-      "description": "The Sony Alpha 6000 is a compact APS-C mirrorless camera designed for photographers who demand speed, portability, and exceptional image quality. Featuring a 24.3MP Exmor APS-C sensor, fast hybrid autofocus, and continuous shooting up to 11 fps, it captures sharp photos and Full HD videos with remarkable detail. Its lightweight design, interchangeable E-mount lens system, and intuitive controls make it an excellent choice for travel, street photography, portraits, and everyday creative shooting.",
-      "rating": 4.7,
-      "stock": 5,
-      "userId": "QLC9S6aT-eQ",
-      "productId": "3",
-      "quantity": 1
-    },
-    {
       "id": "x-yuEla8yLY",
       "name": "Olympus OM-2 MD",
       "brand": "Olympus",
@@ -1015,19 +989,33 @@
       "quantity": 1
     },
     {
-      "id": "pnWHJ967Rw0",
-      "name": "Olympus OM-2 MD",
-      "brand": "Olympus",
+      "id": "lMzWJtSLj4Q",
+      "name": " Sony a9 III",
+      "brand": "Sony",
       "category": "Mirrorless",
-      "price": 42990,
-      "image": "/src/assets/images/products/olympus-om.jpg",
-      "description": "A timeless 35mm film SLR renowned for its precision engineering and elegant design. The Olympus OM-2 MD features aperture-priority automatic exposure, through-the-lens (TTL) metering, and a compact, lightweight body that makes it a favorite among film photography enthusiasts. Its exceptional Zuiko lens compatibility and reliable performance deliver beautifully detailed images, making it an excellent choice for both collectors and photographers seeking an authentic analog shooting experience.",
+      "price": 529990,
+      "image": "/src/assets/images/products/sony-a9.webp",
+      "description": "The Sony a9 III is a flagship full-frame mirrorless camera engineered for professionals who demand exceptional speed, precision, and image quality. Featuring advanced autofocus, high-speed continuous shooting, and outstanding low-light performance, it excels in sports, wildlife, events, and cinematic video production. Its durable design, intuitive controls, and cutting-edge technology make it the perfect companion for capturing every decisive moment with confidence.",
       "rating": 4.7,
-      "stock": 3,
+      "stock": 5,
       "isDeleted": false,
       "userId": "QLC9S6aT-eQ",
-      "productId": "1",
+      "productId": "2",
       "quantity": 1
+    },
+    {
+      "id": "NigUDxpeSw8",
+      "name": "Sony FX5",
+      "brand": "Sony",
+      "category": "Cinema",
+      "price": 489900,
+      "image": "/src/assets/images/products/sony-fx5.webp",
+      "description": "The Sony FX5 is a professional full-frame cinema camera built for filmmakers and video creators. It features a 16.6MP stacked CMOS sensor, 5K open-gate recording, internal RAW recording, AI-powered autofocus, 15+ stops of dynamic range, and advanced 4K video capabilities in a compact Cinema Line body.",
+      "rating": 4.9,
+      "stock": 5,
+      "userId": "QLC9S6aT-eQ",
+      "productId": "10",
+      "quantity": 2
     }
   ],
   "orders": [
@@ -1044,7 +1032,7 @@
         }
       ],
       "total": 529990,
-      "status": "Shipped",
+      "status": "Cancelled",
       "orderedAt": "2026-08-12T10:30:00.000Z",
       "shippingAddress": {
         "fullName": "Afla Shareen",
@@ -1090,7 +1078,7 @@
         }
       ],
       "total": 1255450,
-      "status": "Delivered",
+      "status": "Cancelled",
       "orderedAt": "2026-08-12T08:41:14.364Z",
       "shippingAddress": {
         "fullName": "Afla Shareen",
@@ -1163,7 +1151,7 @@
         }
       ],
       "total": 100000,
-      "status": "Processing",
+      "status": "Delivered",
       "orderedAt": "2026-08-12T10:54:24.587Z",
       "shippingAddress": {
         "fullName": "Amj",
@@ -1222,7 +1210,7 @@
         }
       ],
       "total": 485890,
-      "status": "Processing",
+      "status": "Cancelled",
       "orderedAt": "2026-08-14T03:23:36.243Z",
       "shippingAddress": {
         "fullName": "jalala",

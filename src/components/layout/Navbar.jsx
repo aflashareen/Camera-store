@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { Search, UserRound, Heart, ShoppingBag, Dice1 } from "lucide-react";
+import { Search, UserRound, Heart, ShoppingBag } from "lucide-react";
 import { useDispatch, useSelector } from "react-redux";
 import { useCurrentUser } from '../../hooks/UseCurrentUser';
 import { useQuery } from '@tanstack/react-query';
