@@ -6,7 +6,7 @@
       "brand": "Olympus",
       "category": "Mirrorless",
       "price": 42990,
-      "image": "/src/assets/images/products/olympus-om.jpg",
+      "image": "/src/assets/images/products/olympus-om.webp",
       "description": "A timeless 35mm film SLR renowned for its precision engineering and elegant design. The Olympus OM-2 MD features aperture-priority automatic exposure, through-the-lens (TTL) metering, and a compact, lightweight body that makes it a favorite among film photography enthusiasts. Its exceptional Zuiko lens compatibility and reliable performance deliver beautifully detailed images, making it an excellent choice for both collectors and photographers seeking an authentic analog shooting experience.",
       "rating": 4.7,
       "stock": 3,
@@ -18,7 +18,7 @@
       "brand": "Sony",
       "category": "Mirrorless",
       "price": 529990,
-      "image": "/src/assets/images/products/sony-ilce-1.jpg",
+      "image": "/src/assets/images/products/sony-a9.webp",
       "description": "The Sony a9 III is a flagship full-frame mirrorless camera engineered for professionals who demand exceptional speed, precision, and image quality. Featuring advanced autofocus, high-speed continuous shooting, and outstanding low-light performance, it excels in sports, wildlife, events, and cinematic video production. Its durable design, intuitive controls, and cutting-edge technology make it the perfect companion for capturing every decisive moment with confidence.",
       "rating": 4.7,
       "stock": 5,
@@ -30,7 +30,7 @@
       "brand": "Sony",
       "category": "Mirrorless",
       "price": 59990,
-      "image": "/src/assets/images/products/sony-ilce-7rm3.jpg",
+      "image": "/src/assets/images/products/sony-alpha.webp",
       "description": "The Sony Alpha 6000 is a compact APS-C mirrorless camera designed for photographers who demand speed, portability, and exceptional image quality. Featuring a 24.3MP Exmor APS-C sensor, fast hybrid autofocus, and continuous shooting up to 11 fps, it captures sharp photos and Full HD videos with remarkable detail. Its lightweight design, interchangeable E-mount lens system, and intuitive controls make it an excellent choice for travel, street photography, portraits, and everyday creative shooting.",
       "rating": 4.7,
       "stock": 5
@@ -41,7 +41,7 @@
       "brand": "Olympus",
       "category": "Mirrorless",
       "price": 28990,
-      "image": "/src/assets/images/products/olympus-2n.jpg",
+      "image": "/src/assets/images/products/olympus-2n.webp",
       "description": "The Olympus OM-2N is a legendary 35mm SLR film camera celebrated for its compact design, dependable build quality, and aperture-priority automatic exposure. Designed for both enthusiasts and professionals, it delivers sharp, timeless images while offering full manual control for a classic analog photography experience. Lightweight yet durable, the OM-2N remains one of the most sought-after vintage cameras for film photography.",
       "rating": 4.7,
       "stock": 0
@@ -52,7 +52,7 @@
       "brand": "Nikon",
       "category": "DSLR",
       "price": 24990,
-      "image": "/src/assets/images/products/nikon-film.jpg",
+      "image": "/src/assets/images/products/nikon-film.webp",
       "description": "The Nikon F Photomic FTn is an iconic 35mm film SLR camera that helped define professional photography. Introduced in the late 1960s, it features the renowned Photomic FTn prism finder with center-weighted TTL metering, a rugged all-metal construction, and the legendary Nikon F mount. Built for reliability and precision, the F Photomic FTn remains a favorite among film photography enthusiasts, collectors, and professionals seeking a timeless shooting experience",
       "rating": 4.7,
       "stock": 5
@@ -63,7 +63,7 @@
       "brand": "Canon",
       "category": "Film camera",
       "price": 38700,
-      "image": "/src/assets/images/products/canon-ae.jpg",
+      "image": "/src/assets/images/products/canon-ae.webp",
       "description": "High performance camera for photography and video.",
       "rating": 4.7,
       "stock": 5
@@ -74,7 +74,7 @@
       "brand": "Minolta",
       "category": "Film camera",
       "price": 17999,
-      "image": "/src/assets/images/products/minolta-x-370.jpg",
+      "image": "/src/assets/images/products/minolta-x-370.webp",
       "description": "High performance camera for photography and video.",
       "rating": 4.7,
       "stock": 5
@@ -85,7 +85,7 @@
       "brand": "Sony",
       "category": "Mirrorless",
       "price": 127490,
-      "image": "/src/assets/images/products/sony-a7.jpg",
+      "image": "/src/assets/images/products/sony-a7.webp",
       "description": "The Sony Alpha 7 III is a versatile full-frame mirrorless camera built for photographers and content creators. Featuring a 24.2MP back-illuminated CMOS sensor, advanced autofocus with real-time Eye AF, 5-axis in-body image stabilization, and stunning 4K video recording, it delivers exceptional image quality in both daylight and low-light conditions. Its compact, weather-resistant design and long-lasting battery make it an excellent choice for travel, portraits, landscapes, weddings, and professional video production.",
       "rating": 4.7,
       "stock": 5
@@ -96,7 +96,7 @@
       "brand": "Sony",
       "category": "Mirrorless",
       "price": 270990,
-      "image": "/src/assets/images/products/sony-a7m5.jpg",
+      "image": "/src/assets/images/products/sony-a7m5.webp",
       "description": "The Sony α7 V (A7M5) is a premium full-frame mirrorless camera featuring a 33MP sensor, AI-powered autofocus, 5-axis image stabilization, and professional 4K video recording. Designed for photographers and filmmakers, it delivers exceptional image quality, fast performance, and reliable tracking for portraits, wildlife, sports, and cinematic content.",
       "rating": 4.9,
       "stock": 5
@@ -107,7 +107,7 @@
       "brand": "Sony",
       "category": "Cinema",
       "price": 489900,
-      "image": "/src/assets/images/products/sony-fx5.jpg",
+      "image": "/src/assets/images/products/sony-fx5.webp",
       "description": "The Sony FX5 is a professional full-frame cinema camera built for filmmakers and video creators. It features a 16.6MP stacked CMOS sensor, 5K open-gate recording, internal RAW recording, AI-powered autofocus, 15+ stops of dynamic range, and advanced 4K video capabilities in a compact Cinema Line body.",
       "rating": 4.9,
       "stock": 5
@@ -118,7 +118,7 @@
       "brand": "Sony",
       "category": "Mirrorless",
       "price": 599990,
-      "image": "/src/assets/images/products/sony-a1.jpg",
+      "image": "/src/assets/images/products/sony-a1.webp",
       "description": "The Sony α1 II is Sony's flagship full-frame mirrorless camera, combining a 50.1MP stacked Exmor RS sensor, AI-powered autofocus, blackout-free continuous shooting up to 30 fps, and professional 8K video recording. Built for sports, wildlife, commercial photography, and filmmaking, it delivers exceptional speed, accuracy, and image quality.",
       "rating": 5,
       "stock": 5
@@ -129,7 +129,7 @@
       "brand": "Sony",
       "category": "Mirrorless",
       "price": 470990,
-      "image": "/src/assets/images/products/sony-a7r6.jpg",
+      "image": "/src/assets/images/products/sony-a7r6.webp",
       "description": "The Sony α7R VI is a premium full-frame mirrorless camera featuring a 66.8MP stacked Exmor RS CMOS sensor, AI-powered autofocus, up to 30 fps continuous shooting, and 8K video recording. Built for professional photographers and filmmakers, it delivers exceptional detail, speed, and dynamic range, making it ideal for landscape, commercial, wildlife, portrait, and studio photography.",
       "rating": 4.9,
       "stock": 5
@@ -140,7 +140,7 @@
       "brand": "Sony",
       "category": "Cinema",
       "price": 489900,
-      "image": "/src/assets/images/products/sony-fx3.jpg",
+      "image": "/src/assets/images/products/sony-fx3.webp",
       "description": "The Sony FX5 is a professional full-frame cinema camera built for filmmakers and video creators. It features a 16.6MP stacked CMOS sensor, 5K open-gate recording, internal RAW recording, AI-powered autofocus, 15+ stops of dynamic range, and advanced 4K video capabilities in a compact Cinema Line body.",
       "rating": 4.9,
       "stock": 5
@@ -151,7 +151,7 @@
       "brand": "Sony",
       "category": "Vlogging",
       "price": 489900,
-      "image": "/src/assets/images/products/sony-zv.jpg",
+      "image": "/src/assets/images/products/sony-zv.webp",
       "description": "The Sony FX5 is a professional full-frame cinema camera built for filmmakers and video creators. It features a 16.6MP stacked CMOS sensor, 5K open-gate recording, internal RAW recording, AI-powered autofocus, 15+ stops of dynamic range, and advanced 4K video capabilities in a compact Cinema Line body.",
       "rating": 4.9,
       "stock": 5
@@ -162,7 +162,7 @@
       "brand": "Sony",
       "category": "DSLR",
       "price": 489900,
-      "image": "/src/assets/images/products/nikon-d850.jpg",
+      "image": "/src/assets/images/products/nikon-d850.webp",
       "description": "The Sony FX5 is a professional full-frame cinema camera built for filmmakers and video creators. It features a 16.6MP stacked CMOS sensor, 5K open-gate recording, internal RAW recording, AI-powered autofocus, 15+ stops of dynamic range, and advanced 4K video capabilities in a compact Cinema Line body.",
       "rating": 4.9,
       "stock": 5
@@ -173,7 +173,7 @@
       "brand": "Sony",
       "category": "Lenses",
       "price": 466990,
-      "image": "/src/assets/images/products/lens-FE.jpg",
+      "image": "/src/assets/images/products/lens-FE.webp",
       "description": "The Sony FX5 is a professional full-frame cinema camera built for filmmakers and video creators. It features a 16.6MP stacked CMOS sensor, 5K open-gate recording, internal RAW recording, AI-powered autofocus, 15+ stops of dynamic range, and advanced 4K video capabilities in a compact Cinema Line body.",
       "rating": 4.9,
       "stock": 5
@@ -184,7 +184,7 @@
       "brand": "Sony",
       "category": "Lenses",
       "price": 45990,
-      "image": "/src/assets/images/products/lens-FE28.jpg",
+      "image": "/src/assets/images/products/lens-FE28.webp",
       "description": "The Sony FX5 is a professional full-frame cinema camera built for filmmakers and video creators. It features a 16.6MP stacked CMOS sensor, 5K open-gate recording, internal RAW recording, AI-powered autofocus, 15+ stops of dynamic range, and advanced 4K video capabilities in a compact Cinema Line body.",
       "rating": 4.9,
       "stock": 5
@@ -195,7 +195,7 @@
       "brand": "Sony",
       "category": "Lenses",
       "price": 147990,
-      "image": "/src/assets/images/products/lens-FE100.jpg",
+      "image": "/src/assets/images/products/lens-FE100.webp",
       "description": "The Sony FX5 is a professional full-frame cinema camera built for filmmakers and video creators. It features a 16.6MP stacked CMOS sensor, 5K open-gate recording, internal RAW recording, AI-powered autofocus, 15+ stops of dynamic range, and advanced 4K video capabilities in a compact Cinema Line body.",
       "rating": 4.9,
       "stock": 5
@@ -206,7 +206,7 @@
       "brand": "Sony",
       "category": "Lenses",
       "price": 377490,
-      "image": "/src/assets/images/products/lens-FE50.jpg",
+      "image": "/src/assets/images/products/lens-FE50.webp",
       "description": "The Sony FX5 is a professional full-frame cinema camera built for filmmakers and video creators. It features a 16.6MP stacked CMOS sensor, 5K open-gate recording, internal RAW recording, AI-powered autofocus, 15+ stops of dynamic range, and advanced 4K video capabilities in a compact Cinema Line body.",
       "rating": 4.9,
       "stock": 5
@@ -217,7 +217,7 @@
       "brand": "Sony",
       "category": "Lenses",
       "price": 599990,
-      "image": "/src/assets/images/products/lens-FE300.jpg",
+      "image": "/src/assets/images/products/lens-FE300.webp",
       "description": "The Sony FX5 is a professional full-frame cinema camera built for filmmakers and video creators. It features a 16.6MP stacked CMOS sensor, 5K open-gate recording, internal RAW recording, AI-powered autofocus, 15+ stops of dynamic range, and advanced 4K video capabilities in a compact Cinema Line body.",
       "rating": 4.9,
       "stock": 5
@@ -228,7 +228,7 @@
       "brand": "Sony",
       "category": "Lenses",
       "price": 30490,
-      "image": "/src/assets/images/products/lens-EPZ.jpg",
+      "image": "/src/assets/images/products/lens-EPZ.webp",
       "description": "The Sony FX5 is a professional full-frame cinema camera built for filmmakers and video creators. It features a 16.6MP stacked CMOS sensor, 5K open-gate recording, internal RAW recording, AI-powered autofocus, 15+ stops of dynamic range, and advanced 4K video capabilities in a compact Cinema Line body.",
       "rating": 4.9,
       "stock": 5
@@ -239,7 +239,7 @@
       "brand": "Sony",
       "category": "Lenses",
       "price": 185900,
-      "image": "/src/assets/images/products/lens-FE85.jpg",
+      "image": "/src/assets/images/products/lens-FE85.webp",
       "description": "The Sony FX5 is a professional full-frame cinema camera built for filmmakers and video creators. It features a 16.6MP stacked CMOS sensor, 5K open-gate recording, internal RAW recording, AI-powered autofocus, 15+ stops of dynamic range, and advanced 4K video capabilities in a compact Cinema Line body.",
       "rating": 4.9,
       "stock": 5
@@ -250,7 +250,7 @@
       "brand": "Sony",
       "category": "Lenses",
       "price": 299990,
-      "image": "/src/assets/images/products/lens-FE12.jpg",
+      "image": "/src/assets/images/products/lens-FE12.webp",
       "description": "The Sony FX5 is a professional full-frame cinema camera built for filmmakers and video creators. It features a 16.6MP stacked CMOS sensor, 5K open-gate recording, internal RAW recording, AI-powered autofocus, 15+ stops of dynamic range, and advanced 4K video capabilities in a compact Cinema Line body.",
       "rating": 4.9,
       "stock": 5
@@ -261,7 +261,7 @@
       "brand": "Sony",
       "category": "Accessories",
       "price": 299990,
-      "image": "/src/assets/images/products/accessory-raincover.jpg",
+      "image": "/src/assets/images/products/accessory-raincover.webp",
       "description": "The Sony FX5 is a professional full-frame cinema camera built for filmmakers and video creators. It features a 16.6MP stacked CMOS sensor, 5K open-gate recording, internal RAW recording, AI-powered autofocus, 15+ stops of dynamic range, and advanced 4K video capabilities in a compact Cinema Line body.",
       "rating": 4.9,
       "stock": 5
@@ -272,7 +272,7 @@
       "brand": "Sony",
       "category": "Accessories",
       "price": 69490,
-      "image": "/src/assets/images/products/accessory-XLR.jpg",
+      "image": "/src/assets/images/products/accessory-XLR.webp",
       "description": "The Sony FX5 is a professional full-frame cinema camera built for filmmakers and video creators. It features a 16.6MP stacked CMOS sensor, 5K open-gate recording, internal RAW recording, AI-powered autofocus, 15+ stops of dynamic range, and advanced 4K video capabilities in a compact Cinema Line body.",
       "rating": 4.9,
       "stock": 5
@@ -283,7 +283,7 @@
       "brand": "Sony",
       "category": "Accessories",
       "price": 299990,
-      "image": "/src/assets/images/products/accessory-frontlens.jpg",
+      "image": "/src/assets/images/products/accessory-frontlens.webp",
       "description": "The Sony FX5 is a professional full-frame cinema camera built for filmmakers and video creators. It features a 16.6MP stacked CMOS sensor, 5K open-gate recording, internal RAW recording, AI-powered autofocus, 15+ stops of dynamic range, and advanced 4K video capabilities in a compact Cinema Line body.",
       "rating": 4.9,
       "stock": 5
@@ -294,7 +294,7 @@
       "brand": "Sony",
       "category": "Accessories",
       "price": 299990,
-      "image": "/src/assets/images/products/accessory-lenshood.jpg",
+      "image": "/src/assets/images/products/accessory-lenshood.webp",
       "description": "The Sony FX5 is a professional full-frame cinema camera built for filmmakers and video creators. It features a 16.6MP stacked CMOS sensor, 5K open-gate recording, internal RAW recording, AI-powered autofocus, 15+ stops of dynamic range, and advanced 4K video capabilities in a compact Cinema Line body.",
       "rating": 4.9,
       "stock": 5
@@ -305,7 +305,7 @@
       "brand": "Sony",
       "category": "Accessories",
       "price": 299990,
-      "image": "/src/assets/images/products/accessory-lenshood2.jpg",
+      "image": "/src/assets/images/products/accessory-lenshood2.webp",
       "description": "The Sony FX5 is a professional full-frame cinema camera built for filmmakers and video creators. It features a 16.6MP stacked CMOS sensor, 5K open-gate recording, internal RAW recording, AI-powered autofocus, 15+ stops of dynamic range, and advanced 4K video capabilities in a compact Cinema Line body.",
       "rating": 4.9,
       "stock": 5
@@ -316,7 +316,7 @@
       "brand": "Canon",
       "category": "DSLR",
       "price": 299990,
-      "image": "/src/assets/images/products/canon-eos.jpg",
+      "image": "/src/assets/images/products/canon-eos.webp",
       "description": "The Sony FX5 is a professional full-frame cinema camera built for filmmakers and video creators. It features a 16.6MP stacked CMOS sensor, 5K open-gate recording, internal RAW recording, AI-powered autofocus, 15+ stops of dynamic range, and advanced 4K video capabilities in a compact Cinema Line body.",
       "rating": 4.9,
       "stock": 5
@@ -327,7 +327,7 @@
       "brand": "Sony",
       "category": "Accessories",
       "price": 299990,
-      "image": "/src/assets/images/products/accessory-flash.jpg",
+      "image": "/src/assets/images/products/accessory-flash.webp",
       "description": "The Sony FX5 is a professional full-frame cinema camera built for filmmakers and video creators. It features a 16.6MP stacked CMOS sensor, 5K open-gate recording, internal RAW recording, AI-powered autofocus, 15+ stops of dynamic range, and advanced 4K video capabilities in a compact Cinema Line body.",
       "rating": 4.9,
       "stock": 5,
@@ -339,7 +339,7 @@
       "brand": "Canon",
       "category": "DSLR",
       "price": 299990,
-      "image": "/src/assets/images/products/canon-eos-r5.jpg",
+      "image": "/src/assets/images/products/canon-eos-r5.webp",
       "description": "The EOS R5 Mark II has set a new benchmark for videography and photography, with many new AF features made possible by the new Accelerated Capture System.",
       "rating": 4.9,
       "stock": 5
@@ -350,7 +350,7 @@
       "brand": "Godox",
       "category": "Accessories",
       "price": 34590,
-      "image": "/src/assets/images/products/accessory-godox.jpg",
+      "image": "/src/assets/images/products/accessory-godox.webp",
       "description": "The Godox SL200 is a powerful 200W continuous LED video light series, featuring options like the Godox SL200III Daylight LED Video Light and the Godox SL200IIIBI Bi-Color LED Monolight, priced roughly between ₹28,999 and ₹44,413 depending on the exact version. It is widely used for studio setups, interviews, and film production.",
       "rating": 4.9,
       "stock": 5
@@ -361,7 +361,7 @@
       "brand": "Digitek",
       "category": "Accessories",
       "price": 2299,
-      "image": "/src/assets/images/products/accessory-godox-softbox.jpg",
+      "image": "/src/assets/images/products/accessory-godox-softbox.webp",
       "description": "The Godox SL200 is a powerful 200W continuous LED video light series, featuring options like the Godox SL200III Daylight LED Video Light and the Godox SL200IIIBI Bi-Color LED Monolight, priced roughly between ₹28,999 and ₹44,413 depending on the exact version. It is widely used for studio setups, interviews, and film production.",
       "rating": 4.9,
       "stock": 5
@@ -372,7 +372,7 @@
       "brand": "DJI",
       "category": "Accessories",
       "price": 49990,
-      "image": "/src/assets/images/products/accessory-gimbal-rs5.jpg",
+      "image": "/src/assets/images/products/accessory-gimbal-rs5.webp",
       "description": "The Godox SL200 is a powerful 200W continuous LED video light series, featuring options like the Godox SL200III Daylight LED Video Light and the Godox SL200IIIBI Bi-Color LED Monolight, priced roughly between ₹28,999 and ₹44,413 depending on the exact version. It is widely used for studio setups, interviews, and film production.",
       "rating": 4.9,
       "stock": 5
@@ -383,7 +383,7 @@
       "category": "Mirrorless",
       "price": 100000,
       "stock": 1,
-      "image": "/src/assets/images/products/olympus-om.jpg",
+      "image": "/src/assets/images/products/olympus-om.webp",
       "description": "best product to ever invest on",
       "rating": 5,
       "isDeleted": false,
@@ -395,23 +395,11 @@
       "category": "Mirrorless",
       "price": 500000,
       "stock": 5,
-      "image": "/src/assets/images/products/canon-eos.jpg",
+      "image": "/src/assets/images/products/canon-eos.webp",
       "description": "good product nallath ann vangikuka",
       "rating": 4.5,
       "isDeleted": false,
       "id": "zo_Ovs_pXLg"
-    },
-    {
-      "name": "rida",
-      "brand": "Canon",
-      "category": "DSLR",
-      "price": 999835,
-      "stock": 5,
-      "image": "/src/assets/images/products/canon-eos.jpg",
-      "description": "best product everrrrr",
-      "rating": 1.5,
-      "isDeleted": true,
-      "id": "toBPQ2Hzf74"
     },
     {
       "name": "Sony FX6",
@@ -419,11 +407,47 @@
       "category": "cinema",
       "price": 3350000,
       "stock": 6,
-      "image": "/src/assets/images/products/sony-fx6.jpg",
+      "image": "/src/assets/images/products/sony-fx6.webp",
       "description": "The Sony FX6 is a professional full-frame cinema camera featuring a 10.2MP Exmor R sensor, 4K up to 120p recording, and an electronic variable ND filter",
       "rating": 4.5,
       "isDeleted": false,
       "id": "HpLcGj1gqko"
+    },
+    {
+      "name": "Canon R6",
+      "brand": "Canon",
+      "category": "Mirrorless",
+      "price": 155999,
+      "stock": 3,
+      "image": "/src/assets/images/products/canon-r6.webp",
+      "description": "full-frame mirrorless camera family known for high-speed performance and strong hybrid photo-video features",
+      "rating": 4,
+      "isDeleted": false,
+      "id": "3v-h0cl3hP0"
+    },
+    {
+      "name": "Nikon Z8",
+      "brand": "Nikon",
+      "category": "Mirrorless",
+      "price": 299495,
+      "stock": 4,
+      "image": "/src/assets/images/products/nikon-z8.webp",
+      "description": "The Nikon Z8 is a powerful, compact full-frame mirrorless camera featuring a 45.7 MP stacked CMOS sensor and EXPEED 7 processor.",
+      "rating": 5,
+      "isDeleted": false,
+      "id": "T7tvkUK06Rk"
+    },
+    {
+      "name": "Sony Alpha 7 IV",
+      "brand": "Sony",
+      "category": "Mirrorless",
+      "price": 182990,
+      "stock": 2,
+      "image": "/src/assets/images/products/sony-a7iv.webp",
+      "description": "The Sony Alpha 7 IV is a full-frame hybrid mirrorless camera featuring a 33MP Exmor R CMOS sensor, BIONZ XR processor, and 4K 60p video capabilities.",
+      "rating": 4,
+      "isDeleted": false,
+      "id": "VltI1qDGQOw"
     }
   ],
   "categories": [
@@ -729,7 +753,7 @@
       "brand": "Sony",
       "category": "Mirrorless",
       "price": 270990,
-      "image": "/src/assets/images/products/sony-a7m5.jpg",
+      "image": "/src/assets/images/products/sony-a7m5.webp",
       "description": "The Sony α7 V (A7M5) is a premium full-frame mirrorless camera featuring a 33MP sensor, AI-powered autofocus, 5-axis image stabilization, and professional 4K video recording. Designed for photographers and filmmakers, it delivers exceptional image quality, fast performance, and reliable tracking for portraits, wildlife, sports, and cinematic content.",
       "rating": 4.9,
       "stock": 5,

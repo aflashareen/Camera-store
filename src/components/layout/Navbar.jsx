@@ -10,7 +10,6 @@ import { setSearch } from '../../redux/slice/searchSlice';
 
 function Navbar() {
   const navigate = useNavigate();
-
   const dispatch = useDispatch();
 
 const search = useSelector((state) => state.search.search);
@@ -42,8 +41,8 @@ const search = useSelector((state) => state.search.search);
 };
 
   return (
-    <nav className="sticky top-0 z-50 bg-neutral-950 shadow-lg border h-15">
-      <div className="h-15 flex justify-between items-center text-white">
+    <nav className="sticky top-0 z-50 h-15 overflow-x-auto bg-neutral-950 shadow-lg border scrollbar-hide lg:overflow-visible">
+      <div className="h-15 flex min-w-max items-center justify-between text-white lg:min-w-0">
 
         <div className='text-xl tracking-[0.35em] uppercase p-4'>
           <Link to="/hero"><h1>LENSÉ</h1></Link>

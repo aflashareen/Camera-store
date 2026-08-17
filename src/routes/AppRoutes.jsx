@@ -24,9 +24,9 @@ import NotFound from "../notfound/NotFound";
 //admin
 import AdminRoute from "./AdminRoute";
 import Dashboard from "../pages/admin/Dashboard";
-import AdminProducts from "../pages/admin/Products";
+import AdminProducts from "../pages/admin/AdminProducts";
 import Users from "../pages/admin/Users";
-import AdminOrders from "../pages/admin/Orders";
+import AdminOrders from "../pages/admin/AdminOrders";
 import AdminLayout from "../components/admin/AdminLayout";
 
 // function AuthLayout() {

@@ -1,6 +1,8 @@
-import React from "react";
+// import React from "react";
+import { useMemo } from "react";
 
 function TopSelling({ orders }) {
+  const topProducts = useMemo(()=>{
   const productSales = {};
 
   orders.forEach((order) => {
@@ -17,10 +19,10 @@ function TopSelling({ orders }) {
     });
   });
 
-  const topProducts = Object.values(productSales)
+  return Object.values(productSales)
     .sort((a, b) => b.quantity - a.quantity)
     .slice(0, 5);
-
+  },[orders])
   return (
     <div className="mt-8">
       <h2 className="text-xl font-semibold text-white">

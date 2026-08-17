@@ -21,18 +21,6 @@ function Header() {
 
     const search = searchParams.get("search") || "";
 
-    const handleSearch = (e) => {
-        const value = e.target.value;
-
-        if (value) {
-            setSearchParams({ search: value });
-        } else {
-            setSearchParams({});
-        }
-    };
-    const handleSearchClick=()=>{
-         navigate(`/admin/products?search=${search}`);
-    }
       const handleLogout = (user) =>{
         localStorage.removeItem("userId");
         navigate("/login");
@@ -63,21 +51,6 @@ function Header() {
 
 
             <div className="ml-auto flex items-center gap-2 md:gap-3">
-
-                <div className="relative flex-1 max-w-md">
-                    <Search
-                        size={18}
-                        className="absolute left-4 top-1/2 -translate-y-1/2 text-zinc-500" />
-
-                    <input
-                        type="text"
-                        placeholder="Search Products..."
-                        value={search}
-                        onChange={handleSearch}
-                        onClick={handleSearchClick}
-                        className="w-full rounded-xl border border-white/10 bg-[#1D1D1D] py-3 pl-11 pr-4 text-sm text-white placeholder:text-zinc-500 outline-none transition focus:border-white/20" />
-                </div>
-
                 <button className="relative rounded-xl bg-[#1D1D1D] p-3 transition hover:bg-[#262626]">
                     <Bell size={20} className="text-white" />
 

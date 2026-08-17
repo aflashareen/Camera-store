@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts'
 
 function SalesOverview({ orders }) {
-    const salesData = orders.map((order) => ({
+    const salesData =useMemo(()=>{
+        return orders.map((order) => ({
         date: new Date(order.orderedAt).toLocaleDateString(),
         sales: Number(order.total || 0),
-    }));
+         }));
+    },[orders]); 
+   
     return (
         <div className='mt-8'>
             <h2 className='text-xl font-semibold text-white'>Sales Overview</h2>
