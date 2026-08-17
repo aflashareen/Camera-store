@@ -25,21 +25,13 @@ function Filter({
   };
     return (
         <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-
             <div className="flex flex-col xl:flex-row xl:items-center xl:justify-between gap-8 border-b border-zinc-800 pb-8">
                 <div>
-                    <p className="text-xs uppercase tracking-[0.4em] text-zinc-500">
-                        Discover
-                    </p>
-
-                    <h2 className="mt-2 text-2xl sm:text-3xl lg:text-4xl font-light text-white">
-                        Shop Cameras
-                    </h2>
+                    <p className="text-xs uppercase tracking-[0.4em] text-zinc-500">Discover</p>
+                    <h2 className="mt-2 text-2xl sm:text-3xl lg:text-4xl font-light text-white">Shop Cameras</h2>
                 </div>
-
  
                 <div className="flex items-center gap-4 overflow-x-auto whitespace-nowrap scrollbar-hide pb-2">
-
                     {categoryList.map((category) => (
                         <button
                             key={category}

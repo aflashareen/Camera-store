@@ -8,7 +8,7 @@ function AdminLayout() {
     <div className="min-h-screen bg-[#080808] bg-[radial-gradient(circle_at_15%_10%,rgba(161,161,170,0.25),transparent_35%),radial-gradient(circle_at_85%_90%,rgba(113,113,122,0.12),transparent_45%)] p-3 md:p-5">
       <div className="flex flex-col gap-2 lg:flex-row">
 
-        <aside className="fixed left-3 top-3 z-40 hidden h-[calc(100vh-1.5rem)] w-72 lg:block">
+        <aside className="w-full lg:fixed lg:left-3 lg:top-3 lg:z-40 lg:h-[calc(100vh-1.5rem)] lg:w-72">
           <Sidebar />
         </aside>
         

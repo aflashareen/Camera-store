@@ -788,6 +788,19 @@
       "isDeleted": false,
       "userId": "1",
       "productId": "2"
+    },
+    {
+      "id": "jqRXh1MLr00",
+      "name": "Sony Alpha 6000 (APS-C)",
+      "brand": "Sony",
+      "category": "Mirrorless",
+      "price": 59990,
+      "image": "/src/assets/images/products/sony-ilce-7rm3.jpg",
+      "description": "The Sony Alpha 6000 is a compact APS-C mirrorless camera designed for photographers who demand speed, portability, and exceptional image quality. Featuring a 24.3MP Exmor APS-C sensor, fast hybrid autofocus, and continuous shooting up to 11 fps, it captures sharp photos and Full HD videos with remarkable detail. Its lightweight design, interchangeable E-mount lens system, and intuitive controls make it an excellent choice for travel, street photography, portraits, and everyday creative shooting.",
+      "rating": 4.7,
+      "stock": 5,
+      "userId": "QLC9S6aT-eQ",
+      "productId": "3"
     }
   ],
   "cart": [
@@ -975,6 +988,21 @@
       "isDeleted": false,
       "userId": "1",
       "productId": "2",
+      "quantity": 1
+    },
+    {
+      "id": "pnWHJ967Rw0",
+      "name": "Olympus OM-2 MD",
+      "brand": "Olympus",
+      "category": "Mirrorless",
+      "price": 42990,
+      "image": "/src/assets/images/products/olympus-om.jpg",
+      "description": "A timeless 35mm film SLR renowned for its precision engineering and elegant design. The Olympus OM-2 MD features aperture-priority automatic exposure, through-the-lens (TTL) metering, and a compact, lightweight body that makes it a favorite among film photography enthusiasts. Its exceptional Zuiko lens compatibility and reliable performance deliver beautifully detailed images, making it an excellent choice for both collectors and photographers seeking an authentic analog shooting experience.",
+      "rating": 4.7,
+      "stock": 3,
+      "isDeleted": false,
+      "userId": "QLC9S6aT-eQ",
+      "productId": "1",
       "quantity": 1
     }
   ],

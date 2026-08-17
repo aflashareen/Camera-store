@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Search, Bell, ChevronDown, LogOut } from "lucide-react";
 import { useCurrentUser } from "../../hooks/UseCurrentUser";
-import { useSearchParams } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 
 function Header() {
     const { data: user } = useCurrentUser();
@@ -13,36 +13,43 @@ function Header() {
     if (hour < 12) greeting = "Good morning,";
     else if (hour < 17) greeting = "Good Afternoon,";
     else greeting = "Good Evening,";
-
+     const navigate = useNavigate();
     const [isOpen, setIsOpen] = useState(false);
     const dropdownRef = useRef(null);
 
     const [searchParams, setSearchParams] = useSearchParams();
 
-const search = searchParams.get("search") || "";
+    const search = searchParams.get("search") || "";
 
-const handleSearch = (e) => {
-    const value = e.target.value;
+    const handleSearch = (e) => {
+        const value = e.target.value;
 
-    if (value) {
-        setSearchParams({ search: value });
-    } else {
-        setSearchParams({});
+        if (value) {
+            setSearchParams({ search: value });
+        } else {
+            setSearchParams({});
+        }
+    };
+    const handleSearchClick=()=>{
+         navigate(`/admin/products?search=${search}`);
     }
-};
+      const handleLogout = (user) =>{
+        localStorage.removeItem("userId");
+        navigate("/login");
+      }
 
-    useEffect(()=>{
-        function handleClickOutside(e){
-            if(dropdownRef.current && !dropdownRef.current.contains(e.target)){
+    useEffect(() => {
+        function handleClickOutside(e) {
+            if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
                 setIsOpen(false);
             }
         }
-        document.addEventListener("mousedown",handleClickOutside);
+        document.addEventListener("mousedown", handleClickOutside);
 
-        return () =>{
-            document.removeEventListener("mousedown",handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
         }
-    },[]);
+    }, []);
     return (
         <header className="flex flex-col gap-4 rounded-3xl border border-white/10 bg-[#151515] p-4 md:px-6 md:py-5 shadow-xl lg:flex-row  lg:items-center lg:justify-between">
 
@@ -60,73 +67,74 @@ const handleSearch = (e) => {
                 <div className="relative flex-1 max-w-md">
                     <Search
                         size={18}
-                        className="absolute left-4 top-1/2 -translate-y-1/2 text-zinc-500"/>
+                        className="absolute left-4 top-1/2 -translate-y-1/2 text-zinc-500" />
 
                     <input
                         type="text"
-                        placeholder="Search..."
+                        placeholder="Search Products..."
                         value={search}
                         onChange={handleSearch}
-                        className="w-full rounded-xl border border-white/10 bg-[#1D1D1D] py-3 pl-11 pr-4 text-sm text-white placeholder:text-zinc-500 outline-none transition focus:border-white/20"/>
+                        onClick={handleSearchClick}
+                        className="w-full rounded-xl border border-white/10 bg-[#1D1D1D] py-3 pl-11 pr-4 text-sm text-white placeholder:text-zinc-500 outline-none transition focus:border-white/20" />
                 </div>
 
                 <button className="relative rounded-xl bg-[#1D1D1D] p-3 transition hover:bg-[#262626]">
                     <Bell size={20} className="text-white" />
 
-                    <span className="absolute right-3 top-3 h-2 w-2 rounded-full bg-red-500" />
+                    {/* <span className="absolute right-3 top-3 h-2 w-2 rounded-full bg-red-500" /> */}
                 </button>
-               <div className="relative" ref={dropdownRef}>
-                <button
-                    onClick={() => setIsOpen(!isOpen)}
-                    className="flex items-center gap-3 rounded-xl bg-[#1D1D1D] px-3 py-2 transition hover:bg-[#262626]">
+                <div className="relative" ref={dropdownRef}>
+                    <button
+                        onClick={() => setIsOpen(!isOpen)}
+                        className="flex items-center gap-3 rounded-xl bg-[#1D1D1D] px-3 py-2 transition hover:bg-[#262626]">
 
-                    <div className="flex h-11 w-11 items-center justify-center rounded-full bg-white font-semibold text-black">
-                        {user?.name?.charAt(0).toUpperCase()}
-                    </div>
+                        <div className="flex h-11 w-11 items-center justify-center rounded-full bg-white font-semibold text-black">
+                            {user?.name?.charAt(0).toUpperCase()}
+                        </div>
 
-                    <div className="hidden text-left md:block">
-                        <p className="text-sm font-medium text-white">
-                            {user?.name}
-                        </p>
+                        <div className="hidden text-left md:block">
+                            <p className="text-sm font-medium text-white">
+                                {user?.name}
+                            </p>
 
-                        <p className="text-xs text-zinc-400">
-                            Administrator
-                        </p>
-                    </div>
+                            <p className="text-xs text-zinc-400">
+                                Administrator
+                            </p>
+                        </div>
 
-                    <ChevronDown size={16} className="hidden text-zinc-400 md:block" />
+                        <ChevronDown size={16} className="hidden text-zinc-400 md:block" />
 
-                </button>
-                        {isOpen && (
-                    <div className="absolute right-0 top-full mt-2 w-64 rounded-2xl border border-white/10 bg-[#1A1A1A] p-4 shadow-2xl z-50">
+                    </button>
+                    {isOpen && (
+                        <div className="absolute right-0 top-full mt-2 w-64 rounded-2xl border border-white/10 bg-[#1A1A1A] p-4 shadow-2xl z-50">
 
-                        <p className="font-semibold text-white">
-                            {user?.name}
-                        </p>
+                            <p className="font-semibold text-white">
+                                {user?.name}
+                            </p>
 
-                        <p className="text-sm text-zinc-400">
-                            {user?.email}
-                        </p>
+                            <p className="text-sm text-zinc-400">
+                                {user?.email}
+                            </p>
 
-                        <div className="my-3 border-t border-white/10"></div>
+                            <div className="my-3 border-t border-white/10"></div>
 
-                        <p className="text-sm text-zinc-400">
-                            Role
-                        </p>
+                            <p className="text-sm text-zinc-400">
+                                Role
+                            </p>
 
-                        <p className="text-white capitalize">
-                            {user?.role}
-                        </p>
-                        <br />  
-                        <button className="text-white flex gap-2 px-4 py-3 rounded-xl hover:bg-[#1E1E1E]">
-                            <LogOut size={20}/>
-                            Logout
-                        </button>
+                            <p className="text-white capitalize">
+                                {user?.role}
+                            </p>
+                            <br />
+                            <button onClick={handleLogout}
+                            className="text-white flex gap-2 px-4 py-3 rounded-xl hover:bg-[#1E1E1E]">
+                                <LogOut size={20} />
+                                Logout
+                            </button>
 
-                    </div>
-                )}
-</div>
-
+                        </div>
+                    )}
+                </div>
             </div>
         </header>
     );

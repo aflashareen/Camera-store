@@ -29,9 +29,9 @@ import Users from "../pages/admin/Users";
 import AdminOrders from "../pages/admin/Orders";
 import AdminLayout from "../components/admin/AdminLayout";
 
-function AuthLayout() {
-  return <Outlet />;
-}
+// function AuthLayout() {
+//   return <Outlet />;
+// }
 
 function AppRoutes() {
   return (
@@ -64,10 +64,8 @@ function AppRoutes() {
         </Route>
 
         <Route element={<PublicRoute />}>
-          <Route element={<AuthLayout />}>
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
-          </Route>
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
         </Route>
 
 

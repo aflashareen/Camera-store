@@ -13,7 +13,6 @@ function TopSelling({ orders }) {
           quantity: 0,
         };
       }
-
       productSales[productId].quantity += Number(item.quantity || 0);
     });
   });
@@ -30,15 +29,10 @@ function TopSelling({ orders }) {
 
       <div className="mt-4 rounded-2xl border border-white/10 bg-[#151515] p-6">
         {topProducts.map((product, index) => (
-          <div
-            key={index}
-            className="flex items-center justify-between border-b border-white/5 py-4 last:border-0"
-          >
+          <div key={index}
+            className="flex items-center justify-between border-b border-white/5 py-4 last:border-0">
             <p className="text-white">{product.name}</p>
-
-            <p className="text-gray-400">
-              {product.quantity} sold
-            </p>
+            <p className="text-gray-400">{product.quantity} sold </p>
           </div>
         ))}
       </div>

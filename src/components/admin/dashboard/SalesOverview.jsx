@@ -11,8 +11,8 @@ function SalesOverview({ orders }) {
             <h2 className='text-xl font-semibold text-white'>Sales Overview</h2>
 
             <div className='mt-4 h-80 rounded-2xl border border-white/10 bg-[#151515]'>
-                    <ResponsiveContainer width="100%" height="100%">
-          <LineChart data={salesData}>
+            <ResponsiveContainer width="100%" height="100%">
+            <LineChart data={salesData}>
 
             <CartesianGrid strokeDasharray="3 3" />
 

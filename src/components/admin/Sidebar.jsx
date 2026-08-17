@@ -5,75 +5,58 @@ import {
   Package,
   Users,
   ShoppingCart,
-  LogOut
+  LogOut,
 } from "lucide-react";
 
 function Sidebar() {
   const navigate = useNavigate();
-  const handleLogout = (user) =>{
+
+  const handleLogout = () => {
     localStorage.removeItem("userId");
-    if(user.role !== "admin"){
-      navigate("/login")
-    }
-  }
+    localStorage.removeItem("role");
+    navigate("/login");
+  };
+
+  const linkClass = ({ isActive }) =>
+    `flex shrink-0 items-center gap-3 rounded-xl px-4 py-3 ${
+      isActive
+        ? "bg-[#1E1E1E] text-white"
+        : "text-zinc-400 hover:bg-[#1E1E1E] hover:text-white"
+    }`;
+
   return (
     <aside className="flex h-full w-full flex-col rounded-3xl border border-white/5 bg-[#121212] p-6 shadow-2xl">
+      <h1 className="mb-4 text-2xl font-semibold text-white lg:mb-10"> LENSÉ</h1>
 
-      <div>
-        <h1 className="hidden md:block mb-10 text-2xl font-semibold text-white">
-          LENSÉ
-        </h1>
+      <nav className="flex w-full gap-2 overflow-x-auto scrollbar-hide lg:flex-col lg:overflow-visible">
+        <NavLink to="/admin/dashboard" className={linkClass}>
+          <LayoutDashboard size={20} />
+          <span>Dashboard</span>
+        </NavLink>
 
-        <nav className="space-y-2 flex w-full items-center gap-2
-           overflow-x-auto
-           whitespace-nowrap
-           scrollbar-hide
-           lg:flex-col
-           lg:items-stretch
-           lg:overflow-visible
-           lg:whitespace-normal">
-          <NavLink
-            to="/admin/dashboard"
-            className={({ isActive }) => `flex items-center gap-3 rounded-xl px-4 py-3 ${isActive
-              ? "bg-[#1E1E1E] text-white" : "text-zinc-400 hover:bg-[#1E1E1E] hover:text-white"
-              }`}>
-            <LayoutDashboard size={20} />
-            Dashboard
-          </NavLink>
+        <NavLink to="/admin/products" className={linkClass}>
+          <Package size={20} />
+          <span>Products</span>
+        </NavLink>
 
-          <NavLink
-            to="/admin/products"
-            className={({ isActive }) => `flex items-center gap-3 rounded-xl px-4 py-3 ${isActive
-              ? "bg-[#1E1E1E] text-white" : "text-zinc-400 hover:bg-[#1E1E1E] hover:text-white"
-              }`}>
-            <Package size={20} />
-            Products
-          </NavLink>
+        <NavLink to="/admin/users" className={linkClass}>
+          <Users size={20} />
+          <span>Users</span>
+        </NavLink>
 
-          <NavLink
-            to="/admin/users"
-            className={({ isActive }) => `flex items-center gap-3 rounded-xl px-4 py-3 ${isActive
-              ? "bg-[#1E1E1E] text-white" : "text-zinc-400 hover:bg-[#1E1E1E] hover:text-white"
-              }`}>
-            <Users size={20} />
-            Users
-          </NavLink>
+        <NavLink to="/admin/orders" className={linkClass}>
+          <ShoppingCart size={20} />
+          <span>Orders</span>
+        </NavLink>
+      </nav>
 
-          <NavLink
-            to="/admin/orders"
-            className={({ isActive }) => `flex items-center gap-3 rounded-xl px-4 py-3 ${isActive
-              ? "bg-[#1E1E1E] text-white" : "text-zinc-400 hover:bg-[#1E1E1E] hover:text-white"
-              }`}>
-            <ShoppingCart size={20} />
-            Orders
-          </NavLink>
-        </nav>
-      </div>
-      <button onClick={handleLogout}
-      className="mt-auto flex w-full items-center justify-start gap-3 rounded-xl px-4 py-3 text-white transition hover:bg-[#1E1E1E]">
+      <button
+        onClick={handleLogout}
+        className="mt-auto hidden items-center gap-3 rounded-xl px-4 py-3 text-white hover:bg-[#1E1E1E] lg:flex">
         <LogOut size={20} />
         Logout
       </button>
+
     </aside>
   );
 }

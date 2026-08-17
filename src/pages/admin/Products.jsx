@@ -2,7 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 import { getProducts } from '../../services/productService';
 import { usePagination } from '../../hooks/UsePagination.jsx';
 import { Eye, Plus, Trash2 } from 'lucide-react';
-import { useState,useEffect } from 'react';
+import { useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import ProductsDetails from '../../components/admin/products/ProductsDetails';
 import AddProduct from '../../components/admin/products/AddProducts';
@@ -16,19 +16,33 @@ function AdminProducts() {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [isAdding, setIsAdding] = useState(false);
   const [deleteProduct, setDeleteProduct] = useState(null);
-  const [searchParams] = useSearchParams();
+  const [searchParams,setSearchParams] = useSearchParams();
 
   const search = searchParams.get("search") || "";
+  const status = searchParams.get("status") || "all";
 
   const filteredProducts = (products ?? []).filter((product) => {
     const value = search.toLowerCase();
 
-    return (
+    const matchesSearch = () =>{
       product.name?.toLowerCase().includes(value) ||
       product.brand?.toLowerCase().includes(value) ||
-      product.category?.toLowerCase().includes(value)
-    );
+      product.category?.toLowerCase().includes(value) ;
+    }
+    const matchesStatus = status === "all" ||
+    (status === "instock" && product.stock > 2) ||
+    (status === "lowstock" && product.stock < 2) ||
+    (status === "outofstock" && product.stock <= 0);
+
+    return matchesSearch && matchesStatus;
   });
+
+  const handleStatusChange = (value) =>{
+    setSearchParams({
+      search,
+      status: value,
+    })
+  }
 
   const { currentPage, setCurrentPage, totalPages, currentItems } = usePagination(filteredProducts, 5)
   
@@ -37,14 +51,22 @@ function AdminProducts() {
 
   return (
     <div className='text-white'>
-      <div className="mb-5 flex items-center justify-between p-5">
+      <div className="mb-5 flex flex-col gap-4 p-5 sm:flex-row sm:items-center sm:justify-between">
         <h1 className="text-3xl font-black">
           Products
         </h1>
 
+        <select value={status}
+        onChange={(e)=>handleStatusChange(e.target.value)}
+        className='bg-black'>
+          <option value="instock" className=''>In stock</option>
+          <option value="lowstock" >Low stock</option>
+          <option value="outofstock">Out of stock</option>
+        </select>
+
         <button
           onClick={() => setIsAdding(true)}
-          className="flex items-center gap-2 rounded-xl bg-white px-4 py-2 text-black hover:bg-zinc-200">
+          className="flex w-full items-center justify-center gap-2 rounded-xl bg-white px-4 py-2 text-black hover:bg-zinc-200 sm:w-auto">
           <Plus className="h-5 w-5" />
           Add Product
         </button>
@@ -52,7 +74,7 @@ function AdminProducts() {
 
       <div className="overflow-x-auto">
         <table className="w-full border-collapse">
-          <thead className="white/[0.03]">
+          <thead className="bg-white/[0.03]">
             <tr>
               <th className="px-4 py-3 text-left">Image</th>
               <th className="px-4 py-3 text-left">Name</th>
@@ -65,12 +87,10 @@ function AdminProducts() {
 
           <tbody>
             {currentItems.map((product) => (
-              <tr
-                key={product.id}
+              <tr key={product.id}
                 className="border-b border-zinc-800 hover:bg-white/[0.03]" >
                 <td className="px-4 py-3">
-                  <img src={product.image}
-                    alt={product.name}
+                  <img src={product.image} alt={product.name}
                     className="h-16 w-16 rounded-lg object-cover"/>
                 </td>
                 <td className="px-4 py-3">{product.name}</td>
@@ -117,11 +137,11 @@ function AdminProducts() {
           product={deleteProduct}
           onClose={() => setDeleteProduct(null)} />
       )}
-      <div className="flex justify-center items-center gap-2 mt-6">
+      <div className="mt-6 flex flex-wrap items-center justify-center gap-1 px-2 sm:gap-2 sm:px-4">
         <button
           disabled={currentPage === 1}
           onClick={() => setCurrentPage((prev) => prev - 1)}
-          className="px-3 py-2 border-none rounded-xl hover:bg-[#1E1E1E] disabled:opacity-50">
+          className="rounded-xl px-2 py-2 text-sm hover:bg-[#1E1E1E] disabled:opacity-50 sm:px-3">
           Previous
         </button>
 
@@ -129,18 +149,17 @@ function AdminProducts() {
           <button
             key={index}
             onClick={() => setCurrentPage(index + 1)}
-            className={`px-3 py-2 rounded ${currentPage === index + 1
+            className={`rounded px-2 py-2 text-sm sm:px-3 ${currentPage === index + 1
               ? "bg-zinc-600 text-white"
               : "bg-[#1E1E1E] text-white"
               }`}>
             {index + 1}
           </button>
         ))}
-
         <button
           disabled={currentPage === totalPages}
           onClick={() => setCurrentPage((prev) => prev + 1)}
-          className="px-3 py-2 border-none rounded-xl hover:bg-[#1E1E1E] disabled:opacity-50">
+          className="rounded-xl px-2 py-2 text-sm hover:bg-[#1E1E1E] disabled:opacity-50 sm:px-3">
           Next
         </button>
       </div>
