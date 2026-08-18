@@ -1,21 +1,25 @@
 import { Link, useNavigate } from 'react-router-dom'
-import { Search, UserRound, Heart, ShoppingBag } from "lucide-react";
+import { Search, UserRound, Heart, ShoppingBag, Menu } from "lucide-react";
 import { useDispatch, useSelector } from "react-redux";
 import { useCurrentUser } from '../../hooks/UseCurrentUser';
 import { useQuery } from '@tanstack/react-query';
 import { getWishlist } from '../../services/wishlistService';
 import { getCart } from '../../services/cartService';
 import { setSearch } from '../../redux/slice/searchSlice';
+import { useState } from 'react';
+import MobileMenu from './MobileMenu';
 
 function Navbar() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-const search = useSelector((state) => state.search.search);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const search = useSelector((state) => state.search.search);
 
   const { data: user } = useCurrentUser();
 
-//wishlist
+  //wishlist
   const { data: wishlist } = useQuery({
     queryKey: ["wishlist"],
     queryFn: getWishlist,
@@ -23,7 +27,7 @@ const search = useSelector((state) => state.search.search);
 
   const wishlistCount = wishlist?.length ?? 0;
 
-//cart  
+  //cart  
   const { data: cart = [] } = useQuery({
     queryKey: ["cart"],
     queryFn: getCart,
@@ -32,22 +36,22 @@ const search = useSelector((state) => state.search.search);
   const cartCount = cart?.length ?? 0;
 
   const handleSearch = (e) => {
-  const value = e.target.value;
+    const value = e.target.value;
 
-  dispatch(setSearch(value));
+    dispatch(setSearch(value));
 
-  navigate("/shop");
-};
+    navigate("/shop");
+  };
 
   return (
-    <nav className="sticky top-0 z-50 h-15 overflow-x-auto bg-neutral-950 shadow-lg border scrollbar-hide lg:overflow-visible">
-      <div className="h-15 flex min-w-max items-center justify-between text-white lg:min-w-0">
+    <nav className="relative sticky top-0 z-50 bg-neutral-950 shadow-lg border-b border-white/10">
+      <div className="h-16 flex items-center justify-between px-4 lg:px-8 text-white">
 
-        <div className='text-xl tracking-[0.35em] uppercase p-4'>
+        <div className='text-xl tracking-[0.35em] uppercase'>
           <Link to="/hero"><h1>LENSÉ</h1></Link>
         </div>
 
-        <div className="flex items-center gap-8 tracking-[0.2em] uppercase text-sm">
+        <div className="hidden lg:flex items-center gap-8 tracking-[0.2em] uppercase text-sm">
 
           <div className="group relative">
             <Link
@@ -94,7 +98,7 @@ const search = useSelector((state) => state.search.search);
           </div>
         </div>
 
-        <div className="flex items-center gap-6 p-4">
+        <div className="hidden lg:flex items-center gap-6">
           <div className="relative">
             <Search
               size={18}
@@ -137,6 +141,15 @@ const search = useSelector((state) => state.search.search);
             </Link>
           </div>
         </div>
+        <MobileMenu
+          open={menuOpen}
+          setMenuOpen={setMenuOpen}
+          user={user}
+          search={search}
+          handleSearch={handleSearch}
+          wishlistCount={wishlistCount}
+          cartCount={cartCount}
+        />
       </div>
     </nav>
   )

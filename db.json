@@ -1016,6 +1016,48 @@
       "userId": "QLC9S6aT-eQ",
       "productId": "10",
       "quantity": 2
+    },
+    {
+      "id": "oNnvwnFxKjA",
+      "name": "Canon AE-1 Program",
+      "brand": "Canon",
+      "category": "Film camera",
+      "price": 38700,
+      "image": "/src/assets/images/products/canon-ae.webp",
+      "description": "High performance camera for photography and video.",
+      "rating": 4.7,
+      "stock": 5,
+      "userId": "QLC9S6aT-eQ",
+      "productId": "6",
+      "quantity": 1
+    },
+    {
+      "id": "W9dIN5QbYlE",
+      "name": "Minolta X-370",
+      "brand": "Minolta",
+      "category": "Film camera",
+      "price": 17999,
+      "image": "/src/assets/images/products/minolta-x-370.webp",
+      "description": "High performance camera for photography and video.",
+      "rating": 4.7,
+      "stock": 5,
+      "userId": "QLC9S6aT-eQ",
+      "productId": "7",
+      "quantity": 1
+    },
+    {
+      "id": "dR4E9ANnkSQ",
+      "name": "Sony Alpha 6000 (APS-C)",
+      "brand": "Sony",
+      "category": "Mirrorless",
+      "price": 59990,
+      "image": "/src/assets/images/products/sony-alpha.webp",
+      "description": "The Sony Alpha 6000 is a compact APS-C mirrorless camera designed for photographers who demand speed, portability, and exceptional image quality. Featuring a 24.3MP Exmor APS-C sensor, fast hybrid autofocus, and continuous shooting up to 11 fps, it captures sharp photos and Full HD videos with remarkable detail. Its lightweight design, interchangeable E-mount lens system, and intuitive controls make it an excellent choice for travel, street photography, portraits, and everyday creative shooting.",
+      "rating": 4.7,
+      "stock": 5,
+      "userId": "QLC9S6aT-eQ",
+      "productId": "3",
+      "quantity": 1
     }
   ],
   "orders": [
@@ -1078,7 +1120,7 @@
         }
       ],
       "total": 1255450,
-      "status": "Cancelled",
+      "status": "Delivered",
       "orderedAt": "2026-08-12T08:41:14.364Z",
       "shippingAddress": {
         "fullName": "Afla Shareen",

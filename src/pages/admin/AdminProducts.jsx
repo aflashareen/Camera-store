@@ -32,7 +32,6 @@ function AdminProducts() {
       product.category?.toLowerCase().includes(value);
 
     const stock = Number(product.stock);
-    const status = searchParams.get("status") || "all";
 
     const matchesStatus = status === "all" ||
       (status === "instock" && product.stock > 2) ||
@@ -77,7 +76,6 @@ function AdminProducts() {
           <option value="lowstock" className='bg-zinc-900 text-white' >Low stock</option>
           <option value="outofstock" className='bg-zinc-900 text-white'>Out of stock</option>
         </select>
-
 
         <div className="relative flex-1 max-w-md">
           <Search

@@ -24,16 +24,17 @@ function Products() {
 
   const { isWishlisted, handleWishlist } = UseWishlist(product);
 
-  const { handleCart } = useCart(product);
+  const { handleCart } = useCart();
 
   const navigate = useNavigate();
 
   const queryClient = useQueryClient();
 
   const similarProducts = products?.filter((item) =>
-    item.category === product?.category &&
-    item.id !== product?.id).slice(0, 4);
-
+    item.category === product?.category ||
+    item.brand === product?.brand ||
+    item.id !== product?.id
+  ).slice(0, 4);
 
   if (isLoading) return <p>Loading...</p>;
   if (error) return <p>Something went wrong.</p>;
@@ -116,7 +117,7 @@ function Products() {
           </p>
 
           <button
-            onClick={handleCart}
+            onClick={() => handleCart(product)}
             className="mt-10 w-full bg-black text-white py-4 rounded-lg hover:bg-zinc-800 transition">
             Add to Cart
           </button>
