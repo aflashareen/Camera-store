@@ -7,6 +7,7 @@ import toast from "react-hot-toast";
 import { useRef} from "react";
 import useClickOutside from "../../../hooks/UseClickOutside";
 
+
 function ProductsDetails({ product, onClose }) {
   const queryClient = useQueryClient();
 
