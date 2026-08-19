@@ -145,6 +145,17 @@ function ShippingForm({ formData, errors, handleChange }) {
                         <input
                             type="radio"
                             name="paymentMethod"
+                            value="Razorpay"
+                            checked={formData.paymentMethod === "Razorpay"}
+                            onChange={handleChange}
+                        />
+                        Razorpay
+                    </label>
+
+                    <label className="flex items-center gap-3">
+                        <input
+                            type="radio"
+                            name="paymentMethod"
                             value="UPI"
                             checked={formData.paymentMethod === "UPI"}
                             onChange={handleChange}

@@ -1,5 +1,5 @@
 import { Link, useNavigate } from 'react-router-dom'
-import { Search, UserRound, Heart, ShoppingBag, Menu } from "lucide-react";
+import { Search, UserRound, Heart, ShoppingBag, Menu, X } from "lucide-react";
 import { useDispatch, useSelector } from "react-redux";
 import { useCurrentUser } from '../../hooks/UseCurrentUser';
 import { useQuery } from '@tanstack/react-query';
@@ -89,8 +89,7 @@ function Navbar() {
           <div className="group relative">
             <Link
               to="/about"
-              className="text-zinc-400 transition-colors duration-300 group-hover:text-white"
-            >
+              className="text-zinc-400 transition-colors duration-300 group-hover:text-white">
               About
             </Link>
 
@@ -112,6 +111,14 @@ function Navbar() {
               onChange={handleSearch}
               className="w-64 pl-10 pr-4 py-1 border-gray-200 focus:outline-none focus:ring-2 focus:ring-black rounded"
             />
+            {search && (
+              <button
+                onClick={() => dispatch(setSearch(""))}
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400"
+              >
+                <X size={16} />
+              </button>
+            )}
           </div>
 
           <Link to={user ? "/profile" : "/login"}>

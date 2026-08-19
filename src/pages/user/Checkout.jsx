@@ -7,14 +7,14 @@ import { useCurrentUser } from "../../hooks/UseCurrentUser";
 import { addOrder } from "../../services/orderService";
 import ShippingForm from "../../components/admin/user/checkout/ShippingForm";
 import OrderSummary from "../../components/admin/user/checkout/OrderSummary";
+import { createRazorpayOrder } from "../../services/paymentService";
 
 function Checkout() {
   const navigate = useNavigate();
+  const queryClient = useQueryClient();
+  const razorpayKey = import.meta.env.VITE_RAZORPAY_KEY_ID;
 
   const { data: user } = useCurrentUser();
-
-  const queryClient = useQueryClient();
-
   const placeOrderMutation = useMutation({
     mutationFn: addOrder,
 
@@ -86,38 +86,101 @@ function Checkout() {
     return Object.keys(newErrors).length === 0;
   }
 
-  const handlePlaceOrder = () => {
-    if (!validate()) return;
+const handlePlaceOrder = async () => {
+  if (!validate()) return;
 
-    const order = {
-      userId: user.id,
+  const order = {
+    userId: user.id,
 
-      items: cart.map((item) => ({
-        productId: item.productId,
-        name: item.name,
-        image: item.image,
-        price: item.price,
-        quantity: item.quantity || 1,
-      })),
+    items: cart.map((item) => ({
+      productId: item.productId,
+      name: item.name,
+      image: item.image,
+      price: item.price,
+      quantity: item.quantity || 1,
+    })),
 
-      total,
-      status: "Pending",
-      orderedAt: new Date().toISOString(),
+    total,
 
-      shippingAddress: {
-        fullName: formData.fullName,
-        email: formData.email,
-        phone: formData.phone,
-        address: formData.address,
-        city: formData.city,
-        state: formData.state,
-        pincode: formData.pincode,
-      },
+    status: "Pending",
 
-      paymentMethod: formData.paymentMethod,
-    };
-    placeOrderMutation.mutate(order);
+    orderedAt: new Date().toISOString(),
+
+    shippingAddress: {
+      fullName: formData.fullName,
+      email: formData.email,
+      phone: formData.phone,
+      address: formData.address,
+      city: formData.city,
+      state: formData.state,
+      pincode: formData.pincode,
+    },
+
+    paymentMethod: formData.paymentMethod,
   };
+
+  // COD
+  if (formData.paymentMethod === "Cash on Delivery") {
+    placeOrderMutation.mutate(order);
+    return;
+  }
+
+  // Razorpay
+  if (formData.paymentMethod === "Razorpay") {
+    try {
+      // Create Razorpay order
+      const razorpayOrder = await createRazorpayOrder(total);
+
+      const options = {
+        key: razorpayKey,
+
+        amount: razorpayOrder.amount,
+
+        currency: razorpayOrder.currency,
+
+        name: "LENSÉ",
+
+        description: "Camera Purchase",
+
+        order_id: razorpayOrder.id,
+
+        prefill: {
+          name: formData.fullName,
+          email: formData.email,
+          contact: formData.phone,
+        },
+
+        theme: {
+          color: "#7f1d1d",
+        },
+
+        handler: function (response) {
+          console.log("Payment successful");
+          console.log(response);
+
+          const paidOrder = {
+            ...order,
+
+            status: "Paid",
+
+            paymentId: response.razorpay_payment_id,
+
+            razorpayOrderId: response.razorpay_order_id,
+          };
+
+          placeOrderMutation.mutate(paidOrder);
+        },
+      };
+
+      const razorpay = new window.Razorpay(options);
+
+      razorpay.open();
+
+    } catch (error) {
+      console.error("Razorpay error:", error);
+    }
+  }
+};
 
 
   const { data: cart = [] } = useQuery({

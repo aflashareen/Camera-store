@@ -800,19 +800,6 @@
       "isDeleted": false,
       "userId": "1",
       "productId": "2"
-    },
-    {
-      "id": "1FbrCX3RSK0",
-      "name": "Sony Alpha 6000 (APS-C)",
-      "brand": "Sony",
-      "category": "Mirrorless",
-      "price": 59990,
-      "image": "/src/assets/images/products/sony-alpha.webp",
-      "description": "The Sony Alpha 6000 is a compact APS-C mirrorless camera designed for photographers who demand speed, portability, and exceptional image quality. Featuring a 24.3MP Exmor APS-C sensor, fast hybrid autofocus, and continuous shooting up to 11 fps, it captures sharp photos and Full HD videos with remarkable detail. Its lightweight design, interchangeable E-mount lens system, and intuitive controls make it an excellent choice for travel, street photography, portraits, and everyday creative shooting.",
-      "rating": 4.7,
-      "stock": 5,
-      "userId": "QLC9S6aT-eQ",
-      "productId": "3"
     }
   ],
   "cart": [
@@ -989,64 +976,7 @@
       "quantity": 1
     },
     {
-      "id": "lMzWJtSLj4Q",
-      "name": " Sony a9 III",
-      "brand": "Sony",
-      "category": "Mirrorless",
-      "price": 529990,
-      "image": "/src/assets/images/products/sony-a9.webp",
-      "description": "The Sony a9 III is a flagship full-frame mirrorless camera engineered for professionals who demand exceptional speed, precision, and image quality. Featuring advanced autofocus, high-speed continuous shooting, and outstanding low-light performance, it excels in sports, wildlife, events, and cinematic video production. Its durable design, intuitive controls, and cutting-edge technology make it the perfect companion for capturing every decisive moment with confidence.",
-      "rating": 4.7,
-      "stock": 5,
-      "isDeleted": false,
-      "userId": "QLC9S6aT-eQ",
-      "productId": "2",
-      "quantity": 1
-    },
-    {
-      "id": "NigUDxpeSw8",
-      "name": "Sony FX5",
-      "brand": "Sony",
-      "category": "Cinema",
-      "price": 489900,
-      "image": "/src/assets/images/products/sony-fx5.webp",
-      "description": "The Sony FX5 is a professional full-frame cinema camera built for filmmakers and video creators. It features a 16.6MP stacked CMOS sensor, 5K open-gate recording, internal RAW recording, AI-powered autofocus, 15+ stops of dynamic range, and advanced 4K video capabilities in a compact Cinema Line body.",
-      "rating": 4.9,
-      "stock": 5,
-      "userId": "QLC9S6aT-eQ",
-      "productId": "10",
-      "quantity": 2
-    },
-    {
-      "id": "oNnvwnFxKjA",
-      "name": "Canon AE-1 Program",
-      "brand": "Canon",
-      "category": "Film camera",
-      "price": 38700,
-      "image": "/src/assets/images/products/canon-ae.webp",
-      "description": "High performance camera for photography and video.",
-      "rating": 4.7,
-      "stock": 5,
-      "userId": "QLC9S6aT-eQ",
-      "productId": "6",
-      "quantity": 1
-    },
-    {
-      "id": "W9dIN5QbYlE",
-      "name": "Minolta X-370",
-      "brand": "Minolta",
-      "category": "Film camera",
-      "price": 17999,
-      "image": "/src/assets/images/products/minolta-x-370.webp",
-      "description": "High performance camera for photography and video.",
-      "rating": 4.7,
-      "stock": 5,
-      "userId": "QLC9S6aT-eQ",
-      "productId": "7",
-      "quantity": 1
-    },
-    {
-      "id": "dR4E9ANnkSQ",
+      "id": "XWpti3OTxzg",
       "name": "Sony Alpha 6000 (APS-C)",
       "brand": "Sony",
       "category": "Mirrorless",
@@ -1265,6 +1195,32 @@
       },
       "paymentMethod": "Cash on Delivery",
       "id": "31hrvaLiO-M"
+    },
+    {
+      "userId": "QLC9S6aT-eQ",
+      "items": [
+        {
+          "productId": "10",
+          "name": "Sony FX5",
+          "image": "/src/assets/images/products/sony-fx5.webp",
+          "price": 489900,
+          "quantity": 1
+        }
+      ],
+      "total": 489900,
+      "status": "Pending",
+      "orderedAt": "2026-08-19T03:29:51.944Z",
+      "shippingAddress": {
+        "fullName": "Afla Shareen",
+        "email": "aflasherin07@gmail.com",
+        "phone": "0123456789",
+        "address": "ddd jjjj dddd dfdkdkdk",
+        "city": "vengara",
+        "state": "kerala",
+        "pincode": "666666"
+      },
+      "paymentMethod": "Cash on Delivery",
+      "id": "A1_uJGDPy78"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

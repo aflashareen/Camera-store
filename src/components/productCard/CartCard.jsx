@@ -44,13 +44,13 @@ function CartCard({ product }) {
 
           <button
             onClick={handleRemove}
-            className="absolute right-4 top-4 sm:right-6 sm:top-6 lg:right-10 lg:top-20"
+            className="absolute right-2 top-3 sm:right-6 sm:top-6 lg:right-10 lg:top-20"
           >
             <Trash2 className="text-red-600" size={20} />
           </button>
 
           <div>
-            <h2 className="text-xl font-semibold">
+            <h2 className="text-base sm:text-sm md:text-base lg:text-xl font-semibold">
               {product.name}
             </h2>
 
@@ -59,7 +59,7 @@ function CartCard({ product }) {
             </p>
 
             <p className="text-2xl font-bold mt-3">
-              ₹{product.price.toLocaleString()}
+              ₹{(product.price * (product.quantity || 1)).toLocaleString()}
             </p>
           </div>
 

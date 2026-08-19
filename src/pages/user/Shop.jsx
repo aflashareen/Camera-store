@@ -29,7 +29,7 @@ function Shop() {
   //category
   const filteredProducts = useMemo(() => {
     return products
-    .filter((product) => !product.isDeleted)
+      .filter((product) => !product.isDeleted)
       .filter((product) => {
         const matchesCategory =
           category === "All" || product.category === category;
@@ -72,22 +72,27 @@ function Shop() {
       <Filter
         categories={categories}
         selectedCategory={category}
-        onCategoryChange={(value) =>{
-            if(value === "All"){
-              setSearchParams({});
-            } else {
-              setSearchParams({ category : value });
-            }
+        onCategoryChange={(value) => {
+          if (value === "All") {
+            setSearchParams({});
+          } else {
+            setSearchParams({ category: value });
+          }
         }}
         sortBy={sort}
         onSortChange={(value) => dispatch(setSort(value))}
       />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 p-4 md:p-8">
-        {filteredProducts.map((product) => (
-          <ProductCard key={product.id} product={product} />
-        ))
-        }
+        {filteredProducts.length === 0 ? (
+          <h1 className="text-white text-center col-span-full py-20">
+            Match not found
+          </h1>
+        ) : (
+          filteredProducts.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))
+        )}
       </div>
     </div>
   );
