@@ -1,10 +1,14 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Search, Bell, ChevronDown, LogOut } from "lucide-react";
-import { useCurrentUser } from "../../hooks/UseCurrentUser";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useCurrentAdmin } from "../../hooks/UseAdmin";
+import { useQueryClient } from "@tanstack/react-query";
 
 function Header() {
-    const { data: user } = useCurrentUser();
+    const { data: user } = useCurrentAdmin();
+
+    const queryClient = useQueryClient();
+    const navigate = useNavigate();
 
     const hour = new Date().getHours();
 
@@ -14,18 +18,16 @@ function Header() {
     else if (hour < 17) greeting = "Good Afternoon,";
     else greeting = "Good Evening,";
 
-    const navigate = useNavigate();
+
     const [isOpen, setIsOpen] = useState(false);
     const dropdownRef = useRef(null);
 
-    const [searchParams, setSearchParams] = useSearchParams();
+    const handleLogout = () => {
+        localStorage.removeItem("adminId");
+        localStorage.removeItem("role");
 
-    const search = searchParams.get("search") || "";
-
-      const handleLogout = (user) =>{
-        localStorage.removeItem("userId");
         navigate("/login");
-      }
+    };
 
     useEffect(() => {
         function handleClickOutside(e) {
@@ -101,11 +103,10 @@ function Header() {
                             </p>
                             <br />
                             <button onClick={handleLogout}
-                            className="text-white flex gap-2 px-4 py-3 rounded-xl hover:bg-[#1E1E1E]">
+                                className="text-white flex gap-2 px-4 py-3 rounded-xl hover:bg-[#1E1E1E]">
                                 <LogOut size={20} />
                                 Logout
                             </button>
-
                         </div>
                     )}
                 </div>

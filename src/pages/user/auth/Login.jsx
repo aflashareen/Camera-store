@@ -14,58 +14,59 @@ function Login() {
   const navigate = useNavigate();
   const queryClient = useQueryClient();
 
-const loginMutation = useMutation({
-  mutationFn: getUserByEmail,
+  const loginMutation = useMutation({
+    mutationFn: getUserByEmail,
 
-  onSuccess: (data) => {
-    if (!data || data.length === 0) {
+    onSuccess: (data) => {
+      if (!data || data.length === 0) {
+        setErrors({
+          email: "Email not found",
+        });
+        return;
+      }
+
+      const user = data[0];
+
+      if (user.isBlocked) {
+        setIsBlocked(true);
+        return;
+      }
+
+      if (user.password !== formData.password) {
+        setErrors({
+          password: "Incorrect password",
+        });
+        return;
+      }
+
+      // Store role
+      localStorage.setItem("role", user.role);
+
+      // Admin
+      if (user.role === "admin") {
+        localStorage.setItem("adminId", user.id);
+
+        queryClient.setQueryData(["currentAdmin", user.id], user);
+
+        navigate("/admin");
+        return;
+      }
+      // User
+      if (user.role === "user") {
+        localStorage.setItem("userId", user.id);
+        queryClient.setQueryData(["currentUser", user.id], user);
+
+        navigate("/");
+        return;
+      }
+    },
+
+    onError: () => {
       setErrors({
-        email: "Email not found",
+        general: "Something went wrong. Please try again.",
       });
-      return;
-    }
-
-    const user = data[0];
-
-    if (user.isBlocked) {
-      setIsBlocked(true);
-      return;
-    }
-
-    if (user.password !== formData.password) {
-      setErrors({
-        password: "Incorrect password",
-      });
-      return;
-    }
-
-    // Store role
-    localStorage.setItem("role", user.role);
-
-    // Admin
-    if (user.role === "admin") {
-      queryClient.setQueryData(["currentAdmin"], user);
-
-      navigate("/admin");
-      return;
-    }
-
-    // User
-    if (user.role === "user") {
-      localStorage.setItem("userId", user.id);
-      queryClient.setQueryData(["currentUser", user.id],user);
-
-      navigate("/");
-      return;
-    }
-  },
-
-  onError: () => {
-    setErrors({
-      general: "Something went wrong. Please try again.",
-    });
-  },
-});
+    },
+  });
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -130,7 +131,7 @@ const loginMutation = useMutation({
             </p>
           </div>
         )}
-        
+
       </div>
     </form>
   );
