@@ -18,7 +18,6 @@ function Header() {
     else if (hour < 17) greeting = "Good Afternoon,";
     else greeting = "Good Evening,";
 
-
     const [isOpen, setIsOpen] = useState(false);
     const dropdownRef = useRef(null);
 
